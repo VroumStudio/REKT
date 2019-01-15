@@ -25,6 +25,7 @@
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
+				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjQwNDEiIG1hc2s9IlJLWUMyNzc1IiBlbmM9IjAiPjxsaWNlbnNlIGlkPSIxIiBuYW1lPSJXd2lzZSIgdHlwZT0iMiIgcGxhdGZvcm1zPSIxMCwxMiIgZXhwaXJlcz0iMjAyMC0wNy0wMSIgIC8+PGxpY2Vuc2UgaWQ9IjIxIiBuYW1lPSJNYWludGVuYW5jZSIgdHlwZT0iMiIgcGxhdGZvcm1zPSI1LDEwLDEyIiBleHBpcmVzPSIyMDIwLTA3LTAxIiAgLz48bGljZW5zZSBpZD0iMjMiIG5hbWU9IkxldmVsIEIgTGljZW5zZSIgdHlwZT0iMiIgcGxhdGZvcm1zPSIxMCIgZXhwaXJlcz0iMjAyMC0wNy0wMSIgIC8+PGxpY2Vuc2UgaWQ9IjEiIG5hbWU9Ild3aXNlIiB0eXBlPSIxIiBwbGF0Zm9ybXM9IjUiIGV4cGlyZXM9IjIwMTctMTItMDEiICAvPjxsaWNlbnNlIGlkPSI0MyIgbmFtZT0iQXVyby1IZWFkcGhvbmUiIHR5cGU9IjEiIHBsYXRmb3Jtcz0iNSwxMCwxMiIgZXhwaXJlcz0iMjAxNy0xMi0wMSIgIC8+PHBsdWdpbiBpZD0iNzIwOTM4MTEiIG5hbWU9IkF1cm8tSGVhZHBob25lIiBsaWNlbnNlPSI0MyIgLz48L3Byb2plY3Q+|mgaU0dYzyLsgaE+CvA4tqkHMshv/7gqb1zDQpTIQ3b3zHaCS9g67z575WUHJ6l/UVcuZoxHZm9wVcyPcemqxq7kwvOSqtqXgY6rkz+0AMIYjRqmzsTxIxmD8shD9ye+2SQ/HRaXcrrxOR3w08BG8eUyG+yIQJXiv3FgylAB8pVS4/2voLBah6aSvuaPnUcNcBaQVMDl8DqBL6b+lZoSO/MZC6IfA3ugDTMHc/78Kk8bLNS9bFLVQsBxt6u/eJTuw/e2dbeYydolEuO1+QB9dkNzLCjxSgAB6JQeTekD6aLlggnSoZmIevzcRccao75Hexsbw4x1hC3aNgQEokc5WRg=="/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
@@ -9018,6 +9019,120 @@
 						<Property Name="Time" Type="Real64">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="Auro Headphone" PluginType="3" CompanyID="263" PluginID="1100">
+					<PropertyList>
+						<Property Name="Bypass" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Bypass_offset" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ER_Delay" Type="Real32">
+							<ValueList>
+								<Value>1.4</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ER_Level" Type="Real32">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="LFE_level" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Level" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Reverb" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Reverb_alpha" Type="Real32">
+							<ValueList>
+								<Value>0.5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Reverb_fcut" Type="Real32">
+							<ValueList>
+								<Value>10000</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Reverb_level" Type="Real32">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Reverb_predelay" Type="Real32">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Reverb_tr60" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Src_distance" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Wall_back" Type="Real32">
+							<ValueList>
+								<Value>7.25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Wall_bottom" Type="Real32">
+							<ValueList>
+								<Value>2.75</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Wall_front" Type="Real32">
+							<ValueList>
+								<Value>3.25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Wall_left" Type="Real32">
+							<ValueList>
+								<Value>4.25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Wall_right" Type="Real32">
+							<ValueList>
+								<Value>4.75</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Wall_top" Type="Real32">
+							<ValueList>
+								<Value>3.75</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

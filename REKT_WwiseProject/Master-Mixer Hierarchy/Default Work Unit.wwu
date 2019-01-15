@@ -9,6 +9,28 @@
 							<ObjectRef Name="System" ID="{F13E2F4C-2ECE-41C1-8731-3A102876DB55}" WorkUnitID="{AE1DCC86-6E82-4B1F-A8A6-32D073A78674}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{F2C33434-93C8-42F6-825F-E473E35C0017}">
+							<ChildrenList>
+								<AuxBus Name="Car" ID="{CBFF45EC-96DA-4F09-8CAC-0FD96C40132E}"/>
+								<AuxBus Name="Monsters" ID="{A868AC24-5C92-4605-9C89-628832A09C32}"/>
+								<AuxBus Name="Weapons" ID="{AFAB1BDA-932E-4D98-8B70-704EA0AB9378}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Amb" ID="{FF8C6886-DBC5-4306-9846-7DA221E03D1B}"/>
+						<Bus Name="Music" ID="{C33409A4-2045-4096-9C95-B664AF48A94F}"/>
+						<Bus Name="Reverb" ID="{CF384DF1-C2EE-4CE1-BF4A-E1CE9F2B01B8}">
+							<ChildrenList>
+								<AuxBus Name="Garage" ID="{AFE88607-79F7-47E5-AE70-4F8296CC3315}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Metal_Hangar" ID="{C4A4605C-42EF-476A-B53C-E31C7A442C24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

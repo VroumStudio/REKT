@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" SchemaVersion="89">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="MUSIC_GARAGE_DRY" ID="{57AD2673-21C7-4A1F-8E65-085214BF9547}" ShortID="30898668">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Music_Garage_Attenuation" ID="{1D59C308-8EE8-4A2F-986D-AFDAF04DAE27}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{C33409A4-2045-4096-9C95-B664AF48A94F}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Garage" ID="{AFE88607-79F7-47E5-AE70-4F8296CC3315}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="MUSIC_GARAGE_DRY" ID="{D8E6500C-167E-46C4-9EF4-4ABED86C491E}" ShortID="942125961">
+							<Language>SFX</Language>
+							<AudioFile>MUSIC_GARAGE_DRY.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="MUSIC_GARAGE_DRY" ID="{D8E6500C-167E-46C4-9EF4-4ABED86C491E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
