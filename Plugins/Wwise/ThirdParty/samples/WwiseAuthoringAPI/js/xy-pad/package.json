@@ -1,0 +1,14 @@
+{
+  "name": "xy-pad-waapi",
+  "version": "1.0.0",
+  "description": "",
+  "browser": {
+    "app": "./js/app.js"
+  },
+  "author": "Audiokinetic",
+  "dependencies": {
+    "autobahn-browser": "18.3.2",
+    "jquery": "^3.3.1",
+    "pixi.js": "4.8.2"
+  }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3157003241" Name="Test" ObjectPath="\Events\Default Work Unit\Test"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="942125961" Language="SFX">
+					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
+					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

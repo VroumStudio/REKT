@@ -1,0 +1,1 @@
+../../../../Mac/Debug/bin/SampleClient $@

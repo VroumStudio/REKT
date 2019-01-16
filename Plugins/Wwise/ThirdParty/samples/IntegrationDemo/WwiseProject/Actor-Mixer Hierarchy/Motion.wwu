@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B8E18876-D5DC-4A01-ABE4-F522E6D122B2}" SchemaVersion="89">
+	<AudioObjects>
+		<WorkUnit Name="Motion" ID="{B8E18876-D5DC-4A01-ABE4-F522E6D122B2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="DoorSliding" ID="{FC1C7065-4B2F-42A6-B343-388FBE6E534B}" ShortID="725126515">
+					<ChildrenList>
+						<Sound Name="DoorSliding" ID="{C2FE5D00-C3BF-4513-8F56-EA201A2FF725}" ShortID="698991938">
+							<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Soundelux Design Music Group
+© 2007 Soundelux Design Music Group
+www.soundeluxdmg.com
+
+The Audio Content contained in this digitally watermarked file is the property of Soundelux Design Music Group.  Your sole right with regard to this Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be used or modified for a commercial purpose nor for public demonstration.</Comment>
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{3A429FCB-87D8-458B-B315-DBE8023064B3}" WorkUnitID="{5793A36C-0278-4AE3-B21C-4737AF9F120D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_DoorSliding_01_Open" ID="{61F08EDB-A2D0-41A3-9CE9-66B68449C66B}" ShortID="874577216">
+									<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Soundelux Design Music Group
+© 2007 Soundelux Design Music Group
+www.soundeluxdmg.com
+
+The Audio Content contained in this digitally watermarked file is the property of Soundelux Design Music Group.  
+Your sole right with regard to this Audio Content is to listen to the Audio Content as part of this Sample Project. 
+This Audio Content cannot be used or modified for a commercial purpose nor for public demonstration.</Comment>
+									<Language>SFX</Language>
+									<AudioFile>SFX_DoorSliding_01_Open.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_DoorSliding_01_Open" ID="{61F08EDB-A2D0-41A3-9CE9-66B68449C66B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DoorSliding_Motion" ID="{74DAB445-7D41-42DB-A298-D46BA986592B}" ShortID="88833382">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Motion Source" ID="{FA712F84-AB1A-4862-8B8C-70145EF19FA8}" ShortID="276697515" PluginName="Wwise Motion Source" CompanyID="0" PluginID="409">
+									<PropertyList>
+										<Property Name="Channel2" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="ChannelConfig" Type="int16">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="DriverA" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{DB594764-6030-40E4-ACF5-AFD622DB7A2E}" ShortID="416462243">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<Custom>
+																<ModulatorTime Name="Modulator Time (Custom)" ID="{F977D175-22EC-4CEB-A551-0738DE3DB5BA}" ShortID="733219381"/>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{99295789-27A1-4ACD-9601-2606261539C5}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0.636</XPos>
+																<YPos>-0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0.864</XPos>
+																<YPos>1</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>-0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="DriverB" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{124C1931-DCCE-480E-89D1-1DF35767C1AE}" ShortID="1032661652">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<Custom>
+																<ModulatorTime Name="Modulator Time (Custom)" ID="{18116B15-059A-4E64-8C8C-721E1ADBBAB1}" ShortID="184046137"/>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{BD31998F-D653-487E-8549-F13844CABCDD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>1</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0.054</XPos>
+																<YPos>1</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0.455</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Motion Source" ID="{FA712F84-AB1A-4862-8B8C-70145EF19FA8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="GunFire" ID="{396AC0D1-E3DD-4B6B-B89D-6DCFED6264C0}" ShortID="415642584">
+					<ChildrenList>
+						<Sound Name="GunFire" ID="{9E2D8122-A02F-4FEC-9212-B1C9DD89DCBD}" ShortID="163546346">
+							<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Soundelux Design Music Group
+© 2007 Soundelux Design Music Group
+www.soundeluxdmg.com
+
+The Audio Content contained in this digitally watermarked file is the property of Soundelux Design Music Group.  Your sole right with regard to this Audio Content is to listen to the Audio Content as part of this Sample Project.  This Audio Content cannot be used or modified for a commercial purpose nor for public demonstration.</Comment>
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{3A429FCB-87D8-458B-B315-DBE8023064B3}" WorkUnitID="{5793A36C-0278-4AE3-B21C-4737AF9F120D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}"/>
+								</Reference>
+								<Reference Name="OutputBus" Platform="XboxOne">
+									<ObjectRef Name="Game Pad Bus" ID="{831EDEB8-142B-454B-B7D7-0E412F47FF4E}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}"/>
+								</Reference>
+								<Reference Name="OutputBus" Platform="PS4">
+									<ObjectRef Name="Game Pad Bus" ID="{831EDEB8-142B-454B-B7D7-0E412F47FF4E}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Master_Motion_Bus_Aux" ID="{2419781F-599B-449A-9504-E8E98FC50D1E}" WorkUnitID="{B90D7019-72C6-46E8-990C-3BC04B2724DB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shotgun_Fire_01" ID="{32BE5941-2D06-4170-BA11-C59855248191}" ShortID="102876030">
+									<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Soundelux Design Music Group
+© 2007 Soundelux Design Music Group
+www.soundeluxdmg.com
+
+The Audio Content contained in this digitally watermarked file is the property of Soundelux Design Music Group.  
+Your sole right with regard to this Audio Content is to listen to the Audio Content as part of this Sample Project.  
+This Audio Content cannot be used or modified for a commercial purpose nor for public demonstration.</Comment>
+									<Language>SFX</Language>
+									<AudioFile>Shotgun_Fire_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shotgun_Fire_01" ID="{32BE5941-2D06-4170-BA11-C59855248191}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

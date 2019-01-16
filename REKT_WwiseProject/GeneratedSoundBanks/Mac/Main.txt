@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3157003241	Test			\Default Work Unit\Test	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	942125961	MUSIC_GARAGE_DRY	C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Mac\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\MUSIC_GARAGE_DRY		8192068
+

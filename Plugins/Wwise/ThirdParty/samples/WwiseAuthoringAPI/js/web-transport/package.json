@@ -1,0 +1,16 @@
+{
+  "name": "web-transport-waapi",
+  "version": "1.0.0",
+  "description": "",
+  "browser": {
+    "app": "./js/app.js"
+  },
+  "author": "Audiokinetic",
+  "dependencies": {
+    "autobahn-browser": "18.3.2",
+    "bootstrap": "4.1.3",
+    "bootstrap-select": "1.13.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}

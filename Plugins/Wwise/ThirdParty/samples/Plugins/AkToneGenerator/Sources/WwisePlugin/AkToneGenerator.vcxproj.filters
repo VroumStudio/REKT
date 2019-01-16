@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>{4FA5880B-BBAE-887C-442A-9F7CB032947C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ToneGen.h" />
+    <ClInclude Include="ToneGenPlugin.h" />
+    <ClInclude Include="TopicAlias.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ToneGen.cpp" />
+    <ClCompile Include="ToneGenPlugin.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ToneGen.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ToneGenPlugin.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\AkToneGen.xml">
+      <Filter>res</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

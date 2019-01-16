@@ -2,5 +2,14 @@
 	"FileVersion": 3,
 	"EngineAssociation": "4.21",
 	"Category": "",
-	"Description": ""
+	"Description": "",
+	"Plugins": [
+		{
+			"Name": "Wwise",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor"
+	]
 }
