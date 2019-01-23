@@ -1,6 +1,0 @@
-xcodebuild -project AkAutobahn/AkAutobahn.xcodeproj build -configuration "Debug"
-xcodebuild -project SampleClient/SampleClient.xcodeproj build -configuration "Debug"
-xcodebuild -project AkAutobahn/AkAutobahn.xcodeproj build -configuration "Profile"
-xcodebuild -project SampleClient/SampleClient.xcodeproj build -configuration "Profile"
-xcodebuild -project AkAutobahn/AkAutobahn.xcodeproj build -configuration "Release"
-xcodebuild -project SampleClient/SampleClient.xcodeproj build -configuration "Release"

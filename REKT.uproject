@@ -3,10 +3,10 @@
 	"EngineAssociation": "4.21",
 	"Category": "",
 	"Description": "",
-	"Plugins": [
+  "Plugins": [
     {
       "Name": "Wwise",
-      "Enabled": true
+      "Enabled":  true
     },
     {
       "Name": "Niagara",
@@ -14,9 +14,9 @@
     },
     {
       "Name": "NiagaraExtras",
-      "Enabled":  true
+      "Enabled": true
     }
-	],
+  ],
 	"TargetPlatforms": [
 		"WindowsNoEditor"
 	]
