@@ -1,6 +1,45 @@
 Event	ID	Name			Wwise Object Path	Notes
+	504240361	Set_State_PauseOff			\Default Work Unit\Set_State_PauseOff	
+	941995915	Nitro			\Default Work Unit\Nitro	
+	1020321262	Car_Engine			\Default Work Unit\Car_Engine	
+	1646258643	Set_Switch_Rear			\Default Work Unit\Set_Switch_Rear	
+	2167152046	Set_Switch_Front			\Default Work Unit\Set_Switch_Front	
+	2201148061	Set_State_PauseOn			\Default Work Unit\Set_State_PauseOn	
+	3092587493	Pause			\Default Work Unit\Pause	
 	3157003241	Test			\Default Work Unit\Test	
+	3258270161	Transmission			\Default Work Unit\Transmission	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	16764168	Direction			\Default Work Unit\Direction	
+
+Switch	ID	Name	Switch Group			Notes
+	1260494898	Front	Direction			
+	2579596231	Rear	Direction			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3030367241	ST_Car_View			\Default Work Unit\ST_Car_View	
+	4054796535	ST_Pause			\Default Work Unit\ST_Pause	
+
+State	ID	Name	State Group			Notes
+	0	None	ST_Car_View			
+	144697359	Outdoor	ST_Car_View			
+	340398852	Indoor	ST_Car_View			
+	0	None	ST_Pause			
+	80751710	PauseOn	ST_Pause			
+	3921005316	PauseOff	ST_Pause			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	362735170	PauseOn	ST_Pause	\Actor-Mixer Hierarchy\Default Work Unit\SFX_Car_Engine\Car_Engine		
+	395871982	Indoor	ST_Car_View	\Actor-Mixer Hierarchy\Default Work Unit\SFX_Car_Engine\Car_Engine		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3774151474	RTPC_RPM			\Default Work Unit\Car\RTPC_RPM	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	942125961	MUSIC_GARAGE_DRY	C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\MUSIC_GARAGE_DRY		8192068
+	24285591	PH_SFX_Car_Nitro	C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Nitro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\PH_SFX_Car_Nitro		456328
+	67882987	PH_SFX_Car_FuturLO_Loop	C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_FuturLO_Loop_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Car_Engine\Car_Engine\PH_SFX_Car_FuturLO_Loop		645468
+	165497928	PH_SFX_Car_FuturHI_Loop	C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_FuturHI_Loop_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Car_Engine\Car_Engine\PH_SFX_Car_FuturHI_Loop		731716
+	424078183	PH_SFX_Car_Transmission	C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Transmission_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\PH_SFX_Car_Transmission		445264
+	432180664	PH_SFX_Car_Idle_Loop	C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Idle_Loop_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Car_Engine\Car_Engine\PH_SFX_Car_Idle_Loop		730132
+	942125961	MUSIC_GARAGE_DRY	C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\MUSIC_GARAGE_DRY		8192068
 

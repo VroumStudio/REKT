@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\etudiant\Documents\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Sam\Documents\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,9 +21,37 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1020321262" Name="Car_Engine" ObjectPath="\Events\Default Work Unit\Car_Engine"/>
+				<Event Id="941995915" Name="Nitro" ObjectPath="\Events\Default Work Unit\Nitro"/>
+				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\Pause"/>
+				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\Set_State_PauseOff"/>
+				<Event Id="2201148061" Name="Set_State_PauseOn" ObjectPath="\Events\Default Work Unit\Set_State_PauseOn"/>
+				<Event Id="2167152046" Name="Set_Switch_Front" ObjectPath="\Events\Default Work Unit\Set_Switch_Front"/>
+				<Event Id="1646258643" Name="Set_Switch_Rear" ObjectPath="\Events\Default Work Unit\Set_Switch_Rear"/>
 				<Event Id="3157003241" Name="Test" ObjectPath="\Events\Default Work Unit\Test"/>
+				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\Transmission"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="24285591" Language="SFX">
+					<ShortName>PH_SFX_Car_Nitro.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_Nitro_56D34C19.wem</Path>
+				</File>
+				<File Id="67882987" Language="SFX">
+					<ShortName>PH_SFX_Car_FuturLO_Loop.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_FuturLO_Loop_8956FC97.wem</Path>
+				</File>
+				<File Id="165497928" Language="SFX">
+					<ShortName>PH_SFX_Car_FuturHI_Loop.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_FuturHI_Loop_8956FC97.wem</Path>
+				</File>
+				<File Id="424078183" Language="SFX">
+					<ShortName>PH_SFX_Car_Transmission.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_Transmission_56D34C19.wem</Path>
+				</File>
+				<File Id="432180664" Language="SFX">
+					<ShortName>PH_SFX_Car_Idle_Loop.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_Idle_Loop_8956FC97.wem</Path>
+				</File>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
 					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
