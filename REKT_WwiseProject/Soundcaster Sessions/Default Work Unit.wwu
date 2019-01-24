@@ -17,7 +17,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}"/>
-							<Value>900</Value>
+							<Value>7023.27402135231</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">

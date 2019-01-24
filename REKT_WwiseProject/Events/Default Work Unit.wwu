@@ -139,6 +139,40 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="StartLevelConfig" ID="{D21A7715-94D4-41F2-8D9D-4A2E7B591188}">
+					<ChildrenList>
+						<Action Name="" ID="{5BA24194-CAFB-4B85-95A0-4B64D0C68B63}" ShortID="395276195">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PauseOff" ID="{F3FFF631-358C-42F1-91CC-A14506B59F95}" WorkUnitID="{AB310595-1892-474C-895A-85064AA96686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{75E813C1-5560-4899-8CC5-CE1AF6035311}" ShortID="492620464">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Front" ID="{BA2F86B1-A1FE-43DA-93F9-55D25636CE5E}" WorkUnitID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8961E9D1-6846-44D5-844C-A3D41710B2B7}" ShortID="465644332">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
