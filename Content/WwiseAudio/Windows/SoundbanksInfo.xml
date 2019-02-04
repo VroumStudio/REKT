@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Sam\Documents\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\etudiant\Documents\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -28,6 +28,7 @@
 				<Event Id="2201148061" Name="Set_State_PauseOn" ObjectPath="\Events\Default Work Unit\Set_State_PauseOn"/>
 				<Event Id="2167152046" Name="Set_Switch_Front" ObjectPath="\Events\Default Work Unit\Set_Switch_Front"/>
 				<Event Id="1646258643" Name="Set_Switch_Rear" ObjectPath="\Events\Default Work Unit\Set_Switch_Rear"/>
+				<Event Id="152581" Name="StartLevelConfig" ObjectPath="\Events\Default Work Unit\StartLevelConfig"/>
 				<Event Id="3157003241" Name="Test" ObjectPath="\Events\Default Work Unit\Test"/>
 				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\Transmission"/>
 			</IncludedEvents>
