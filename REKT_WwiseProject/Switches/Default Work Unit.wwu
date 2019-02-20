@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}" SchemaVersion="89">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}" PersistMode="Standalone">
-			<ChildrenList>
-				<SwitchGroup Name="Direction" ID="{8380E665-738C-4678-9BE4-1FEE22E8F709}">
-					<ChildrenList>
-						<Switch Name="Front" ID="{BA2F86B1-A1FE-43DA-93F9-55D25636CE5E}"/>
-						<Switch Name="Rear" ID="{DEC7F20F-E194-411E-967F-22E2988D51F1}"/>
-					</ChildrenList>
-				</SwitchGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}" PersistMode="Standalone"/>
 	</Switches>
 </WwiseDocument>

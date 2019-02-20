@@ -4,7 +4,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	0	None	ST_Car_View			
-	144697359	Outdoor	ST_Car_View			
 	340398852	Indoor	ST_Car_View			
 	0	None	ST_Pause			
 	80751710	PauseOn	ST_Pause			

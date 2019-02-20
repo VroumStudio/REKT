@@ -5,11 +5,7 @@
 			<ChildrenList>
 				<StateGroup Name="ST_Car_View" ID="{86CB3158-B700-4E8D-A619-8E892186E46E}">
 					<ChildrenList>
-						<State Name="Outdoor" ID="{E308B21A-ECDE-428D-8C6D-5F75AB9FE362}">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="6"/>
-							</PropertyList>
-						</State>
+						<State Name="None" ID="{858B8D83-9F0F-4B0B-8786-C1DB7B5C6D6A}"/>
 						<State Name="Indoor" ID="{05A30E51-F9C7-4A7B-9BE9-3BB33F3240B7}"/>
 					</ChildrenList>
 				</StateGroup>

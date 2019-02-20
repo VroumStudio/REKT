@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Test" ID="{541E14F0-5FF1-44F3-993C-DD52E59930DA}">
+				<Event Name="Play_Music_Garage" ID="{541E14F0-5FF1-44F3-993C-DD52E59930DA}">
 					<ChildrenList>
 						<Action Name="" ID="{6F43D9A6-347C-4D69-B555-C3F0E80F6030}" ShortID="294102004">
 							<PropertyList>
@@ -83,34 +83,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Set_Switch_Rear" ID="{623AD8AA-2DF5-4687-9076-BC1E0DBB924A}">
-					<ChildrenList>
-						<Action Name="" ID="{0172B571-19A2-4248-B8E5-686E9AA3B99B}" ShortID="435095238">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rear" ID="{DEC7F20F-E194-411E-967F-22E2988D51F1}" WorkUnitID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Set_Switch_Front" ID="{E6988C1E-A477-46C4-9C38-4237187A153F}">
-					<ChildrenList>
-						<Action Name="" ID="{3A710C12-CE1B-4A2D-8DBD-F75811422B4C}" ShortID="285104131">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Front" ID="{BA2F86B1-A1FE-43DA-93F9-55D25636CE5E}" WorkUnitID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Set_State_PauseOn" ID="{FE9AAD2F-4E10-42D2-B28F-4D5F69B6428E}">
 					<ChildrenList>
 						<Action Name="" ID="{62663251-2542-467F-B4A9-5A77547843F6}" ShortID="613768060">
@@ -148,16 +120,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="PauseOff" ID="{F3FFF631-358C-42F1-91CC-A14506B59F95}" WorkUnitID="{AB310595-1892-474C-895A-85064AA96686}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{75E813C1-5560-4899-8CC5-CE1AF6035311}" ShortID="492620464">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="23"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Front" ID="{BA2F86B1-A1FE-43DA-93F9-55D25636CE5E}" WorkUnitID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
