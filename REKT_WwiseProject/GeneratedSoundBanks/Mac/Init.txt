@@ -1,7 +1,19 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3030367241	ST_Car_View			\Default Work Unit\ST_Car_View	
+	4054796535	ST_Pause			\Default Work Unit\ST_Pause	
+
+State	ID	Name	State Group			Notes
+	0	None	ST_Car_View			
+	340398852	Indoor	ST_Car_View			
+	0	None	ST_Pause			
+	80751710	PauseOn	ST_Pause			
+	3921005316	PauseOff	ST_Pause			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	1117531639	Amb			\Default Work Unit\Master Audio Bus\Amb	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 

@@ -12,13 +12,52 @@
 					<ChildrenList>
 						<Bus Name="SFX" ID="{F2C33434-93C8-42F6-825F-E473E35C0017}">
 							<ChildrenList>
-								<AuxBus Name="Car" ID="{CBFF45EC-96DA-4F09-8CAC-0FD96C40132E}"/>
-								<AuxBus Name="Monsters" ID="{A868AC24-5C92-4605-9C89-628832A09C32}"/>
-								<AuxBus Name="Weapons" ID="{AFAB1BDA-932E-4D98-8B70-704EA0AB9378}"/>
+								<Bus Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}"/>
+								<Bus Name="Monsters" ID="{A55DA6C3-E438-442F-A539-52F5B239F657}"/>
+								<Bus Name="Weapons" ID="{F83D72EB-394B-4484-B693-98EB04E1A7AC}"/>
 							</ChildrenList>
 						</Bus>
-						<Bus Name="Amb" ID="{FF8C6886-DBC5-4306-9846-7DA221E03D1B}"/>
-						<Bus Name="Music" ID="{C33409A4-2045-4096-9C95-B664AF48A94F}"/>
+						<Bus Name="Amb" ID="{FF8C6886-DBC5-4306-9846-7DA221E03D1B}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Meter (Custom)" ID="{C7B924F3-8C8C-4B0D-8D62-96CBE43E77DA}" ShortID="250581872" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</Bus>
+						<Bus Name="Music" ID="{C33409A4-2045-4096-9C95-B664AF48A94F}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Meter (Custom)" ID="{FFAA25FE-BE07-42C2-88FB-47AB64F547BF}" ShortID="464945727" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ST_Pause" ID="{5E16841F-4300-4468-91D7-4BF23D8CE669}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="PauseOff" ID="{F3FFF631-358C-42F1-91CC-A14506B59F95}"/>
+										<State Name="" ID="{80E416C2-B955-4AF4-9622-50FACD59B331}" ShortID="767740082"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="PauseOn" ID="{B56A1929-C48D-45FF-B186-6FEFC1332FE0}"/>
+										<State Name="" ID="{9F828205-36BE-410F-9910-F3F88956A9DB}" ShortID="38229889">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="25"/>
+												<Property Name="Lowpass" Type="int16" Value="64"/>
+												<Property Name="Volume" Type="Real64" Value="-6"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</Bus>
 						<Bus Name="Reverb" ID="{CF384DF1-C2EE-4CE1-BF4A-E1CE9F2B01B8}">
 							<ChildrenList>
 								<AuxBus Name="Garage" ID="{AFE88607-79F7-47E5-AE70-4F8296CC3315}">
@@ -30,7 +69,30 @@
 								</AuxBus>
 							</ChildrenList>
 						</Bus>
+						<Bus Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}"/>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="ST_SlowMo" ID="{86937285-19E3-49BE-8540-C86099E757D1}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
+								<State Name="" ID="{BC87C555-2943-42D8-B596-879C8DBD5896}" ShortID="581992597">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="18"/>
+										<Property Name="Lowpass" Type="int16" Value="58"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}"/>
+								<State Name="" ID="{02778E16-EEAD-48CC-B68A-437455D61F79}" ShortID="556809338"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

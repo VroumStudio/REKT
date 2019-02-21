@@ -26,8 +26,8 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>1483.762</XPos>
-											<YPos>-5.05622</YPos>
+											<XPos>1656.17579</XPos>
+											<YPos>-0.42584</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
@@ -103,8 +103,8 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1427.771</XPos>
-											<YPos>30</YPos>
+											<XPos>2180.1221</XPos>
+											<YPos>19</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>InvertedSCurve</SegmentShape>
 										</Point>

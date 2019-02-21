@@ -1,6 +1,34 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2468732901	Play_Music_Garage			\Default Work Unit\Play_Music_Garage	
+	35730698	Play_SFX_Wpn_Gatling_Shoot			\Default Work Unit\Play_SFX_Wpn_Gatling_Shoot	
+	624714026	Play_UI_Weapons			\Default Work Unit\Play_UI_Weapons	
+	878452949	Play_UI_Equipment			\Default Work Unit\Play_UI_Equipment	
+	1472165566	Play_Music_BabyPark			\Default Work Unit\Play_Music_BabyPark	
+	1501458217	Play_Amb_BabyPark			\Default Work Unit\Play_Amb_BabyPark	
+	1569993949	Play_SFX_Trap_Mine_Explode			\Default Work Unit\Play_SFX_Trap_Mine_Explode	
+	1576113860	Play_SFX_Wpn_Gatling_Summon			\Default Work Unit\Play_SFX_Wpn_Gatling_Summon	
+	1868201586	Play_SFX_Wpn_FlameThrower_Summon			\Default Work Unit\Play_SFX_Wpn_FlameThrower_Summon	
+	2207983986	Play_Amb_Garage			\Default Work Unit\Play_Amb_Garage	
+	2468732901	Play_Music_Garage			\Default Work Unit\New Virtual Folder\Play_Music_Garage	
+	2883580317	Play_SFX_Monsters_Run			\Default Work Unit\Play_SFX_Monsters_Run	
+	3022734157	Play_UI_Confirm			\Default Work Unit\Play_UI_Confirm	
+	3362185276	Play_SFX_Wpn_FlameThrower_Shoot			\Default Work Unit\Play_SFX_Wpn_FlameThrower_Shoot	
+	3417507024	Play_SFX_Monsters_Die			\Default Work Unit\Play_SFX_Monsters_Die	
+	3624587671	Play_UI_Pause			\Default Work Unit\Play_UI_Pause	
+	3626629520	Play_UI_Movement			\Default Work Unit\Play_UI_Movement	
+	4185453606	Play_SFX_Trap_Mine_Trigger			\Default Work Unit\Play_SFX_Trap_Mine_Trigger	
+	4265925356	Play_SFX_Trap_Mine_Idle			\Default Work Unit\Play_SFX_Trap_Mine_Idle	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	942125961	MUSIC_GARAGE_DRY	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\WIP\MUSIC_GARAGE_DRY		8192068
+	22608017	Music_BabyPark_Intro	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Intro		6144068
+	90233645	UI_Equipment	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Equipment		240116
+	209010448	UI_Weapons	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTARMES_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Weapons		232656
+	246661573	UI_Movement	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTLEFTRIGHT_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Movement		4864
+	473618790	UI_Confirm	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTOK_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Confirm		14160
+	539231935	UI_Pause	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_PAUSE_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Pause		96064
+	942125961	Music_Garage	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_Garage		8192068
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	369924876	Amb_BabyPark	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181220_SDLF_REKT_AMB_GARAGE_8956FC97.wem	369924876.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark	
+	670022925	Amb_Garage	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem	670022925.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_Garage	
+	707811912	Music_BabyPark_Loop	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Boucle_8956FC97.wem	707811912.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Loop	
 

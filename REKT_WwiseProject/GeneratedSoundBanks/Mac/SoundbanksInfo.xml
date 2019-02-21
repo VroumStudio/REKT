@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>E:\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\GitHub\REKT\REKT_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\etudiant\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="369924876" Language="SFX">
+			<ShortName>20181220_SDLF_REKT_AMB_GARAGE.wav</ShortName>
+			<Path>SFX\20181220_SDLF_REKT_AMB_GARAGE_8956FC97.wem</Path>
+		</File>
+		<File Id="670022925" Language="SFX">
+			<ShortName>20181220_SDLF_REKT_AMB_COURSE.wav</ShortName>
+			<Path>SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
 		<SoundBank Id="1355168291" Language="SFX">
@@ -16,13 +25,78 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
-			<ShortName>Main</ShortName>
-			<Path>Main.bnk</Path>
+		<SoundBank Id="1831739045" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\SB_BabyPark</ObjectPath>
+			<ShortName>SB_BabyPark</ShortName>
+			<Path>SB_BabyPark.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3157003241" Name="Test" ObjectPath="\Events\Default Work Unit\Test"/>
+				<Event Id="1020321262" Name="Car_Engine" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Car_Engine"/>
+				<Event Id="941995915" Name="Nitro" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Nitro"/>
+				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Pause"/>
+				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Amb_BabyPark"/>
+				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\Play_Amb_Garage"/>
+				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
+				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Die"/>
+				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Run"/>
+				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Explode"/>
+				<Event Id="4265925356" Name="Play_SFX_Trap_Mine_Idle" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Idle"/>
+				<Event Id="4185453606" Name="Play_SFX_Trap_Mine_Trigger" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Trigger"/>
+				<Event Id="3362185276" Name="Play_SFX_Wpn_FlameThrower_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Shoot"/>
+				<Event Id="1868201586" Name="Play_SFX_Wpn_FlameThrower_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Summon"/>
+				<Event Id="35730698" Name="Play_SFX_Wpn_Gatling_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Shoot"/>
+				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Summon"/>
+				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Set_State_PauseOff"/>
+				<Event Id="2201148061" Name="Set_State_PauseOn" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Set_State_PauseOn"/>
+				<Event Id="152581" Name="StartLevelConfig" ObjectPath="\Events\Default Work Unit\New Virtual Folder\StartLevelConfig"/>
+				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Transmission"/>
 			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="369924876"/>
+				<File Id="670022925"/>
+			</ReferencedStreamedFiles>
+			<IncludedMemoryFiles>
+				<File Id="24285591" Language="SFX">
+					<ShortName>PH_SFX_Car_Nitro.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_Nitro_56D34C19.wem</Path>
+				</File>
+				<File Id="67882987" Language="SFX">
+					<ShortName>PH_SFX_Car_FuturLO_Loop.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_FuturLO_Loop_8956FC97.wem</Path>
+				</File>
+				<File Id="165497928" Language="SFX">
+					<ShortName>PH_SFX_Car_FuturHI_Loop.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_FuturHI_Loop_8956FC97.wem</Path>
+				</File>
+				<File Id="424078183" Language="SFX">
+					<ShortName>PH_SFX_Car_Transmission.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_Transmission_56D34C19.wem</Path>
+				</File>
+				<File Id="432180664" Language="SFX">
+					<ShortName>PH_SFX_Car_Idle_Loop.wav</ShortName>
+					<Path>SFX\PH_SFX_Car_Idle_Loop_8956FC97.wem</Path>
+				</File>
+				<File Id="942125961" Language="SFX">
+					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
+					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2062346256" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\SB_NeoOslo</ObjectPath>
+			<ShortName>SB_NeoOslo</ShortName>
+			<Path>SB_NeoOslo.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4272623862" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\SB_Garage</ObjectPath>
+			<ShortName>SB_Garage</ShortName>
+			<Path>SB_Garage.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\Play_Amb_Garage"/>
+				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
+			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="670022925"/>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>

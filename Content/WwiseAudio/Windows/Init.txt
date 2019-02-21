@@ -1,18 +1,27 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	3030367241	ST_Car_View			\Default Work Unit\ST_Car_View	
+	3557541768	ST_SlowMo			\Default Work Unit\ST_SlowMo	
 	4054796535	ST_Pause			\Default Work Unit\ST_Pause	
 
 State	ID	Name	State Group			Notes
 	0	None	ST_Car_View			
 	340398852	Indoor	ST_Car_View			
+	0	None	ST_SlowMo			
+	3042819342	ST_Normal	ST_SlowMo			
+	3557541768	ST_SlowMo	ST_SlowMo			
 	0	None	ST_Pause			
 	80751710	PauseOn	ST_Pause			
 	3921005316	PauseOff	ST_Pause			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	38229889	PauseOn	ST_Pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
+	581992597	ST_SlowMo	ST_SlowMo	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	1117531639	Amb			\Default Work Unit\Master Audio Bus\Amb	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
@@ -23,6 +32,8 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	3858746980	Monsters			\Default Work Unit\Master Audio Bus\SFX\Monsters	
 
 Effect plug-ins	ID	Name	Type				Notes
+	250581872	Wwise Meter (Custom)	Wwise Meter			
+	464945727	Wwise Meter (Custom)	Wwise Meter			
 	3900114836	Metal_Hangar	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2207983986	Play_Amb_Garage			\Default Work Unit\Play_Amb_Garage	
+	2468732901	Play_Music_Garage			\Default Work Unit\New Virtual Folder\Play_Music_Garage	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	942125961	MUSIC_GARAGE_DRY	E:\GitHub\REKT\REKT_WwiseProject\.cache\Mac\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_GARAGE_DRY		8192068
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	670022925	Amb_Garage	E:\GitHub\REKT\REKT_WwiseProject\.cache\Mac\SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem	670022925.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_Garage	
+
