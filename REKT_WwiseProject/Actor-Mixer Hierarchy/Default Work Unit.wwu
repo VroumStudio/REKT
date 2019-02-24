@@ -34,20 +34,16 @@
 									<Language>SFX</Language>
 									<AudioFile>20181220_SDLF_REKT_AMB_COURSE.wav</AudioFile>
 								</AudioFileSource>
+								<AudioFileSource Name="AMB_GARAGE" ID="{A9C03A5D-D084-4597-8FC8-654E8C34EA05}" ShortID="177033170">
+									<Language>SFX</Language>
+									<AudioFile>AMB_GARAGE.wav</AudioFile>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="20181220_SDLF_REKT_AMB_COURSE" ID="{599C6368-90BA-48C9-B948-22BEF8E368AA}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Amb_BabyPark" ID="{90A40BFA-9AB0-4639-9968-D92267C5786D}" ShortID="873875215">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="IsStreamingEnabled" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<BlendContainer Name="Amb_BabyPark_Police" ID="{86F327DB-215F-4E9F-B5CC-3E1F2A8749FD}" ShortID="663322785">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -57,13 +53,119 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="20181220_SDLF_REKT_AMB_GARAGE" ID="{C1F48BCF-6D28-49DE-8500-5BE914D461F3}" ShortID="369924876">
+								<Sound Name="Amb_Babypark_Police_Dry" ID="{645110FE-6033-45DB-9B31-A8E103F14448}" ShortID="464761180">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Police_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_Babypark_Police_Dry" ID="{9EE81322-BDB1-48E0-A536-A2F8627A29B1}" ShortID="89081979">
+											<Language>SFX</Language>
+											<AudioFile>Amb_Babypark_Police_Dry.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{1E865483-917F-499A-893A-358470F2350E}">
+											<PropertyList>
+												<Property Name="PanX" Type="Real64" Value="75.1004016064257"/>
+												<Property Name="PanY" Type="Real64" Value="0.425531914893622"/>
+											</PropertyList>
+										</Panner>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_Babypark_Police_Dry" ID="{9EE81322-BDB1-48E0-A536-A2F8627A29B1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Amb_Babypark_Police_Wet" ID="{FA9DAEE4-B2D2-4F31-9656-167BEBAF4FB0}" ShortID="26725358">
+									<PropertyList>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Police_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_Babypark_Police_Wet" ID="{3E7AD180-7022-46AA-90BD-ACA8B0F4CF4D}" ShortID="829940235">
+											<Language>SFX</Language>
+											<AudioFile>Amb_Babypark_Police_Wet.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_Babypark_Police_Wet" ID="{3E7AD180-7022-46AA-90BD-ACA8B0F4CF4D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<Sound Name="Amb_BabyPark" ID="{E00F9E0C-AA0D-48F0-BA85-6DE1BAA93F4D}" ShortID="1043205816">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Amb" ID="{FF8C6886-DBC5-4306-9846-7DA221E03D1B}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB_GARAGE" ID="{82429159-4A26-4BBC-8E3E-31FB24C8F0F3}" ShortID="647363192">
 									<Language>SFX</Language>
-									<AudioFile>20181220_SDLF_REKT_AMB_GARAGE.wav</AudioFile>
+									<AudioFile>AMB_GARAGE.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="20181220_SDLF_REKT_AMB_GARAGE" ID="{C1F48BCF-6D28-49DE-8500-5BE914D461F3}" Platform="Linked"/>
+								<ActiveSource Name="AMB_GARAGE" ID="{82429159-4A26-4BBC-8E3E-31FB24C8F0F3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -254,6 +356,7 @@
 												<Sound Name="PH_SFX_Car_Idle_Loop" ID="{06806B6A-9A0B-4571-A4DD-B3FB7446C4C7}" ShortID="700421450">
 													<PropertyList>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="OverrideEffect" Type="bool" Value="True"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>-2</Value>
@@ -744,6 +847,33 @@
 										</GroupingBehaviorList>
 									</GroupingInfo>
 								</SwitchContainer>
+								<Sound Name="SFX_Drift" ID="{8C1E3FA5-8D5F-46F9-8FAA-8082EA10223D}" ShortID="556252956">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Drift" ID="{96A57E9E-9CCF-4CDF-B618-9DF5733B610D}" ShortID="198857015">
+											<Language>SFX</Language>
+											<AudioFile>SFX_Drift.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Drift" ID="{96A57E9E-9CCF-4CDF-B618-9DF5733B610D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="SFX_Monsters" ID="{E56422FB-7829-4134-8D18-E859E7C4678B}" ShortID="289724215">
@@ -866,7 +996,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -885,7 +1015,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -904,7 +1034,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -923,7 +1053,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -942,7 +1072,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -953,6 +1083,25 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="AMB_COURSE_SELECTOK" ID="{783275CD-5A08-430B-9EB3-C756ED5514A9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Babypark_Checkpoint" ID="{3DC56180-82D3-4A65-A37C-99D92AE1BE12}" ShortID="136573787">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Babypark_Checkpoint" ID="{0579A89A-0D95-4C8C-A5C9-9E4A8E0EE92B}" ShortID="247985915">
+									<Language>SFX</Language>
+									<AudioFile>UI_Babypark_Checkpoint.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Babypark_Checkpoint" ID="{0579A89A-0D95-4C8C-A5C9-9E4A8E0EE92B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

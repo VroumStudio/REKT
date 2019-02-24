@@ -12,6 +12,12 @@
 								<Property Name="Min" Type="Real64" Value="900"/>
 							</PropertyList>
 						</GameParameter>
+						<GameParameter Name="RTPC_Speed" ID="{1798CA33-1860-49BA-9C41-6EF9FB1DBBBB}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="90"/>
+							</PropertyList>
+						</GameParameter>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

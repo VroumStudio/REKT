@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="89">
-	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1550768110" DateHigh="0"/>
-	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1550708457" DateHigh="0"/>
+	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1550942994" DateHigh="0"/>
+	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1550921928" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
@@ -9,20 +9,20 @@
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Effects\Factory Effects.wwu" DateLow="1548454826" DateHigh="0"/>
-	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Events\Default Work Unit.wwu" DateLow="1550769566" DateHigh="0"/>
-	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
+	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Events\Default Work Unit.wwu" DateLow="1550942994" DateHigh="0"/>
+	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1550853795" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
-	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1550769657" DateHigh="0"/>
+	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1550933881" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Queries\Factory Queries.wwu" DateLow="1548454826" DateHigh="0"/>
-	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\REKT_WwiseProject.Antonin MINGAM.wsettings" DateLow="1550770375" DateHigh="0"/>
+	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\REKT_WwiseProject.Antonin MINGAM.wsettings" DateLow="1550939317" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\REKT_WwiseProject.wproj" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1550768985" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1550705010" DateHigh="0"/>
-	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\States\Default Work Unit.wwu" DateLow="1550769657" DateHigh="0"/>
+	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\States\Default Work Unit.wwu" DateLow="1550933881" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1550680809" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>
 	<ValidationCacheItem File="E:\GitHub\REKT\REKT_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1548454826" DateHigh="0"/>

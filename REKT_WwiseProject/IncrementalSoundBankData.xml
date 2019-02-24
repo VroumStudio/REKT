@@ -3,15 +3,15 @@
 	<Platform GUID="{8AF17D77-59C1-42B2-8C0A-81007E8A4D14}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="440580307" Timestamp="1550769683"/>
-				<File Name="SB_BabyPark" Hash="2673964807" Timestamp="1550769683"/>
-				<File Name="SB_Garage" Hash="280874818" Timestamp="1550768995"/>
-				<File Name="SB_NeoOslo" Hash="3162858078" Timestamp="1550769683"/>
+				<File Name="Init" Hash="1171636960" Timestamp="1550933917"/>
+				<File Name="SB_BabyPark" Hash="2633813271" Timestamp="1550943006"/>
+				<File Name="SB_Garage" Hash="585190161" Timestamp="1550943006"/>
+				<File Name="SB_NeoOslo" Hash="1326131818" Timestamp="1550943006"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3589951399" Timestamp="1550769683"/>
+				<File Name="" Hash="434050547" Timestamp="1550943006"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

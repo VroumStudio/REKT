@@ -20,11 +20,23 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="ST_SlowMo" ID="{86937285-19E3-49BE-8540-C86099E757D1}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{E3E741B3-24C6-4241-8F9F-7149AC9EB500}"/>
 						<State Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
 						<State Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}"/>
+						<State Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
+							<EndState Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

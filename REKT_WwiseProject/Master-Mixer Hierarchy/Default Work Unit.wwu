@@ -2,6 +2,9 @@
 <WwiseDocument Type="WorkUnit" ID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}" SchemaVersion="89">
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="1"/>
+			</PropertyList>
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<ReferenceList>
@@ -12,10 +15,60 @@
 					<ChildrenList>
 						<Bus Name="SFX" ID="{F2C33434-93C8-42F6-825F-E473E35C0017}">
 							<ChildrenList>
-								<Bus Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}"/>
+								<Bus Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}">
+									<PropertyList>
+										<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
 								<Bus Name="Monsters" ID="{A55DA6C3-E438-442F-A539-52F5B239F657}"/>
 								<Bus Name="Weapons" ID="{F83D72EB-394B-4484-B693-98EB04E1A7AC}"/>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ST_Pause" ID="{5E16841F-4300-4468-91D7-4BF23D8CE669}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="ST_SlowMo" ID="{86937285-19E3-49BE-8540-C86099E757D1}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="PauseOff" ID="{F3FFF631-358C-42F1-91CC-A14506B59F95}"/>
+										<State Name="" ID="{BDF7396C-A9F3-4D20-9F26-9FCE53A4BD48}" ShortID="37316898"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
+										<State Name="" ID="{063607EF-1CED-4035-8ECC-562449E7A877}" ShortID="994436243">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="18"/>
+												<Property Name="Lowpass" Type="int16" Value="58"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="PauseOn" ID="{B56A1929-C48D-45FF-B186-6FEFC1332FE0}"/>
+										<State Name="" ID="{1501EDF1-1E4D-4581-A02F-D435B7504CD6}" ShortID="893339675">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}"/>
+										<State Name="" ID="{4809BEC8-6A79-443D-8893-FFC00A7F6208}" ShortID="1038433579"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}"/>
+										<State Name="" ID="{BAEE7938-D29E-4968-BC3A-4BB9B3318C56}" ShortID="821891409"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</Bus>
 						<Bus Name="Amb" ID="{FF8C6886-DBC5-4306-9846-7DA221E03D1B}">
 							<ReferenceList>
@@ -25,8 +78,41 @@
 									</Custom>
 								</Reference>
 							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ST_SlowMo" ID="{86937285-19E3-49BE-8540-C86099E757D1}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
+										<State Name="" ID="{356876FE-7779-4D67-A5ED-32FCF2DBFBBD}" ShortID="729137948">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="18"/>
+												<Property Name="Lowpass" Type="int16" Value="58"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}"/>
+										<State Name="" ID="{EC2D4B7E-217D-4325-B1F7-C495AD502EDF}" ShortID="907863106"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}"/>
+										<State Name="" ID="{D9693FF2-0433-4D18-A634-723E5CFE3B8C}" ShortID="991940123"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</Bus>
 						<Bus Name="Music" ID="{C33409A4-2045-4096-9C95-B664AF48A94F}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Effect0">
 									<Custom>
@@ -39,11 +125,23 @@
 									<StateGroupInfo>
 										<StateGroupRef Name="ST_Pause" ID="{5E16841F-4300-4468-91D7-4BF23D8CE669}"/>
 									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="ST_SlowMo" ID="{86937285-19E3-49BE-8540-C86099E757D1}"/>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
 										<StateRef Name="PauseOff" ID="{F3FFF631-358C-42F1-91CC-A14506B59F95}"/>
 										<State Name="" ID="{80E416C2-B955-4AF4-9622-50FACD59B331}" ShortID="767740082"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
+										<State Name="" ID="{99E1790C-ED39-4B6A-8E5E-5E520AA99690}" ShortID="223007376">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="18"/>
+												<Property Name="Lowpass" Type="int16" Value="58"/>
+											</PropertyList>
+										</State>
 									</CustomState>
 									<CustomState>
 										<StateRef Name="PauseOn" ID="{B56A1929-C48D-45FF-B186-6FEFC1332FE0}"/>
@@ -54,6 +152,14 @@
 												<Property Name="Volume" Type="Real64" Value="-6"/>
 											</PropertyList>
 										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}"/>
+										<State Name="" ID="{ED697455-33E1-41DB-89FD-645D5BFCF2A1}" ShortID="541819491"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}"/>
+										<State Name="" ID="{AD16241C-D03E-4E4D-9F75-D8527FCE74F4}" ShortID="731596328"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -69,30 +175,30 @@
 								</AuxBus>
 							</ChildrenList>
 						</Bus>
-						<Bus Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}"/>
+						<Bus Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ST_SlowMo" ID="{86937285-19E3-49BE-8540-C86099E757D1}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
+										<State Name="" ID="{0C711905-3CAD-414F-85C5-11AAC4B16056}" ShortID="389583270"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}"/>
+										<State Name="" ID="{94D9E977-6DEB-48C6-8668-AD3C738DB8DF}" ShortID="480380174"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}"/>
+										<State Name="" ID="{CF7CA33C-AB39-4ED1-BA88-F0D6D15BAA2C}" ShortID="269533156"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</Bus>
 					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="ST_SlowMo" ID="{86937285-19E3-49BE-8540-C86099E757D1}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
-								<State Name="" ID="{BC87C555-2943-42D8-B596-879C8DBD5896}" ShortID="581992597">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16" Value="18"/>
-										<Property Name="Lowpass" Type="int16" Value="58"/>
-									</PropertyList>
-								</State>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}"/>
-								<State Name="" ID="{02778E16-EEAD-48CC-B68A-437455D61F79}" ShortID="556809338"/>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

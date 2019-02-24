@@ -287,7 +287,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Amb_BabyPark" ID="{90A40BFA-9AB0-4639-9968-D92267C5786D}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+									<ObjectRef Name="Amb_BabyPark" ID="{E00F9E0C-AA0D-48F0-BA85-6DE1BAA93F4D}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -400,6 +400,73 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}" WorkUnitID="{AB310595-1892-474C-895A-85064AA96686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Amb_Babypark_Police_Dry" ID="{2FE7F7AB-67A6-4D97-A925-E0BBCE3CF8EE}">
+					<ChildrenList>
+						<Action Name="" ID="{9A804DF1-0266-4BAE-B8AA-C883DE84C05C}" ShortID="468133578">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb_Babypark_Police_Dry" ID="{645110FE-6033-45DB-9B31-A8E103F14448}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Amb_Babypark_Police_Wet" ID="{111BC744-7FC0-47FD-B19D-44120A300418}">
+					<ChildrenList>
+						<Action Name="" ID="{256D84F5-EFA4-4F0B-B0D2-28C05DA1050C}" ShortID="942797652">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb_Babypark_Police_Wet" ID="{FA9DAEE4-B2D2-4F31-9656-167BEBAF4FB0}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_ST_Build" ID="{DD2DD0E6-E1E1-4451-A462-97124AD2254E}">
+					<ChildrenList>
+						<Action Name="" ID="{3EB692B6-940D-4FD9-8692-F2B6938A0146}" ShortID="751151674">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}" WorkUnitID="{AB310595-1892-474C-895A-85064AA96686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3E65FC28-2DC9-43D9-884A-10BC92625C55}" ShortID="440134198">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Delay" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_Normal" ID="{8243FAB9-4A1F-4B28-80ED-7B00A8C1B2AD}" WorkUnitID="{AB310595-1892-474C-895A-85064AA96686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Babypark_Checkpoint" ID="{A7E6AEAB-4066-46C3-A24D-840EDEE742FE}">
+					<ChildrenList>
+						<Action Name="" ID="{E35128F5-DA3E-4097-B717-465891DC92B1}" ShortID="1033659450">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Babypark_Checkpoint" ID="{3DC56180-82D3-4A65-A37C-99D92AE1BE12}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
