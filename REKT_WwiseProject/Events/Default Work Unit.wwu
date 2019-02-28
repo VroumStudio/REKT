@@ -472,6 +472,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_SFX_Car_Drift" ID="{72284702-B79F-4D9E-931D-1D7BAB1E4594}">
+					<ChildrenList>
+						<Action Name="" ID="{35747460-F5D5-4E60-B19C-97A88F286025}" ShortID="392319199">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Car_Drift" ID="{E2792444-AF8C-443D-AD2E-9015824BD8B4}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_SFX_Car_Drift" ID="{DC7C814B-F349-43EE-AD9C-4E9A9EB1BAA3}">
+					<ChildrenList>
+						<Action Name="" ID="{65591542-530D-4E2E-B9F8-A7CC3A2415D5}" ShortID="249630342">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Car_Drift" ID="{E2792444-AF8C-443D-AD2E-9015824BD8B4}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Car_Drift_Start" ID="{27F4C281-AA51-4F77-B0FB-E31D4BC63EFA}">
+					<ChildrenList>
+						<Action Name="" ID="{E2E5EF62-F4CE-427B-9036-6D47E5086881}" ShortID="835782322">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Car_Drift_Start" ID="{FD1720D5-5EC6-40E5-AF87-BD726C79413B}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

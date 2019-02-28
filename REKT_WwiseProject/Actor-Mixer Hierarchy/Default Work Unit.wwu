@@ -847,12 +847,18 @@
 										</GroupingBehaviorList>
 									</GroupingInfo>
 								</SwitchContainer>
-								<Sound Name="SFX_Drift" ID="{8C1E3FA5-8D5F-46F9-8FAA-8082EA10223D}" ShortID="556252956">
+								<BlendContainer Name="SFX_Car_Drift" ID="{E2792444-AF8C-443D-AD2E-9015824BD8B4}" ShortID="158340214">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="IsStreamingEnabled" Type="bool">
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F1B6355A-B568-419C-9504-5BFF4DCBB395}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>True</Value>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -865,15 +871,452 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="SFX_Drift" ID="{96A57E9E-9CCF-4CDF-B618-9DF5733B610D}" ShortID="198857015">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Drift.wav</AudioFile>
-										</AudioFileSource>
+										<RandomSequenceContainer Name="SFX_Car_Drift_Start" ID="{FD1720D5-5EC6-40E5-AF87-BD726C79413B}" ShortID="380942317">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{434E80EC-6981-4C57-8DB9-0D9D1E769800}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.02"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Car_Tire_Drift_Start" ID="{6DFA6133-1D0B-48F4-BCD7-93B06C255C67}" ShortID="165177190">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Start" ID="{87405D9A-96F5-4100-B0F7-A30E544AC511}" ShortID="984508822">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Start.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Start" ID="{87405D9A-96F5-4100-B0F7-A30E544AC511}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Start-01" ID="{A0697F3D-4FBB-4485-A3C5-06299318F696}" ShortID="636069553">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Start-01" ID="{9F6409D5-06ED-4D78-BB5E-49165ED37DFE}" ShortID="746364561">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Start-01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Start-01" ID="{9F6409D5-06ED-4D78-BB5E-49165ED37DFE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Start-04" ID="{094F8650-EC10-4223-82DA-9B7A5A8620C8}" ShortID="405901849">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Start-04" ID="{9A8B9D05-8611-480D-9D91-6A05EE87B37B}" ShortID="1026971028">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Start-04.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Start-04" ID="{9A8B9D05-8611-480D-9D91-6A05EE87B37B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Start-05" ID="{B5EB7801-372A-4322-A146-E8AA25668ECB}" ShortID="544981926">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Start-05" ID="{D0685870-B927-49C0-8979-20A96AF7B7BF}" ShortID="984893858">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Start-05.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Start-05" ID="{D0685870-B927-49C0-8979-20A96AF7B7BF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="SFX_Car_Drift_Loop" ID="{9EAF53A9-7E52-43AC-BC12-8368D6C93DB1}" ShortID="121589917">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FB0B4C29-73E3-450A-BA50-346BBC549874}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.03"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+													<RTPCList>
+														<RTPC Name="" ID="{0C6FEF29-C086-4111-8839-5F55F3B9D560}" ShortID="161471243">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<Custom>
+																		<ModulatorTime Name="Modulator Time (Custom)" ID="{A3DE5B8E-B546-4115-901B-312C781B8FF9}" ShortID="837975695">
+																			<PropertyList>
+																				<Property Name="EnvelopeStopPlayback" Type="bool" Value="False"/>
+																			</PropertyList>
+																		</ModulatorTime>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{03FDF5B7-B522-4561-A84D-713FA9F635A8}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.09576</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Car_Tire_Drift_Loop" ID="{9EB293DF-775E-4325-85E9-4C924C6E0EE1}" ShortID="216912571">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop" ID="{1C73A490-632F-4E44-B5AF-70110108EB84}" ShortID="357915156">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop" ID="{1C73A490-632F-4E44-B5AF-70110108EB84}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-01" ID="{6F05F0CB-F0DD-4079-B907-3D8074041518}" ShortID="600919420">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-01" ID="{82914C74-DCA5-4EC2-9DEC-DF1A5A2F6306}" ShortID="151755535">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-01" ID="{82914C74-DCA5-4EC2-9DEC-DF1A5A2F6306}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-02" ID="{5A156D82-370B-415F-8049-C2933AC00553}" ShortID="4997247">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-02" ID="{305BF0D4-7636-4159-BDBF-8DE279CBBD15}" ShortID="328045296">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-02" ID="{305BF0D4-7636-4159-BDBF-8DE279CBBD15}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-03" ID="{15CF1D49-CD48-4F45-8E8E-2C8A1B606EE9}" ShortID="770599085">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-03" ID="{6B19A70C-960D-478F-B556-6D5408E6035E}" ShortID="338627591">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-03.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-03" ID="{6B19A70C-960D-478F-B556-6D5408E6035E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-04" ID="{1FE3CF0A-D653-4CF0-8F84-019D82B3C0C0}" ShortID="73503235">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-04" ID="{F58484EF-2645-4BFF-9FAB-21AEB0DC7DE7}" ShortID="894102337">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-04.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-04" ID="{F58484EF-2645-4BFF-9FAB-21AEB0DC7DE7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-07" ID="{DE27C505-72AA-46D1-9D25-7C824D0DC817}" ShortID="202338558">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-07" ID="{D5D4DFF1-16B7-4C4A-81C1-55C711EFB1BA}" ShortID="673637251">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-07.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-07" ID="{D5D4DFF1-16B7-4C4A-81C1-55C711EFB1BA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-08" ID="{0446A011-2615-461B-BFAF-1E29A5330E4F}" ShortID="972956346">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-08" ID="{F5D36E87-A2FC-472E-89C3-79A1F6357DAE}" ShortID="1065341630">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-08.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-08" ID="{F5D36E87-A2FC-472E-89C3-79A1F6357DAE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-09" ID="{DCB2EC5E-8A1C-43DD-A084-A2A4EC3531ED}" ShortID="346068788">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-09" ID="{BC35532E-063A-4212-8DAF-3CEFCD1C9DCE}" ShortID="138180119">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-09.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-09" ID="{BC35532E-063A-4212-8DAF-3CEFCD1C9DCE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-10" ID="{20714199-BF91-44C5-9A74-137CB92E49D5}" ShortID="48785696">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-10" ID="{2588C00E-7CA2-49A9-89BC-F7C266FAE5C8}" ShortID="188807683">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-10.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-10" ID="{2588C00E-7CA2-49A9-89BC-F7C266FAE5C8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-11" ID="{8FAD272C-755A-4F65-80F4-9569ED4CD141}" ShortID="591073027">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-11" ID="{F11BCF3A-8B76-4CD8-A842-2A21867608D5}" ShortID="415854430">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-11.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-11" ID="{F11BCF3A-8B76-4CD8-A842-2A21867608D5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-12" ID="{354B0C41-D903-4531-9579-58E8FDF7C4DD}" ShortID="482653890">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-12" ID="{3DFEEE09-325F-43B2-BA8F-E9B71324559C}" ShortID="674923998">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-12.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-12" ID="{3DFEEE09-325F-43B2-BA8F-E9B71324559C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-13" ID="{48982429-5B06-4623-984D-C1F613A359D3}" ShortID="873901029">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-13" ID="{8D22A72D-653C-4F5E-A1CE-60F08032B0E4}" ShortID="337410547">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-13.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-13" ID="{8D22A72D-653C-4F5E-A1CE-60F08032B0E4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-14" ID="{C11A93AB-DCFF-4FBA-815C-37C23D0AB8F0}" ShortID="37483617">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-14" ID="{A092CBB7-4083-4B2D-9453-52651C484B22}" ShortID="926201035">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-14.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-14" ID="{A092CBB7-4083-4B2D-9453-52651C484B22}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-15" ID="{F487AC5A-722C-4F7B-BE14-07F4A47A774E}" ShortID="803784346">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-15" ID="{CB7EE177-7CFA-4355-ADC1-5646DCC47FEE}" ShortID="357001961">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-15.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-15" ID="{CB7EE177-7CFA-4355-ADC1-5646DCC47FEE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Drift" ID="{96A57E9E-9CCF-4CDF-B618-9DF5733B610D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="SFX_Monsters" ID="{E56422FB-7829-4134-8D18-E859E7C4678B}" ShortID="289724215">

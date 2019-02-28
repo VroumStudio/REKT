@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Users\etudiant\Documents\GitHub\REKT_Perso\Content\WwiseAudio\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -47,6 +47,8 @@
 				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\Play_Amb_Garage"/>
 				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
+				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift"/>
+				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift_Start"/>
 				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Die"/>
 				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Run"/>
 				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Explode"/>
@@ -68,6 +70,7 @@
 				<Event Id="3091697021" Name="Set_State_ST_Normal" ObjectPath="\Events\Default Work Unit\Set_State_ST_Normal"/>
 				<Event Id="434512859" Name="Set_State_ST_SlowMo" ObjectPath="\Events\Default Work Unit\Set_State_ST_SlowMo"/>
 				<Event Id="152581" Name="StartLevelConfig" ObjectPath="\Events\Default Work Unit\New Virtual Folder\StartLevelConfig"/>
+				<Event Id="3237579210" Name="Stop_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Stop_SFX_Car_Drift"/>
 				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Transmission"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
@@ -93,9 +96,21 @@
 					<ShortName>AMB_COURSE_SELECTEQUIP.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem</Path>
 				</File>
+				<File Id="138180119" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-09.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-09_56D34C19.wem</Path>
+				</File>
+				<File Id="151755535" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-01.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-01_56D34C19.wem</Path>
+				</File>
 				<File Id="165497928" Language="SFX">
 					<ShortName>PH_SFX_Car_FuturHI_Loop.wav</ShortName>
 					<Path>SFX\PH_SFX_Car_FuturHI_Loop_8956FC97.wem</Path>
+				</File>
+				<File Id="188807683" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-10.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-10_56D34C19.wem</Path>
 				</File>
 				<File Id="209010448" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTARMES.wav</ShortName>
@@ -108,6 +123,30 @@
 				<File Id="247985915" Language="SFX">
 					<ShortName>UI_Babypark_Checkpoint.wav</ShortName>
 					<Path>SFX\UI_Babypark_Checkpoint_56D34C19.wem</Path>
+				</File>
+				<File Id="328045296" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-02.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-02_56D34C19.wem</Path>
+				</File>
+				<File Id="337410547" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-13.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-13_56D34C19.wem</Path>
+				</File>
+				<File Id="338627591" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-03.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-03_56D34C19.wem</Path>
+				</File>
+				<File Id="357001961" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-15.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-15_56D34C19.wem</Path>
+				</File>
+				<File Id="357915156" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop_56D34C19.wem</Path>
+				</File>
+				<File Id="415854430" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-11.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-11_56D34C19.wem</Path>
 				</File>
 				<File Id="424078183" Language="SFX">
 					<ShortName>PH_SFX_Car_Transmission.wav</ShortName>
@@ -129,9 +168,45 @@
 					<ShortName>AMB_GARAGE.wav</ShortName>
 					<Path>SFX\AMB_GARAGE_56D34C19.wem</Path>
 				</File>
+				<File Id="673637251" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-07.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-07_56D34C19.wem</Path>
+				</File>
+				<File Id="674923998" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-12.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-12_56D34C19.wem</Path>
+				</File>
+				<File Id="746364561" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start-01.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem</Path>
+				</File>
+				<File Id="894102337" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-04.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-04_56D34C19.wem</Path>
+				</File>
+				<File Id="926201035" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-14.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem</Path>
+				</File>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
 					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
+				</File>
+				<File Id="984508822" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start_56D34C19.wem</Path>
+				</File>
+				<File Id="984893858" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start-05.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start-05_56D34C19.wem</Path>
+				</File>
+				<File Id="1026971028" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start-04.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start-04_56D34C19.wem</Path>
+				</File>
+				<File Id="1065341630" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-08.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-08_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -149,6 +224,8 @@
 				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\Play_Amb_Garage"/>
 				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
+				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift"/>
+				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift_Start"/>
 				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Die"/>
 				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Run"/>
 				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Explode"/>
@@ -170,6 +247,7 @@
 				<Event Id="3091697021" Name="Set_State_ST_Normal" ObjectPath="\Events\Default Work Unit\Set_State_ST_Normal"/>
 				<Event Id="434512859" Name="Set_State_ST_SlowMo" ObjectPath="\Events\Default Work Unit\Set_State_ST_SlowMo"/>
 				<Event Id="152581" Name="StartLevelConfig" ObjectPath="\Events\Default Work Unit\New Virtual Folder\StartLevelConfig"/>
+				<Event Id="3237579210" Name="Stop_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Stop_SFX_Car_Drift"/>
 				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Transmission"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
@@ -195,9 +273,21 @@
 					<ShortName>AMB_COURSE_SELECTEQUIP.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem</Path>
 				</File>
+				<File Id="138180119" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-09.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-09_56D34C19.wem</Path>
+				</File>
+				<File Id="151755535" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-01.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-01_56D34C19.wem</Path>
+				</File>
 				<File Id="165497928" Language="SFX">
 					<ShortName>PH_SFX_Car_FuturHI_Loop.wav</ShortName>
 					<Path>SFX\PH_SFX_Car_FuturHI_Loop_8956FC97.wem</Path>
+				</File>
+				<File Id="188807683" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-10.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-10_56D34C19.wem</Path>
 				</File>
 				<File Id="209010448" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTARMES.wav</ShortName>
@@ -210,6 +300,30 @@
 				<File Id="247985915" Language="SFX">
 					<ShortName>UI_Babypark_Checkpoint.wav</ShortName>
 					<Path>SFX\UI_Babypark_Checkpoint_56D34C19.wem</Path>
+				</File>
+				<File Id="328045296" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-02.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-02_56D34C19.wem</Path>
+				</File>
+				<File Id="337410547" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-13.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-13_56D34C19.wem</Path>
+				</File>
+				<File Id="338627591" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-03.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-03_56D34C19.wem</Path>
+				</File>
+				<File Id="357001961" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-15.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-15_56D34C19.wem</Path>
+				</File>
+				<File Id="357915156" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop_56D34C19.wem</Path>
+				</File>
+				<File Id="415854430" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-11.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-11_56D34C19.wem</Path>
 				</File>
 				<File Id="424078183" Language="SFX">
 					<ShortName>PH_SFX_Car_Transmission.wav</ShortName>
@@ -231,9 +345,45 @@
 					<ShortName>AMB_GARAGE.wav</ShortName>
 					<Path>SFX\AMB_GARAGE_56D34C19.wem</Path>
 				</File>
+				<File Id="673637251" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-07.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-07_56D34C19.wem</Path>
+				</File>
+				<File Id="674923998" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-12.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-12_56D34C19.wem</Path>
+				</File>
+				<File Id="746364561" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start-01.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem</Path>
+				</File>
+				<File Id="894102337" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-04.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-04_56D34C19.wem</Path>
+				</File>
+				<File Id="926201035" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-14.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem</Path>
+				</File>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
 					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
+				</File>
+				<File Id="984508822" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start_56D34C19.wem</Path>
+				</File>
+				<File Id="984893858" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start-05.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start-05_56D34C19.wem</Path>
+				</File>
+				<File Id="1026971028" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Start-04.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Start-04_56D34C19.wem</Path>
+				</File>
+				<File Id="1065341630" Language="SFX">
+					<ShortName>SFX_Car_Tire_Drift_Loop-08.wav</ShortName>
+					<Path>SFX\SFX_Car_Tire_Drift_Loop-08_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
