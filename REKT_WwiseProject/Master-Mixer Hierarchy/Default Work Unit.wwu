@@ -138,8 +138,8 @@
 										<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
 										<State Name="" ID="{99E1790C-ED39-4B6A-8E5E-5E520AA99690}" ShortID="223007376">
 											<PropertyList>
-												<Property Name="Highpass" Type="int16" Value="18"/>
-												<Property Name="Lowpass" Type="int16" Value="58"/>
+												<Property Name="Highpass" Type="int16" Value="25"/>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
 											</PropertyList>
 										</State>
 									</CustomState>
@@ -148,7 +148,7 @@
 										<State Name="" ID="{9F828205-36BE-410F-9910-F3F88956A9DB}" ShortID="38229889">
 											<PropertyList>
 												<Property Name="Highpass" Type="int16" Value="25"/>
-												<Property Name="Lowpass" Type="int16" Value="64"/>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
 												<Property Name="Volume" Type="Real64" Value="-6"/>
 											</PropertyList>
 										</State>
@@ -194,6 +194,25 @@
 									<CustomState>
 										<StateRef Name="ST_Build" ID="{51F89DEE-BB91-4E43-B001-3ED40C8AC945}"/>
 										<State Name="" ID="{CF7CA33C-AB39-4ED1-BA88-F0D6D15BAA2C}" ShortID="269533156"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</Bus>
+						<Bus Name="Car_Inside" ID="{81DE80F6-D32F-4DA7-8238-D04383106ECE}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ST_Car_View" ID="{86CB3158-B700-4E8D-A619-8E892186E46E}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Indoor" ID="{05A30E51-F9C7-4A7B-9BE9-3BB33F3240B7}"/>
+										<State Name="" ID="{CD45ABB2-0F2D-47F7-BE88-1B5C2E4D45B1}" ShortID="423184195"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal" ID="{B33DA4C5-4112-4B66-B094-014ADC2A7974}"/>
+										<State Name="" ID="{85CAB8C5-3BC0-49AB-9EAF-B977372D7748}" ShortID="201277844"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>

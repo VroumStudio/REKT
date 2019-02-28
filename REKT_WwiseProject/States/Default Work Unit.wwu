@@ -7,6 +7,7 @@
 					<ChildrenList>
 						<State Name="None" ID="{858B8D83-9F0F-4B0B-8786-C1DB7B5C6D6A}"/>
 						<State Name="Indoor" ID="{05A30E51-F9C7-4A7B-9BE9-3BB33F3240B7}"/>
+						<State Name="Normal" ID="{B33DA4C5-4112-4B66-B094-014ADC2A7974}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="ST_Pause" ID="{5E16841F-4300-4468-91D7-4BF23D8CE669}">

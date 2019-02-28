@@ -6,6 +6,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 State	ID	Name	State Group			Notes
 	0	None	ST_Car_View			
 	340398852	Indoor	ST_Car_View			
+	1160234136	Normal	ST_Car_View			
 	0	None	ST_SlowMo			
 	2370781097	ST_Build	ST_SlowMo			
 	3042819342	ST_Normal	ST_SlowMo			
@@ -31,6 +32,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3858746980	Monsters			\Default Work Unit\Master Audio Bus\SFX\Monsters	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	3994642068	Car_Inside			\Default Work Unit\Master Audio Bus\Car_Inside	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	311707310	Garage			\Default Work Unit\Master Audio Bus\Reverb\Garage	

@@ -301,552 +301,6 @@
 										<ActiveSource Name="PH_SFX_Car_Transmission" ID="{893B407F-25CE-4B02-8165-C0D19099BFEC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="PH_SFX_Car_Nitro" ID="{7D9BDD0E-733E-4E6B-8C63-F5E5643FDAA1}" ShortID="671017991">
-									<PropertyList>
-										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-										<Property Name="MaxSoundPerInstance" Type="int16">
-											<ValueList>
-												<Value>1</Value>
-											</ValueList>
-										</Property>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="PH_SFX_Car_Nitro" ID="{098881F1-A5CD-4870-9425-C6E7AABBA91A}" ShortID="24285591">
-											<Language>SFX</Language>
-											<AudioFile>PH_SFX_Car_Nitro.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="PH_SFX_Car_Nitro" ID="{098881F1-A5CD-4870-9425-C6E7AABBA91A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<SwitchContainer Name="SFX_Car_Engine" ID="{97A5A2CB-B768-4F05-8022-6BF8DF603C2C}" ShortID="210954038">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<BlendContainer Name="Car_Engine" ID="{90DEB97B-3773-47B5-95E0-875B1A95DFF9}" ShortID="883006516">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="PH_SFX_Car_Idle_Loop" ID="{06806B6A-9A0B-4571-A4DD-B3FB7446C4C7}" ShortID="700421450">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-														<Property Name="OverrideEffect" Type="bool" Value="True"/>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-2</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PH_SFX_Car_Idle_Loop" ID="{91704AE8-A9AD-48EC-8542-BCAF5B6BF404}" ShortID="432180664">
-															<Language>SFX</Language>
-															<AudioFile>PH_SFX_Car_Idle_Loop.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PH_SFX_Car_Idle_Loop" ID="{91704AE8-A9AD-48EC-8542-BCAF5B6BF404}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PH_SFX_Car_FuturHI_Loop" ID="{4D635323-3D9C-464C-B0EC-92E20B961AD4}" ShortID="482642791">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-5</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PH_SFX_Car_FuturHI_Loop" ID="{FF01AD62-A39F-47BB-B3A7-86B79A703019}" ShortID="165497928">
-															<Language>SFX</Language>
-															<AudioFile>PH_SFX_Car_FuturHI_Loop.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PH_SFX_Car_FuturHI_Loop" ID="{FF01AD62-A39F-47BB-B3A7-86B79A703019}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PH_SFX_Car_FuturLO_Loop" ID="{0AC9F2A6-0C56-4F3A-98E5-B5E30C75CA3E}" ShortID="540955912">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PH_SFX_Car_FuturLO_Loop" ID="{6D42F6AA-F825-4096-94E8-4F6B98FDE9E2}" ShortID="67882987">
-															<Language>SFX</Language>
-															<AudioFile>PH_SFX_Car_FuturLO_Loop.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PH_SFX_Car_FuturLO_Loop" ID="{6D42F6AA-F825-4096-94E8-4F6B98FDE9E2}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PH_SFX_Car_Idle_Loop_01" ID="{1C085D16-A6FD-4906-955C-7F1FE5AC2AB6}" ShortID="480579001">
-													<PropertyList>
-														<Property Name="Highpass" Type="int16">
-															<ValueList>
-																<Value>45</Value>
-															</ValueList>
-														</Property>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-														<Property Name="Pitch" Type="int32">
-															<ValueList>
-																<Value>1200</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-2</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PH_SFX_Car_Idle_Loop" ID="{FB304133-D8F1-4C75-B3ED-83A764A003BD}" ShortID="542089742">
-															<Language>SFX</Language>
-															<AudioFile>PH_SFX_Car_Idle_Loop.wav</AudioFile>
-															<ConvertedFileIDList>
-																<File ID="432180664"/>
-															</ConvertedFileIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PH_SFX_Car_Idle_Loop" ID="{FB304133-D8F1-4C75-B3ED-83A764A003BD}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<StateInfo>
-												<StateGroupList>
-													<StateGroupInfo>
-														<StateGroupRef Name="ST_Car_View" ID="{86CB3158-B700-4E8D-A619-8E892186E46E}"/>
-													</StateGroupInfo>
-													<StateGroupInfo>
-														<StateGroupRef Name="ST_Pause" ID="{5E16841F-4300-4468-91D7-4BF23D8CE669}"/>
-													</StateGroupInfo>
-												</StateGroupList>
-												<CustomStateList>
-													<CustomState>
-														<StateRef Name="PauseOff" ID="{F3FFF631-358C-42F1-91CC-A14506B59F95}"/>
-														<State Name="" ID="{A218CF01-31F7-4EBF-AAD8-6BCCA261F4E9}" ShortID="862411843"/>
-													</CustomState>
-													<CustomState>
-														<StateRef Name="PauseOn" ID="{B56A1929-C48D-45FF-B186-6FEFC1332FE0}"/>
-														<State Name="" ID="{A5302D95-A45F-498A-84EA-EC83661BBEF7}" ShortID="362735170">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64" Value="-108"/>
-															</PropertyList>
-														</State>
-													</CustomState>
-													<CustomState>
-														<StateRef Name="Indoor" ID="{05A30E51-F9C7-4A7B-9BE9-3BB33F3240B7}"/>
-														<State Name="" ID="{00C72490-2F2A-4D9B-9231-B8305544FA78}" ShortID="395871982">
-															<PropertyList>
-																<Property Name="Lowpass" Type="int16" Value="44"/>
-															</PropertyList>
-														</State>
-													</CustomState>
-												</CustomStateList>
-											</StateInfo>
-											<BlendTrackList>
-												<BlendTrack Name="Stopped" ID="{594843E1-B288-4CD5-9FC2-5BED644A775F}" ShortID="561016246">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-														<Property Name="Pitch" Type="int32">
-															<RTPCList>
-																<RTPC Name="" ID="{85D39839-27AB-4538-95D2-E2ADF9C0FC52}" ShortID="20084512">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{CD854A23-4126-4C7B-9954-F603D3D6B830}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>330</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>2485</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<RTPCList>
-																<RTPC Name="" ID="{0A282882-520E-40DE-9A82-53E397C495C4}" ShortID="112731257">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{5DFD3A89-1D65-4A30-88B3-96D306A1B030}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>-8.51937</YPos>
-																				<Flags>5</Flags>
-																				<SegmentShape>Log3</SegmentShape>
-																			</Point>
-																			<Point>
-																				<XPos>1148.82562</XPos>
-																				<YPos>-0.0939</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="PH_SFX_Car_Idle_Loop" ID="{06806B6A-9A0B-4571-A4DD-B3FB7446C4C7}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>900</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>8500</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-												<BlendTrack Name="1000RPM" ID="{7CA0AF12-D0D6-4AD3-A554-7BF8AB673C6E}" ShortID="471509024">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-														<Property Name="Pitch" Type="int32">
-															<RTPCList>
-																<RTPC Name="" ID="{F3B8A1AE-249B-4B90-AB6F-B89077D18E97}" ShortID="314435106">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{7828719B-938A-42B7-8276-12737A9AF59F}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>-943</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>2057</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<RTPCList>
-																<RTPC Name="" ID="{73407E96-CDB5-43C1-8E4A-D398D91F5022}" ShortID="190931832">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{E3604E5F-A606-41F5-BCE3-5EF00D3EFE8B}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>0.08498</YPos>
-																				<Flags>5</Flags>
-																				<SegmentShape>Log3</SegmentShape>
-																			</Point>
-																			<Point>
-																				<XPos>1100.14235</XPos>
-																				<YPos>-6.09585</YPos>
-																				<Flags>0</Flags>
-																				<SegmentShape>Exp3</SegmentShape>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>-14.02915</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="PH_SFX_Car_FuturLO_Loop" ID="{0AC9F2A6-0C56-4F3A-98E5-B5E30C75CA3E}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>900</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>8500</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-												<BlendTrack Name="2000RPM" ID="{1416BD63-CD98-42F0-82A1-0EDBB5BA4198}" ShortID="435499414">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-														<Property Name="Pitch" Type="int32">
-															<RTPCList>
-																<RTPC Name="" ID="{CFAA233D-DC83-4CC0-B898-16A6F9D426F9}" ShortID="621569681">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{C291A154-93CF-47F4-A96F-14BC7F7E4BE8}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>-2000</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>1200</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<RTPCList>
-																<RTPC Name="" ID="{ED99AC13-9934-4952-BCA7-AB37E56D4C73}" ShortID="445611272">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{DCDEBE24-26AB-48AA-A6EA-F131F8D2C142}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>-200</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>4670.15708000027</XPos>
-																				<YPos>-200</YPos>
-																				<Flags>0</Flags>
-																				<SegmentShape>Exp3</SegmentShape>
-																			</Point>
-																			<Point>
-																				<XPos>5316.75368</XPos>
-																				<YPos>-8.93853</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>-6.81332</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="PH_SFX_Car_FuturHI_Loop" ID="{4D635323-3D9C-464C-B0EC-92E20B961AD4}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>900</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>8500</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-												<BlendTrack Name="New Blend Track" ID="{56BA23B9-C82D-4BDA-90C4-99FBF8A466D1}" ShortID="933478557">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-														<Property Name="Pitch" Type="int32">
-															<RTPCList>
-																<RTPC Name="" ID="{C8215D90-314B-4B67-A78A-7B97BA6A45D6}" ShortID="928204812">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{D28AA66B-7456-47F6-A238-95251AB8A616}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>-442</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>2485</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<RTPCList>
-																<RTPC Name="" ID="{BC05A98A-BB02-491B-8CD7-6C9F0D5236D6}" ShortID="599919956">
-																	<ReferenceList>
-																		<Reference Name="ControlInput">
-																			<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<Curve Name="" ID="{A94E2B6F-10AD-4FC3-80A5-9BBC3C846DE2}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>900</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>8500</XPos>
-																				<YPos>6</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</RTPC>
-															</RTPCList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="PH_SFX_Car_Idle_Loop_01" ID="{1C085D16-A6FD-4906-955C-7F1FE5AC2AB6}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>900</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>8500</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="Car_Engine" ID="{90DEB97B-3773-47B5-95E0-875B1A95DFF9}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-									</GroupingInfo>
-								</SwitchContainer>
 								<BlendContainer Name="SFX_Car_Drift" ID="{E2792444-AF8C-443D-AD2E-9015824BD8B4}" ShortID="158340214">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
@@ -1315,13 +769,916 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="SFX_Car_Drift_Loop_01" ID="{809888E6-97D2-4C98-8EC5-E74FFC6EDB95}" ShortID="376497555">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-1200</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B30D29F3-D14A-40D6-AC3A-D53C83C89CA9}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.03"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-13</Value>
+													</ValueList>
+													<RTPCList>
+														<RTPC Name="" ID="{3EA7FE01-7750-499E-8615-9F590D8E4E86}" ShortID="889437205">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<Custom>
+																		<ModulatorTime Name="Modulator Time (Custom)" ID="{E33631EF-6FC9-4D3F-B57B-C42167059CC0}" ShortID="422287908">
+																			<PropertyList>
+																				<Property Name="EnvelopeStopPlayback" Type="bool" Value="False"/>
+																			</PropertyList>
+																		</ModulatorTime>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{EE0BCCE1-B425-4BD1-99A5-A27DA5C4CC0D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.09576</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Car_Tire_Drift_Loop" ID="{07DC62DF-D8D9-4AF8-8A48-5A6499FE073E}" ShortID="99640790">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop" ID="{C566BE61-D062-4DAF-8867-F349B7F4A5A0}" ShortID="625317675">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="357915156"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop" ID="{C566BE61-D062-4DAF-8867-F349B7F4A5A0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-01" ID="{418B5F23-DF5C-4642-86C6-F6F9BFFD3E22}" ShortID="134089513">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-01" ID="{88F1C086-6728-4C11-9232-8392E410068D}" ShortID="177605546">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="151755535"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-01" ID="{88F1C086-6728-4C11-9232-8392E410068D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-02" ID="{326D8FE1-4FE3-4F8B-AF56-321735FB528B}" ShortID="55967617">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-02" ID="{09BFDA89-0968-4D7C-BA14-B2D3ABDD2C94}" ShortID="421603609">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="328045296"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-02" ID="{09BFDA89-0968-4D7C-BA14-B2D3ABDD2C94}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-03" ID="{F265DFD4-A3A8-4243-B820-2B4495341293}" ShortID="49813817">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-03" ID="{3D7C366A-81FC-4A99-9E28-B7A91015510A}" ShortID="689882461">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-03.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="338627591"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-03" ID="{3D7C366A-81FC-4A99-9E28-B7A91015510A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-04" ID="{568B62BD-CE04-4E84-858D-A87D6233291F}" ShortID="570527899">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-04" ID="{962491D9-98CB-4C68-9EF7-FA13B9E180EB}" ShortID="650382120">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-04.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="894102337"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-04" ID="{962491D9-98CB-4C68-9EF7-FA13B9E180EB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-07" ID="{BA0C48D3-F63D-4027-8036-2FFD0246EF1F}" ShortID="657047152">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-07" ID="{6BCABF51-B52A-4D68-B3A9-54C6531650D7}" ShortID="206977052">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-07.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="673637251"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-07" ID="{6BCABF51-B52A-4D68-B3A9-54C6531650D7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-08" ID="{8E912C47-975A-4117-8C45-F016908D0D1C}" ShortID="901371605">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-08" ID="{7C896F7B-F94E-4F35-AFD8-02EF70C7181C}" ShortID="391042685">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-08.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="1065341630"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-08" ID="{7C896F7B-F94E-4F35-AFD8-02EF70C7181C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-09" ID="{62CB12FF-7BCA-4710-8690-239A0975C0B1}" ShortID="1020060084">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-09" ID="{DC32FBAA-DD19-4411-B14C-B11578BA5063}" ShortID="1056803129">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-09.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="138180119"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-09" ID="{DC32FBAA-DD19-4411-B14C-B11578BA5063}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-10" ID="{5CA69F5B-4F51-4D5F-A74A-A3268CC33229}" ShortID="735895821">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-10" ID="{5F9F7824-17EF-40F2-B05D-91779FCC5AE8}" ShortID="256905013">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-10.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="188807683"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-10" ID="{5F9F7824-17EF-40F2-B05D-91779FCC5AE8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-11" ID="{320D9D97-6B90-4049-AD27-DFF996DE234C}" ShortID="889536657">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-11" ID="{2A862DA4-7FB9-4218-A519-02A921F37980}" ShortID="111306117">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-11.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="415854430"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-11" ID="{2A862DA4-7FB9-4218-A519-02A921F37980}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-12" ID="{D66E9AB9-8274-45B0-A904-ECA62B205979}" ShortID="1072544711">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-12" ID="{6CDDB5A8-16C6-4B58-8C47-53632D1464F8}" ShortID="524369885">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-12.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="674923998"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-12" ID="{6CDDB5A8-16C6-4B58-8C47-53632D1464F8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-13" ID="{53ECBD83-2A96-479D-9AFF-80A29046324B}" ShortID="749484094">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-13" ID="{709379D8-55E9-4BD2-8BFA-AC942B00F6EA}" ShortID="1012338497">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-13.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="337410547"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-13" ID="{709379D8-55E9-4BD2-8BFA-AC942B00F6EA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-14" ID="{1908D503-C06A-4DC5-A900-BDCAA00896EF}" ShortID="1034224603">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-14" ID="{63A8F114-50EA-43AE-A322-C37612DCF423}" ShortID="1021945145">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-14.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="926201035"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-14" ID="{63A8F114-50EA-43AE-A322-C37612DCF423}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Car_Tire_Drift_Loop-15" ID="{8CA1C9E4-74D2-4B06-8681-B73552EFA3ED}" ShortID="569135324">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Car_Tire_Drift_Loop-15" ID="{CB73EABC-830B-4539-8C2E-5174B9320119}" ShortID="742340458">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Car_Tire_Drift_Loop-15.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="357001961"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Car_Tire_Drift_Loop-15" ID="{CB73EABC-830B-4539-8C2E-5174B9320119}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
 									</ChildrenList>
 								</BlendContainer>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="SFX_Monsters" ID="{E56422FB-7829-4134-8D18-E859E7C4678B}" ShortID="289724215">
-							<ChildrenList>
-								<BlendContainer Name="SFX_Monsters_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" ShortID="466827219">
+								<BlendContainer Name="SFX_Car_Engine" ID="{90DEB97B-3773-47B5-95E0-875B1A95DFF9}" ShortID="883006516">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F2253ED4-840D-42D2-995D-0CA36172F71E}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="PH_SFX_Car_Idle_Loop" ID="{06806B6A-9A0B-4571-A4DD-B3FB7446C4C7}" ShortID="700421450">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PH_SFX_Car_Idle_Loop" ID="{91704AE8-A9AD-48EC-8542-BCAF5B6BF404}" ShortID="432180664">
+													<Language>SFX</Language>
+													<AudioFile>PH_SFX_Car_Idle_Loop.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PH_SFX_Car_Idle_Loop" ID="{91704AE8-A9AD-48EC-8542-BCAF5B6BF404}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="PH_SFX_Car_FuturHI_Loop" ID="{4D635323-3D9C-464C-B0EC-92E20B961AD4}" ShortID="482642791">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PH_SFX_Car_FuturHI_Loop" ID="{FF01AD62-A39F-47BB-B3A7-86B79A703019}" ShortID="165497928">
+													<Language>SFX</Language>
+													<AudioFile>PH_SFX_Car_FuturHI_Loop.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PH_SFX_Car_FuturHI_Loop" ID="{FF01AD62-A39F-47BB-B3A7-86B79A703019}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="PH_SFX_Car_FuturLO_Loop" ID="{0AC9F2A6-0C56-4F3A-98E5-B5E30C75CA3E}" ShortID="540955912">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PH_SFX_Car_FuturLO_Loop" ID="{6D42F6AA-F825-4096-94E8-4F6B98FDE9E2}" ShortID="67882987">
+													<Language>SFX</Language>
+													<AudioFile>PH_SFX_Car_FuturLO_Loop.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PH_SFX_Car_FuturLO_Loop" ID="{6D42F6AA-F825-4096-94E8-4F6B98FDE9E2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="PH_SFX_Car_Idle_Loop_01" ID="{1C085D16-A6FD-4906-955C-7F1FE5AC2AB6}" ShortID="480579001">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>45</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>1200</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PH_SFX_Car_Idle_Loop" ID="{FB304133-D8F1-4C75-B3ED-83A764A003BD}" ShortID="542089742">
+													<Language>SFX</Language>
+													<AudioFile>PH_SFX_Car_Idle_Loop.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="432180664"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PH_SFX_Car_Idle_Loop" ID="{FB304133-D8F1-4C75-B3ED-83A764A003BD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="ST_Car_View" ID="{86CB3158-B700-4E8D-A619-8E892186E46E}"/>
+											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="ST_Pause" ID="{5E16841F-4300-4468-91D7-4BF23D8CE669}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="PauseOff" ID="{F3FFF631-358C-42F1-91CC-A14506B59F95}"/>
+												<State Name="" ID="{A218CF01-31F7-4EBF-AAD8-6BCCA261F4E9}" ShortID="862411843"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="PauseOn" ID="{B56A1929-C48D-45FF-B186-6FEFC1332FE0}"/>
+												<State Name="" ID="{A5302D95-A45F-498A-84EA-EC83661BBEF7}" ShortID="362735170">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Indoor" ID="{05A30E51-F9C7-4A7B-9BE9-3BB33F3240B7}"/>
+												<State Name="" ID="{00C72490-2F2A-4D9B-9231-B8305544FA78}" ShortID="395871982">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16" Value="44"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Normal" ID="{B33DA4C5-4112-4B66-B094-014ADC2A7974}"/>
+												<State Name="" ID="{E071B10B-93ED-4813-A5E3-DA0AA492C4E6}" ShortID="966459830"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<BlendTrackList>
+										<BlendTrack Name="Stopped" ID="{594843E1-B288-4CD5-9FC2-5BED644A775F}" ShortID="561016246">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<RTPCList>
+														<RTPC Name="" ID="{85D39839-27AB-4538-95D2-E2ADF9C0FC52}" ShortID="20084512">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{CD854A23-4126-4C7B-9954-F603D3D6B830}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>330</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>3171</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{0A282882-520E-40DE-9A82-53E397C495C4}" ShortID="112731257">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{5DFD3A89-1D65-4A30-88B3-96D306A1B030}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>-8.51937</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1148.82562</XPos>
+																		<YPos>-0.0939</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="PH_SFX_Car_Idle_Loop" ID="{06806B6A-9A0B-4571-A4DD-B3FB7446C4C7}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>900</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>8500</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+										<BlendTrack Name="1000RPM" ID="{7CA0AF12-D0D6-4AD3-A554-7BF8AB673C6E}" ShortID="471509024">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<RTPCList>
+														<RTPC Name="" ID="{F3B8A1AE-249B-4B90-AB6F-B89077D18E97}" ShortID="314435106">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{7828719B-938A-42B7-8276-12737A9AF59F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>-943</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>2057</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{73407E96-CDB5-43C1-8E4A-D398D91F5022}" ShortID="190931832">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{E3604E5F-A606-41F5-BCE3-5EF00D3EFE8B}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>0.08498</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1100.14235</XPos>
+																		<YPos>-6.09585</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>-14.02915</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="PH_SFX_Car_FuturLO_Loop" ID="{0AC9F2A6-0C56-4F3A-98E5-B5E30C75CA3E}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>900</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>8500</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+										<BlendTrack Name="2000RPM" ID="{1416BD63-CD98-42F0-82A1-0EDBB5BA4198}" ShortID="435499414">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<RTPCList>
+														<RTPC Name="" ID="{CFAA233D-DC83-4CC0-B898-16A6F9D426F9}" ShortID="621569681">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{C291A154-93CF-47F4-A96F-14BC7F7E4BE8}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>-2000</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>1200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{ED99AC13-9934-4952-BCA7-AB37E56D4C73}" ShortID="445611272">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{DCDEBE24-26AB-48AA-A6EA-F131F8D2C142}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4670.15708000027</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>5316.75368</XPos>
+																		<YPos>-8.93853</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>-6.81332</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="PH_SFX_Car_FuturHI_Loop" ID="{4D635323-3D9C-464C-B0EC-92E20B961AD4}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>900</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>8500</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+										<BlendTrack Name="New Blend Track" ID="{56BA23B9-C82D-4BDA-90C4-99FBF8A466D1}" ShortID="933478557">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<RTPCList>
+														<RTPC Name="" ID="{C8215D90-314B-4B67-A78A-7B97BA6A45D6}" ShortID="928204812">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{D28AA66B-7456-47F6-A238-95251AB8A616}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>-442</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>3171</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{BC05A98A-BB02-491B-8CD7-6C9F0D5236D6}" ShortID="599919956">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{A94E2B6F-10AD-4FC3-80A5-9BBC3C846DE2}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8500</XPos>
+																		<YPos>6</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="PH_SFX_Car_Idle_Loop_01" ID="{1C085D16-A6FD-4906-955C-7F1FE5AC2AB6}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>900</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>8500</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<RandomSequenceContainer Name="SFX_Car_Nitro" ID="{0B7DD25F-C281-47DC-92EA-D33B337D09C5}" ShortID="55557769">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{96BA2209-40A4-4C24-A7FC-E00BF4E24020}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -1330,8 +1687,920 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Car_Nitro_Boost" ID="{F565E74B-272C-488D-B8C2-27D19BBF5542}" ShortID="945374424">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Nitro_Boost" ID="{9B3F5760-74DA-441E-9F35-77139E97C904}" ShortID="943796425">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Nitro_Boost.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Nitro_Boost" ID="{9B3F5760-74DA-441E-9F35-77139E97C904}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Nitro_Boost-01" ID="{B36F7067-2604-4CD0-B7A7-1E3A5078CDCF}" ShortID="861067919">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Nitro_Boost-01" ID="{7BBBD708-0ED2-4AAD-B10B-5F110ED97402}" ShortID="373229762">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Nitro_Boost-01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Nitro_Boost-01" ID="{7BBBD708-0ED2-4AAD-B10B-5F110ED97402}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Nitro_Boost-02" ID="{12BDB1B9-FA42-4FD1-B35D-21C5E5C23A5D}" ShortID="903066080">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Nitro_Boost-02" ID="{032C46BB-02FB-42CA-8F83-52AA9A0BF4EC}" ShortID="792734688">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Nitro_Boost-02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Nitro_Boost-02" ID="{032C46BB-02FB-42CA-8F83-52AA9A0BF4EC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="SFX_Car_Nitro_Refill" ID="{4BDB8CD2-B535-4AF1-9657-C2476C597B3A}" ShortID="798419275">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Car_Nitro_Refill" ID="{27878F87-A446-456D-B0E1-9240A95A3AE6}" ShortID="862043951">
+											<Language>SFX</Language>
+											<AudioFile>SFX_Car_Nitro_Refill.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Car_Nitro_Refill" ID="{27878F87-A446-456D-B0E1-9240A95A3AE6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="SFX_Monster" ID="{E56422FB-7829-4134-8D18-E859E7C4678B}" ShortID="289724215">
+							<ChildrenList>
+								<BlendContainer Name="SFX_Monster_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" ShortID="466827219">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FE50780D-CFD8-49F5-A051-AB2985CAD1F7}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="SFX_Monster_Run_Asphalt" ID="{875FFA64-E4B0-476F-BA9E-BF533B2E05FC}" ShortID="432738028">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4ECC3A4B-9323-4D9B-8520-ED3CC1115356}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.02"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Monster_Run_Asphalt_1" ID="{C49945F3-3DC3-4BCD-A57D-15FDCA823119}" ShortID="186581573">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_1" ID="{AE7D5CF8-F14C-42D2-9A57-F37DCB8D763E}" ShortID="271719483">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_1" ID="{AE7D5CF8-F14C-42D2-9A57-F37DCB8D763E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_2" ID="{4FD51B3E-7F4D-40B6-977E-4D7823ABD571}" ShortID="27527142">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_2" ID="{5A584406-48F7-4EFF-B97F-DC459F415CDB}" ShortID="630750179">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_2" ID="{5A584406-48F7-4EFF-B97F-DC459F415CDB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_3" ID="{69411B04-6D87-4E4D-BB6F-42A850CFB797}" ShortID="521287986">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_3" ID="{A748025A-5FB9-4156-8B89-217CBE36FEB2}" ShortID="853301487">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_3" ID="{A748025A-5FB9-4156-8B89-217CBE36FEB2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_4" ID="{1622BF65-7F6E-498A-BE1D-43A7ECFC91FE}" ShortID="210798276">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_4" ID="{A92723E0-7EE1-492F-AEA8-E92CF8FF6906}" ShortID="159642181">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_4" ID="{A92723E0-7EE1-492F-AEA8-E92CF8FF6906}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_5" ID="{72BBDF64-1FAF-4714-91A5-CA8234EF778E}" ShortID="255850296">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_5" ID="{1DDA4148-3886-4FF5-9044-B37EB958F0B4}" ShortID="685125525">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_5" ID="{1DDA4148-3886-4FF5-9044-B37EB958F0B4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_6" ID="{FB16AD21-085F-4C42-B646-9D49872AB4A5}" ShortID="387177965">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_6" ID="{B86A045F-81BF-4938-9555-D9EE818C0A44}" ShortID="59304707">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_6.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_6" ID="{B86A045F-81BF-4938-9555-D9EE818C0A44}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_7" ID="{D3A66DD3-6757-4545-A770-2D2A0BAC4C63}" ShortID="612835534">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_7" ID="{4F0DCF47-682C-45C7-9E1E-F6D777047891}" ShortID="982930451">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_7.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_7" ID="{4F0DCF47-682C-45C7-9E1E-F6D777047891}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_8" ID="{7F760A55-30B2-4AB7-8937-553D8AFB61A0}" ShortID="1002121891">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_8" ID="{AE8FE169-F0A6-46CE-ACEE-CC0DB902A192}" ShortID="341212262">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_8.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_8" ID="{AE8FE169-F0A6-46CE-ACEE-CC0DB902A192}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_9" ID="{5470BC1E-5899-4B56-8CAC-0377C294E103}" ShortID="133456727">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_9" ID="{7762BD22-D898-4092-BCA1-662A5ED5C697}" ShortID="815904793">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_9.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_9" ID="{7762BD22-D898-4092-BCA1-662A5ED5C697}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_10" ID="{34E9A8F4-467B-46DC-92E5-3CBE1630C4F3}" ShortID="925317490">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_10" ID="{6DA833EE-ACEF-48DF-87FB-B4A6B917E1C3}" ShortID="877861424">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_10.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_10" ID="{6DA833EE-ACEF-48DF-87FB-B4A6B917E1C3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_11" ID="{656873C0-CDE9-4743-8DEE-304A85B74A4F}" ShortID="708537593">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_11" ID="{3CB41642-06A2-4149-AA37-643E34B66B53}" ShortID="561559514">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_11.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_11" ID="{3CB41642-06A2-4149-AA37-643E34B66B53}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_12" ID="{69CDAAFF-38E1-440F-99C2-04FC5DD05EEE}" ShortID="525210897">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_12" ID="{9DA52A2E-50CB-4D52-8436-142C42C5CE7F}" ShortID="615726283">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_12.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_12" ID="{9DA52A2E-50CB-4D52-8436-142C42C5CE7F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_13" ID="{441D2199-B07F-40BF-B354-F6FA2A2E6381}" ShortID="464524190">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_13" ID="{3C16523C-B8E1-448E-B8A6-90D85508DE24}" ShortID="1038994047">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_13.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_13" ID="{3C16523C-B8E1-448E-B8A6-90D85508DE24}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_14" ID="{FC10672C-668C-4BDB-A6BC-E55F458EB77D}" ShortID="518863887">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_14" ID="{0AF6C931-2BA9-4692-B7EF-143E10F3651B}" ShortID="857524936">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_14.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_14" ID="{0AF6C931-2BA9-4692-B7EF-143E10F3651B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_15" ID="{D4E6C3C1-FE8E-473B-BB2D-1F1000E6ADBE}" ShortID="328735787">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_15" ID="{142C8543-7D0A-4BD2-97EB-F69AF2F1AF2F}" ShortID="800857768">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_15.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_15" ID="{142C8543-7D0A-4BD2-97EB-F69AF2F1AF2F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_16" ID="{414823B4-2694-4AEE-B33A-7355269DB010}" ShortID="141107586">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_16" ID="{D08F53F3-520B-4CAE-93A0-2A41756763D5}" ShortID="719328683">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_16.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_16" ID="{D08F53F3-520B-4CAE-93A0-2A41756763D5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_17" ID="{7E0EF465-9050-4F9F-BE00-4000024FE3A1}" ShortID="737016964">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_17" ID="{1A18DD49-5B47-4575-9620-24C41B5649BA}" ShortID="984626086">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_17.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_17" ID="{1A18DD49-5B47-4575-9620-24C41B5649BA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_18" ID="{3DA92C27-8D4F-42CB-BCD7-3C478633FE6C}" ShortID="1035744265">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_18" ID="{9EFC232A-121B-4437-BDBA-44433E7CF31B}" ShortID="477144447">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_18.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_18" ID="{9EFC232A-121B-4437-BDBA-44433E7CF31B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_19" ID="{5255514D-A046-4B47-9F48-57B56F8BAE6A}" ShortID="548510038">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_19" ID="{73EDB55F-5432-42C2-96A7-C0CAE6BC8778}" ShortID="789886876">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_19.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_19" ID="{73EDB55F-5432-42C2-96A7-C0CAE6BC8778}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_20" ID="{E22516F0-1B8C-4C8A-B6BE-A2D92BA5D8F7}" ShortID="754095341">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_20" ID="{DF5AB9E1-BD57-45C4-8A93-D443A516543D}" ShortID="533488739">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_20.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_20" ID="{DF5AB9E1-BD57-45C4-8A93-D443A516543D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_21" ID="{8EC4D927-C742-482B-8B1E-A5380B59B0E2}" ShortID="97528056">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_21" ID="{09BCFF50-8673-4958-B6F0-435E6659F3F7}" ShortID="268113833">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_21.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_21" ID="{09BCFF50-8673-4958-B6F0-435E6659F3F7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_22" ID="{10697FC8-1272-422D-AA5C-9CB0F2C3FEA2}" ShortID="118833480">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_22" ID="{55F59F26-E923-47A4-81B1-DA7C76AEDEF4}" ShortID="1072533953">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_22.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_22" ID="{55F59F26-E923-47A4-81B1-DA7C76AEDEF4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_23" ID="{8D692E08-2470-402D-8E78-DAE6EAB503D9}" ShortID="680032934">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_23" ID="{C6D66D1E-A4A7-4D6A-909E-94D72580F43A}" ShortID="746319321">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_23.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_23" ID="{C6D66D1E-A4A7-4D6A-909E-94D72580F43A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_24" ID="{D0CC8CE5-B607-4EF2-A4EB-5BE6D1CA83C3}" ShortID="5437973">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_24" ID="{CDDED50D-D959-4D0E-9660-213E9330D203}" ShortID="1007014752">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_24.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_24" ID="{CDDED50D-D959-4D0E-9660-213E9330D203}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_25" ID="{16A47601-1675-4E17-996D-5B0FCEE41AE0}" ShortID="971277754">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_25" ID="{27ED54B9-5E10-4FE7-BEB5-526D59EF179E}" ShortID="50865050">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_25.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_25" ID="{27ED54B9-5E10-4FE7-BEB5-526D59EF179E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_26" ID="{5F8F89D9-2E23-4606-999D-669DAEDA6DE0}" ShortID="760019747">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_26" ID="{7D3102BA-A213-4CAC-BCD6-86664AEC406A}" ShortID="630336622">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_26.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_26" ID="{7D3102BA-A213-4CAC-BCD6-86664AEC406A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_27" ID="{BED66A56-808E-4D6A-8E7E-B4D9952597C9}" ShortID="908979967">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_27" ID="{50293784-CEB2-42AF-B467-823AD0BB2B90}" ShortID="841573623">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_27.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_27" ID="{50293784-CEB2-42AF-B467-823AD0BB2B90}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_28" ID="{6ADCC1C2-DB4A-4F19-860F-4EDDB6C1A0B1}" ShortID="403660765">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_28" ID="{0591CEC9-CEE3-4FC7-9524-7E4FE99AB725}" ShortID="35856289">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_28.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_28" ID="{0591CEC9-CEE3-4FC7-9524-7E4FE99AB725}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_29" ID="{8D0DB054-C875-4748-AA0A-869CA2997A35}" ShortID="845024053">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_29" ID="{C67B22B5-29A6-40CC-AB67-A8883C000368}" ShortID="912985413">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_29.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_29" ID="{C67B22B5-29A6-40CC-AB67-A8883C000368}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_30" ID="{4E25C6AF-1588-4F6C-9E82-F7916676F1D6}" ShortID="307016885">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_30" ID="{EFAF8B7C-8568-464D-A264-F800F0B7FAB1}" ShortID="625407417">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_30.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_30" ID="{EFAF8B7C-8568-464D-A264-F800F0B7FAB1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_31" ID="{C79BD176-BC3A-4B39-84FA-1D6C43601D13}" ShortID="200576735">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_31" ID="{94F6234D-2872-4EF2-ADF1-3662B307D4FB}" ShortID="116157522">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_31.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_31" ID="{94F6234D-2872-4EF2-ADF1-3662B307D4FB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_32" ID="{38B5B3B4-3C5B-4A40-A5A1-DC7C6BB5DBB7}" ShortID="269321045">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_32" ID="{D26B7BFE-B6D3-4D77-9395-5436E74684D3}" ShortID="174565045">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_32.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_32" ID="{D26B7BFE-B6D3-4D77-9395-5436E74684D3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_33" ID="{256A85FD-6482-4D0C-809B-FB280CDF5CF0}" ShortID="802899985">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_33" ID="{21ABC9D6-6073-495F-8148-65442DF520EC}" ShortID="127778559">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_33.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_33" ID="{21ABC9D6-6073-495F-8148-65442DF520EC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_34" ID="{AF386F16-B183-40B7-AA12-4516B07F9B20}" ShortID="587906907">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_34" ID="{88A48662-6990-4B24-8BFC-0D2E445A7E30}" ShortID="885566710">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_34.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_34" ID="{88A48662-6990-4B24-8BFC-0D2E445A7E30}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_35" ID="{A9E48C8D-0DC3-4AD7-BA5B-44011EC6B715}" ShortID="10515128">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_35" ID="{24E0A3E7-421D-4A51-8F99-39753C609F0F}" ShortID="680259220">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_35.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_35" ID="{24E0A3E7-421D-4A51-8F99-39753C609F0F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_36" ID="{F58DFE1E-05D6-4D4E-BAC8-E9D92EBF5481}" ShortID="662230340">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_36" ID="{4D065A5F-F652-409B-9276-A268A524CBB8}" ShortID="81053282">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_36.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_36" ID="{4D065A5F-F652-409B-9276-A268A524CBB8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_37" ID="{E64D652E-C18C-4715-94B0-F85D6CC06F42}" ShortID="952762902">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_37" ID="{A896EFAF-63B6-435C-9087-418181EF1AFF}" ShortID="542680252">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_37.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_37" ID="{A896EFAF-63B6-435C-9087-418181EF1AFF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_38" ID="{2ABB0FDE-24C0-4E4B-8DCB-19A89EEF345C}" ShortID="867458223">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_38" ID="{5B96DD3E-63DE-4C3F-A2A9-2774BB0030B6}" ShortID="81337290">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_38.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_38" ID="{5B96DD3E-63DE-4C3F-A2A9-2774BB0030B6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Monster_Run_Asphalt_39" ID="{E35BF2F4-F57D-415B-AC91-A19D2D3A57A2}" ShortID="503577491">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Monster_Run_Asphalt_39" ID="{A19EC8BC-64B5-40C2-8704-FE7685145A00}" ShortID="120863485">
+															<Language>SFX</Language>
+															<AudioFile>SFX_Monster_Run_Asphalt_39.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Monster_Run_Asphalt_39" ID="{A19EC8BC-64B5-40C2-8704-FE7685145A00}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="SFX_Monster_Run_Rouling" ID="{9F83E908-A9BD-42AF-BE2A-8D6A79729548}" ShortID="682054637">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E5449D41-E31D-49AC-A5E7-EA60271052AE}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Monster_Run_Rouling" ID="{FE7193C8-565E-408A-BD04-1EAEA8887B41}" ShortID="876872529">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Monster_Run_Rouling.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Monster_Run_Rouling" ID="{FE7193C8-565E-408A-BD04-1EAEA8887B41}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</BlendContainer>
-								<BlendContainer Name="SFX_Monsters Die" ID="{DAABDAED-0BA1-4782-BA24-792C7391CE53}" ShortID="724139286">
+								<BlendContainer Name="SFX_Monster_Die" ID="{DAABDAED-0BA1-4782-BA24-792C7391CE53}" ShortID="724139286">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -1429,6 +2698,25 @@
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>
+						<Sound Name="SFX_SlowMo" ID="{DA2C1D98-968E-459D-BF55-5D084E316FB2}" ShortID="945418616">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SlowMo-01" ID="{E8186E7C-AFF0-4AA9-B50C-4C4FE7373F61}" ShortID="939851861">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SlowMo-01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SlowMo-01" ID="{E8186E7C-AFF0-4AA9-B50C-4C4FE7373F61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{9D90592F-4CB2-4909-9B44-1CAD2F1D91D0}" ShortID="610206023">

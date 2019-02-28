@@ -39,38 +39,41 @@
 			<Path>SB_BabyPark.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1020321262" Name="Car_Engine" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Car_Engine"/>
-				<Event Id="941995915" Name="Nitro" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Nitro"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Pause"/>
-				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Amb_BabyPark"/>
-				<Event Id="1925799616" Name="Play_Amb_Babypark_Police_Dry" ObjectPath="\Events\Default Work Unit\Play_Amb_Babypark_Police_Dry"/>
-				<Event Id="1944695683" Name="Play_Amb_Babypark_Police_Wet" ObjectPath="\Events\Default Work Unit\Play_Amb_Babypark_Police_Wet"/>
-				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\Play_Amb_Garage"/>
+				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_BabyPark"/>
+				<Event Id="1925799616" Name="Play_Amb_Babypark_Police_Dry" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Dry"/>
+				<Event Id="1944695683" Name="Play_Amb_Babypark_Police_Wet" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Wet"/>
+				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Garage"/>
 				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
-				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift"/>
-				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift_Start"/>
-				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Die"/>
-				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Run"/>
-				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Explode"/>
-				<Event Id="4265925356" Name="Play_SFX_Trap_Mine_Idle" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Idle"/>
-				<Event Id="4185453606" Name="Play_SFX_Trap_Mine_Trigger" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Trigger"/>
-				<Event Id="3362185276" Name="Play_SFX_Wpn_FlameThrower_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Shoot"/>
-				<Event Id="1868201586" Name="Play_SFX_Wpn_FlameThrower_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Summon"/>
-				<Event Id="35730698" Name="Play_SFX_Wpn_Gatling_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Shoot"/>
-				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Summon"/>
-				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\Play_UI_Babypark_Checkpoint"/>
-				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\Play_UI_Confirm"/>
-				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\Play_UI_Equipment"/>
-				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\Play_UI_Movement"/>
-				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\Play_UI_Pause"/>
-				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\Play_UI_Weapons"/>
-				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Set_State_PauseOff"/>
-				<Event Id="2201148061" Name="Set_State_PauseOn" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Set_State_PauseOn"/>
-				<Event Id="1871393852" Name="Set_State_ST_Build" ObjectPath="\Events\Default Work Unit\Set_State_ST_Build"/>
-				<Event Id="3091697021" Name="Set_State_ST_Normal" ObjectPath="\Events\Default Work Unit\Set_State_ST_Normal"/>
-				<Event Id="434512859" Name="Set_State_ST_SlowMo" ObjectPath="\Events\Default Work Unit\Set_State_ST_SlowMo"/>
+				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift"/>
+				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start"/>
+				<Event Id="3345503513" Name="Play_SFX_Car_Nitro" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro"/>
+				<Event Id="2880876640" Name="Play_SFX_Car_Nitro_Refill" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro_Refill"/>
+				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die"/>
+				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Run"/>
+				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Explode"/>
+				<Event Id="4265925356" Name="Play_SFX_Trap_Mine_Idle" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Idle"/>
+				<Event Id="4185453606" Name="Play_SFX_Trap_Mine_Trigger" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Trigger"/>
+				<Event Id="3362185276" Name="Play_SFX_Wpn_FlameThrower_Shoot" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Shoot"/>
+				<Event Id="1868201586" Name="Play_SFX_Wpn_FlameThrower_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Summon"/>
+				<Event Id="35730698" Name="Play_SFX_Wpn_Gatling_Shoot" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Shoot"/>
+				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon"/>
+				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Babypark_Checkpoint"/>
+				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Confirm"/>
+				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Equipment"/>
+				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Movement"/>
+				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Pause"/>
+				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
+				<Event Id="177170041" Name="Set_State_Indoor" ObjectPath="\Events\Default Work Unit\States\Set_State_Indoor"/>
+				<Event Id="2630068541" Name="Set_State_Normal" ObjectPath="\Events\Default Work Unit\States\Set_State_Normal"/>
+				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\States\Set_State_PauseOff"/>
+				<Event Id="2201148061" Name="Set_State_PauseOn" ObjectPath="\Events\Default Work Unit\States\Set_State_PauseOn"/>
+				<Event Id="1871393852" Name="Set_State_ST_Build" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_Build"/>
+				<Event Id="3091697021" Name="Set_State_ST_Normal" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_Normal"/>
+				<Event Id="434512859" Name="Set_State_ST_SlowMo" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_SlowMo"/>
 				<Event Id="152581" Name="StartLevelConfig" ObjectPath="\Events\Default Work Unit\New Virtual Folder\StartLevelConfig"/>
-				<Event Id="3237579210" Name="Stop_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Stop_SFX_Car_Drift"/>
+				<Event Id="3237579210" Name="Stop_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\SFX_Car\Stop_SFX_Car_Drift"/>
 				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Transmission"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
@@ -83,10 +86,6 @@
 				<File Id="22608017" Language="SFX">
 					<ShortName>20181219_SDLF_REKT2_Intro.wav</ShortName>
 					<Path>SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem</Path>
-				</File>
-				<File Id="24285591" Language="SFX">
-					<ShortName>PH_SFX_Car_Nitro.wav</ShortName>
-					<Path>SFX\PH_SFX_Car_Nitro_56D34C19.wem</Path>
 				</File>
 				<File Id="67882987" Language="SFX">
 					<ShortName>PH_SFX_Car_FuturLO_Loop.wav</ShortName>
@@ -144,6 +143,10 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop_56D34C19.wem</Path>
 				</File>
+				<File Id="373229762" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Boost-01.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Boost-01_56D34C19.wem</Path>
+				</File>
 				<File Id="415854430" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-11.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-11_56D34C19.wem</Path>
@@ -180,6 +183,14 @@
 					<ShortName>SFX_Car_Tire_Drift_Start-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem</Path>
 				</File>
+				<File Id="792734688" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Boost-02.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Boost-02_56D34C19.wem</Path>
+				</File>
+				<File Id="862043951" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Refill.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Refill_56D34C19.wem</Path>
+				</File>
 				<File Id="894102337" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-04.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-04_56D34C19.wem</Path>
@@ -188,9 +199,17 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop-14.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem</Path>
 				</File>
+				<File Id="939851861" Language="SFX">
+					<ShortName>SFX_SlowMo-01.wav</ShortName>
+					<Path>SFX\SFX_SlowMo-01_56D34C19.wem</Path>
+				</File>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
 					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
+				</File>
+				<File Id="943796425" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Boost.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Boost_56D34C19.wem</Path>
 				</File>
 				<File Id="984508822" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Start.wav</ShortName>
@@ -216,38 +235,41 @@
 			<Path>SB_NeoOslo.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1020321262" Name="Car_Engine" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Car_Engine"/>
-				<Event Id="941995915" Name="Nitro" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Nitro"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Pause"/>
-				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Amb_BabyPark"/>
-				<Event Id="1925799616" Name="Play_Amb_Babypark_Police_Dry" ObjectPath="\Events\Default Work Unit\Play_Amb_Babypark_Police_Dry"/>
-				<Event Id="1944695683" Name="Play_Amb_Babypark_Police_Wet" ObjectPath="\Events\Default Work Unit\Play_Amb_Babypark_Police_Wet"/>
-				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\Play_Amb_Garage"/>
+				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_BabyPark"/>
+				<Event Id="1925799616" Name="Play_Amb_Babypark_Police_Dry" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Dry"/>
+				<Event Id="1944695683" Name="Play_Amb_Babypark_Police_Wet" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Wet"/>
+				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Garage"/>
 				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
-				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift"/>
-				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\Play_SFX_Car_Drift_Start"/>
-				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Die"/>
-				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Run"/>
-				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Explode"/>
-				<Event Id="4265925356" Name="Play_SFX_Trap_Mine_Idle" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Idle"/>
-				<Event Id="4185453606" Name="Play_SFX_Trap_Mine_Trigger" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Trigger"/>
-				<Event Id="3362185276" Name="Play_SFX_Wpn_FlameThrower_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Shoot"/>
-				<Event Id="1868201586" Name="Play_SFX_Wpn_FlameThrower_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Summon"/>
-				<Event Id="35730698" Name="Play_SFX_Wpn_Gatling_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Shoot"/>
-				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Summon"/>
-				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\Play_UI_Babypark_Checkpoint"/>
-				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\Play_UI_Confirm"/>
-				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\Play_UI_Equipment"/>
-				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\Play_UI_Movement"/>
-				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\Play_UI_Pause"/>
-				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\Play_UI_Weapons"/>
-				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Set_State_PauseOff"/>
-				<Event Id="2201148061" Name="Set_State_PauseOn" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Set_State_PauseOn"/>
-				<Event Id="1871393852" Name="Set_State_ST_Build" ObjectPath="\Events\Default Work Unit\Set_State_ST_Build"/>
-				<Event Id="3091697021" Name="Set_State_ST_Normal" ObjectPath="\Events\Default Work Unit\Set_State_ST_Normal"/>
-				<Event Id="434512859" Name="Set_State_ST_SlowMo" ObjectPath="\Events\Default Work Unit\Set_State_ST_SlowMo"/>
+				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift"/>
+				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start"/>
+				<Event Id="3345503513" Name="Play_SFX_Car_Nitro" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro"/>
+				<Event Id="2880876640" Name="Play_SFX_Car_Nitro_Refill" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro_Refill"/>
+				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die"/>
+				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Run"/>
+				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Explode"/>
+				<Event Id="4265925356" Name="Play_SFX_Trap_Mine_Idle" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Idle"/>
+				<Event Id="4185453606" Name="Play_SFX_Trap_Mine_Trigger" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Trigger"/>
+				<Event Id="3362185276" Name="Play_SFX_Wpn_FlameThrower_Shoot" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Shoot"/>
+				<Event Id="1868201586" Name="Play_SFX_Wpn_FlameThrower_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Summon"/>
+				<Event Id="35730698" Name="Play_SFX_Wpn_Gatling_Shoot" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Shoot"/>
+				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon"/>
+				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Babypark_Checkpoint"/>
+				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Confirm"/>
+				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Equipment"/>
+				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Movement"/>
+				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Pause"/>
+				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
+				<Event Id="177170041" Name="Set_State_Indoor" ObjectPath="\Events\Default Work Unit\States\Set_State_Indoor"/>
+				<Event Id="2630068541" Name="Set_State_Normal" ObjectPath="\Events\Default Work Unit\States\Set_State_Normal"/>
+				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\States\Set_State_PauseOff"/>
+				<Event Id="2201148061" Name="Set_State_PauseOn" ObjectPath="\Events\Default Work Unit\States\Set_State_PauseOn"/>
+				<Event Id="1871393852" Name="Set_State_ST_Build" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_Build"/>
+				<Event Id="3091697021" Name="Set_State_ST_Normal" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_Normal"/>
+				<Event Id="434512859" Name="Set_State_ST_SlowMo" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_SlowMo"/>
 				<Event Id="152581" Name="StartLevelConfig" ObjectPath="\Events\Default Work Unit\New Virtual Folder\StartLevelConfig"/>
-				<Event Id="3237579210" Name="Stop_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\Stop_SFX_Car_Drift"/>
+				<Event Id="3237579210" Name="Stop_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\SFX_Car\Stop_SFX_Car_Drift"/>
 				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Transmission"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
@@ -260,10 +282,6 @@
 				<File Id="22608017" Language="SFX">
 					<ShortName>20181219_SDLF_REKT2_Intro.wav</ShortName>
 					<Path>SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem</Path>
-				</File>
-				<File Id="24285591" Language="SFX">
-					<ShortName>PH_SFX_Car_Nitro.wav</ShortName>
-					<Path>SFX\PH_SFX_Car_Nitro_56D34C19.wem</Path>
 				</File>
 				<File Id="67882987" Language="SFX">
 					<ShortName>PH_SFX_Car_FuturLO_Loop.wav</ShortName>
@@ -321,6 +339,10 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop_56D34C19.wem</Path>
 				</File>
+				<File Id="373229762" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Boost-01.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Boost-01_56D34C19.wem</Path>
+				</File>
 				<File Id="415854430" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-11.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-11_56D34C19.wem</Path>
@@ -357,6 +379,14 @@
 					<ShortName>SFX_Car_Tire_Drift_Start-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem</Path>
 				</File>
+				<File Id="792734688" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Boost-02.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Boost-02_56D34C19.wem</Path>
+				</File>
+				<File Id="862043951" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Refill.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Refill_56D34C19.wem</Path>
+				</File>
 				<File Id="894102337" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-04.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-04_56D34C19.wem</Path>
@@ -365,9 +395,17 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop-14.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem</Path>
 				</File>
+				<File Id="939851861" Language="SFX">
+					<ShortName>SFX_SlowMo-01.wav</ShortName>
+					<Path>SFX\SFX_SlowMo-01_56D34C19.wem</Path>
+				</File>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
 					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
+				</File>
+				<File Id="943796425" Language="SFX">
+					<ShortName>SFX_Car_Nitro_Boost.wav</ShortName>
+					<Path>SFX\SFX_Car_Nitro_Boost_56D34C19.wem</Path>
 				</File>
 				<File Id="984508822" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Start.wav</ShortName>
@@ -392,25 +430,25 @@
 			<ShortName>SB_Garage</ShortName>
 			<Path>SB_Garage.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Amb_BabyPark"/>
-				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\Play_Amb_Garage"/>
+				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_BabyPark"/>
+				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Garage"/>
 				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
-				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Die"/>
-				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\Play_SFX_Monsters_Run"/>
-				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Explode"/>
-				<Event Id="4265925356" Name="Play_SFX_Trap_Mine_Idle" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Idle"/>
-				<Event Id="4185453606" Name="Play_SFX_Trap_Mine_Trigger" ObjectPath="\Events\Default Work Unit\Play_SFX_Trap_Mine_Trigger"/>
-				<Event Id="3362185276" Name="Play_SFX_Wpn_FlameThrower_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Shoot"/>
-				<Event Id="1868201586" Name="Play_SFX_Wpn_FlameThrower_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_FlameThrower_Summon"/>
-				<Event Id="35730698" Name="Play_SFX_Wpn_Gatling_Shoot" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Shoot"/>
-				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\Play_SFX_Wpn_Gatling_Summon"/>
-				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\Play_UI_Babypark_Checkpoint"/>
-				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\Play_UI_Confirm"/>
-				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\Play_UI_Equipment"/>
-				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\Play_UI_Movement"/>
-				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\Play_UI_Pause"/>
-				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\Play_UI_Weapons"/>
+				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die"/>
+				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Run"/>
+				<Event Id="1569993949" Name="Play_SFX_Trap_Mine_Explode" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Explode"/>
+				<Event Id="4265925356" Name="Play_SFX_Trap_Mine_Idle" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Idle"/>
+				<Event Id="4185453606" Name="Play_SFX_Trap_Mine_Trigger" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Trigger"/>
+				<Event Id="3362185276" Name="Play_SFX_Wpn_FlameThrower_Shoot" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Shoot"/>
+				<Event Id="1868201586" Name="Play_SFX_Wpn_FlameThrower_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Summon"/>
+				<Event Id="35730698" Name="Play_SFX_Wpn_Gatling_Shoot" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Shoot"/>
+				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon"/>
+				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Babypark_Checkpoint"/>
+				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Confirm"/>
+				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Equipment"/>
+				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Movement"/>
+				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Pause"/>
+				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
 				<File Id="670022925"/>

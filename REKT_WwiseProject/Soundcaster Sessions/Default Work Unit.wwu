@@ -6,11 +6,11 @@
 				<SoundcasterSession Name="Car" ID="{E0E26592-89CA-40CE-AF76-6AA16CAFE87B}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Car_Engine" ID="{90DEB97B-3773-47B5-95E0-875B1A95DFF9}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+							<ObjectRef Name="SFX_Car_Engine" ID="{90DEB97B-3773-47B5-95E0-875B1A95DFF9}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Nitro" ID="{248BF4BF-4B4A-4ABC-85FC-F6047E54A1A0}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}"/>
+							<ObjectRef Name="Play_SFX_Car_Nitro" ID="{248BF4BF-4B4A-4ABC-85FC-F6047E54A1A0}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
