@@ -72,6 +72,7 @@
 								<Action Name="" ID="{8961E9D1-6846-44D5-844C-A3D41710B2B7}" ShortID="465644332">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="177.631578947368"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -530,16 +531,9 @@
 						</Event>
 						<Event Name="Set_State_ST_SlowMo" ID="{B87F0DEF-0A44-43E8-AC30-E9A2A15F3BCA}">
 							<ChildrenList>
-								<Action Name="" ID="{811868DF-7521-4466-95D2-AE2A2D11BFD2}" ShortID="921760620">
+								<Action Name="" ID="{360A3FCE-B663-465A-B49A-2C34AF04A3AC}" ShortID="1000892431">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="Delay" Type="Real64">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{1B341A8E-6CE4-4494-BBC1-B6EF5E4A6B69}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -550,7 +544,6 @@
 								<Action Name="" ID="{50970601-2050-4D4C-9DC8-F1F61F169B9C}" ShortID="240296648">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -590,6 +583,34 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_SFX_Monster_Run" ID="{2D7AE5F5-64B0-4A2D-9B74-1788B44F9DB1}">
+					<ChildrenList>
+						<Action Name="" ID="{D4185D87-0F4E-425D-B71D-F9D7C00094B1}" ShortID="949032547">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Monster_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_SFX_Monster_Run" ID="{E35FC08A-9C76-47D6-A756-135BAEC9C4E1}">
+					<ChildrenList>
+						<Action Name="" ID="{71F3D2A6-C15D-4257-8CFC-15153A5EED6E}" ShortID="485732396">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Monster_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

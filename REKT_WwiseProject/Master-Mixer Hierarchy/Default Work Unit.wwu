@@ -14,9 +14,21 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="SFX" ID="{F2C33434-93C8-42F6-825F-E473E35C0017}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Meter (Custom)" ID="{5E1C5422-61A2-4B29-AD0E-EC41DE89A989}" ShortID="857790075" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<Bus Name="Car" ID="{85D900D7-1FEC-4BB6-922C-C2DF16F26882}">
 									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
@@ -24,9 +36,30 @@
 											</ValueList>
 										</Property>
 									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<ObjectRef Name="Wwise_Meter_Car" ID="{DBE8ADD8-9189-4F49-97E8-8A53EE48433B}" WorkUnitID="{B58CADBF-3732-4239-B54B-970ABCA4814E}"/>
+										</Reference>
+									</ReferenceList>
 								</Bus>
-								<Bus Name="Monsters" ID="{A55DA6C3-E438-442F-A539-52F5B239F657}"/>
-								<Bus Name="Weapons" ID="{F83D72EB-394B-4484-B693-98EB04E1A7AC}"/>
+								<Bus Name="Monsters" ID="{A55DA6C3-E438-442F-A539-52F5B239F657}">
+									<ReferenceList>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Meter (Custom)" ID="{E6E95119-921E-4CCA-A887-17D7054068D0}" ShortID="814721238" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+								</Bus>
+								<Bus Name="Weapons" ID="{F83D72EB-394B-4484-B693-98EB04E1A7AC}">
+									<ReferenceList>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Meter (Custom)" ID="{7B1CD536-FFF1-4B48-A695-C90A94BC9EFF}" ShortID="962278582" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+								</Bus>
 							</ChildrenList>
 							<StateInfo>
 								<StateGroupList>
@@ -46,8 +79,10 @@
 										<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
 										<State Name="" ID="{063607EF-1CED-4035-8ECC-562449E7A877}" ShortID="994436243">
 											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-6"/>
 												<Property Name="Highpass" Type="int16" Value="18"/>
 												<Property Name="Lowpass" Type="int16" Value="58"/>
+												<Property Name="Pitch" Type="int32" Value="-1200"/>
 											</PropertyList>
 										</State>
 									</CustomState>
@@ -107,10 +142,66 @@
 						</Bus>
 						<Bus Name="Music" ID="{C33409A4-2045-4096-9C95-B664AF48A94F}">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<RTPCList>
+										<RTPC Name="" ID="{B70264CB-E38C-42F7-ACF4-B50BF6048D39}" ShortID="206286136">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="RTPC_Car_Meter" ID="{CC009623-165F-4CEB-8B0E-9DC4F284FE12}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{4F134EF9-E7F8-4B92-A432-5AEF84367600}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>20</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-8</Value>
 									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{9605BCD9-4394-4780-9678-43D009C73113}" ShortID="639104099">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="RTPC_Car_Meter" ID="{CC009623-165F-4CEB-8B0E-9DC4F284FE12}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{616BFF31-6AED-4000-B6E0-BCDA958DE25E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0.12868</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-1.45682</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -138,6 +229,7 @@
 										<StateRef Name="ST_SlowMo" ID="{9F809E6C-FD83-45FD-B48E-18F36324F61A}"/>
 										<State Name="" ID="{99E1790C-ED39-4B6A-8E5E-5E520AA99690}" ShortID="223007376">
 											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="6"/>
 												<Property Name="Highpass" Type="int16" Value="25"/>
 												<Property Name="Lowpass" Type="int16" Value="60"/>
 											</PropertyList>
@@ -165,6 +257,13 @@
 							</StateInfo>
 						</Bus>
 						<Bus Name="Reverb" ID="{CF384DF1-C2EE-4CE1-BF4A-E1CE9F2B01B8}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Meter (Custom)" ID="{2F8DD238-CE5F-4051-B70E-C3ED4ADD6217}" ShortID="30891430" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<AuxBus Name="Garage" ID="{AFE88607-79F7-47E5-AE70-4F8296CC3315}">
 									<ReferenceList>
@@ -176,6 +275,11 @@
 							</ChildrenList>
 						</Bus>
 						<Bus Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="Wwise_Meter_Car" ID="{DBE8ADD8-9189-4F49-97E8-8A53EE48433B}" WorkUnitID="{B58CADBF-3732-4239-B54B-970ABCA4814E}"/>
+								</Reference>
+							</ReferenceList>
 							<StateInfo>
 								<StateGroupList>
 									<StateGroupInfo>

@@ -22,6 +22,9 @@ Custom State	ID	Name	State Group	Owner		Notes
 	893339675	PauseOn	ST_Pause	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX		
 	994436243	ST_SlowMo	ST_SlowMo	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX		
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3512380217	RTPC_Car_Meter			\Default Work Unit\RTPC_Car_Meter	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
@@ -38,8 +41,13 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	311707310	Garage			\Default Work Unit\Master Audio Bus\Reverb\Garage	
 
 Effect plug-ins	ID	Name	Type				Notes
+	30891430	Wwise Meter (Custom)	Wwise Meter			
 	250581872	Wwise Meter (Custom)	Wwise Meter			
 	464945727	Wwise Meter (Custom)	Wwise Meter			
+	814721238	Wwise Meter (Custom)	Wwise Meter			
+	857790075	Wwise Meter (Custom)	Wwise Meter			
+	962278582	Wwise Meter (Custom)	Wwise Meter			
+	2416423925	Wwise_Meter_Car	Wwise Meter			
 	3900114836	Metal_Hangar	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
