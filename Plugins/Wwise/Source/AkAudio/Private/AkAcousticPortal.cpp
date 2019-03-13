@@ -6,11 +6,11 @@
 
 #include "AkAcousticPortal.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/BrushComponent.h"
 #include "Model.h"
 #include "EngineUtils.h"
+#include "AkRoomComponent.h"
+#include "AkComponent.h"
 
 UAkPortalComponent::UAkPortalComponent(const class FObjectInitializer& ObjectInitializer) :
 	Super(ObjectInitializer)

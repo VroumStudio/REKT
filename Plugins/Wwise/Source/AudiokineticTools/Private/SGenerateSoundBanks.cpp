@@ -5,9 +5,10 @@
 ------------------------------------------------------------------------------------*/
 
 #include "SGenerateSoundBanks.h"
-#include "AkAudioClasses.h"
+#include "AkAudioBank.h"
 #include "AkAudioDevice.h"
 #include "AkAudioBankGenerationHelpers.h"
+#include "AkWaapiClient.h"
 #include "AssetRegistryModule.h"
 #include "Dom/JsonObject.h"
 #include "Interfaces/ITargetPlatformManagerModule.h"

@@ -2,7 +2,9 @@
 
 #include "MovieSceneAkAudioEventSection.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "AkAudioEvent.h"
+#include "AkWaapiClient.h"
+#include "MovieSceneAkAudioEventTrack.h"
 
 #include "Misc/Base64.h"
 #include "KeyParams.h"
@@ -111,16 +113,19 @@ void UMovieSceneAkAudioEventSection::Initialize()
 
 void UMovieSceneAkAudioEventSection::BeginDestroy()
 {
-    /* Wait for WAAPI callbacks to complete */
-    while (iCallbackCounter.GetValue() > 0) {}
+	/* Wait for WAAPI callbacks to complete */
+	while (iCallbackCounter.GetValue() > 0) {}
 
-    UnsubscribeAllWAAPICallbacks();
-    if (SoundbanksLoadedHandle.IsValid())
-    {
-        FAkAudioDevice::Get()->OnSoundbanksLoaded.Remove(SoundbanksLoadedHandle);
-        SoundbanksLoadedHandle.Reset();
-    }
-    Super::BeginDestroy();
+	UnsubscribeAllWAAPICallbacks();
+	if (SoundbanksLoadedHandle.IsValid())
+	{
+		FAkAudioDevice::Get()->OnSoundbanksLoaded.Remove(SoundbanksLoadedHandle);
+		SoundbanksLoadedHandle.Reset();
+	}
+
+	FAkAudioDevice::Get()->CancelEventCallbackCookie(EventTracker.Get());
+
+	Super::BeginDestroy();
 }
 
 /** Register the callback to trigger when soundbanks are generated. */
@@ -430,16 +435,6 @@ FFloatRange UMovieSceneAkAudioEventSection::GetEventDuration() const
 #else
 	return AkAudioEventSectionHelper::GetDuration(Event);
 #endif
-}
-
-/** Returns the duration estimation of the currently playing event.
- *  If no event is playing, returns the maximum possible playback duration.
- */
-float UMovieSceneAkAudioEventSection::GetCurrentEventDurationEstimation() const
-{
-    if (EventTracker.IsValid() && EventTracker->CurrentDurationEstimation != -1.0f)
-        return EventTracker->CurrentDurationEstimation;
-    return GetEventDuration().GetUpperBoundValue();
 }
 
 void UMovieSceneAkAudioEventSection::WAAPIGetPeaks(const char* in_uri,

@@ -136,7 +136,7 @@ public:
         uint64& out_subscriptionId, TSharedPtr<FJsonObject>& out_result, int in_iTimeoutMs = 500);
 
     /**
-    *
+    * Unsubscribe to notifications
     *
     * @param in_subscriptionId	Gets the id of the current subscription to the event from which we want to be unsubscribed.
     * @param out_result		A JSON object that contains useful informations about the unsubscription process from a specific event, gets an error infos in case the unsubscription failed.
@@ -144,6 +144,13 @@ public:
     */
     bool Unsubscribe(const uint64_t& in_subscriptionId, FString& out_result, int in_iTimeoutMs = 500, bool in_bSilenceLog = false);
     bool Unsubscribe(const uint64_t& in_subscriptionId, TSharedPtr<FJsonObject>& out_result, int in_iTimeoutMs = 500, bool in_bSilenceLog = false);
+
+	/**
+	 * Remove manually the WampEventCallback, used by the WAAPI picker when the connection is lost
+	 *
+	  * @param in_subscriptionId The subscription id to the event from which we want to be unsubscribed.
+	 */
+	bool RemoveWampEventCallback(const uint64_t in_subscriptionId);
 
     /**
     *

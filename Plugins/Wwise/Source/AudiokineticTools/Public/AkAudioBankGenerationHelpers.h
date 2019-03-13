@@ -5,7 +5,9 @@
 ------------------------------------------------------------------------------------*/
 #pragma once
 
-#include "AkAudioClasses.h"
+#include "AkAuxBus.h"
+#include "AkAudioEvent.h"
+#include "AkAudioBank.h"
 
 namespace WwiseBnkGenHelper
 {

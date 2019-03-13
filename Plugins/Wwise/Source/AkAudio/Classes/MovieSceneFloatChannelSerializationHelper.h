@@ -9,7 +9,6 @@
 #endif
 #include "MovieSceneFloatChannelSerializationHelper.generated.h"
 
-
 USTRUCT()
 struct FMovieSceneTangentDataSerializationHelper
 {
@@ -29,20 +28,19 @@ struct FMovieSceneTangentDataSerializationHelper
 #endif
 
 	UPROPERTY()
-	float ArriveTangent;
+	float ArriveTangent = 0.f;
 
 	UPROPERTY()
-	float LeaveTangent;
+	float LeaveTangent = 0.f;
 
 	UPROPERTY()
-	TEnumAsByte<ERichCurveTangentWeightMode> TangentWeightMode;
+	TEnumAsByte<ERichCurveTangentWeightMode> TangentWeightMode = ERichCurveTangentWeightMode();
 
 	UPROPERTY()
-	float ArriveTangentWeight;
+	float ArriveTangentWeight = 0.f;
 
 	UPROPERTY()
-	float LeaveTangentWeight;
-
+	float LeaveTangentWeight = 0.f;
 };
 
 USTRUCT()
@@ -76,13 +74,13 @@ struct FMovieSceneFloatValueSerializationHelper
 #endif
 
 	UPROPERTY()
-	float Value;
+	float Value = 0.f;
 
 	UPROPERTY()
-	TEnumAsByte<ERichCurveInterpMode> InterpMode;
+	TEnumAsByte<ERichCurveInterpMode> InterpMode = ERichCurveInterpMode();
 
 	UPROPERTY()
-	TEnumAsByte<ERichCurveTangentMode> TangentMode;
+	TEnumAsByte<ERichCurveTangentMode> TangentMode = ERichCurveTangentMode();
 
 	UPROPERTY()
 	FMovieSceneTangentDataSerializationHelper Tangent;
@@ -143,10 +141,10 @@ struct FMovieSceneFloatChannelSerializationHelper
 #endif
 
 	UPROPERTY()
-	TEnumAsByte<ERichCurveExtrapolation> PreInfinityExtrap;
+	TEnumAsByte<ERichCurveExtrapolation> PreInfinityExtrap = ERichCurveExtrapolation();
 
 	UPROPERTY()
-	TEnumAsByte<ERichCurveExtrapolation> PostInfinityExtrap;
+	TEnumAsByte<ERichCurveExtrapolation> PostInfinityExtrap = ERichCurveExtrapolation();
 
 	UPROPERTY()
 	TArray<int32> Times;
@@ -155,8 +153,8 @@ struct FMovieSceneFloatChannelSerializationHelper
 	TArray<FMovieSceneFloatValueSerializationHelper> Values;
 
 	UPROPERTY()
-	float DefaultValue;
+	float DefaultValue = 0.f;
 
 	UPROPERTY()
-	bool bHasDefaultValue;
+	bool bHasDefaultValue = false;
 };

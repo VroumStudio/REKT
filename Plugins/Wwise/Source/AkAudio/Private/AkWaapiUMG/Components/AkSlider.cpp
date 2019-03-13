@@ -274,21 +274,24 @@ void UAkSlider::SynchronizePropertyWithWwise()
 			TSharedPtr<FJsonObject> ItemInfoResult;
 			if (CallWappiGetPropertySate(ItemId, ItemProperty, ItemInfoResult) && MyAkSlider.IsValid())
 			{
-				const double PropertyValue = ItemInfoResult->GetNumberField(WwiseWaapiHelper::AT + ItemProperty);
-				double maxRange = MyAkSlider->GetAkSliderRangeMax().GetValue();
-				double minRange = MyAkSlider->GetAkSliderRangeMin().GetValue();
-				if (PropertyValue > maxRange)
+				double PropertyValue = 0.0;
+				if (ItemInfoResult->TryGetNumberField(WwiseWaapiHelper::AT + ItemProperty, PropertyValue))
 				{
-					MyAkSlider->SetAkSliderRangeMax(PropertyValue);
-					maxRange = PropertyValue;
+					double maxRange = MyAkSlider->GetAkSliderRangeMax().GetValue();
+					double minRange = MyAkSlider->GetAkSliderRangeMin().GetValue();
+					if (PropertyValue > maxRange)
+					{
+						MyAkSlider->SetAkSliderRangeMax(PropertyValue);
+						maxRange = PropertyValue;
+					}
+					if (PropertyValue < minRange)
+					{
+						MyAkSlider->SetAkSliderRangeMin(PropertyValue);
+						minRange = PropertyValue;
+					}
+					const float newValue = ComputeValue(PropertyValue, maxRange, minRange);
+					SetValue(newValue);
 				}
-				if (PropertyValue < minRange)
-				{
-					MyAkSlider->SetAkSliderRangeMin(PropertyValue);
-					minRange = PropertyValue;
-				}
-				const float newValue = ComputeValue(PropertyValue, maxRange, minRange);
-				SetValue(newValue);
 			}
 
 			if (SubscriptionId != 0)
@@ -302,24 +305,27 @@ void UAkSlider::SynchronizePropertyWithWwise()
 			{
 				AsyncTask(ENamedThreads::GameThread, [this, id, in_UEJsonObject]
 				{
-                    if (MyAkSlider.IsValid())
-                    {
-                        const double PropertyValue = in_UEJsonObject->GetNumberField(WwiseWaapiHelper::NEW);
-                        double maxRange = MyAkSlider->GetAkSliderRangeMax().GetValue();
-                        double minRange = MyAkSlider->GetAkSliderRangeMin().GetValue();
-                        if (PropertyValue > maxRange)
-                        {
-                            MyAkSlider->SetAkSliderRangeMax(PropertyValue);
-                            maxRange = PropertyValue;
-                        }
-                        else if (PropertyValue < minRange)
-                        {
-                            MyAkSlider->SetAkSliderRangeMin(PropertyValue);
-                            minRange = PropertyValue;
-                        }
-                        const float newValue = ComputeValue(PropertyValue, maxRange, minRange);
-                        SetValue(newValue);
-                    }
+					if (MyAkSlider.IsValid())
+					{
+						double PropertyValue = 0.0;
+						if (in_UEJsonObject->TryGetNumberField(WwiseWaapiHelper::NEW, PropertyValue))
+						{
+							double maxRange = MyAkSlider->GetAkSliderRangeMax().GetValue();
+							double minRange = MyAkSlider->GetAkSliderRangeMin().GetValue();
+							if (PropertyValue > maxRange)
+							{
+								MyAkSlider->SetAkSliderRangeMax(PropertyValue);
+								maxRange = PropertyValue;
+							}
+							else if (PropertyValue < minRange)
+							{
+								MyAkSlider->SetAkSliderRangeMin(PropertyValue);
+								minRange = PropertyValue;
+							}
+							const float newValue = ComputeValue(PropertyValue, maxRange, minRange);
+							SetValue(newValue);
+						}
+					}
 				});
 			});
 			SubscribeToPropertyStateChange(ItemId, ItemProperty, wampEventCallback, SubscriptionId, outJsonResult);

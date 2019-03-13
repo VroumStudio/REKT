@@ -18,7 +18,13 @@
 #include "AkUEFeatures.h"
 #include "AkSettings.h"
 #include "AkAudioModule.h"
-#include "AkAudioClasses.h"
+#include "AkAudioBank.h"
+#include "AkAudioEvent.h"
+#include "AkAuxBus.h"
+#include "AkSpotReflector.h"
+#include "AkComponent.h"
+#include "AkRoomComponent.h"
+#include "AkAcousticPortal.h"
 #include "EditorSupportDelegates.h"
 #include "ISettingsModule.h"
 #include "Interfaces/IPluginManager.h"
@@ -27,6 +33,7 @@
 #include "FilePackageIO/AkFilePackageLowLevelIO.h"
 #include "AkUnrealIOHookDeferred.h"
 #include "AkLateReverbComponent.h"
+#include "AkCallbackInfoPool.h"
 
 #include "Async/TaskGraphInterfaces.h"
 #include "Async/ParallelFor.h"
@@ -35,6 +42,7 @@
 #include "UObject/UObjectIterator.h"
 #include "UObject/UObjectGlobals.h"
 #include "GameFramework/WorldSettings.h"
+#include "GameFramework/PlayerController.h"
 #include "Engine/GameEngine.h"
 #include "Camera/PlayerCameraManager.h"
 #include "Misc/App.h"
@@ -647,6 +655,14 @@ void FAkAudioDevice::Teardown()
 			}
 			delete AkBankManager;
 			AkBankManager = nullptr;
+		}
+
+		if (CallbackInfoPool)
+		{
+			CallbackInfoPool->Teardown();
+
+			delete CallbackInfoPool;
+			CallbackInfoPool = nullptr;
 		}
 
 		m_EngineExiting = true;
@@ -1625,7 +1641,7 @@ void FAkAudioDevice::SetSpatialAudioPortal(const AAkAcousticPortal* in_Portal)
 		return;
 
 #ifdef AK_ENABLE_PORTALS
-	AkPortalID portalID = AkPortalID(in_Portal);
+	AkPortalID portalID = in_Portal->GetPortalID();
 
 	FString nameStr = in_Portal->GetFName().ToString();
 
@@ -1666,7 +1682,7 @@ void FAkAudioDevice::RemoveSpatialAudioPortal(const AAkAcousticPortal* in_Portal
 		return;
 
 #ifdef AK_ENABLE_PORTALS
-	AkPortalID portalID = AkPortalID(in_Portal);
+	AkPortalID portalID = in_Portal->GetPortalID();
 	AK::SpatialAudio::RemovePortal(portalID);
 
 	UpdateAllSpatialAudioRooms(in_Portal->GetWorld());
@@ -3069,6 +3085,8 @@ bool FAkAudioDevice::EnsureInitialized()
 	m_bSoundEngineInitialized = true;
 	
 	AkBankManager = new FAkBankManager;
+
+	CallbackInfoPool = new AkCallbackInfoPool;
 
 	LoadAllReferencedBanks();
 

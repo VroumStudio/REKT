@@ -4,7 +4,10 @@
 	AkJsonFactory.cpp:
 =============================================================================*/
 #include "AkJsonFactory.h"
-#include "AkAudioClasses.h"
+#include "AkAudioEvent.h"
+#include "AkSettings.h"
+#include "Paths.h"
+
 /*------------------------------------------------------------------------------
 	UAkJsonFactory.
 ------------------------------------------------------------------------------*/

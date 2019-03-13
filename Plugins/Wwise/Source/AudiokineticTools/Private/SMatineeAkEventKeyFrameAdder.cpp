@@ -5,7 +5,6 @@
 ------------------------------------------------------------------------------------*/
 
 #include "SMatineeAkEventKeyFrameAdder.h"
-#include "AkAudioClasses.h"
 #include "AkAudioDevice.h"
 #include "PropertyEditorModule.h"
 #include "PropertyCustomizationHelpers.h"

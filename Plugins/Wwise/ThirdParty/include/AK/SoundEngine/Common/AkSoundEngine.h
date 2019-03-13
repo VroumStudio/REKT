@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 // AkSoundEngine.h
@@ -403,8 +403,7 @@ namespace AK
 		/// - Modify the angles and call SetSpeakerAngles().
 		/// This function posts a message to the audio thread through the command queue, so it is thread safe. However the result may not be immediately read with GetSpeakerAngles().
 		/// \warning This function only applies to configurations (or subset of these configurations) that are standard and whose speakers are on the plane (2D).
-		/// \return AK_NotCompatible if the channel configuration of the device is not standard (AK_ChannelConfigType_Standard), 
-		/// AK_Success if successful (device exists and angles are valid), AK_Fail otherwise.
+		/// \return AK_Success if successful.
 		/// \sa GetSpeakerAngles()
 		AK_EXTERNAPIFUNC( AKRESULT, SetSpeakerAngles )(
 			AkReal32 *			in_pfSpeakerAngles,			///< Array of loudspeaker pair angles, in degrees relative to azimuth [0,180].

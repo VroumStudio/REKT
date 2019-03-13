@@ -2,7 +2,6 @@
 
 #include "MovieSceneAkAudioRTPCTrack.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
 
 #include "IMovieScenePlayer.h"
 #include "MovieSceneCommonHelpers.h"

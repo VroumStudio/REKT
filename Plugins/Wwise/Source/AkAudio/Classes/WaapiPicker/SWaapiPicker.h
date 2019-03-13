@@ -194,6 +194,11 @@ private:
 	EVisibility isWarningVisible() const;
 	bool isPickerVisible;
 private:
+	void SubscribeAllWaapiCallbacks();
+
+	void RemoveAllWaapiCallbacks();
+	void RemoveWaapiCallback(FAkWaapiClient* pClient, uint64& subscriptionID);
+
     void UnsubscribeAllWaapiCallbacks();
     void UnsubscribeWaapiCallback(FAkWaapiClient* pClient, uint64& subscriptionID);
 	/** One-off active timer to focus the widget post-construct */

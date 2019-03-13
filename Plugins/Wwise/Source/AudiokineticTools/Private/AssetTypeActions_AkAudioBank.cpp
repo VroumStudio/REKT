@@ -4,7 +4,7 @@
 	AssetTypeActions_AkAudioBank.cpp:
 =============================================================================*/
 #include "AssetTypeActions_AkAudioBank.h"
-#include "AkAudioClasses.h"
+#include "AkAudioBank.h"
 #include "IAssetTools.h"
 #include "SGenerateSoundBanks.h"
 #include "AkAudioDevice.h"

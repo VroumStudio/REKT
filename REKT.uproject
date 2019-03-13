@@ -5,15 +5,15 @@
 	"Description": "",
 	"Plugins": [
 		{
+			"Name": "Wwise",
+			"Enabled": true
+		},
+		{
 			"Name": "Niagara",
 			"Enabled": true
 		},
 		{
 			"Name": "NiagaraExtras",
-			"Enabled": true
-		},
-		{
-			"Name": "Wwise",
 			"Enabled": true
 		}
 	],

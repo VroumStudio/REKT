@@ -6,7 +6,7 @@
 #pragma once
 
 #include "GameFramework/Volume.h"
-#include "AkOcclusionObstructionService.h"
+#include "OcclusionObstructionService/AkPortalOcclusionObstructionService.h"
 #include "AkGameplayTypes.h"
 #include "AkAcousticPortal.generated.h"
 
@@ -53,6 +53,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AkAcousticPortal)
 	TEnumAsByte<ECollisionChannel> ObstructionCollisionChannel = ECollisionChannel::ECC_Visibility;
 
+	AkPortalID GetPortalID() const { return AkPortalID(this); }
+
 protected:
 
 	template <typename tComponent>
@@ -63,7 +65,7 @@ protected:
 	AkRoomID FrontRoom;
 	AkRoomID BackRoom;
 
-	AkOcclusionObstructionService ObstructionService;
+	AkPortalOcclusionObstructionService ObstructionService;
 };
 
 UCLASS(ClassGroup = Audiokinetic)

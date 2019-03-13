@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 // AkWinSoundEngine.h
@@ -77,6 +77,7 @@ struct AkPlatformInitSettings
 
     // Threading model.
     AkThreadProperties  threadLEngine;			///< Lower engine threading properties
+	AkThreadProperties  threadOutputMgr;		///< Ouput thread threading properties
 	AkThreadProperties  threadBankManager;		///< Bank manager threading properties (its default priority is AK_THREAD_PRIORITY_NORMAL)
 	AkThreadProperties  threadMonitor;			///< Monitor threading properties (its default priority is AK_THREAD_PRIORITY_ABOVENORMAL). This parameter is not used in Release build.
 

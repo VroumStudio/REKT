@@ -82,11 +82,6 @@ public:
 	AKAUDIO_API float GetMaxEventDuration() const;
 #endif
 
-    /** Returns the duration estimation of the currently playing event. 
-     *  If no event is playing, returns the maximum possible playback duration.
-     */
-    AKAUDIO_API float GetCurrentEventDurationEstimation() const;
-
     /** Returns the trim begin value for the Wwise event that this section triggers. */
     float GetTrimBegin() const { return TrimBegin; }
     /** Returns the duration of the scrub snippets that this section produces when scrubbed. 

@@ -34,31 +34,42 @@ namespace SAkItemBoolProperties_Helpers
 		TEXT("BypassEffect1"),
 		TEXT("BypassEffect2"),
 		TEXT("BypassEffect3"),
+#if AK_WWISESDK_VERSION_MAJOR <= 2017
 		TEXT("DynamicPositioning"),
+#endif
+#if AK_WWISESDK_VERSION_MAJOR >= 2019
+		TEXT("EnableAttenuation"),
+#endif
 		TEXT("EnableLoudnessNormalization"),
 		TEXT("EnableMidiNoteTracking"),
+#if AK_WWISESDK_VERSION_MAJOR <= 2017
 		TEXT("EnablePanner"),
 		TEXT("EnablePositioning"),
 		TEXT("FollowListenerOrientation"),
+#endif
 		TEXT("HdrEnableEnvelope"),
+#if AK_WWISESDK_VERSION_MAJOR >= 2018
+		TEXT("HoldEmitterPositionOrientation"),
+		TEXT("HoldListenerOrientation"),
+#endif
 		TEXT("IgnoreParentMaxSoundInstance"),
 		TEXT("Inclusion"),
 		TEXT("IsLoopingEnabled"),
 		TEXT("IsLoopingInfinite"),
 		TEXT("IsNonCachable"),
 		TEXT("IsStreamingEnabled"),
-		TEXT("IsVoice"),
 		TEXT("IsZeroLantency"),
+#if AK_WWISESDK_VERSION_MAJOR >= 2018
+		TEXT("ListenerRelativeRouting"),
+#endif
 		TEXT("MidiBreakOnNoteOff"),
 		TEXT("OverrideAnalysis"),
-		TEXT("OverrideAttachableMixerInput"),
 		TEXT("OverrideConversion"),
 		TEXT("OverrideEffect"),
 		TEXT("OverrideGameAuxSends"),
 		TEXT("OverrideHdrEnvelope"),
 		TEXT("OverrideMidiEventsBehavior"),
 		TEXT("OverrideMidiNoteTracking"),
-		TEXT("OverrideMotionOutput"),
 		TEXT("OverrideOutput"),
 		TEXT("OverridePositioning"),
 		TEXT("OverridePriority"),
@@ -69,7 +80,9 @@ namespace SAkItemBoolProperties_Helpers
 		TEXT("RenderEffect1"),
 		TEXT("RenderEffect2"),
 		TEXT("RenderEffect3"),
+#if AK_WWISESDK_VERSION_MAJOR <= 2017
 		TEXT("Spatialization"),
+#endif
 		TEXT("UseGameAuxSends"),
 		TEXT("UseMaxSoundPerInstance")
 	};

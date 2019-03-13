@@ -308,15 +308,15 @@ SWaapiPicker::~SWaapiPicker()
 	RootItems.Empty();
 
 	RemoveClientCallbacks();
-    //The following callback removal is intentionally left out of RemoveClientCallbacks()
+	//The following callback removal is intentionally left out of RemoveClientCallbacks()
 	auto pWaapiClient = FAkWaapiClient::Get();
 	if (pWaapiClient != nullptr)
 	{
 		pWaapiClient->OnClientBeginDestroy.Remove(ClientBeginDestroyHandle);
 	}
 
-    UnsubscribeAllWaapiCallbacks();
-    StopAndDestroyAllTransports();
+	UnsubscribeAllWaapiCallbacks();
+	StopAndDestroyAllTransports();
 
 #if WITH_EDITOR
 	FDirectoryWatcherModule& DirectoryWatcherModule = FModuleManager::LoadModuleChecked<FDirectoryWatcherModule>(TEXT("DirectoryWatcher"));
@@ -324,26 +324,98 @@ SWaapiPicker::~SWaapiPicker()
 #endif//WITH_EDITOR
 }
 
+void SWaapiPicker::SubscribeAllWaapiCallbacks()
+{
+	if (FAkWaapiClient* waapiClient = FAkWaapiClient::Get())
+	{
+		if (waapiClient->IsConnected()
+			&& (!idRenamed || !idPreDeleted || !idRemoved || !idChildAdded || !idCreated)
+			)
+		{
+			auto wampEventCallback = WampEventCallback::CreateLambda([this](uint64_t id, TSharedPtr<FJsonObject> in_UEJsonObject)
+			{
+				// refresh the picker, since we got a notification of object created, deleted or name changed.
+				AsyncTask(ENamedThreads::GameThread, [this]
+				{
+					ConstructTree();
+				});
+			});
+
+			// Construct the options Json object : Getting parent infos.
+			TSharedRef<FJsonObject> in_options = MakeShareable(new FJsonObject());
+			{
+				TArray<TSharedPtr<FJsonValue>> StructJsonArray;
+				StructJsonArray.Add(MakeShareable(new FJsonValueString(WwiseWaapiHelper::PARENT)));
+				in_options->SetArrayField(WwiseWaapiHelper::RETURN, StructJsonArray);
+			}
+
+			TSharedPtr<FJsonObject> unrealInfoJson;
+			// Subscribe to object renamed-created-deleted and removed notifications.
+			if (!idRenamed)
+			{
+				waapiClient->Subscribe(ak::wwise::core::object::nameChanged, in_options, wampEventCallback, idRenamed, unrealInfoJson);
+			}
+			if (!idPreDeleted)
+			{
+				waapiClient->Subscribe(ak::wwise::core::object::preDeleted, in_options, wampEventCallback, idPreDeleted, unrealInfoJson);
+			}
+			if (!idRemoved)
+			{
+				waapiClient->Subscribe(ak::wwise::core::object::childRemoved, in_options, wampEventCallback, idRemoved, unrealInfoJson);
+			}
+			if (!idChildAdded)
+			{
+				waapiClient->Subscribe(ak::wwise::core::object::childAdded, in_options, wampEventCallback, idChildAdded, unrealInfoJson);
+			}
+			if (!idCreated)
+			{
+				waapiClient->Subscribe(ak::wwise::core::object::created, in_options, wampEventCallback, idCreated, unrealInfoJson);
+			}
+		}
+	}
+}
+
 void SWaapiPicker::UnsubscribeAllWaapiCallbacks()
 {
-    if (FAkWaapiClient* waapiClient = FAkWaapiClient::Get())
-    {
-        UnsubscribeWaapiCallback(waapiClient, idRenamed);
-        UnsubscribeWaapiCallback(waapiClient, idPreDeleted);
-        UnsubscribeWaapiCallback(waapiClient, idRemoved);
-        UnsubscribeWaapiCallback(waapiClient, idChildAdded);
-        UnsubscribeWaapiCallback(waapiClient, idCreated);
-    }
+	if (FAkWaapiClient* waapiClient = FAkWaapiClient::Get())
+	{
+		UnsubscribeWaapiCallback(waapiClient, idRenamed);
+		UnsubscribeWaapiCallback(waapiClient, idPreDeleted);
+		UnsubscribeWaapiCallback(waapiClient, idRemoved);
+		UnsubscribeWaapiCallback(waapiClient, idChildAdded);
+		UnsubscribeWaapiCallback(waapiClient, idCreated);
+	}
 }
 
 void SWaapiPicker::UnsubscribeWaapiCallback(FAkWaapiClient* pClient, uint64& subscriptionID)
 {
-    if (subscriptionID > 0)
-    {
-        TSharedPtr<FJsonObject> result = MakeShareable(new FJsonObject());
-        pClient->Unsubscribe(subscriptionID, result);
-        subscriptionID = 0;
-    }
+	if (subscriptionID > 0)
+	{
+		TSharedPtr<FJsonObject> result = MakeShareable(new FJsonObject());
+		pClient->Unsubscribe(subscriptionID, result);
+		subscriptionID = 0;
+	}
+}
+
+void SWaapiPicker::RemoveAllWaapiCallbacks()
+{
+	if (FAkWaapiClient* waapiClient = FAkWaapiClient::Get())
+	{
+		RemoveWaapiCallback(waapiClient, idRenamed);
+		RemoveWaapiCallback(waapiClient, idPreDeleted);
+		RemoveWaapiCallback(waapiClient, idRemoved);
+		RemoveWaapiCallback(waapiClient, idChildAdded);
+		RemoveWaapiCallback(waapiClient, idCreated);
+	}
+}
+
+void SWaapiPicker::RemoveWaapiCallback(FAkWaapiClient* pClient, uint64& subscriptionID)
+{
+	if (subscriptionID > 0)
+	{
+		pClient->RemoveWampEventCallback(subscriptionID);
+		subscriptionID = 0;
+	}
 }
 
 void SWaapiPicker::Construct(const FArguments& InArgs)
@@ -366,7 +438,7 @@ void SWaapiPicker::Construct(const FArguments& InArgs)
 	SearchBoxFilter->OnChanged().AddSP( this, &SWaapiPicker::FilterUpdated );
 
 	InitiliseAkSettings(false);
-    
+	
 	ChildSlot
 	[
 		SNew(SBorder)
@@ -507,35 +579,8 @@ void SWaapiPicker::Construct(const FArguments& InArgs)
 	OnPopulateClicked();
 	ExpandFirstLevel();
 
-	/** Subscribe to object renamed-created-deleted and removed to be notified from Wwise using WAAPI, so we can maintain the Wise picker up to date dynamically. */ 
-	// Connect to Wwise Authoring on localhost.
-	if (FAkWaapiClient* waapiClient = FAkWaapiClient::Get())
-	{
-		auto wampEventCallback = WampEventCallback::CreateLambda([this](uint64_t id, TSharedPtr<FJsonObject> in_UEJsonObject)
-		{
-			// refresh the picker, since we got a notification of object created, deleted or name changed.
-			AsyncTask(ENamedThreads::GameThread, [this]
-			{
-				ConstructTree();
-			});
-		});
-
-		// Construct the options Json object : Getting parent infos.
-		TSharedRef<FJsonObject> in_options = MakeShareable(new FJsonObject());
-		{
-			TArray<TSharedPtr<FJsonValue>> StructJsonArray;
-			StructJsonArray.Add(MakeShareable(new FJsonValueString(WwiseWaapiHelper::PARENT)));		
-			in_options->SetArrayField(WwiseWaapiHelper::RETURN, StructJsonArray);
-		}
-		
-		TSharedPtr<FJsonObject> unrealInfoJson;
-		// Subscribe to object renamed-created-deleted and removed notifications.
-		waapiClient->Subscribe(ak::wwise::core::object::nameChanged, in_options, wampEventCallback, idRenamed, unrealInfoJson);
-		waapiClient->Subscribe(ak::wwise::core::object::preDeleted, in_options, wampEventCallback, idPreDeleted, unrealInfoJson);
-		waapiClient->Subscribe(ak::wwise::core::object::childRemoved, in_options, wampEventCallback, idRemoved, unrealInfoJson);
-		waapiClient->Subscribe(ak::wwise::core::object::childAdded, in_options, wampEventCallback, idChildAdded, unrealInfoJson);
-		waapiClient->Subscribe(ak::wwise::core::object::created, in_options, wampEventCallback, idCreated, unrealInfoJson);
-	}
+	// Subscribe to object renamed-created-deleted and removed to be notified from Wwise using WAAPI, so we can maintain the Wise picker up to date dynamically.
+	SubscribeAllWaapiCallbacks();
 
 	auto pWaapiClient = FAkWaapiClient::Get();
 	if (pWaapiClient)
@@ -543,6 +588,8 @@ void SWaapiPicker::Construct(const FArguments& InArgs)
 		/* Construct the tree when we have the same project */
 		ProjectLoadedHandle = pWaapiClient->OnProjectLoaded.AddLambda([this]()
 		{
+			SubscribeAllWaapiCallbacks();
+
 			isPickerVisible = true;
 			CallWaapiGetProjectNamePath(ProjectName, ProjectFolder);
 			ConstructTree();
@@ -551,6 +598,8 @@ void SWaapiPicker::Construct(const FArguments& InArgs)
 		ConnectionLostHandle = pWaapiClient->OnConnectionLost.AddLambda([this]()
 		{
 			isPickerVisible = false;
+
+			RemoveAllWaapiCallbacks();
 			ConstructTree();
 		});
 		ClientBeginDestroyHandle = pWaapiClient->OnClientBeginDestroy.AddLambda([this]()
@@ -576,12 +625,12 @@ EVisibility SWaapiPicker::isWarningVisible() const
 
 void SWaapiPicker::Tick( const FGeometry& AllottedGeometry, const double InCurrentTime, const float InDeltaTime )
 {
-    UAkSettings* AkSettings = GetMutableDefault<UAkSettings>();
-    if(AkSettings->bRequestRefresh)
-    {
+	UAkSettings* AkSettings = GetMutableDefault<UAkSettings>();
+	if(AkSettings->bRequestRefresh)
+	{
 		ConstructTree();
-        AkSettings->bRequestRefresh = false;
-    }
+		AkSettings->bRequestRefresh = false;
+	}
 }
 
 FText SWaapiPicker::GetProjectName() const
@@ -1180,7 +1229,7 @@ uint64 SWaapiPicker::SubscribeToTransportStateChanged(int32 in_transportID)
 	if (waapiClient)
 	{
 		TSharedPtr<FJsonObject> outJsonResult;
-        uint64 subscriptionID = 0;
+		uint64 subscriptionID = 0;
 		waapiClient->Subscribe(ak::wwise::core::transport::stateChanged, Options, wampEventCallback, subscriptionID, outJsonResult);
 		return subscriptionID;
 	}

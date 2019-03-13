@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 // AkSimd.h
@@ -221,6 +221,9 @@ typedef AKSIMD_V4F32 AKSIMD_V4FCOND;	 ///< Vector of 4 comparison results
 
 /// Vector square root aproximation (see _mm_sqrt_ps)
 #define AKSIMD_SQRT_V4F32( __a__ ) _mm_sqrt_ps( (__a__) )
+
+/// Vector reciprocal square root approximation 1/sqrt(a), or equivalently, sqrt(1/a)
+#define AKSIMD_RSQRT_V4F32( __a__ ) _mm_rsqrt_ps( (__a__) )
 
 /// Faked in-place vector horizontal add. 
 /// \akwarning

@@ -5,8 +5,7 @@
 =============================================================================*/
 #include "AssetTypeActions_AkAudioEvent.h"
 #include "IAssetTools.h"
-#include "AkAudioClasses.h"
-#include "AkAudioDevice.h"
+#include "AkAudioEvent.h"
 #include "AkAudioDevice.h"
 #include "Toolkits/SimpleAssetEditor.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"

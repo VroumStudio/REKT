@@ -19,6 +19,10 @@
 #include "WwiseEventDragDropOp.h"
 #include "Widgets/Input/SHyperlink.h"
 
+#include "AkWaapiClient.h"
+#include "AkSettings.h"
+
+
 #define LOCTEXT_NAMESPACE "AkAudio"
 
 const FName SWwisePicker::WwisePickerTabName = FName("WwisePicker");

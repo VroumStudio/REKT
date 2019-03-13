@@ -30,7 +30,14 @@ namespace SAkItemProperties_Helpers
 {
 	static const FString FullPropertiesList[] =
 	{
+#if AK_WWISESDK_VERSION_MAJOR >= 2018
+		TEXT("CenterPercentage"),
+#endif
+#if AK_WWISESDK_VERSION_MAJOR <= 2017
 		TEXT("DivergenceCenter"),
+#endif
+		TEXT("GameAuxSendHPF"),
+		TEXT("GameAuxSendLPF"),
 		TEXT("GameAuxSendVolume"),
 		TEXT("HdrActiveRange"),
 		TEXT("HdrEnvelopeSensitivity"),
@@ -48,8 +55,10 @@ namespace SAkItemProperties_Helpers
 		TEXT("MidiVelocityFilterMax"),
 		TEXT("MidiVelocityFilterMin"),
 		TEXT("MidiVelocityOffset"),
+#if AK_WWISESDK_VERSION_MAJOR <= 2017
 		TEXT("MotionLowpass"),
 		TEXT("MotionVolume"),
+#endif
 		TEXT("OutputBusHighpass"),
 		TEXT("OutputBusLowpass"),
 		TEXT("OutputBusVolume"),
@@ -57,13 +66,15 @@ namespace SAkItemProperties_Helpers
 		TEXT("PreFetchLength"),
 		TEXT("Priority"),
 		TEXT("PriorityDistanceOffset"),
+#if AK_WWISESDK_VERSION_MAJOR >= 2018
+		TEXT("SpeakerPanning3DSpatializationMix"),
+#endif
 		TEXT("UserAuxSendVolume0"),
 		TEXT("UserAuxSendVolume1"),
 		TEXT("UserAuxSendVolume2"),
 		TEXT("UserAuxSendVolume3"),
 		TEXT("Volume"),
 		TEXT("Weight")
-
 	};
 
 	enum { FullPropertiesListSize = sizeof(FullPropertiesList) / sizeof(*FullPropertiesList) };

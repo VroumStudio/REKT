@@ -6,8 +6,7 @@
 
 #include "AkRoomComponent.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
+#include "AkLateReverbComponent.h"
 #include "Components/BrushComponent.h"
 #include "GameFramework/Volume.h"
 #include "Model.h"

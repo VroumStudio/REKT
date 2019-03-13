@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 #ifndef _AK_PLATFORM_FUNCS_H_
@@ -77,7 +77,7 @@ namespace AK
 #define AK_GET_THREAD_ROUTINE_PARAMETER_PTR(type) reinterpret_cast<type*>( AK_THREAD_ROUTINE_PARAMETER )
 #define AK_RETURN_THREAD_OK                     0x00000000
 #define AK_RETURN_THREAD_ERROR                  0x00000001
-#define AK_DEFAULT_STACK_SIZE					(64*1024)
+#define AK_DEFAULT_STACK_SIZE					(128*1024)
 #define AK_THREAD_PRIORITY_NORMAL				THREAD_PRIORITY_NORMAL
 #define AK_THREAD_PRIORITY_ABOVE_NORMAL			THREAD_PRIORITY_ABOVE_NORMAL
 #define AK_THREAD_PRIORITY_TIME_CRITICAL		THREAD_PRIORITY_TIME_CRITICAL
@@ -162,7 +162,7 @@ namespace AKPLATFORM
 		return InterlockedDecrement( pValue );
 	}
 
-#ifdef AK_CPU_X86_64
+#if defined AK_POINTER_64
 	inline bool AkInterlockedCompareExchange( volatile AkAtomic64* io_pDest, AkInt64 in_newValue, AkInt64 in_expectedOldVal )
 	{
 		return _InterlockedCompareExchange64(io_pDest, in_newValue, in_expectedOldVal) == in_expectedOldVal;
@@ -174,7 +174,7 @@ namespace AKPLATFORM
 		return InterlockedCompareExchange(io_pDest, in_newValue, in_expectedOldVal) == in_expectedOldVal;
 	}
 
-#if defined AK_CPU_X86 || defined AK_CPU_ARM
+#if !defined AK_POINTER_64
 	inline bool AkInterlockedCompareExchange(volatile AkAtomicPtr* io_pDest, AkIntPtr in_newValue, AkIntPtr in_expectedOldVal)
 	{
 		return InterlockedCompareExchange((volatile LONG_PTR*)io_pDest, (LONG_PTR)in_newValue, (LONG_PTR)in_expectedOldVal) == in_expectedOldVal;

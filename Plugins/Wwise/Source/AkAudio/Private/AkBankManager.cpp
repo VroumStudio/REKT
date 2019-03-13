@@ -3,7 +3,6 @@
 #include "AkBankManager.h"
 #include "AkAudioDevice.h"
 #include "AkInclude.h"
-#include "AkAudioClasses.h"
 #include "Misc/ScopeLock.h"
 #include "Async/Async.h"
 

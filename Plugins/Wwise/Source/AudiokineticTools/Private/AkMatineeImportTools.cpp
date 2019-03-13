@@ -2,7 +2,12 @@
 
 #include "AkMatineeImportTools.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "InterpTrackAkAudioRTPC.h"
+#include "InterpTrackAkAudioEvent.h"
+#include "MovieSceneAkAudioRTPCSection.h"
+#include "MovieSceneAkAudioRTPCTrack.h"
+#include "MovieSceneAkAudioEventSection.h"
+#include "MovieSceneAkAudioEventTrack.h"
 #include "AkUEFeatures.h"
 #include "MatineeImportTools.h"
 

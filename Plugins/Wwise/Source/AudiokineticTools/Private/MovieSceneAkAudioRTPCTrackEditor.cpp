@@ -2,7 +2,7 @@
 
 #include "MovieSceneAkAudioRTPCTrackEditor.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "InterpTrackAkAudioRTPC.h"
 
 #include "MovieScene.h"
 #include "MovieSceneCommonHelpers.h"

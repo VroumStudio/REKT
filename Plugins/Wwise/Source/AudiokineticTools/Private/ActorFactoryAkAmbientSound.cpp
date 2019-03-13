@@ -4,7 +4,9 @@
 	ActorFactoryAkAmbientSound.cpp: 
 =============================================================================*/
 #include "ActorFactoryAkAmbientSound.h"
-#include "AkAudioClasses.h"
+#include "AkAmbientSound.h"
+#include "AkAudioEvent.h"
+#include "AkComponent.h"
 #include "AssetData.h"
 #include "Editor/EditorEngine.h"
 

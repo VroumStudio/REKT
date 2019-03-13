@@ -6,8 +6,10 @@
 
 #include "AkGameplayStatics.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
+#include "AkAudioEvent.h"
+#include "AkAudioBank.h"
+#include "AkComponent.h"
+#include "AkAmbientSound.h"
 #include "EngineUtils.h"
 #include "Model.h"
 #include "UObject/UObjectIterator.h"

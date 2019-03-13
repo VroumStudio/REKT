@@ -5,7 +5,8 @@ AkWwiseAcousticsComponentVisualizer.cpp:
 =============================================================================*/
 #include "AkSurfaceReflectorSetComponentVisualizer.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "AkSurfaceReflectorSetComponent.h"
+#include "AkSpatialAudioVolume.h"
 #include "Editor.h"
 #include "EditorModeManager.h"
 #include "EditorModes.h"

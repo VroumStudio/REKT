@@ -8,8 +8,11 @@
 #include "AkAudioDevice.h"
 #include "AkAudioEvent.h"
 #include "InterpTrackInstAkAudioEvent.h"
-#include "EngineClasses.h"
 #include "InterpolationHitProxy.h"
+#include "Matinee/InterpGroup.h"
+#include "Matinee/InterpGroupInst.h"
+#include "Matinee/MatineeActor.h"
+#include "CanvasTypes.h"
 
 /*-----------------------------------------------------------------------------
 	Macros for making arrays-of-structs type tracks easier

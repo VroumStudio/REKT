@@ -6,8 +6,9 @@
 
 #include "AkSpatialAudioVolume.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
+#include "AkLateReverbComponent.h"
+#include "AkRoomComponent.h"
+#include "AkSurfaceReflectorSetComponent.h"
 #include "Components/BrushComponent.h"
 #include "Model.h"
 /*------------------------------------------------------------------------------------

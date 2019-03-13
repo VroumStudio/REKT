@@ -6,9 +6,10 @@
 
 #include "AkGameplayTypes.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
 #include "EngineUtils.h"
+#include "AkComponent.h"
 #include "Engine/GameEngine.h"
+#include "AkCallbackInfoPool.h"
 
 
 UAkCallbackInfo* AkCallbackTypeHelpers::GetBlueprintableCallbackInfo(AkCallbackType CallbackType, AkCallbackInfo* CallbackInfo)
@@ -65,7 +66,7 @@ UAkCallbackInfo::UAkCallbackInfo( class FObjectInitializer const & ObjectInitial
 
 UAkCallbackInfo* UAkCallbackInfo::Create(AkGameObjectID GameObjectID)
 {
-	auto CbInfo = NewObject<UAkCallbackInfo>();
+	auto CbInfo = FAkAudioDevice::Get()->GetAkCallbackInfoPool()->Acquire<UAkCallbackInfo>();
 	if (CbInfo)
 	{
 		CbInfo->AkComponent = UAkComponent::GetAkComponent(GameObjectID);
@@ -79,7 +80,7 @@ UAkEventCallbackInfo::UAkEventCallbackInfo(class FObjectInitializer const & Obje
 
 UAkEventCallbackInfo* UAkEventCallbackInfo::Create(AkEventCallbackInfo* AkEventCbInfo)
 {
-	auto CbInfo = NewObject<UAkEventCallbackInfo>();
+	auto CbInfo = FAkAudioDevice::Get()->GetAkCallbackInfoPool()->Acquire<UAkEventCallbackInfo>();
 	if (CbInfo)
 	{
 		CbInfo->AkComponent = UAkComponent::GetAkComponent(AkEventCbInfo->gameObjID);
@@ -95,7 +96,7 @@ UAkMIDIEventCallbackInfo::UAkMIDIEventCallbackInfo(class FObjectInitializer cons
 
 UAkMIDIEventCallbackInfo* UAkMIDIEventCallbackInfo::Create(AkMIDIEventCallbackInfo* AkMIDIEventCbInfo)
 {
-	auto CbInfo = NewObject<UAkMIDIEventCallbackInfo>();
+	auto CbInfo = FAkAudioDevice::Get()->GetAkCallbackInfoPool()->Acquire<UAkMIDIEventCallbackInfo>();
 	if (CbInfo)
 	{
 		CbInfo->AkComponent = UAkComponent::GetAkComponent(AkMIDIEventCbInfo->gameObjID);
@@ -112,7 +113,7 @@ UAkMarkerCallbackInfo::UAkMarkerCallbackInfo(class FObjectInitializer const & Ob
 
 UAkMarkerCallbackInfo* UAkMarkerCallbackInfo::Create(AkMarkerCallbackInfo* AkMarkerCbInfo)
 {
-	auto CbInfo = NewObject<UAkMarkerCallbackInfo>();
+	auto CbInfo = FAkAudioDevice::Get()->GetAkCallbackInfoPool()->Acquire<UAkMarkerCallbackInfo>();
 	if (CbInfo)
 	{
 		CbInfo->AkComponent = UAkComponent::GetAkComponent(AkMarkerCbInfo->gameObjID);
@@ -131,7 +132,7 @@ UAkDurationCallbackInfo::UAkDurationCallbackInfo(class FObjectInitializer const 
 
 UAkDurationCallbackInfo* UAkDurationCallbackInfo::Create(AkDurationCallbackInfo* AkDurationCbInfo)
 {
-	auto CbInfo = NewObject<UAkDurationCallbackInfo>();
+	auto CbInfo = FAkAudioDevice::Get()->GetAkCallbackInfoPool()->Acquire<UAkDurationCallbackInfo>();
 	if (CbInfo)
 	{
 		CbInfo->AkComponent = UAkComponent::GetAkComponent(AkDurationCbInfo->gameObjID);
@@ -152,7 +153,7 @@ UAkMusicSyncCallbackInfo::UAkMusicSyncCallbackInfo(class FObjectInitializer cons
 
 UAkMusicSyncCallbackInfo* UAkMusicSyncCallbackInfo::Create(AkMusicSyncCallbackInfo* AkMusicCbInfo)
 {
-	auto CbInfo = NewObject<UAkMusicSyncCallbackInfo>();
+	auto CbInfo = FAkAudioDevice::Get()->GetAkCallbackInfoPool()->Acquire<UAkMusicSyncCallbackInfo>();
 	if (CbInfo)
 	{
 		CbInfo->AkComponent = UAkComponent::GetAkComponent(AkMusicCbInfo->gameObjID);

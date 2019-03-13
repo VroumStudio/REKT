@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 #pragma once
@@ -71,7 +71,7 @@ namespace AK
 #define AK_RETURN_THREAD_OK                     0x00000000
 #define AK_RETURN_THREAD_ERROR                  0x00000001
 
-#define AK_DEFAULT_STACK_SIZE                   (64*1024)
+#define AK_DEFAULT_STACK_SIZE                   (128*1024)
 
 
 #define AK_THREAD_DEFAULT_SCHED_POLICY			SCHED_FIFO

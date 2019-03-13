@@ -43,6 +43,7 @@ class CAkUnrealIOHookDeferred;
 class AkFileCustomParamPolicy;
 class AAkAcousticPortal;
 class CAkDiskPackage;
+class AkCallbackInfoPool;
 
 template <class T_LLIOHOOK_FILELOC, class T_PACKAGE, class U_CUSTOMPARAM_POLICY>
 class CAkFilePackageLowLevelIO;
@@ -1141,6 +1142,11 @@ public:
 		return MaxAuxBus;
 	}
 
+	AkCallbackInfoPool* GetAkCallbackInfoPool()
+	{
+		return CallbackInfoPool;
+	}
+
 #if WITH_EDITOR
 	void SetMaxAuxBus(uint8 ValToSet) 
 	{
@@ -1300,6 +1306,7 @@ private:
 	uint8 MaxAuxBus;
 
 	FAkComponentCallbackManager* CallbackManager;
+	AkCallbackInfoPool* CallbackInfoPool;
 	FAkBankManager* AkBankManager;
 	CAkFilePackageLowLevelIO<CAkUnrealIOHookDeferred, CAkDiskPackage, AkFileCustomParamPolicy>* LowLevelIOHook;
 

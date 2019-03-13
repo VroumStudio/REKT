@@ -7,14 +7,16 @@
 #include "AkComponent.h"
 #include "AkAudioDevice.h"
 #include "AkInclude.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
 #include "Engine/Texture2D.h"
 #include "Components/BillboardComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
 #include "AkComponentCallbackManager.h"
+#include "AkLateReverbComponent.h"
+#include "AkRoomComponent.h"
+#include "AkSettings.h"
+#include "AkAudioEvent.h"
 #if WITH_EDITOR
 #include "LevelEditorViewport.h"
 #include "CameraController.h"
@@ -578,7 +580,6 @@ void UAkComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FAct
 void UAkComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
 	UpdateGameObjectPosition();
 
 	// If spawned inside AkReverbVolume(s), we do not want the fade in effect to kick in.
@@ -1021,13 +1022,13 @@ void UAkComponent::SetUseSpatialAudio(const bool bNewValue)
 	if (bUseSpatialAudio == bNewValue || !AkAudioDevice)
 		return;
 
+	bUseSpatialAudio = bNewValue;
 	if (bNewValue)
 		AkAudioDevice->RegisterSpatialAudioEmitter(this);
 	else
 		AkAudioDevice->UnregisterSpatialAudioEmitter(this);
 
-	bUseSpatialAudio = bNewValue;
-	ObstructionService.SetOcclusionObstructionFunction(this);
+	UpdateOcclusionObstruction();
 }
 
 

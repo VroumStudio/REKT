@@ -6,8 +6,7 @@
 
 #include "InterpTrackAkAudioRTPC.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "EngineClasses.h"
+#include "InterpTrackInstAkAudioEvent.h"
 #include "InterpolationHitProxy.h"
 
 /*-----------------------------------------------------------------------------

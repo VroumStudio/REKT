@@ -8,13 +8,19 @@
 
 // @todo sequencer uobjects: The *.generated.inl should auto-include required headers (they should always have #pragma once anyway)
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "AkComponent.h"
+#include "AkSettingsPerUser.h"
+#include "AkSurfaceReflectorSetComponent.h"
+#include "AkAcousticPortal.h"
+#include "InterpTrackAkAudioRTPC.h"
+#include "InterpTrackAkAudioEvent.h"
+#include "AkLateReverbComponent.h"
+#include "AkRoomComponent.h"
 #include "AkAudioBankFactory.h"
 #include "AkAudioEventFactory.h"
 #include "ActorFactoryAkAmbientSound.h"
 #include "AkComponentVisualizer.h"
 #include "MatineeModule.h"
-#include "MatineeClasses.h"
 #include "InterpTrackAkAudioEventHelper.h"
 #include "InterpTrackAkAudioRTPCHelper.h"
 #include "AssetToolsModule.h"
@@ -159,7 +165,7 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 		{
 			if (AkSettings->WwiseProjectPath.FilePath.IsEmpty())
 			{
-				if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings)
+				if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings && FApp::CanEverRender())
 				{
 					if (EAppReturnType::Yes == FMessageDialog::Open(EAppMsgType::YesNo, LOCTEXT("SettingsNotSet", "Wwise settings do not seem to be set. Would you like to open the settings window to set them?")))
 					{

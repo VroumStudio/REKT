@@ -282,9 +282,14 @@ void UAkCheckBox::SynchronizePropertyWithWwise()
 		TSharedPtr<FJsonObject> ItemInfoResult;
 		if (CallWappiGetPropertySate(IdItemToControl, BoolPropertyToControl, ItemInfoResult))
 		{
-			const bool PropertyValue = ItemInfoResult->GetBoolField(WwiseWaapiHelper::AT + BoolPropertyToControl);
-			SetIsChecked(PropertyValue);
+			bool result = false;
+
+			if (ItemInfoResult.Get()->TryGetBoolField(WwiseWaapiHelper::AT + BoolPropertyToControl, result))
+			{
+				SetIsChecked(result);
+			}
 		}
+
         if (SubscriptionId != 0)
         {
             bool isUnsubscribed;
@@ -296,8 +301,11 @@ void UAkCheckBox::SynchronizePropertyWithWwise()
 
 		auto wampEventCallback = WampEventCallback::CreateLambda([this](uint64_t id, TSharedPtr<FJsonObject> in_UEJsonObject)
 		{
-			const bool newValue = in_UEJsonObject->GetBoolField(WwiseWaapiHelper::NEW);
-			SetIsChecked(newValue);
+			bool result = false;
+			if (in_UEJsonObject->TryGetBoolField(WwiseWaapiHelper::NEW, result))
+			{
+				SetIsChecked(result);
+			}
 		});
 		SubscribeToPropertyStateChange(IdItemToControl, BoolPropertyToControl, wampEventCallback, SubscriptionId, outJsonResult);
 	}

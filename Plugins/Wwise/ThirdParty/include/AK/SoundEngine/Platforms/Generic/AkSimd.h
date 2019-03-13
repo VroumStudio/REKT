@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 // AkSimd.h
@@ -578,6 +578,18 @@ AkForceInline AKSIMD_V4F32 AKSIMD_SQRT_V4F32( const AKSIMD_V4F32& in_vec )
 		//AKSIMD_V4F32 res = vrecpeq_f32( vrsqrteq_f32( in_vec ) );
 
 		return vCompare /*res*/;
+}
+
+/// Vector reciprocal square root approximation 1/sqrt(a), or equivalently, sqrt(1/a)
+AkForceInline AKSIMD_V4F32 AKSIMD_RSQRT_V4F32(const AKSIMD_V4F32& in_vec)
+{
+	AKSIMD_V4F32 vCompare;
+	AKSIMD_GETELEMENT_V4F32(vCompare, 0) = 1.f / sqrtf(AKSIMD_GETELEMENT_V4F32(in_vec, 0));
+	AKSIMD_GETELEMENT_V4F32(vCompare, 1) = 1.f / sqrtf(AKSIMD_GETELEMENT_V4F32(in_vec, 1));
+	AKSIMD_GETELEMENT_V4F32(vCompare, 2) = 1.f / sqrtf(AKSIMD_GETELEMENT_V4F32(in_vec, 2));
+	AKSIMD_GETELEMENT_V4F32(vCompare, 3) = 1.f / sqrtf(AKSIMD_GETELEMENT_V4F32(in_vec, 3));
+
+	return vCompare;
 }
 
 AkForceInline AKSIMD_V2F32 AKSIMD_SQRT_V2F32( const AKSIMD_V2F32& in_vec )

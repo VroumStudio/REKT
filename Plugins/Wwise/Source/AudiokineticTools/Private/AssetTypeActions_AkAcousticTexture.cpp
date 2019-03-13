@@ -5,9 +5,6 @@ AssetTypeActions_AkAcousticTexture.cpp:
 =============================================================================*/
 #include "AssetTypeActions_AkAcousticTexture.h"
 #include "IAssetTools.h"
-#include "AkAudioClasses.h"
-#include "AkAudioDevice.h"
-#include "AkAudioDevice.h"
 #include "Toolkits/SimpleAssetEditor.h"
 
 #define LOCTEXT_NAMESPACE "AssetTypeActions"

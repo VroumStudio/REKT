@@ -6,8 +6,8 @@
 
 #include "AkAmbientSound.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
+#include "AkComponent.h"
+#include "AkAudioEvent.h"
 
 /*------------------------------------------------------------------------------------
 	AAkAmbientSound

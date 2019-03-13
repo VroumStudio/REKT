@@ -1,73 +1,161 @@
 Event	ID	Name			Wwise Object Path	Notes
 	152581	StartLevelConfig			\Default Work Unit\New Virtual Folder\StartLevelConfig	
-	35730698	Play_SFX_Wpn_Gatling_Shoot			\Default Work Unit\Play_SFX_Wpn_Gatling_Shoot	
-	434512859	Set_State_ST_SlowMo			\Default Work Unit\Set_State_ST_SlowMo	
-	504240361	Set_State_PauseOff			\Default Work Unit\New Virtual Folder\Set_State_PauseOff	
-	624714026	Play_UI_Weapons			\Default Work Unit\Play_UI_Weapons	
-	878452949	Play_UI_Equipment			\Default Work Unit\Play_UI_Equipment	
-	941995915	Nitro			\Default Work Unit\New Virtual Folder\Nitro	
+	35730698	Play_SFX_Wpn_Gatling_Shoot			\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Shoot	
+	177170041	Set_State_Indoor			\Default Work Unit\States\Set_State_Indoor	
+	434512859	Set_State_ST_SlowMo			\Default Work Unit\States\Set_State_ST_SlowMo	
+	504240361	Set_State_PauseOff			\Default Work Unit\States\Set_State_PauseOff	
+	624714026	Play_UI_Weapons			\Default Work Unit\UI\Play_UI_Weapons	
+	853193096	Play_SFX_Car_Drift			\Default Work Unit\SFX_Car\Play_SFX_Car_Drift	
+	878452949	Play_UI_Equipment			\Default Work Unit\UI\Play_UI_Equipment	
 	1020321262	Car_Engine			\Default Work Unit\New Virtual Folder\Car_Engine	
 	1472165566	Play_Music_BabyPark			\Default Work Unit\Play_Music_BabyPark	
-	1501458217	Play_Amb_BabyPark			\Default Work Unit\Play_Amb_BabyPark	
-	1569993949	Play_SFX_Trap_Mine_Explode			\Default Work Unit\Play_SFX_Trap_Mine_Explode	
-	1576113860	Play_SFX_Wpn_Gatling_Summon			\Default Work Unit\Play_SFX_Wpn_Gatling_Summon	
-	1868201586	Play_SFX_Wpn_FlameThrower_Summon			\Default Work Unit\Play_SFX_Wpn_FlameThrower_Summon	
-	1871393852	Set_State_ST_Build			\Default Work Unit\Set_State_ST_Build	
-	1925799616	Play_Amb_Babypark_Police_Dry			\Default Work Unit\Play_Amb_Babypark_Police_Dry	
-	1944695683	Play_Amb_Babypark_Police_Wet			\Default Work Unit\Play_Amb_Babypark_Police_Wet	
-	2201148061	Set_State_PauseOn			\Default Work Unit\New Virtual Folder\Set_State_PauseOn	
-	2207983986	Play_Amb_Garage			\Default Work Unit\Play_Amb_Garage	
-	2226512720	Play_UI_Babypark_Checkpoint			\Default Work Unit\Play_UI_Babypark_Checkpoint	
+	1501458217	Play_Amb_BabyPark			\Default Work Unit\AMB\Play_Amb_BabyPark	
+	1569993949	Play_SFX_Trap_Mine_Explode			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Explode	
+	1576113860	Play_SFX_Wpn_Gatling_Summon			\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon	
+	1857540444	Stop_SFX_Monster_Run			\Default Work Unit\Stop_SFX_Monster_Run	
+	1868201586	Play_SFX_Wpn_FlameThrower_Summon			\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Summon	
+	1871393852	Set_State_ST_Build			\Default Work Unit\States\Set_State_ST_Build	
+	1925799616	Play_Amb_Babypark_Police_Dry			\Default Work Unit\AMB\Play_Amb_Babypark_Police_Dry	
+	1944695683	Play_Amb_Babypark_Police_Wet			\Default Work Unit\AMB\Play_Amb_Babypark_Police_Wet	
+	2201148061	Set_State_PauseOn			\Default Work Unit\States\Set_State_PauseOn	
+	2207983986	Play_Amb_Garage			\Default Work Unit\AMB\Play_Amb_Garage	
+	2226512720	Play_UI_Babypark_Checkpoint			\Default Work Unit\UI\Play_UI_Babypark_Checkpoint	
 	2468732901	Play_Music_Garage			\Default Work Unit\New Virtual Folder\Play_Music_Garage	
-	2883580317	Play_SFX_Monsters_Run			\Default Work Unit\Play_SFX_Monsters_Run	
-	3022734157	Play_UI_Confirm			\Default Work Unit\Play_UI_Confirm	
-	3091697021	Set_State_ST_Normal			\Default Work Unit\Set_State_ST_Normal	
+	2528789258	Play_SFX_Monster_Run			\Default Work Unit\Play_SFX_Monster_Run	
+	2630068541	Set_State_Normal			\Default Work Unit\States\Set_State_Normal	
+	2880876640	Play_SFX_Car_Nitro_Refill			\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro_Refill	
+	2883580317	Play_SFX_Monsters_Run			\Default Work Unit\SFX_Car\Play_SFX_Monsters_Run	
+	3022734157	Play_UI_Confirm			\Default Work Unit\UI\Play_UI_Confirm	
+	3091697021	Set_State_ST_Normal			\Default Work Unit\States\Set_State_ST_Normal	
 	3092587493	Pause			\Default Work Unit\New Virtual Folder\Pause	
+	3237579210	Stop_SFX_Car_Drift			\Default Work Unit\SFX_Car\Stop_SFX_Car_Drift	
 	3258270161	Transmission			\Default Work Unit\New Virtual Folder\Transmission	
-	3362185276	Play_SFX_Wpn_FlameThrower_Shoot			\Default Work Unit\Play_SFX_Wpn_FlameThrower_Shoot	
-	3417507024	Play_SFX_Monsters_Die			\Default Work Unit\Play_SFX_Monsters_Die	
-	3624587671	Play_UI_Pause			\Default Work Unit\Play_UI_Pause	
-	3626629520	Play_UI_Movement			\Default Work Unit\Play_UI_Movement	
-	4185453606	Play_SFX_Trap_Mine_Trigger			\Default Work Unit\Play_SFX_Trap_Mine_Trigger	
-	4265925356	Play_SFX_Trap_Mine_Idle			\Default Work Unit\Play_SFX_Trap_Mine_Idle	
+	3345503513	Play_SFX_Car_Nitro			\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro	
+	3362185276	Play_SFX_Wpn_FlameThrower_Shoot			\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Shoot	
+	3364113413	Play_SFX_Car_Drift_Start			\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start	
+	3417507024	Play_SFX_Monsters_Die			\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die	
+	3624587671	Play_UI_Pause			\Default Work Unit\UI\Play_UI_Pause	
+	3626629520	Play_UI_Movement			\Default Work Unit\UI\Play_UI_Movement	
+	4185453606	Play_SFX_Trap_Mine_Trigger			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Trigger	
+	4265925356	Play_SFX_Trap_Mine_Idle			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Idle	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3030367241	ST_Car_View			\Default Work Unit\ST_Car_View	
+	3557541768	ST_SlowMo			\Default Work Unit\ST_SlowMo	
 	4054796535	ST_Pause			\Default Work Unit\ST_Pause	
 
 State	ID	Name	State Group			Notes
 	0	None	ST_Car_View			
 	340398852	Indoor	ST_Car_View			
+	1160234136	Normal	ST_Car_View			
+	0	None	ST_SlowMo			
+	2370781097	ST_Build	ST_SlowMo			
+	3042819342	ST_Normal	ST_SlowMo			
+	3557541768	ST_SlowMo	ST_SlowMo			
 	0	None	ST_Pause			
 	80751710	PauseOn	ST_Pause			
 	3921005316	PauseOff	ST_Pause			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	362735170	PauseOn	ST_Pause	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\Car_Engine		
-	395871982	Indoor	ST_Car_View	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\Car_Engine		
+	362735170	PauseOn	ST_Pause	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine		
+	395871982	Indoor	ST_Car_View	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine		
+	732858217	ST_SlowMo	ST_SlowMo	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	3774151474	RTPC_RPM			\Default Work Unit\Car\RTPC_RPM	
 
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	422287908	Modulator Time (Custom)				
+	837975695	Modulator Time (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	1182561210	Cut_3dB_10KHz	Wwise Parametric EQ			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	288951254	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Silence\Wwise Silence	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	22608017	Music_BabyPark_Intro	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Intro		6144068
-	24285591	PH_SFX_Car_Nitro	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Nitro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\PH_SFX_Car_Nitro		456328
-	67882987	PH_SFX_Car_FuturLO_Loop	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_FuturLO_Loop_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\Car_Engine\PH_SFX_Car_FuturLO_Loop		645468
-	90233645	UI_Equipment	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Equipment		240116
-	165497928	PH_SFX_Car_FuturHI_Loop	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_FuturHI_Loop_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\Car_Engine\PH_SFX_Car_FuturHI_Loop		731716
-	209010448	UI_Weapons	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTARMES_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Weapons		232656
-	246661573	UI_Movement	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTLEFTRIGHT_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Movement		4864
-	247985915	UI_Babypark_Checkpoint	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\UI_Babypark_Checkpoint_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Babypark_Checkpoint		480072
-	424078183	PH_SFX_Car_Transmission	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Transmission_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\PH_SFX_Car_Transmission		445264
-	432180664	PH_SFX_Car_Idle_Loop	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Idle_Loop_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\Car_Engine\PH_SFX_Car_Idle_Loop		730132
-	473618790	UI_Confirm	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTOK_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Confirm		14160
-	539231935	UI_Pause	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_PAUSE_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Pause		96064
-	647363192	Amb_BabyPark	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\AMB_GARAGE_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark		39832304
-	942125961	Music_Garage	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_Garage		8192068
+	22608017	Music_BabyPark_Intro	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Intro		6144068
+	35856289	SFX_Monster_Run_Asphalt_28	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_28_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_28		6514
+	50865050	SFX_Monster_Run_Asphalt_25	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_25_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_25		6514
+	59304707	SFX_Monster_Run_Asphalt_6	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_6		6512
+	81053282	SFX_Monster_Run_Asphalt_36	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_36_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_36		6512
+	81337290	SFX_Monster_Run_Asphalt_38	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_38_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_38		6512
+	90233645	UI_Equipment	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Equipment		240116
+	116157522	SFX_Monster_Run_Asphalt_31	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_31_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_31		6514
+	120863485	SFX_Monster_Run_Asphalt_39	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_39_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_39		6512
+	127778559	SFX_Monster_Run_Asphalt_33	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_33_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_33		6512
+	138180119	SFX_Car_Tire_Drift_Loop-09	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-09_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-09		26720
+	151755535	SFX_Car_Tire_Drift_Loop-01	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-01		33384
+	159642181	SFX_Monster_Run_Asphalt_4	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_4		6512
+	168048995	SFX_SlowMo	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_SlowMo-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_SlowMo		165704
+	174565045	SFX_Monster_Run_Asphalt_32	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_32_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_32		6512
+	188807683	SFX_Car_Tire_Drift_Loop-10	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-10		46712
+	209010448	UI_Weapons	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTARMES_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Weapons		232656
+	246661573	UI_Movement	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTLEFTRIGHT_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Movement		4864
+	247985915	UI_Babypark_Checkpoint	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\UI_Babypark_Checkpoint_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Babypark_Checkpoint		480072
+	268113833	SFX_Monster_Run_Asphalt_21	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_21_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_21		6512
+	271719483	SFX_Monster_Run_Asphalt_1	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_1		4830
+	328045296	SFX_Car_Tire_Drift_Loop-02	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-02		35608
+	337410547	SFX_Car_Tire_Drift_Loop-13	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-13_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-13		51152
+	338627591	SFX_Car_Tire_Drift_Loop-03	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-03		42268
+	341212262	SFX_Monster_Run_Asphalt_8	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_8		6512
+	357001961	SFX_Car_Tire_Drift_Loop-15	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-15_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-15		33384
+	357915156	SFX_Car_Tire_Drift_Loop	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop		33384
+	373229762	SFX_Car_Nitro_Boost-01	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Boost-01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro\SFX_Car_Nitro_Boost-01		238644
+	415854430	SFX_Car_Tire_Drift_Loop-11	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-11_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-11		40048
+	424078183	PH_SFX_Car_Transmission	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Transmission_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\PH_SFX_Car_Transmission		445264
+	473618790	UI_Confirm	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTOK_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Confirm		14160
+	477144447	SFX_Monster_Run_Asphalt_18	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_18_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_18		6512
+	533488739	SFX_Monster_Run_Asphalt_20	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_20_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_20		6512
+	539231935	UI_Pause	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_PAUSE_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Pause		96064
+	542680252	SFX_Monster_Run_Asphalt_37	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_37_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_37		6514
+	561559514	SFX_Monster_Run_Asphalt_11	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_11_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_11		6512
+	615726283	SFX_Monster_Run_Asphalt_12	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_12_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_12		6512
+	625407417	SFX_Monster_Run_Asphalt_30	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_30_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_30		6514
+	630336622	SFX_Monster_Run_Asphalt_26	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_26_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_26		6514
+	630750179	SFX_Monster_Run_Asphalt_2	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_2		6512
+	647363192	Amb_BabyPark	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_GARAGE_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark		39832304
+	673637251	SFX_Car_Tire_Drift_Loop-07	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-07		28944
+	674923998	SFX_Car_Tire_Drift_Loop-12	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-12_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-12		48932
+	680259220	SFX_Monster_Run_Asphalt_35	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_35_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_35		6512
+	685125525	SFX_Monster_Run_Asphalt_5	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_5		6512
+	719328683	SFX_Monster_Run_Asphalt_16	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_16_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_16		6512
+	746319321	SFX_Monster_Run_Asphalt_23	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_23_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_23		6514
+	746364561	SFX_Car_Tire_Drift_Start-01	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-01		173920
+	789886876	SFX_Monster_Run_Asphalt_19	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_19_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_19		6512
+	792734688	SFX_Car_Nitro_Boost-02	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Boost-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro\SFX_Car_Nitro_Boost-02		250344
+	800857768	SFX_Monster_Run_Asphalt_15	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_15_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_15		6512
+	815904793	SFX_Monster_Run_Asphalt_9	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_9_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_9		6512
+	841573623	SFX_Monster_Run_Asphalt_27	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_27_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_27		6514
+	853301487	SFX_Monster_Run_Asphalt_3	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_3		6512
+	857524936	SFX_Monster_Run_Asphalt_14	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_14_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_14		6512
+	862043951	SFX_Car_Nitro_Refill	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Refill_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro_Refill		167832
+	876872529	SFX_Monster_Run_Rouling	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Rouling_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Rouling		793604
+	877861424	SFX_Monster_Run_Asphalt_10	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_10		6512
+	885566710	SFX_Monster_Run_Asphalt_34	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_34_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_34		6512
+	894102337	SFX_Car_Tire_Drift_Loop-04	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-04		26720
+	912985413	SFX_Monster_Run_Asphalt_29	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_29_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_29		6514
+	926201035	SFX_Car_Tire_Drift_Loop-14	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-14		35604
+	942125961	Music_Garage	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_Garage		8192068
+	943796425	SFX_Car_Nitro_Boost	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Boost_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro\SFX_Car_Nitro_Boost		252144
+	982930451	SFX_Monster_Run_Asphalt_7	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_7		6512
+	984508822	SFX_Car_Tire_Drift_Start	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start		142952
+	984626086	SFX_Monster_Run_Asphalt_17	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_17_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_17		6512
+	984893858	SFX_Car_Tire_Drift_Start-05	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-05		167248
+	1007014752	SFX_Monster_Run_Asphalt_24	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_24_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_24		6514
+	1026971028	SFX_Car_Tire_Drift_Start-04	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-04		212732
+	1038994047	SFX_Monster_Run_Asphalt_13	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_13_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_13		6512
+	1065341630	SFX_Car_Tire_Drift_Loop-08	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-08		42268
+	1072533953	SFX_Monster_Run_Asphalt_22	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_22_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_22		6514
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	89081979	Amb_Babypark_Police_Dry	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\Amb_Babypark_Police_Dry_8956FC97.wem	89081979.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark_Police\Amb_Babypark_Police_Dry	
-	670022925	Amb_Garage	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem	670022925.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_Garage	
-	707811912	Music_BabyPark_Loop	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Boucle_8956FC97.wem	707811912.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Loop	
-	829940235	Amb_Babypark_Police_Wet	D:\Users\etudiant\Documents\GitHub\REKT_Perso\REKT_WwiseProject\.cache\Windows\SFX\Amb_Babypark_Police_Wet_8956FC97.wem	829940235.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark_Police\Amb_Babypark_Police_Wet	
+	89081979	Amb_Babypark_Police_Dry	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\Amb_Babypark_Police_Dry_8956FC97.wem	89081979.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark_Police\Amb_Babypark_Police_Dry	
+	131386122	SFX_Car_Engine_Idle	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Engine_Idle_8956FC97.wem	131386122.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Idle	
+	232015800	SFX_Car_Engine_Strong	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Engine_Strong_8956FC97.wem	232015800.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Strong	
+	242782528	SFX_Car_Engine_Medium	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Engine_Medium_8956FC97.wem	242782528.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Medium	
+	670022925	Amb_Garage	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem	670022925.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_Garage	
+	707811912	Music_BabyPark_Loop	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Boucle_8956FC97.wem	707811912.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Loop	
+	829940235	Amb_Babypark_Police_Wet	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\Amb_Babypark_Police_Wet_8956FC97.wem	829940235.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark_Police\Amb_Babypark_Police_Wet	
+	906881567	SFX_Car_Engine_Idle_Synth_Loop	D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Engine_Idle_Synth_Loop_8956FC97.wem	906881567.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Idle_Synth_Loop	
 

@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 // AkSimd.h
@@ -33,7 +33,11 @@ the specific language governing permissions and limitations under the License.
 #ifndef _AKSIMD_ARM_NEON_H_
 #define _AKSIMD_ARM_NEON_H_
 
-#include <arm_neon.h>
+#if defined _MSC_VER && defined _M_ARM64
+	#include <arm64_neon.h>
+#else
+	#include <arm_neon.h>
+#endif
 #include <AK/SoundEngine/Common/AkTypes.h>
 
 // Platform specific defines for prefetching
@@ -458,6 +462,9 @@ AkForceInline AKSIMD_V4F32 AKSIMD_MADD_SS_V4F32( const AKSIMD_V4F32& __a__, cons
 /// Square root (4 floats)
 #define AKSIMD_SQRT_V4F32( __vec__ ) vrecpeq_f32( vrsqrteq_f32( __vec__ ) )
 
+/// Vector reciprocal square root approximation 1/sqrt(a), or equivalently, sqrt(1/a)
+#define AKSIMD_RSQRT_V4F32( __a__ ) vrsqrteq_f32( (__a__) )
+
 /// Square root (2 floats)
 #define AKSIMD_SQRT_V2F32( __vec__ ) vrecpe_f32( vrsqrte_f32( __vec__ ) )
 
@@ -635,7 +642,7 @@ static AkForceInline int AKSIMD_MASK_V4F32( const AKSIMD_V4UI32& in_vec1 )
 {
 #ifdef AKSIMD_DECLARE_V4F32
 	static const AKSIMD_DECLARE_V4I32(movemask, 1, 2, 4, 8);
-	static const AKSIMD_DECLARE_V4I32(highbit, 0x80000000, 0x80000000, 0x80000000, 0x80000000);
+	static const AKSIMD_DECLARE_V4I32(highbit, (int32_t)0x80000000, (int32_t)0x80000000, (int32_t)0x80000000, (int32_t)0x80000000);
 #else
 	static const uint32x4_t movemask = { 1, 2, 4, 8 };
 	static const uint32x4_t highbit = { 0x80000000, 0x80000000, 0x80000000, 0x80000000 };

@@ -5,7 +5,10 @@
 ------------------------------------------------------------------------------------*/
 
 #include "AkAudioBankGenerationHelpers.h"
-#include "AkAudioClasses.h"
+#include "AkAuxBus.h"
+#include "AkAudioBank.h"
+#include "AkAudioEvent.h"
+#include "AkSettingsPerUser.h"
 #include "SGenerateSoundBanks.h"
 #include "AkSettings.h"
 #include "AssetRegistryModule.h"
@@ -18,6 +21,8 @@
 #include "Framework/MultiBox/MultiBoxBuilder.h"
 #include "Interfaces/IProjectManager.h"
 #include "ProjectDescriptor.h"
+#include "Serialization/JsonReader.h"
+#include "Serialization/JsonSerializer.h"
 
 
 #define LOCTEXT_NAMESPACE "AkAudio"
@@ -236,6 +241,13 @@ bool WwiseBnkGenHelper::GenerateDefinitionFile(TArray< TSharedPtr<FString> >& Ba
 
 	FString DefFileContent = WwiseBnkGenHelper::DumpBankContentString(BankToEventSet);
 	DefFileContent += WwiseBnkGenHelper::DumpBankContentString(BankToAuxBusSet);
+
+	if (DefFileContent.IsEmpty())
+	{
+		UE_LOG(LogAk, Error, TEXT("Your Wwise SoundBank definition file is empty, you should add a reference to a bank in your event assets."));
+		return false;
+	}
+
 	return FFileHelper::SaveStringToFile(DefFileContent, *WwiseBnkGenHelper::GetDefaultSBDefinitionFilePath());
 }
 

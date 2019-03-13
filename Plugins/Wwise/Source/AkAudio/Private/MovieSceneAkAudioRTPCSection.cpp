@@ -2,7 +2,6 @@
 
 #include "MovieSceneAkAudioRTPCSection.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
 #include "AkCustomVersion.h"
 #include "MovieSceneAkAudioRTPCTemplate.h"
 

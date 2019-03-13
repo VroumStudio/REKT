@@ -5,8 +5,7 @@
 =============================================================================*/
 #include "InterpTrackAkAudioEventHelper.h"
 #include "MatineeModule.h"
-#include "MatineeClasses.h"
-#include "AkAudioClasses.h"
+#include "InterpTrackAkAudioEvent.h"
 #include "PropertyCustomizationHelpers.h"
 #include "SMatineeAkEventKeyFrameAdder.h"
 #include "EditorModeInterpolation.h"

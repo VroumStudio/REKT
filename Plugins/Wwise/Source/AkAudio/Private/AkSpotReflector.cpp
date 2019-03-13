@@ -2,7 +2,8 @@
 
 #include "AkSpotReflector.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "AkAuxBus.h"
+#include "AkRoomComponent.h"
 #include "Engine/Texture2D.h"
 #include "Components/BillboardComponent.h"
 

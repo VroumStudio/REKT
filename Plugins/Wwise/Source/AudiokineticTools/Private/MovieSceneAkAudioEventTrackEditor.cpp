@@ -2,7 +2,7 @@
 
 #include "MovieSceneAkAudioEventTrackEditor.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "InterpTrackAkAudioEvent.h"
 #include "AkAudioBankGenerationHelpers.h"
 #include "MovieScene.h"
 #include "MovieSceneCommonHelpers.h"

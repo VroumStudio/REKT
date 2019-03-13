@@ -21,8 +21,8 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
-  Copyright (c) 2006-2018 Audiokinetic Inc.
+  Version: v2018.1.6  Build: 6858
+  Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
 // AkTypes.h
@@ -51,6 +51,9 @@ the specific language governing permissions and limitations under the License.
 	#define AK_CPU_X86_64							///< Compiling for 64-bit x86 CPU
 #elif defined _M_ARM
 	#define AK_CPU_ARM
+	#define AK_CPU_ARM_NEON
+#elif defined _M_ARM64
+	#define AK_CPU_ARM_64
 	#define AK_CPU_ARM_NEON
 #endif
 	

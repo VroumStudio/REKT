@@ -5,7 +5,8 @@
 =============================================================================*/
 #include "AkComponentVisualizer.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
+#include "AkComponent.h"
+#include "AkAudioEvent.h"
 #include "SceneView.h"
 #include "SceneManagement.h"
 

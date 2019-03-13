@@ -69,11 +69,16 @@ static_assert(static_cast<AK::SoundEngine::MultiPositionType>(AkMultiPositionTyp
 UENUM(BlueprintType)
 enum class AkActionOnEventType : uint8
 {
-	Stop = 0,            // AK::SoundEngine::AkActionOnEventType_Stop
-	Pause = 1,           // AK::SoundEngine::AkActionOnEventType_Pause
-	Resume = 2,          // AK::SoundEngine::AkActionOnEventType_Resume
-	Break = 3,           // AK::SoundEngine::AkActionOnEventType_Break
-	ReleaseEnvelope = 4  // AK::SoundEngine::AkActionOnEventType_ReleaseEnvelope
+	// AK::SoundEngine::AkActionOnEventType_Stop
+	Stop = 0,
+	// AK::SoundEngine::AkActionOnEventType_Pause
+	Pause = 1,
+	// AK::SoundEngine::AkActionOnEventType_Resume
+	Resume = 2,
+	// AK::SoundEngine::AkActionOnEventType_Break
+	Break = 3,
+	// AK::SoundEngine::AkActionOnEventType_ReleaseEnvelope
+	ReleaseEnvelope = 4
 };
 
 static_assert(static_cast<AK::SoundEngine::AkActionOnEventType>(AkActionOnEventType::Stop) == AK::SoundEngine::AkActionOnEventType_Stop, "AkActionOnEventType::Stop does not correspond with its internal Wwise counterpart.");
@@ -85,17 +90,28 @@ static_assert(static_cast<AK::SoundEngine::AkActionOnEventType>(AkActionOnEventT
 UENUM(BlueprintType)
 enum class EAkCurveInterpolation : uint8
 {
-	Log3 = 0,          ///< Log3
-	Sine = 1,          ///< Sine
-	Log1 = 2,          ///< Log1
-	InvSCurve = 3,     ///< Inversed S Curve
-	Linear = 4,        ///< Linear (Default)
-	SCurve = 5,        ///< S Curve
-	Exp1 = 6,          ///< Exp1
-	SineRecip = 7,     ///< Reciprocal of sine curve
-	Exp3 = 8,          ///< Exp3
-	LastFadeCurve = 8, ///< Update this value to reflect last curve available for fades
-	Constant = 9       ///< Constant ( not valid for fading values )
+	// Log3
+	Log3 = 0,
+	// Sine
+	Sine = 1,
+	// Log1
+	Log1 = 2,
+	// Inversed S Curve
+	InvSCurve = 3,
+	// Linear (Default)
+	Linear = 4,
+	// S Curve
+	SCurve = 5,
+	// Exp1
+	Exp1 = 6,
+	// Reciprocal of sine curve
+	SineRecip = 7,
+	// Exp3
+	Exp3 = 8,
+	// Update this value to reflect last curve available for fades
+	LastFadeCurve = 8,
+	// Constant ( not valid for fading values )
+	Constant = 9
 };
 
 static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Log3) == AkCurveInterpolation_Log3, "AkCurveInterpolation::Log3 does not correspond with its internal Wwise counterpart.");
@@ -364,7 +380,7 @@ public:
 	static UAkCallbackInfo* Create(AkGameObjectID GameObjectID);
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo")
-	class UAkComponent * AkComponent;
+	class UAkComponent * AkComponent = nullptr;
 };
 
 /// Callback information structure corresponding to \ref AK_EndOfEvent, \ref AK_MusicPlayStarted and \ref AK_Starvation.
@@ -379,10 +395,10 @@ public:
 	static UAkEventCallbackInfo* Create(AkEventCallbackInfo* AkEventCallbackInfo);
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|AkEvent")
-	int32 PlayingID;		///< Playing ID of Event, returned by PostEvent()
+	int32 PlayingID = 0;		///< Playing ID of Event, returned by PostEvent()
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|AkEvent")
-	int32 EventID;		///< Unique ID of Event, passed to PostEvent()
+	int32 EventID = 0;		///< Unique ID of Event, passed to PostEvent()
 };
 
 
@@ -525,10 +541,10 @@ struct FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI")
-	EAkMidiEventType	Type;
+	EAkMidiEventType	Type = EAkMidiEventType();
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI")
-	uint8	Chan;
+	uint8	Chan = 0;
 };
 
 
@@ -545,10 +561,10 @@ struct FAkMidiGeneric : public FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|Generic")
-	uint8 Param1;
+	uint8 Param1 = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|Generic")
-	uint8 Param2;
+	uint8 Param2 = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -564,10 +580,10 @@ struct FAkMidiNoteOnOff : public FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|NoteOnOff")
-	uint8 Note;
+	uint8 Note = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|NoteOnOff")
-	uint8 Velocity;
+	uint8 Velocity = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -583,10 +599,10 @@ struct FAkMidiCc : public FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|CC")
-	EAkMidiCcValues Cc;
+	EAkMidiCcValues Cc = EAkMidiCcValues();
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|CC")
-	uint8 Value;
+	uint8 Value = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -603,13 +619,13 @@ struct FAkMidiPitchBend : public FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|PitchBend")
-	uint8 ValueLsb;
+	uint8 ValueLsb = 0;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|PitchBend")
-	uint8 ValueMsb;
+	uint8 ValueMsb = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|PitchBend")
-	int32 FullValue;
+	int32 FullValue = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -625,10 +641,10 @@ struct FAkMidiNoteAftertouch : public FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|NoteAfterTouch")
-	uint8 Note;
+	uint8 Note = 0;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|NoteAfterTouch")
-	uint8 Value;
+	uint8 Value = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -643,7 +659,7 @@ struct FAkMidiChannelAftertouch : public FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|ChannelAfterTouch")
-	uint8 Value;
+	uint8 Value = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -658,7 +674,7 @@ struct FAkMidiProgramChange : public FAkMidiEventBase
 	{}
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|MIDI|ProgramChange")
-	uint8 ProgramNum;
+	uint8 ProgramNum = 0;
 };
 
 
@@ -722,10 +738,10 @@ public:
 	static UAkMarkerCallbackInfo* Create(AkMarkerCallbackInfo* akCallbackInfo);
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Marker")
-	int32 Identifier;		///< Cue point identifier
+	int32 Identifier = 0;		///< Cue point identifier
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Marker")
-	int32 Position;			///< Position in the cue point (unit: sample frames)
+	int32 Position = 0;			///< Position in the cue point (unit: sample frames)
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Marker")
 	FString	Label;			///< Label of the marker, read from the file
@@ -743,19 +759,19 @@ public:
 	static UAkDurationCallbackInfo* Create(AkDurationCallbackInfo* akCallbackInfo);
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Duration")
-	float Duration;				///< Duration of the sound (unit: milliseconds)
+	float Duration = 0.f;				///< Duration of the sound (unit: milliseconds)
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Duration")
-	float EstimatedDuration;		///< Estimated duration of the sound depending on source settings such as pitch. (unit: milliseconds)
+	float EstimatedDuration = 0.f;		///< Estimated duration of the sound depending on source settings such as pitch. (unit: milliseconds)
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Duration")
-	int32 AudioNodeID;			///< Audio Node ID of playing item
+	int32 AudioNodeID = 0;			///< Audio Node ID of playing item
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Duration")
-	int32 MediaID;				///< Media ID of playing item. (corresponds to 'ID' attribute of 'File' element in SoundBank metadata file)
+	int32 MediaID = 0;				///< Media ID of playing item. (corresponds to 'ID' attribute of 'File' element in SoundBank metadata file)
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Duration")
-	bool bStreaming;				///< True if source is streaming, false otherwise.
+	bool bStreaming = false;				///< True if source is streaming, false otherwise.
 };
 
 /// Structure used to query info on active playing segments.
@@ -778,31 +794,31 @@ struct FAkSegmentInfo
 	{}
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	int32		CurrentPosition;		///< Current position of the segment, relative to the Entry Cue, in milliseconds. Range is [-iPreEntryDuration, iActiveDuration+iPostExitDuration].
+	int32		CurrentPosition = 0;		///< Current position of the segment, relative to the Entry Cue, in milliseconds. Range is [-iPreEntryDuration, iActiveDuration+iPostExitDuration].
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	int32		PreEntryDuration;		///< Duration of the pre-entry region of the segment, in milliseconds.
+	int32		PreEntryDuration = 0;		///< Duration of the pre-entry region of the segment, in milliseconds.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	int32		ActiveDuration;		///< Duration of the active region of the segment (between the Entry and Exit Cues), in milliseconds.
+	int32		ActiveDuration = 0;		///< Duration of the active region of the segment (between the Entry and Exit Cues), in milliseconds.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	int32		PostExitDuration;		///< Duration of the post-exit region of the segment, in milliseconds.
+	int32		PostExitDuration = 0;		///< Duration of the post-exit region of the segment, in milliseconds.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	int32		RemainingLookAheadTime;///< Number of milliseconds remaining in the "looking-ahead" state of the segment, when it is silent but streamed tracks are being prefetched.
+	int32		RemainingLookAheadTime = 0;///< Number of milliseconds remaining in the "looking-ahead" state of the segment, when it is silent but streamed tracks are being prefetched.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	float		BeatDuration;			///< Beat Duration in seconds.
+	float		BeatDuration = 0.f;			///< Beat Duration in seconds.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	float		BarDuration;			///< Bar Duration in seconds.
+	float		BarDuration = 0.f;			///< Bar Duration in seconds.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	float		GridDuration;			///< Grid duration in seconds.
+	float		GridDuration = 0.f;			///< Grid duration in seconds.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|SegmentInfo")
-	float		GridOffset;			///< Grid offset in seconds.
+	float		GridOffset = 0.f;			///< Grid offset in seconds.
 };
 
 UCLASS(BlueprintType)
@@ -814,13 +830,13 @@ public:
 	static UAkMusicSyncCallbackInfo* Create(AkMusicSyncCallbackInfo* akCallbackInfo);
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Music")
-	int32 PlayingID;		///< Playing ID of Event, returned by PostEvent()
+	int32 PlayingID = 0;		///< Playing ID of Event, returned by PostEvent()
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Music")
 	FAkSegmentInfo SegmentInfo;		///< Segment information corresponding to the segment triggering this callback.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Music")
-	EAkCallbackType MusicSyncType;	///< Would be either \ref AK_MusicSyncEntry, \ref AK_MusicSyncBeat, \ref AK_MusicSyncBar, \ref AK_MusicSyncExit, \ref AK_MusicSyncGrid, \ref AK_MusicSyncPoint or \ref AK_MusicSyncUserCue.
+	EAkCallbackType MusicSyncType = EAkCallbackType();	///< Would be either \ref AK_MusicSyncEntry, \ref AK_MusicSyncBeat, \ref AK_MusicSyncBar, \ref AK_MusicSyncExit, \ref AK_MusicSyncGrid, \ref AK_MusicSyncPoint or \ref AK_MusicSyncUserCue.
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|Music")
 	FString UserCueName;	///< Cue name (UTF-8 string). Set for notifications AK_MusicSyncUserCue. NULL if cue has no name.
@@ -839,10 +855,9 @@ class FWaitEndOfEventAction : public FPendingLatentAction
 {
 public:
 	FName ExecutionFunction;
-	int32 OutputLink;
+	int32 OutputLink = 0;
 	FWeakObjectPtr CallbackTarget;
 	FThreadSafeBool EventFinished;
-
 
 	FWaitEndOfEventAction(const FLatentActionInfo& LatentInfo)
 		: ExecutionFunction(LatentInfo.ExecutionFunction)
@@ -870,10 +885,9 @@ class FWaitEndBankAction : public FPendingLatentAction
 {
 public:
 	FName ExecutionFunction;
-	int32 OutputLink;
+	int32 OutputLink = 0;
 	FWeakObjectPtr CallbackTarget;
 	FThreadSafeBool ActionDone;
-
 
 	FWaitEndBankAction(const FLatentActionInfo& LatentInfo)
 		: ExecutionFunction(LatentInfo.ExecutionFunction)

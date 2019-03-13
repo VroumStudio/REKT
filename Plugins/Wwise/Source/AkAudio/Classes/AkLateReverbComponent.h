@@ -1,4 +1,4 @@
-// Copyright Audiokinetic 2015
+// Copyright Audiokinetic 2012-2018
 
 #pragma once
 #include "Components/SceneComponent.h"

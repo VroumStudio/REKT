@@ -10,7 +10,7 @@
 #include "AkInclude.h"
 #include "AkGameplayTypes.h"
 #include "Components/SceneComponent.h"
-#include "AkOcclusionObstructionService.h"
+#include "OcclusionObstructionService/AkComponentOcclusionObstructionService.h"
 #include "AkComponent.generated.h"
 
 UENUM(Meta = (Bitflags))
@@ -416,7 +416,7 @@ private:
 	 */
 	void ApplyAkReverbVolumeList(float DeltaTime);
 
-	AkOcclusionObstructionService ObstructionService;
+	AkComponentOcclusionObstructionService ObstructionService;
 
 	/** Array of the active AkReverbVolumes at the AkComponent's location */
 	TArray<AkReverbFadeControl> ReverbFadeControls;

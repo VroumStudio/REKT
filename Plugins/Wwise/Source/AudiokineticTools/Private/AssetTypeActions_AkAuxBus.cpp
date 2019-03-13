@@ -5,9 +5,6 @@
 =============================================================================*/
 #include "AssetTypeActions_AkAuxBus.h"
 #include "IAssetTools.h"
-#include "AkAudioClasses.h"
-#include "AkAudioDevice.h"
-#include "AkAudioDevice.h"
 #include "Toolkits/SimpleAssetEditor.h"
 
 #define LOCTEXT_NAMESPACE "AssetTypeActions"

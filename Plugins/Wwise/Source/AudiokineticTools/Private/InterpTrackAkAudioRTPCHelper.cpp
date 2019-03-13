@@ -4,8 +4,6 @@
 	InterpTrackAkRTPCHelper.cpp: 
 =============================================================================*/
 #include "InterpTrackAkAudioRTPCHelper.h"
-#include "AkAudioClasses.h"
-#include "MatineeClasses.h"
 
 /*-----------------------------------------------------------------------------
 	UInterpTrackAkAudioRTPCHelper

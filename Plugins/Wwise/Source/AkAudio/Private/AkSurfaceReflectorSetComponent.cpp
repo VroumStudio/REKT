@@ -1,10 +1,9 @@
 #include "AkSurfaceReflectorSetComponent.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/BrushComponent.h"
 #include "Model.h"
 #include "Engine/Polys.h"
+#include "GameFramework/Volume.h"
 
 
 #include <AK/SpatialAudio/Common/AkSpatialAudio.h>

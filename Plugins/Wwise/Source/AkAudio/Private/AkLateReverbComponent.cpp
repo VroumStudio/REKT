@@ -1,4 +1,4 @@
-// Copyright (c) 2006-2012 Audiokinetic Inc. / All Rights Reserved
+// Copyright (c) 2006-2018 Audiokinetic Inc. / All Rights Reserved
 
 /*=============================================================================
 	AkLateReverbComponent.cpp:
@@ -6,10 +6,12 @@
 
 #include "AkLateReverbComponent.h"
 #include "AkAudioDevice.h"
-#include "AkAudioClasses.h"
-#include "Net/UnrealNetwork.h"
+#include "AkAuxBus.h"
+#include "AkRoomComponent.h"
 #include "Components/BrushComponent.h"
 #include "Model.h"
+#include "GameFramework/Volume.h"
+
 /*------------------------------------------------------------------------------------
 	UAkLateReverbComponent
 ------------------------------------------------------------------------------------*/
@@ -17,18 +19,17 @@
 UAkLateReverbComponent::UAkLateReverbComponent(const class FObjectInitializer& ObjectInitializer) :
 	Super(ObjectInitializer)
 {
-	ParentVolume = NULL;
+	ParentVolume = nullptr;
 
 	// Property initialization
 	SendLevel = 1.0f;
 	FadeRate = 0.5f;
 	Priority = 1.0f;
 
-	NextLowerPriorityComponent = NULL;
+	NextLowerPriorityComponent = nullptr;
 
 	bEnable = true;
 	bWantsInitializeComponent = true;
-
 }
 
 bool UAkLateReverbComponent::HasEffectOnLocation(const FVector& Location) const
@@ -83,12 +84,20 @@ void UAkLateReverbComponent::PostLoad()
 void UAkLateReverbComponent::InitializeComponent()
 {
 	Super::InitializeComponent();
-	UAkRoomComponent* pRoomCmpt = (UAkRoomComponent*)ParentVolume->GetComponentByClass(UAkRoomComponent::StaticClass());
+	
+	UAkRoomComponent* pRoomCmpt = nullptr;
+	if (ParentVolume)
+	{
+		pRoomCmpt = (UAkRoomComponent*)ParentVolume->GetComponentByClass(UAkRoomComponent::StaticClass());
+	}
+
 	if (!pRoomCmpt || !pRoomCmpt->RoomIsActive())
 	{
 		FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
 		if (AkAudioDevice && LateReverbIsActive())
+		{
 			AkAudioDevice->AddLateReverbComponentToPrioritizedList(this);
+		}
 	}
 }
 
@@ -97,6 +106,8 @@ void UAkLateReverbComponent::UninitializeComponent()
 	Super::UninitializeComponent();
 	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
 	if (AkAudioDevice && LateReverbIsActive())
+	{
 		AkAudioDevice->RemoveLateReverbComponentFromPrioritizedList(this);
+	}
 }
 
