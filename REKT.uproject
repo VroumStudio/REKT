@@ -5,8 +5,9 @@
 	"Description": "",
 	"Plugins": [
 		{
-			"Name": "Wwise",
-			"Enabled": true
+      "Name": "Wwise",
+      "Installed" :  true,
+      "Enabled": true  
 		},
 		{
 			"Name": "Niagara",
