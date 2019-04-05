@@ -37,13 +37,6 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="SB_NeoOslo" ID="{D8D15AFE-99A7-4A4A-884E-7FC2B2FFC78F}">
-					<ObjectInclusionList>
-						<ObjectRef Name="Default Work Unit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

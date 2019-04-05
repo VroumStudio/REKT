@@ -272,6 +272,13 @@
 										</Reference>
 									</ReferenceList>
 								</AuxBus>
+								<AuxBus Name="BabyPark" ID="{2551E99B-ADAB-4E8E-AA43-8B4B08AAB0F1}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
 							</ChildrenList>
 						</Bus>
 						<Bus Name="UI" ID="{909E86E8-4947-476F-80D0-4B18D8C2ADA9}">
