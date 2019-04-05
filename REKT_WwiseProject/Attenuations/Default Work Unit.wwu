@@ -127,7 +127,7 @@
 				</Attenuation>
 				<Attenuation Name="Monster_Attenuation" ID="{6A34F229-1C49-4481-9662-DA563DA7C19D}" ShortID="425788401">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="5000"/>
+						<Property Name="RadiusMax" Type="Real64" Value="3000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -143,13 +143,13 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>4102.22139</XPos>
-											<YPos>-2.15498</YPos>
+											<XPos>1812.43001</XPos>
+											<YPos>-4.59477</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>5000</XPos>
+											<XPos>3000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -179,7 +179,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>5000</XPos>
+											<XPos>3000</XPos>
 											<YPos>28</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -202,7 +202,7 @@
 								<Value>True</Value>
 							</ValueList>
 						</Property>
-						<Property Name="RadiusMax" Type="Real64" Value="5000"/>
+						<Property Name="RadiusMax" Type="Real64" Value="10000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -218,17 +218,17 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>623.72059</XPos>
-											<YPos>-2.77772</YPos>
+											<XPos>1656.17579</XPos>
+											<YPos>-0.42584</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>4610.62306</XPos>
-											<YPos>-4.91729</YPos>
+											<XPos>9825.94936</XPos>
+											<YPos>-14.0116</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>5000</XPos>
+											<XPos>10000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -237,35 +237,7 @@
 							</CurveUsageInfo>
 						</VolumeDryUsage>
 						<VolumeWetGameUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-								<Curve Name="VolumeWetGame" ID="{8F06783C-27CD-405F-B4F6-3455ECCAB22B}">
-									<PropertyList>
-										<Property Name="Flags" Type="int32" Value="3"/>
-									</PropertyList>
-									<PointList>
-										<Point>
-											<XPos>0</XPos>
-											<YPos>0</YPos>
-											<Flags>5</Flags>
-										</Point>
-										<Point>
-											<XPos>828.087895</XPos>
-											<YPos>-0.42584</YPos>
-											<Flags>0</Flags>
-										</Point>
-										<Point>
-											<XPos>4809.39125</XPos>
-											<YPos>-1.67656</YPos>
-											<Flags>0</Flags>
-										</Point>
-										<Point>
-											<XPos>5000</XPos>
-											<YPos>-200</YPos>
-											<Flags>37</Flags>
-										</Point>
-									</PointList>
-								</Curve>
-							</CurveUsageInfo>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
 						</VolumeWetGameUsage>
 						<VolumeWetUserUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -280,7 +252,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>5000</XPos>
+											<XPos>10000</XPos>
 											<YPos>-5.89359</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -301,12 +273,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>681.1425</XPos>
+											<XPos>1362.285</XPos>
 											<YPos>13</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>5000</XPos>
+											<XPos>10000</XPos>
 											<YPos>15</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -328,13 +300,13 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1090.06105</XPos>
+											<XPos>2180.1221</XPos>
 											<YPos>19</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>InvertedSCurve</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>5000</XPos>
+											<XPos>10000</XPos>
 											<YPos>30</YPos>
 											<Flags>37</Flags>
 										</Point>

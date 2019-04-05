@@ -611,34 +611,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_SFX_Turret_Drop" ID="{8E1FAD74-3E2D-4A9A-AA49-54A8AB69909D}">
-					<ChildrenList>
-						<Action Name="" ID="{540D2203-A69F-4796-A6C3-6B580CF473E1}" ShortID="876388594">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Turret" ID="{A17DF3D7-0A96-4C34-A82E-CBD83F3EB344}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_UI_Build_Error" ID="{48BE435B-4FED-42EF-B9FB-516392ED8543}">
-					<ChildrenList>
-						<Action Name="" ID="{A3F4677E-BD21-4B0F-B124-BFF3C4780886}" ShortID="200464449">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="UI_Build_Error" ID="{93C23F1A-84F6-4AF5-A12E-B9FEA6856D2C}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

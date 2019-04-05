@@ -39,11 +39,9 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	311707310	Garage			\Default Work Unit\Master Audio Bus\Reverb\Garage	
-	3857981469	BabyPark			\Default Work Unit\Master Audio Bus\Reverb\BabyPark	
 
 Effect plug-ins	ID	Name	Type				Notes
 	30891430	Wwise Meter (Custom)	Wwise Meter			
-	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	250581872	Wwise Meter (Custom)	Wwise Meter			
 	464945727	Wwise Meter (Custom)	Wwise Meter			
 	814721238	Wwise Meter (Custom)	Wwise Meter			
