@@ -85,7 +85,12 @@ void FAkSurfaceReflectorSetComponentVisualizer::DrawVisualization(const UActorCo
 				{
 					FLinearColor SurfaceColor = SurfaceReflectorSet->AcousticPolys[NodeIdx].Texture->EditColor;
 					SurfaceColor.A = 0.5f;
-					FDynamicColoredMaterialRenderProxy* MatProxy = new FDynamicColoredMaterialRenderProxy(GEngine->GeomMaterial->GetRenderProxy(false), SurfaceColor);
+#if UE_4_22_OR_LATER
+					auto* renderProxy = GEngine->GeomMaterial->GetRenderProxy();
+#else
+					auto* renderProxy = GEngine->GeomMaterial->GetRenderProxy(false);
+#endif
+					FDynamicColoredMaterialRenderProxy* MatProxy = new FDynamicColoredMaterialRenderProxy(renderProxy, SurfaceColor);
 					PDI->RegisterDynamicResource(MatProxy);
 					MeshBuilder.Draw(PDI, SpatialAudioVolume->ActorToWorld().ToMatrixWithScale(), MatProxy, SDPG_World, false);
 				}

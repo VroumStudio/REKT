@@ -27,7 +27,6 @@
 
 
 #define LOCTEXT_NAMESPACE "AkAudio"
-DEFINE_LOG_CATEGORY_STATIC(LogAkBanks, Log, All);
 
 SGenerateSoundBanks::SGenerateSoundBanks()
 {
@@ -186,7 +185,7 @@ void SGenerateSoundBanks::PopulateList(void)
 	}
 
 	// Get available platforms
-	WwiseBnkGenHelper::GetWwisePlatforms(PlatformNames);
+	PlatformNames = WwiseBnkGenHelper::GetWwisePlatforms();
 }
 
 FReply SGenerateSoundBanks::OnKeyDown( const FGeometry& MyGeometry, const FKeyEvent& InKeyboardEvent )
@@ -244,22 +243,24 @@ FReply SGenerateSoundBanks::OnGenerateButtonClicked()
             }
         }
 
-		int32 ReturnCode = WwiseBnkGenHelper::GenerateSoundBanks( BanksToGenerate, PlatformsToGenerate );
-
-		if ( ReturnCode == 0 || ReturnCode == 2 )
+		if (BanksToGenerate.Num() != 0)
 		{
-            FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
-            if (AudioDevice)
-            {
-                AudioDevice->ReloadAllReferencedBanks();
-            }
-			WwiseBnkGenHelper::FetchAttenuationInfo(BankToEventSet);
+			auto OnSoundBanksGenerated = WwiseBnkGenHelper::FOnBankGenerationComplete::CreateLambda([this, BankToEventSet](bool bSuccess)
+			{
+				if (bSuccess)
+				{
+					FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
+					if (AudioDevice)
+					{
+						UE_LOG(LogAkBanks, Log, TEXT("Reloading all SoundBanks..."));
+						AudioDevice->ReloadAllReferencedBanks();
+					}
+					WwiseBnkGenHelper::FetchAttenuationInfo(BankToEventSet);
+				}
+			});
+			WwiseBnkGenHelper::GenerateSoundBanksNonBlocking( BanksToGenerate, PlatformsToGenerate, OnSoundBanksGenerated);
 			TSharedPtr<SWindow> ParentWindow = FSlateApplication::Get().FindWidgetWindow(AsShared());
 			ParentWindow->RequestDestroyWindow();
-		}
-		else
-		{
-			FMessageDialog::Open( EAppMsgType::Ok, LOCTEXT("AkAudio_SoundBankGenFail", "SoundBank generation returned errors: see the Ouput Log window (Window->Developer Tools->Output Log) for more information.") );
 		}
 	}
 	else

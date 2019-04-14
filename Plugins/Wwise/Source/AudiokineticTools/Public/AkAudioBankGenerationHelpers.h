@@ -9,37 +9,71 @@
 #include "AkAudioEvent.h"
 #include "AkAudioBank.h"
 
+DECLARE_LOG_CATEGORY_EXTERN(LogAkBanks, Log, All);
+
 namespace WwiseBnkGenHelper
 {
+	DECLARE_DELEGATE_OneParam(FOnBankGenerationComplete, bool);
+
+	/**
+	 * Get an absolute path to the associated Wwise project
+	 */
+	FString GetLinkedProjectPath();
+
 	/**
 	 * Dump the bank definition to file
 	 *
 	 * @param in_DefinitionFileContent	Banks to include in file
 	 */
-	AUDIOKINETICTOOLS_API bool GenerateDefinitionFile(TArray< TSharedPtr<FString> >& BanksToGenerate, TMap<FString, TSet<UAkAudioEvent*> >& BankToEventSet);
-	FString DumpBankContentString(TMap<FString, TSet<UAkAudioEvent*> >& in_DefinitionFileContent);
-	FString DumpBankContentString(TMap<FString, TSet<UAkAuxBus*> >& in_DefinitionFileContent );
+	bool GenerateDefinitionFile(TArray< TSharedPtr<FString> >& BanksToGenerate, TMap<FString, TSet<UAkAudioEvent*> >& BankToEventSet);
 	
 	/**
-	 * Generate the Wwise soundbanks
+	 * Generate the Wwise soundbanks in a blocking process
 	 *
-	 * @param in_rBankNames				Names of the banks
-	 * @param in_bImportDefinitionFile	Use an import definition file
+	 * @param in_rBankNames				Names of the banks to generate
+	 * @param in_PlatformNames			Names of the platforms to generate for
+	 * @param WwisePathOverride			Use a different path to WwiseCli than the one in the ini file
 	 */
-	AUDIOKINETICTOOLS_API int32 GenerateSoundBanks( TArray< TSharedPtr<FString> >& in_rBankNames, TArray< TSharedPtr<FString> >& in_PlatformNames, const FString* WwisePathOverride = nullptr);
+	int32 GenerateSoundBanksBlocking(TArray< TSharedPtr<FString> >& in_rBankNames, TArray< TSharedPtr<FString> >& in_PlatformNames, const FString* WwisePathOverride = nullptr);
 
-	AUDIOKINETICTOOLS_API void GetWwisePlatforms(TArray< TSharedPtr<FString> >& WwisePlatforms);
-	void AddPlatformIfSupported(const TSet<FString>& SupportedPlatforms, const FString& UnrealName, const TCHAR* WwiseName, TArray< TSharedPtr<FString> >& WwisePlatforms);
+	/**
+	 * Generate the Wwise soundbanks in a non-blocking manner
+	 *
+	 * @param in_rBankNames					Names of the banks to generate
+	 * @param in_PlatformNames				Names of the platforms to generate for
+	 * @param OnSoundBankGenerationComplete	Delegate fired when generation completes, take a bool argument indicating success
+	 */
+	void GenerateSoundBanksNonBlocking( TArray< TSharedPtr<FString> >& in_rBankNames, TArray< TSharedPtr<FString> >& in_PlatformNames, FOnBankGenerationComplete OnSoundBankGenerationComplete);
 
-	AUDIOKINETICTOOLS_API bool FetchAttenuationInfo(const TMap<FString, TSet<UAkAudioEvent*> >& BankToEventSet);
+	/**
+	 * Returns all platforms supported in both Wwise and the Unreal project
+	 *
+	 * @param WwisePlatforms	Output parameter: array of platforms
+	 *
+	 */
+	TArray< TSharedPtr<FString> > GetWwisePlatforms();
+	AK_DEPRECATED(2019.1, "This function is deprecated and will be removed in future releases.")
+	void GetWwisePlatforms(TArray< TSharedPtr<FString> >& WwisePlatforms);
 
-	void CreateGenerateSoundBankWindow(TArray<TWeakObjectPtr<UAkAudioBank>>* pSoundBanks, bool in_bShouldSaveWwiseProject);
+	/**
+	 * Returns all platforms supported in the Unreal project
+	 */
+	TSet<FString> GetSupportedPlatforms();
 
-	FString GetBankGenerationFullDirectory( const TCHAR * in_szPlatformDir );
+	/**
+	 * Gather attenuation info for newly generated banks
+	 *
+	 * @params BankToEventSet	Map of SoundBanks to Events contained in that SoundBank
+	 * 
+	 */
+	void FetchAttenuationInfo(const TMap<FString, TSet<UAkAudioEvent*> >& BankToEventSet);
 
-	FString GetLinkedProjectPath();
-
-	FString GetDefaultSBDefinitionFilePath();
-
-	FString GetProjectDirectory();
-};
+	/**
+	 * Function to create the Generate SoundBanks window
+	 *
+	 * @param pSoundBanks				List of SOundBanks to be pre-selected
+	 * @paramin_bShouldSaveWwiseProject	Whether the Wwise project should be saved or not
+	 *
+	 */
+	void CreateGenerateSoundBankWindow(TArray<TWeakObjectPtr<UAkAudioBank>>* pSoundBanks, bool in_bShouldSaveWwiseProject = false);
+}

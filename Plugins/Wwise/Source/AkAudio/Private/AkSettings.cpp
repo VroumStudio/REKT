@@ -7,12 +7,36 @@
 
 #if WITH_EDITOR
 #include "Settings/ProjectPackagingSettings.h"
+
+#include "InitializationSettings/AkInitializationSettings.h"
+#include "InitializationSettings/AkAndroidInitializationSettings.h"
+#include "InitializationSettings/AkIOSInitializationSettings.h"
+#include "InitializationSettings/AkLinuxInitializationSettings.h"
+#include "InitializationSettings/AkLuminInitializationSettings.h"
+#include "InitializationSettings/AkMacInitializationSettings.h"
+#include "InitializationSettings/AkPS4InitializationSettings.h"
+#include "InitializationSettings/AkSwitchInitializationSettings.h"
+#include "InitializationSettings/AkWindowsInitializationSettings.h"
+#include "InitializationSettings/AkXBoxOneInitializationSettings.h"
 #endif
 
 #include "UObject/UnrealType.h"
 
 //////////////////////////////////////////////////////////////////////////
 // UAkSettings
+
+namespace AkSettings_Helper
+{
+	template<typename TAkInitializationSettings>
+	void MigrateMultiCoreRendering(bool EnableMultiCoreRendering)
+	{
+		if (auto* Settings = GetMutableDefault<TAkInitializationSettings>())
+		{
+			Settings->AdvancedSettings.EnableMultiCoreRendering = EnableMultiCoreRendering;
+			Settings->UpdateDefaultConfigFile();
+		}
+	}
+}
 
 FString UAkSettings::DefaultSoundBankFolder = TEXT("WwiseAudio");
 
@@ -50,13 +74,30 @@ void UAkSettings::PostInitProperties()
 			AkSettingsPerUser->SaveConfig();
 		}
 	}
-#endif
+
+	if (!MigratedEnableMultiCoreRendering)
+	{
+		MigratedEnableMultiCoreRendering = true;
+
+		using namespace AkSettings_Helper;
+		const auto Enabled = bEnableMultiCoreRendering_DEPRECATED;
+		MigrateMultiCoreRendering<UAkAndroidInitializationSettings>(Enabled);
+		MigrateMultiCoreRendering<UAkLinuxInitializationSettings>(Enabled);
+		MigrateMultiCoreRendering<UAkLuminInitializationSettings>(Enabled);
+		MigrateMultiCoreRendering<UAkMacInitializationSettings>(Enabled);
+		MigrateMultiCoreRendering<UAkPS4InitializationSettings>(Enabled);
+		MigrateMultiCoreRendering<UAkSwitchInitializationSettings>(Enabled);
+		MigrateMultiCoreRendering<UAkWindowsInitializationSettings>(Enabled);
+		MigrateMultiCoreRendering<UAkXBoxOneInitializationSettings>(Enabled);
+	}
+#endif // WITH_EDITOR
 }
 
 #if WITH_EDITOR
 void UAkSettings::PreEditChange(UProperty* PropertyAboutToChange)
 {
 	PreviousWwiseProjectPath = WwiseProjectPath.FilePath;
+	PreviousSoundBankFolder = WwiseSoundBankFolder.Path;
 }
 
 void UAkSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
@@ -86,10 +127,12 @@ void UAkSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedE
 		EnsureSoundBankPathIsInPackagingSettings();
 	}
 
+	PreviousSoundBankFolder.Empty();
+
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 }
 
-void UAkSettings::EnsureSoundBankPathIsInPackagingSettings() const
+void UAkSettings::EnsureSoundBankPathIsInPackagingSettings() 
 {
 	UProjectPackagingSettings* PackagingSettings = GetMutableDefault<UProjectPackagingSettings>();
 
@@ -111,16 +154,15 @@ void UAkSettings::EnsureSoundBankPathIsInPackagingSettings() const
 		packageSettingsNeedUpdate = true;
 	}
 
-	FString ContentFolder = FPaths::ConvertRelativePathToFull(AkUnrealHelper::GetContentDirectory());
-
-	for (int32 i = PackagingSettings->DirectoriesToAlwaysStageAsUFS.Num() - 1; i >= 0; --i)
+	if (!PreviousSoundBankFolder.IsEmpty())
 	{
-		FString FullContentFolder = FPaths::Combine(*ContentFolder, PackagingSettings->DirectoriesToAlwaysStageAsUFS[i].Path);
-
-		if (!FPaths::DirectoryExists(FullContentFolder))
+		for (int i = 0; i < PackagingSettings->DirectoriesToAlwaysStageAsUFS.Num(); i++)
 		{
-			PackagingSettings->DirectoriesToAlwaysStageAsUFS.RemoveAt(i);
-			packageSettingsNeedUpdate = true;
+			if (PackagingSettings->DirectoriesToAlwaysStageAsUFS[i].Path == PreviousSoundBankFolder)
+			{
+				PackagingSettings->DirectoriesToAlwaysStageAsUFS.RemoveAt(i);
+				packageSettingsNeedUpdate = true;
+			}
 		}
 	}
 

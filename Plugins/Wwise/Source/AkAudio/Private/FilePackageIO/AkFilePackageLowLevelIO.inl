@@ -61,17 +61,10 @@ CAkFilePackageLowLevelIO<T_LLIOHOOK_FILELOC, T_PACKAGE, U_CUSTOMPARAM_POLICY>::C
 template <class T_LLIOHOOK_FILELOC, class T_PACKAGE, class U_CUSTOMPARAM_POLICY>
 CAkFilePackageLowLevelIO<T_LLIOHOOK_FILELOC, T_PACKAGE, U_CUSTOMPARAM_POLICY>::~CAkFilePackageLowLevelIO()
 {
-}
-
-// Initialize/terminate.
-template <class T_LLIOHOOK_FILELOC, class T_PACKAGE, class U_CUSTOMPARAM_POLICY>
-void CAkFilePackageLowLevelIO<T_LLIOHOOK_FILELOC, T_PACKAGE, U_CUSTOMPARAM_POLICY>::Term()
-{
-    UnloadAllFilePackages();
+	UnloadAllFilePackages();
 	m_packages.Term();
-	if ( m_bRegisteredToLangChg )
-		AK::StreamMgr::RemoveLanguageChangeObserver( this );
-	T_LLIOHOOK_FILELOC::Term();
+	if (m_bRegisteredToLangChg)
+		AK::StreamMgr::RemoveLanguageChangeObserver(this);
 }
 
 // Override Open (string): Search file in each LUT first. If it cannot be found, use base class services.

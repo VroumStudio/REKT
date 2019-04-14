@@ -1,3 +1,4 @@
+// Copyright (c) 2006-2018 Audiokinetic Inc. / All Rights Reserved
 #pragma once
 
 #include "Engine/EngineTypes.h"
@@ -27,13 +28,15 @@ class AKAUDIO_API UAkSettings : public UObject
 	UPROPERTY(Config, EditAnywhere, Category = "Installation")
 	bool bAutoConnectToWAAPI = false;
 
-	// Allow to distribute SoundEngine processing tasks across multiple threads. Requires Editor restart.
-	UPROPERTY(Config, EditAnywhere, Category = "Advanced")
-	bool bEnableMultiCoreRendering = false;
-
 	// Default value for Occlusion Collision Channel when creating a new Ak Component.
 	UPROPERTY(Config, EditAnywhere, Category = "Occlusion")
 	TEnumAsByte<ECollisionChannel> DefaultOcclusionCollisionChannel = ECollisionChannel::ECC_Visibility;
+
+	UPROPERTY(Config)
+	bool bEnableMultiCoreRendering_DEPRECATED = false;
+
+	UPROPERTY()
+	bool MigratedEnableMultiCoreRendering = false;
 
 	UPROPERTY(Config)
 	FDirectoryPath WwiseWindowsInstallationPath_DEPRECATED;
@@ -46,7 +49,7 @@ class AKAUDIO_API UAkSettings : public UObject
 	virtual void PostInitProperties() override;
 
 #if WITH_EDITOR
-	void EnsureSoundBankPathIsInPackagingSettings() const;
+	void EnsureSoundBankPathIsInPackagingSettings();
 #endif
 
 protected:
@@ -57,6 +60,7 @@ protected:
 
 private:
 	FString PreviousWwiseProjectPath;
+	FString PreviousSoundBankFolder;
 
 public:
 	bool bRequestRefresh = false;

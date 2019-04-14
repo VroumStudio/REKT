@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-Version: v2018.1.6  Build: 6858
+Version: v2019.1.0  Build: 6947
 Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -76,6 +76,8 @@ struct AkImageSourceParams
 		: fDistanceScalingFactor(1.f)
 		, fLevel(1.f)
 		, fDiffraction(0.f)
+		, uDiffractionEmitterSide(0)
+		, uDiffractionListenerSide(0)
 	{
 		sourcePosition.X = 0.f;
 		sourcePosition.Y = 0.f;
@@ -87,6 +89,8 @@ struct AkImageSourceParams
 		, fDistanceScalingFactor(in_fDistanceScalingFactor)
 		, fLevel(in_fLevel)
 		, fDiffraction(0.f)
+		, uDiffractionEmitterSide(0)
+		, uDiffractionListenerSide(0)
 	{
 	}
 
@@ -94,8 +98,8 @@ struct AkImageSourceParams
 	AkReal32 fDistanceScalingFactor;			///< Image source distance scaling. This number effectively scales the sourcePosition vector with respect to the listener and, consequently, scales distance and preserves orientation.
 	AkReal32 fLevel;							///< Game-controlled level for this source, linear.
 	AkReal32 fDiffraction;						///< Diffraction amount, normalized to the range [0,1].
-	bool bDiffractedEmitterSide;				///< Indicates if there is a shadow zone diffraction just after the emitter in the reflection path.
-	bool bDiffractedListenerSide;				///< Indicates if there is a shadow zone diffraction before reaching the listener in the reflection path.
+	AkUInt8 uDiffractionEmitterSide;			///< If there is a shadow zone diffraction just after the emitter in the reflection path, indicates the number of diffraction edges, otherwise 0 if no diffraction.
+	AkUInt8 uDiffractionListenerSide;			///< If there is a shadow zone diffraction before reaching the listener in the reflection path, indicates the number of diffraction edges, otherwise 0 if no diffraction.
 };
 
 struct AkReflectImageSource

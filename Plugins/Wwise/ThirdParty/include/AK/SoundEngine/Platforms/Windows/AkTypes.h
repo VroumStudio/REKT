@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -62,6 +62,9 @@ the specific language governing permissions and limitations under the License.
 	#if !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 		#define AK_USE_UWP_API
 		#define AK_USE_METRO_API // deprecated
+		#ifdef __cplusplus_winrt
+			#define AK_UWP_CPP_CX // To test for UWP code which uses Microsoft's C++/CX extended language (not all projects do)
+		#endif
 		#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)
 			#define AK_WIN_UNIVERSAL_APP
 		#endif

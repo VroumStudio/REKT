@@ -30,10 +30,10 @@ enum class AkAcousticPortalState : uint8
 UENUM(BlueprintType)
 enum class AkChannelConfiguration : uint8
 {
-    Ak_Parent = 0,
+	Ak_Parent = 0,
 	Ak_LFE,
-    Ak_1_0,
-    Ak_2_0,
+	Ak_1_0,
+	Ak_2_0,
 	Ak_2_1,
 	Ak_3_0,
 	Ak_3_1,
@@ -41,17 +41,38 @@ enum class AkChannelConfiguration : uint8
 	Ak_4_1,
 	Ak_5_0,
 	Ak_5_1,
-    Ak_7_1,
-    Ak_5_1_2,
-    Ak_7_1_2,
-    Ak_7_1_4,
-    Ak_Auro_9_1,
-    Ak_Auro_10_1,
-    Ak_Auro_11_1,
-    Ak_Auro_13_1,
-    Ak_Ambisonics_1st_order,
-    Ak_Ambisonics_2nd_order,
-    Ak_Ambisonics_3rd_order
+	Ak_7_1,
+	Ak_5_1_2,
+	Ak_7_1_2,
+	Ak_7_1_4,
+	Ak_Auro_9_1,
+	Ak_Auro_10_1,
+	Ak_Auro_11_1,
+	Ak_Auro_13_1,
+	Ak_Ambisonics_1st_order,
+	Ak_Ambisonics_2nd_order,
+	Ak_Ambisonics_3rd_order
+};
+
+UENUM(meta=(Bitflags, UseEnumValuesAsMaskValuesInEditor = "true"))
+enum class AkSpeakerConfiguration
+{
+	Ak_Speaker_Front_Left = AK_SPEAKER_FRONT_LEFT,
+	Ak_Speaker_Front_Right = AK_SPEAKER_FRONT_RIGHT,
+	Ak_Speaker_Front_Center = AK_SPEAKER_FRONT_CENTER,
+	Ak_Speaker_Low_Frequency = AK_SPEAKER_LOW_FREQUENCY,
+	Ak_Speaker_Back_Left = AK_SPEAKER_BACK_LEFT,
+	Ak_Speaker_Back_Right = AK_SPEAKER_BACK_RIGHT,
+	Ak_Speaker_Back_Center = AK_SPEAKER_BACK_CENTER,
+	Ak_Speaker_Side_Left = AK_SPEAKER_SIDE_LEFT,
+	Ak_Speaker_Side_Right = AK_SPEAKER_SIDE_RIGHT,
+	Ak_Speaker_Top = AK_SPEAKER_TOP,
+	Ak_Speaker_Height_Front_Left = AK_SPEAKER_HEIGHT_FRONT_LEFT,
+	Ak_Speaker_Height_Front_Center = AK_SPEAKER_HEIGHT_FRONT_CENTER,
+	Ak_Speaker_Height_Front_Right = AK_SPEAKER_HEIGHT_FRONT_RIGHT,
+	Ak_Speaker_Height_Back_Left = AK_SPEAKER_HEIGHT_BACK_LEFT,
+	Ak_Speaker_Height_Back_Center = AK_SPEAKER_HEIGHT_BACK_CENTER,
+	Ak_Speaker_Height_Back_Right = AK_SPEAKER_HEIGHT_BACK_RIGHT,
 };
 
 UENUM(BlueprintType)
@@ -129,96 +150,64 @@ static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Constant)
 UENUM(BlueprintType)
 enum class EAkResult : uint8
 {
-	NotImplemented				UMETA("This feature is not implemented."),
-	Success						UMETA("The operation was successful."),
-	Fail						UMETA("The operation failed."),
-	PartialSuccess				UMETA("The operation succeeded partially."),
-	NotCompatible				UMETA("Incompatible formats"),
-	AlreadyConnected			UMETA("The stream is already connected to another node."),
-	NameNotSet					UMETA("Trying to open a file when its name was not set"),
-	InvalidFile					UMETA("An unexpected value causes the file to be invalid."),
-	AudioFileHeaderTooLarge		UMETA("The file header is too large."),
-	MaxReached					UMETA("The maximum was reached."),
-	InputsInUsed				UMETA("Inputs are currently used."),
-	OutputsInUsed				UMETA("Outputs are currently used."),
-	InvalidName					UMETA("The name is invalid."),
-	NameAlreadyInUse			UMETA("The name is already in use."),
-	InvalidID					UMETA("The ID is invalid."),
-	IDNotFound					UMETA("The ID was not found."),
-	InvalidInstanceID			UMETA("The InstanceID is invalid."),
-	NoMoreData					UMETA("No more data is available from the source."),
-	NoSourceAvailable			UMETA("There is no child (source) associated with the node."),
-	StateGroupAlreadyExists		UMETA("The StateGroup already exists."),
-	InvalidStateGroup			UMETA("The StateGroup is not a valid channel."),
-	ChildAlreadyHasAParent		UMETA("The child already has a parent."),
-	InvalidLanguage				UMETA("The language is invalid (applies to the Low-Level I/O)."),
-	CannotAddItseflAsAChild		UMETA("It is not possible to add itself as its own child."),
-	Reserved1,
-	Reserved2,
-	Reserved3,
-	Reserved4,
-	Reserved5,
-	UserNotInList				UMETA("This user is not there."),
-	NoTransitionPoint			UMETA("Not in use."),
-	InvalidParameter			UMETA("Something is not within bounds."),
-	ParameterAdjusted			UMETA("Something was not within bounds and was relocated to the nearest OK value."),
-	IsA3DSound					UMETA("The sound has 3D parameters."),
-	NotA3DSound					UMETA("The sound does not have 3D parameters."),
-	ElementAlreadyInList		UMETA("The item could not be added because it was already in the list."),
-	PathNotFound				UMETA("This path is not known."),
-	PathNoVertices				UMETA("Stuff in vertices before trying to start it"),
-	PathNotRunning				UMETA("Only a running path can be paused."),
-	PathNotPaused				UMETA("Only a paused path can be resumed."),
-	PathNodeAlreadyInList		UMETA("This path is already there."),
-	PathNodeNotInList			UMETA("This path is not there."),
-	VoiceNotFound				UMETA("Unknown in our voices list"),
-	DataNeeded					UMETA("The consumer needs more."),
-	NoDataNeeded				UMETA("The consumer does not need more."),
-	DataReady					UMETA("The provider has available data."),
-	NoDataReady					UMETA("The provider does not have available data."),
-	NoMoreSlotAvailable			UMETA("Not enough space to load bank."),
-	SlotNotFound				UMETA("Bank error."),
-	ProcessingOnly				UMETA("No need to fetch new data."),
-	MemoryLeak					UMETA("Debug mode only."),
-	CorruptedBlockList			UMETA("The memory manager's block list has been corrupted."),
-	InsufficientMemory			UMETA("Memory error."),
-	Cancelled					UMETA("The requested action was cancelled (not an error)."),
-	UnknownBankID				UMETA("Trying to load a bank using an ID which is not defined."),
-	IsProcessing				UMETA("Asynchronous pipeline component is processing."),
-	BankReadError				UMETA("Error while reading a bank."),
-	InvalidSwitchType			UMETA("Invalid switch type (used with the switch container)"),
-	VoiceDone					UMETA("Internal use only."),
-	UnknownEnvironment			UMETA("This environment is not defined."),
-	EnvironmentInUse			UMETA("This environment is used by an object."),
-	UnknownObject				UMETA("This object is not defined."),
-	NoConversionNeeded			UMETA("Audio data already in target format, no conversion to perform."),
-	FormatNotReady				UMETA("Source format not known yet."),
-	WrongBankVersion			UMETA("The bank version is not compatible with the current bank reader."),
-	DataReadyNoProcess			UMETA("The provider has some data but does not process it (virtual voices)."),
-	FileNotFound				UMETA("File not found."),
-	DeviceNotReady				UMETA("IO device not ready (may be because the tray is open)"),
-	CouldNotCreateSecBuffer		UMETA("The direct sound secondary buffer creation failed."),
-	BankAlreadyLoaded			UMETA("The bank load failed because the bank is already loaded."),
-	Reserved6,
-	RenderedFX					UMETA("The effect on the node is rendered."),
-	ProcessNeeded				UMETA("A routine needs to be executed on some CPU."),
-	ProcessDone					UMETA("The executed routine has finished its execution."),
-	MemManagerNotInitialized	UMETA("The memory manager should have been initialized at this point."),
-	StreamMgrNotInitialized		UMETA("The stream manager should have been initialized at this point."),
-	SSEInstructionsNotSupported	UMETA("The machine does not support SSE instructions (required on PC)."),
-	Busy						UMETA("The system is busy and could not process the request."),
-	UnsupportedChannelConfig	UMETA("Channel configuration is not supported in the current execution context."),
-	PluginMediaNotAvailable		UMETA("Plugin media is not available for effect."),
-	MustBeVirtualized			UMETA("Sound was Not Allowed to play."),
-	CommandTooLarge				UMETA("SDK command is too large to fit in the command queue."),
-	RejectedByFilter			UMETA("A play request was rejected due to the MIDI filter parameters."),
-	InvalidCustomPlatformName	UMETA("Detecting incompatibility between Custom platform of banks and custom platform of connected application"),
-	DLLCannotLoad				UMETA("Plugin DLL could not be loaded, either because it is not found or one dependency is missing."),
-	DLLPathNotFound				UMETA("Plugin DLL search path could not be found."),
-	NoJavaVM					UMETA("No Java VM provided in AkInitSettings."),
-	OpenSLError					UMETA("OpenSL returned an error.  Check error log for more details."),
-	PluginNotRegistered			UMETA("Plugin is not registered.  Make sure to implement a AK::PluginRegistration class for it and use AK_STATIC_LINK_PLUGIN in the game binary."),
-	DataAlignmentError			UMETA("A pointer to audio data was not aligned to the platform's required alignment (check AkTypes.h in the platform-specific folder)"),
+	NotImplemented				= AK_NotImplemented				 UMETA("This feature is not implemented."),
+	Success = AK_Success						 UMETA("The operation was successful."),
+	Fail = AK_Fail						 UMETA("The operation failed."),
+	PartialSuccess = AK_PartialSuccess				 UMETA("The operation succeeded partially."),
+	NotCompatible = AK_NotCompatible				 UMETA("Incompatible formats"),
+	AlreadyConnected = AK_AlreadyConnected			 UMETA("The stream is already connected to another node."),
+	InvalidFile = AK_InvalidFile					 UMETA("An unexpected value causes the file to be invalid."),
+	AudioFileHeaderTooLarge = AK_AudioFileHeaderTooLarge		 UMETA("The file header is too large."),
+	MaxReached = AK_MaxReached					 UMETA("The maximum was reached."),
+	InvalidID = AK_InvalidID					 UMETA("The ID is invalid."),
+	IDNotFound = AK_IDNotFound					 UMETA("The ID was not found."),
+	InvalidInstanceID = AK_InvalidInstanceID			 UMETA("The InstanceID is invalid."),
+	NoMoreData = AK_NoMoreData					 UMETA("No more data is available from the source."),
+	InvalidStateGroup = AK_InvalidStateGroup			 UMETA("The StateGroup is not a valid channel."),
+	ChildAlreadyHasAParent = AK_ChildAlreadyHasAParent		 UMETA("The child already has a parent."),
+	InvalidLanguage = AK_InvalidLanguage				 UMETA("The language is invalid (applies to the Low-Level I/O)."),
+	CannotAddItseflAsAChild = AK_CannotAddItseflAsAChild		 UMETA("It is not possible to add itself as its own child."),
+	InvalidParameter = AK_InvalidParameter			 UMETA("Something is not within bounds."),
+	ElementAlreadyInList = AK_ElementAlreadyInList		 UMETA("The item could not be added because it was already in the list."),
+	PathNotFound = AK_PathNotFound				 UMETA("This path is not known."),
+	PathNoVertices = AK_PathNoVertices				 UMETA("Stuff in vertices before trying to start it"),
+	PathNotRunning = AK_PathNotRunning				 UMETA("Only a running path can be paused."),
+	PathNotPaused = AK_PathNotPaused				 UMETA("Only a paused path can be resumed."),
+	PathNodeAlreadyInList = AK_PathNodeAlreadyInList		 UMETA("This path is already there."),
+	PathNodeNotInList = AK_PathNodeNotInList			 UMETA("This path is not there."),
+	DataNeeded = AK_DataNeeded					 UMETA("The consumer needs more."),
+	NoDataNeeded = AK_NoDataNeeded				 UMETA("The consumer does not need more."),
+	DataReady = AK_DataReady					 UMETA("The provider has available data."),
+	NoDataReady = AK_NoDataReady					 UMETA("The provider does not have available data."),
+	InsufficientMemory = AK_InsufficientMemory			 UMETA("Memory error."),
+	Cancelled = AK_Cancelled					 UMETA("The requested action was cancelled (not an error)."),
+	UnknownBankID = AK_UnknownBankID				 UMETA("Trying to load a bank using an ID which is not defined."),
+	BankReadError = AK_BankReadError				 UMETA("Error while reading a bank."),
+	InvalidSwitchType = AK_InvalidSwitchType			 UMETA("Invalid switch type (used with the switch container)"),
+	FormatNotReady = AK_FormatNotReady				 UMETA("Source format not known yet."),
+	WrongBankVersion = AK_WrongBankVersion			 UMETA("The bank version is not compatible with the current bank reader."),
+	FileNotFound = AK_FileNotFound				 UMETA("File not found."),
+	DeviceNotReady = AK_DeviceNotReady				 UMETA("IO device not ready (may be because the tray is open)"),
+	BankAlreadyLoaded = AK_BankAlreadyLoaded			 UMETA("The bank load failed because the bank is already loaded."),
+	RenderedFX = AK_RenderedFX					 UMETA("The effect on the node is rendered."),
+	ProcessNeeded = AK_ProcessNeeded				 UMETA("A routine needs to be executed on some CPU."),
+	ProcessDone = AK_ProcessDone					 UMETA("The executed routine has finished its execution."),
+	MemManagerNotInitialized = AK_MemManagerNotInitialized	 UMETA("The memory manager should have been initialized at this point."),
+	StreamMgrNotInitialized = AK_StreamMgrNotInitialized		 UMETA("The stream manager should have been initialized at this point."),
+	SSEInstructionsNotSupported = AK_SSEInstructionsNotSupported	 UMETA("The machine does not support SSE instructions (required on PC)."),
+	Busy = AK_Busy						 UMETA("The system is busy and could not process the request."),
+	UnsupportedChannelConfig = AK_UnsupportedChannelConfig	 UMETA("Channel configuration is not supported in the current execution context."),
+	PluginMediaNotAvailable = AK_PluginMediaNotAvailable		 UMETA("Plugin media is not available for effect."),
+	MustBeVirtualized = AK_MustBeVirtualized			 UMETA("Sound was Not Allowed to play."),
+	CommandTooLarge = AK_CommandTooLarge				 UMETA("SDK command is too large to fit in the command queue."),
+	RejectedByFilter = AK_RejectedByFilter			 UMETA("A play request was rejected due to the MIDI filter parameters."),
+	InvalidCustomPlatformName = AK_InvalidCustomPlatformName	 UMETA("Detecting incompatibility between Custom platform of banks and custom platform of connected application"),
+	DLLCannotLoad = AK_DLLCannotLoad				 UMETA("Plugin DLL could not be loaded, either because it is not found or one dependency is missing."),
+	DLLPathNotFound = AK_DLLPathNotFound				 UMETA("Plugin DLL search path could not be found."),
+	NoJavaVM = AK_NoJavaVM					 UMETA("No Java VM provided in AkInitSettings."),
+	OpenSLError = AK_OpenSLError					 UMETA("OpenSL returned an error.  Check error log for more details."),
+	PluginNotRegistered = AK_PluginNotRegistered			 UMETA("Plugin is not registered.  Make sure to implement a AK::PluginRegistration class for it and use AK_STATIC_LINK_PLUGIN in the game binary."),
+	DataAlignmentError = AK_DataAlignmentError			 UMETA("A pointer to audio data was not aligned to the platform's required alignment (check AkTypes.h in the platform-specific folder)"),
 };
 
 #define CHECK_AKRESULT_VALUE(ValueName) static_assert(AK_##ValueName == (uint32)EAkResult::ValueName, #ValueName " value has changed in AKRESULT, please update the EAkResult::" #ValueName " value");
@@ -228,35 +217,18 @@ CHECK_AKRESULT_VALUE(Fail);
 CHECK_AKRESULT_VALUE(PartialSuccess);
 CHECK_AKRESULT_VALUE(NotCompatible);
 CHECK_AKRESULT_VALUE(AlreadyConnected);
-CHECK_AKRESULT_VALUE(NameNotSet);
 CHECK_AKRESULT_VALUE(InvalidFile);
 CHECK_AKRESULT_VALUE(AudioFileHeaderTooLarge);
 CHECK_AKRESULT_VALUE(MaxReached);
-CHECK_AKRESULT_VALUE(InputsInUsed);
-CHECK_AKRESULT_VALUE(OutputsInUsed);
-CHECK_AKRESULT_VALUE(InvalidName);
-CHECK_AKRESULT_VALUE(NameAlreadyInUse);
 CHECK_AKRESULT_VALUE(InvalidID);
 CHECK_AKRESULT_VALUE(IDNotFound);
 CHECK_AKRESULT_VALUE(InvalidInstanceID);
 CHECK_AKRESULT_VALUE(NoMoreData);
-CHECK_AKRESULT_VALUE(NoSourceAvailable);
-CHECK_AKRESULT_VALUE(StateGroupAlreadyExists);
 CHECK_AKRESULT_VALUE(InvalidStateGroup);
 CHECK_AKRESULT_VALUE(ChildAlreadyHasAParent);
 CHECK_AKRESULT_VALUE(InvalidLanguage);
 CHECK_AKRESULT_VALUE(CannotAddItseflAsAChild);
-//CHECK_AKRESULT_VALUE(TransitionNotFound);
-//CHECK_AKRESULT_VALUE(TransitionNotStartable);
-//CHECK_AKRESULT_VALUE(TransitionNotRemovable);
-//CHECK_AKRESULT_VALUE(UsersListFull);
-//CHECK_AKRESULT_VALUE(UserAlreadyInList);
-CHECK_AKRESULT_VALUE(UserNotInList);
-CHECK_AKRESULT_VALUE(NoTransitionPoint);
 CHECK_AKRESULT_VALUE(InvalidParameter);
-CHECK_AKRESULT_VALUE(ParameterAdjusted);
-CHECK_AKRESULT_VALUE(IsA3DSound);
-CHECK_AKRESULT_VALUE(NotA3DSound);
 CHECK_AKRESULT_VALUE(ElementAlreadyInList);
 CHECK_AKRESULT_VALUE(PathNotFound);
 CHECK_AKRESULT_VALUE(PathNoVertices);
@@ -264,33 +236,19 @@ CHECK_AKRESULT_VALUE(PathNotRunning);
 CHECK_AKRESULT_VALUE(PathNotPaused);
 CHECK_AKRESULT_VALUE(PathNodeAlreadyInList);
 CHECK_AKRESULT_VALUE(PathNodeNotInList);
-CHECK_AKRESULT_VALUE(VoiceNotFound);
 CHECK_AKRESULT_VALUE(DataNeeded);
 CHECK_AKRESULT_VALUE(NoDataNeeded);
 CHECK_AKRESULT_VALUE(DataReady);
 CHECK_AKRESULT_VALUE(NoDataReady);
-CHECK_AKRESULT_VALUE(NoMoreSlotAvailable);
-CHECK_AKRESULT_VALUE(SlotNotFound);
-CHECK_AKRESULT_VALUE(ProcessingOnly);
-CHECK_AKRESULT_VALUE(MemoryLeak);
-CHECK_AKRESULT_VALUE(CorruptedBlockList);
 CHECK_AKRESULT_VALUE(InsufficientMemory);
 CHECK_AKRESULT_VALUE(Cancelled);
 CHECK_AKRESULT_VALUE(UnknownBankID);
-CHECK_AKRESULT_VALUE(IsProcessing);
 CHECK_AKRESULT_VALUE(BankReadError);
 CHECK_AKRESULT_VALUE(InvalidSwitchType);
-CHECK_AKRESULT_VALUE(VoiceDone);
-CHECK_AKRESULT_VALUE(UnknownEnvironment);
-CHECK_AKRESULT_VALUE(EnvironmentInUse);
-CHECK_AKRESULT_VALUE(UnknownObject);
-CHECK_AKRESULT_VALUE(NoConversionNeeded);
 CHECK_AKRESULT_VALUE(FormatNotReady);
 CHECK_AKRESULT_VALUE(WrongBankVersion);
-CHECK_AKRESULT_VALUE(DataReadyNoProcess);
 CHECK_AKRESULT_VALUE(FileNotFound);
 CHECK_AKRESULT_VALUE(DeviceNotReady);
-CHECK_AKRESULT_VALUE(CouldNotCreateSecBuffer);
 CHECK_AKRESULT_VALUE(BankAlreadyLoaded);
 CHECK_AKRESULT_VALUE(RenderedFX);
 CHECK_AKRESULT_VALUE(ProcessNeeded);
@@ -360,6 +318,16 @@ CHECK_CALLBACK_TYPE_VALUE(MusicSyncUserCue);
 CHECK_CALLBACK_TYPE_VALUE(MusicSyncPoint);
 CHECK_CALLBACK_TYPE_VALUE(MIDIEvent);
 
+UENUM(BlueprintType)
+enum class ERTPCValueType : uint8
+{
+	Default = AK::SoundEngine::Query::RTPCValue_Default,		///< The value is the Default RTPC.
+	Global = AK::SoundEngine::Query::RTPCValue_Global,		///< The value is the Global RTPC.
+	GameObject = AK::SoundEngine::Query::RTPCValue_GameObject,	///< The value is the game object specific RTPC.
+	PlayingID = AK::SoundEngine::Query::RTPCValue_PlayingID,	///< The value is the playing ID specific RTPC.
+	Unavailable = AK::SoundEngine::Query::RTPCValue_Unavailable	///< The value is not available for the RTPC specified.
+};
+
 class AkCallbackTypeHelpers
 {
 public:
@@ -383,6 +351,15 @@ public:
 	class UAkComponent * AkComponent = nullptr;
 };
 
+USTRUCT(BlueprintType)
+struct FAkChannelMask
+{
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Bitmask, BitmaskEnum = AkSpeakerConfiguration))
+	int32 ChannelMask;
+};
+
 /// Callback information structure corresponding to \ref AK_EndOfEvent, \ref AK_MusicPlayStarted and \ref AK_Starvation.
 /// \sa 
 /// - AK::SoundEngine::PostEvent()
@@ -400,7 +377,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audiokinetic|AkCallbackInfo|AkEvent")
 	int32 EventID = 0;		///< Unique ID of Event, passed to PostEvent()
 };
-
 
 // List of MIDI event types
 UENUM(BlueprintType)

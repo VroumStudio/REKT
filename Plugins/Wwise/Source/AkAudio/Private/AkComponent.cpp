@@ -46,11 +46,15 @@ namespace UAkComponentUtils
 		}
 
 #if WITH_EDITORONLY_DATA
-		TArray<FEditorViewportClient*>* Clients = &GEditor->AllViewportClients;
+#if UE_4_22_OR_LATER
+		auto& Clients = GEditor->GetAllViewportClients();
+#else
+		auto& Clients = GEditor->AllViewportClients;
+#endif
 		static FTransform LastKnownEditorTransform;
-		for (int i = 0; i < GEditor->AllViewportClients.Num(); i++)
+		for (int i = 0; i < Clients.Num(); i++)
 		{
-			FEditorViewportClient* ViewportClient = GEditor->AllViewportClients[i];
+			FEditorViewportClient* ViewportClient = Clients[i];
 			UWorld* World = ViewportClient->GetWorld();
 			if (ViewportClient->Viewport && ViewportClient->Viewport->HasFocus() && World->AllowAudioPlayback())
 			{
@@ -154,8 +158,7 @@ Super(ObjectInitializer)
 	DrawFirstOrderReflections = false;
 	DrawSecondOrderReflections = false;
 	DrawHigherOrderReflections = false;
-	DrawGeometricDiffraction = false;
-	DrawSoundPropagation = false;
+	DrawDiffraction = false;
 	EarlyReflectionOrder = 1;
 	EarlyReflectionMaxPathLength = kDefaultMaxPathLength * 100.f;
 	EarlyReflectionBusSendGain = 1.f;
@@ -328,6 +331,18 @@ void UAkComponent::SetRTPCValue(FString RTPC, float Value, int32 InterpolationTi
 		AK::SoundEngine::SetRTPCValue(TCHAR_TO_AK(*RTPC), Value, GetAkGameObjectID(), InterpolationTimeMs);
 	}
 }
+
+void UAkComponent::GetRTPCValue(FString RTPC, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType)
+{
+	if (FAkAudioDevice::Get())
+	{
+		AK::SoundEngine::Query::RTPCValue_type RTPCType = (AK::SoundEngine::Query::RTPCValue_type)InputValueType;
+		AK::SoundEngine::Query::GetRTPCValue(TCHAR_TO_AK(*RTPC), GetAkGameObjectID(), PlayingID, Value, RTPCType);
+		OutputValueType = (ERTPCValueType)RTPCType;
+	}
+}
+
+
 
 void UAkComponent::PostTrigger(FString Trigger)
 {
@@ -567,12 +582,8 @@ void UAkComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FAct
 #if !UE_BUILD_SHIPPING
 		if (DrawFirstOrderReflections || DrawSecondOrderReflections || DrawHigherOrderReflections)
 			DebugDrawReflections();
-		if (DrawGeometricDiffraction)
-			DebugDrawGeometricDiffraction();
-		if (DrawSoundPropagation)
-		{
-			DebugDrawSoundPropagation();
-		}
+		if (DrawDiffraction)
+			DebugDrawDiffraction();
 #endif
 	}
 }
@@ -919,24 +930,20 @@ void UAkComponent::_DebugDrawReflections( const AkVector& akEmitterPos, const Ak
 				// Finally the last path segment towards the emitter.
 				::DrawDebugLine(GWorld, listenerPt, emitterPos, path.isOccluded ? colorLightGrey : colorLight, false, -1.f, (uint8)'\000', kPathThickness / order);
 			}
-			else
-			{
-				const FVector occlusionPt = FAkAudioDevice::AKVectorToFVector(path.occlusionPoint);
-				::DrawDebugSphere(GWorld, occlusionPt, kRadiusSphere / order, kNumSphereSegments, colorDarkGrey);
-			}
 		}
 	}
 	
 }
 
-void UAkComponent::_DebugDrawGeometricDiffraction(const AkVector& akEmitterPos, const AkVector& akListenerPos, const AkDiffractionPathInfo* paths, AkUInt32 uNumPaths) const
+void UAkComponent::_DebugDrawDiffraction(const AkVector& akEmitterPos, const AkVector& akListenerPos, const AkDiffractionPathInfo* paths, AkUInt32 uNumPaths) const
 {
 	::FlushDebugStrings(GWorld);
 
 	for (AkInt32 idxPath = uNumPaths - 1; idxPath >= 0; --idxPath)
 	{
 		const AkDiffractionPathInfo& path = paths[idxPath];
-
+		
+		FColor purple(0x492E74);
 		FColor green(0x267158);
 
 		if (path.nodeCount > 0)
@@ -959,7 +966,7 @@ void UAkComponent::_DebugDrawGeometricDiffraction(const AkVector& akEmitterPos, 
 				}
 
 				float rad = kRadiusSphereMin + (1.f - path.angles[idxSeg] / PI) * (kRadiusSphereMax - kRadiusSphereMin);
-				::DrawDebugSphere(GWorld, pt, rad, 8, green);
+				::DrawDebugSphere(GWorld, pt, rad, 8, path.portals[idxSeg].IsValid() ? green : purple );
 
 				prevPt = pt;
 			}
@@ -968,52 +975,6 @@ void UAkComponent::_DebugDrawGeometricDiffraction(const AkVector& akEmitterPos, 
 			::DrawDebugLine(GWorld, prevPt, emitterPos, green, false, -1.f, (uint8)'\000', kPathThickness);
 		}
 	}
-}
-
-void UAkComponent::_DebugDrawSoundPropagation(const AkVector& akEmitterPos, const AkVector& akListenerPos, const AkPropagationPathInfo* paths, AkUInt32 uNumPaths) const
-{
-	::FlushDebugStrings(GWorld);
-
-	for (AkInt32 idxPath = uNumPaths - 1; idxPath >= 0; --idxPath)
-	{
-		const AkPropagationPathInfo& path = paths[idxPath];
-
-		FColor purple(0x492E74);
-		FColor green(0x267158);
-		FColor red(0xAA4339);
-
-		{
-			const int kPathThickness = 5.f;
-			const float kRadiusSphereMax = 35.f;
-			const float kRadiusSphereMin = 2.f;
-			const int kNumSphereSegments = 8;
-
-			const FVector emitterPos = FAkAudioDevice::AKVectorToFVector(akEmitterPos);
-			FVector prevPt = FAkAudioDevice::AKVectorToFVector(akListenerPos);
-
-			for (int idxSeg = 0; idxSeg < (int)path.numNodes; ++idxSeg)
-			{
-				const FVector portalPt = FAkAudioDevice::AKVectorToFVector(path.nodePoint[idxSeg]);
-
-				if (idxSeg != 0)
-				{
-					::DrawDebugLine(GWorld, prevPt, portalPt, purple, false, -1.f, (uint8)'\000', kPathThickness);
-				}
-
-				float radWet = kRadiusSphereMin + (1.f - path.wetDiffraction) * (kRadiusSphereMax - kRadiusSphereMin);
-				float radDry = kRadiusSphereMin + (1.f - path.dryDiffraction) * (kRadiusSphereMax - kRadiusSphereMin);
-				
-				::DrawDebugSphere(GWorld, portalPt, radWet, 4, green);
-				::DrawDebugSphere(GWorld, portalPt, radDry, 8, red);
-
-				prevPt = portalPt;
-			}
-
-			// Finally the last path segment towards the emitter.
-			::DrawDebugLine(GWorld, prevPt, emitterPos, purple, false, -1.f, (uint8)'\000', kPathThickness);
-		}
-	}
-
 }
 
 void UAkComponent::SetUseSpatialAudio(const bool bNewValue)
@@ -1043,7 +1004,7 @@ void UAkComponent::DebugDrawReflections() const
 		_DebugDrawReflections(emitterPos, listenerPos, paths, uNumPaths);
 }
 
-void UAkComponent::DebugDrawGeometricDiffraction() const
+void UAkComponent::DebugDrawDiffraction() const
 {
 	enum { kMaxPaths = 16 };
 	AkDiffractionPathInfo paths[kMaxPaths];
@@ -1054,21 +1015,7 @@ void UAkComponent::DebugDrawGeometricDiffraction() const
 	if (AK::SpatialAudio::QueryDiffractionPaths(GetAkGameObjectID(), listenerPos, emitterPos, paths, uNumPaths) == AK_Success)
 	{
 		if (uNumPaths > 0)
-			_DebugDrawGeometricDiffraction(emitterPos, listenerPos, paths, uNumPaths);
+			_DebugDrawDiffraction(emitterPos, listenerPos, paths, uNumPaths);
 	}
 }
 
-void UAkComponent::DebugDrawSoundPropagation() const
-{
-	enum { kMaxPaths = 16 };
-	AkPropagationPathInfo paths[kMaxPaths];
-	AkUInt32 uNumPaths = kMaxPaths;
-
-	AkVector listenerPos, emitterPos;
-
-	if (AK::SpatialAudio::QuerySoundPropagationPaths(GetAkGameObjectID(), listenerPos, emitterPos, paths, uNumPaths) == AK_Success)
-	{
-		if (uNumPaths > 0)
-			_DebugDrawSoundPropagation(emitterPos, listenerPos, paths, uNumPaths);
-	}
-}

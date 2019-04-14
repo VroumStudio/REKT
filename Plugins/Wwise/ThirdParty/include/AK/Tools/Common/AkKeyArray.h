@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-Version: v2018.1.6  Build: 6858
+Version: v2019.1.0  Build: 6947
 Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -166,15 +166,15 @@ template <class T_KEY> struct AkDefaultSortedKeyCompare
 {
 public:
 	template<class THIS_CLASS>
-	static AkForceInline bool Greater(THIS_CLASS*, T_KEY &a, T_KEY &b)
-	{
-		return a > b;
-	}
-
-	template<class THIS_CLASS>
 	static AkForceInline bool Lesser(THIS_CLASS*, T_KEY &a, T_KEY &b)
 	{
 		return a < b;
+	}
+
+	template<class THIS_CLASS>
+	static AkForceInline bool Equal(THIS_CLASS*, T_KEY &a, T_KEY &b)
+	{
+		return a == b;
 	}
 };
 
@@ -183,22 +183,30 @@ public:
 template <class T_KEY, class T_ITEM, class U_POOL, class U_KEY = AkGetArrayKey< T_KEY, T_ITEM >, unsigned long TGrowBy = 1, class TMovePolicy = AkAssignmentMovePolicy<T_ITEM>, class TComparePolicy = AkDefaultSortedKeyCompare<T_KEY> >
 class AkSortedKeyArray : public AkArray< T_ITEM, const T_ITEM &, U_POOL, TGrowBy, TMovePolicy >
 {
-public:
-	AkForceInline bool Greater(T_KEY &a, T_KEY &b) const
-	{
-		return TComparePolicy::Greater((void*)this, a, b);
-	}
-	
+public:	
 	AkForceInline bool Lesser(T_KEY &a, T_KEY &b) const
 	{
 		return TComparePolicy::Lesser((void*)this, a, b);
 	}
 
-	T_ITEM* Exists(T_KEY in_key) const
+	AkForceInline bool Equal(T_KEY &a, T_KEY &b) const
 	{
-		bool bFound;
-		T_ITEM * pItem = BinarySearch(in_key, bFound);
-		return bFound ? pItem : NULL;
+		return TComparePolicy::Equal((void*)this, a, b);
+	}
+
+	T_ITEM* Exists(T_KEY in_key) const	
+	{
+		AkInt32 uBottom = 0, uTop = (AkInt32)this->m_uLength;
+		while (uBottom < uTop)
+		{
+			AkInt32 uThis = uBottom + (uTop - uBottom) / 2;
+			if (Lesser(U_KEY::Get(this->m_pItems[uThis]), in_key))
+				uBottom = uThis + 1;
+			else
+				uTop = uThis;
+		}
+
+		return (uBottom < (AkInt32)this->m_uLength) && Equal(U_KEY::Get(this->m_pItems[uBottom]), in_key) ? this->m_pItems + uBottom : NULL;
 	}
 
 	// Add an item to the list (allowing duplicate keys)
@@ -217,7 +225,7 @@ public:
 	// Add an item to the list (allowing duplicate keys)
 
 	T_ITEM * AddNoSetKey(T_KEY in_key)
-	{
+	{		
 		bool bFound;
 		T_ITEM * pItem = BinarySearch(in_key, bFound);
 		if (pItem)
@@ -266,17 +274,17 @@ public:
 
 
 	bool Unset(T_KEY in_key)
-	{
-		bool bFound;
-		T_ITEM * pItem = BinarySearch(in_key, bFound);
-		if (bFound)
+	{				
+		T_ITEM * pItem = Exists(in_key);
+		if (pItem)
 		{
 			typename AkArray< T_ITEM, const T_ITEM &, U_POOL, TGrowBy, TMovePolicy >::Iterator it;
 			it.pItem = pItem;
 			this->Erase(it);
+			return true;
 		}
 
-		return bFound;
+		return false;
 	}
 
 	// WARNING: Do not use on types that need constructors or destructor called on Item objects at each creation.
@@ -304,7 +312,7 @@ public:
 				if (uIdx > 1)
 				{
 					T_ITEM * pSecondPrevItem = this->m_pItems + (uIdx - 2);
-					if (Greater(in_NewKey, U_KEY::Get(*pSecondPrevItem)))
+					if (Lesser(U_KEY::Get(*pSecondPrevItem), in_NewKey))
 					{
 						return Swap(pPrevItem, pItem);
 					}
@@ -322,7 +330,7 @@ public:
 		if (!bNeedReordering && uIdx < uLastIdx)
 		{
 			T_ITEM * pNextItem = this->m_pItems + (uIdx + 1);
-			if (Greater(in_NewKey, U_KEY::Get(*pNextItem)))
+			if (Lesser(U_KEY::Get(*pNextItem), in_NewKey))
 			{
 				// Check one step further
 				if (uIdx < (uLastIdx - 1))
@@ -412,20 +420,18 @@ public:
 				*pInsertionEmplacement = ItemtoReinsert;
 			}
 		}
-	}
-
+	}	
 	
+	//If found, returns the item, if not, returns the insertion point.
 	T_ITEM * BinarySearch( T_KEY in_key, bool & out_bFound ) const
-	{
+	{					
 		AkInt32 uTop = 0, uBottom = this->Length() - 1;
-
-		// binary search for key
 		while (uTop <= uBottom)
 		{
 			AkInt32 uThis = (uBottom - uTop) / 2 + uTop;
 			if (Lesser(in_key, U_KEY::Get(this->m_pItems[uThis])))
 				uBottom = uThis - 1;
-			else if (Greater(in_key, U_KEY::Get(this->m_pItems[uThis])))
+			else if (Lesser(U_KEY::Get(this->m_pItems[uThis]), in_key))
 				uTop = uThis + 1;
 			else
 			{

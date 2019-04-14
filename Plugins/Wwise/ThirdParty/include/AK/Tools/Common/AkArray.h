@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -52,14 +52,19 @@ struct AkArrayAllocatorNoAlign
 		return AK::MemoryMgr::Malloc( U_POOL::Get(), in_uSize );
 	}
 
+	AkForceInline void * ReAlloc( void * in_pCurrent, size_t in_uSize )
+	{
+		return AK::MemoryMgr::Realloc( U_POOL::Get(), in_pCurrent, in_uSize );
+	}
+
 	AkForceInline void Free( void * in_pAddress )
 	{
 		AK::MemoryMgr::Free( U_POOL::Get(), in_pAddress );
 	}
 
-	AkForceInline void TransferMem(void ** io_pDest, AkArrayAllocatorNoAlign<U_POOL> in_srcAlloc, void * in_pSrc ) 
+	AkForceInline void TransferMem(void *& io_pDest, AkArrayAllocatorNoAlign<U_POOL> in_srcAlloc, void * in_pSrc ) 
 	{
-		(*io_pDest) = in_pSrc;
+		io_pDest = in_pSrc;
 	}
 };
 
@@ -71,14 +76,25 @@ struct AkArrayAllocatorAlignedSimd
 		return AK::MemoryMgr::Malign( U_POOL::Get(), in_uSize, AK_SIMD_ALIGNMENT );
 	}
 
+	AkForceInline void * ReAlloc( void * in_pCurrent, size_t in_uSize )
+	{
+		void* pNew = Alloc(in_uSize);
+		if (pNew && in_pCurrent)
+		{
+			AKPLATFORM::AkMemCpy(pNew, in_pCurrent, (AkUInt32)in_uSize);
+			Free(in_pCurrent);
+		}
+		return pNew;
+	}
+
 	AkForceInline void Free( void * in_pAddress )
 	{
 		AK::MemoryMgr::Falign( U_POOL::Get(), in_pAddress );
 	}
 
-	AkForceInline void TransferMem(void ** io_pDest, AkArrayAllocatorAlignedSimd<U_POOL> in_srcAlloc, void * in_pSrc ) 
+	AkForceInline void TransferMem(void *& io_pDest, AkArrayAllocatorAlignedSimd<U_POOL> in_srcAlloc, void * in_pSrc ) 
 	{
-		(*io_pDest) = in_pSrc;
+		io_pDest = in_pSrc;
 	}
 
 };
@@ -100,22 +116,33 @@ struct AkHybridAllocator
 			return AK::MemoryMgr::Malign(g_DefaultPoolId, in_uSize, uAlignmentSize);
 	}
 
+	AkForceInline void * ReAlloc( void * in_pCurrent, size_t in_uSize )
+	{
+		void* pNew = Alloc(in_uSize);
+		if (pNew != in_pCurrent && pNew && in_pCurrent)
+		{
+			AKPLATFORM::AkMemCpy(pNew, in_pCurrent, (AkUInt32)in_uSize);
+			Free(in_pCurrent);
+		}
+		return pNew;
+	}
+
 	AkForceInline void Free(void * in_pAddress)
 	{
 		if (&m_buffer != in_pAddress)
 			AK::MemoryMgr::Falign(g_DefaultPoolId, in_pAddress);
 	}
 
-	AkForceInline void TransferMem(void ** io_pDest, AkHybridAllocator<uBufferSizeBytes, uAlignmentSize>& in_srcAlloc, void * in_pSrc)
+	AkForceInline void TransferMem(void *& io_pDest, AkHybridAllocator<uBufferSizeBytes, uAlignmentSize>& in_srcAlloc, void * in_pSrc)
 	{
 		if (&in_srcAlloc.m_buffer == in_pSrc)
 		{
 			AKPLATFORM::AkMemCpy(m_buffer, in_srcAlloc.m_buffer, uBufferSizeBytes);
-			(*io_pDest) = m_buffer;
+			io_pDest = m_buffer;
 		}
 		else
 		{
-			(*io_pDest) = in_pSrc;
+			io_pDest = in_pSrc;
 		}
 	}
 	
@@ -131,6 +158,11 @@ struct AkAssignmentMovePolicy
 	{
 		in_Dest = in_Src;
 	}
+
+	static AkForceInline bool IsTrivial()
+	{
+		return true;
+	}
 };
 
 // Can be used as TMovePolicy to create arrays of arrays.
@@ -140,6 +172,11 @@ struct AkTransferMovePolicy
 	static AkForceInline void Move( T& in_Dest, T& in_Src )
 	{
 		in_Dest.Transfer(in_Src); //transfer ownership of resources.
+	}
+
+	static AkForceInline bool IsTrivial()
+	{
+		return false;
 	}
 };
 
@@ -398,7 +435,7 @@ public:
 	}
 	
 	/// Returns a pointer to the specified item in the list if it exists, 0 if not found.
-	T* Exists(ARG_T in_Item) const
+	AkForceInline T* Exists(ARG_T in_Item) const
 	{
 		Iterator it = FindEx( in_Item );
 		return ( it != End() ) ? it.pItem : 0;
@@ -406,7 +443,7 @@ public:
 
 	/// Add an item in the array, without filling it.
 	/// Returns a pointer to the location to be filled.
-	T * AddLast()
+	AkForceInline T * AddLast()
 	{
 		size_t cItems = Length();
 
@@ -435,7 +472,7 @@ public:
 	}
 
 	/// Add an item in the array, and fills it with the provided item.
-	T * AddLast(ARG_T in_rItem)
+	AkForceInline T * AddLast(ARG_T in_rItem)
 	{
 		T * pItem = AddLast();
 		if ( pItem )
@@ -551,31 +588,38 @@ public:
 		AKASSERT( in_uGrowBy );
 		
 		AkUInt32 ulNewReserve = m_ulReserved + in_uGrowBy;
-		T * pNewItems = (T *) TAlloc::Alloc( sizeof( T ) * ulNewReserve );
-		if ( !pNewItems ) 
-			return false;
-
-		// Copy all elements in new array, destroy old ones
-
+		T * pNewItems = NULL;
 		size_t cItems = Length();
-
-		if ( m_pItems && m_pItems != pNewItems /*AkHybridAllocator may serve up same memory*/ ) 
+		if (TMovePolicy::IsTrivial())
 		{
-			for ( size_t i = 0; i < cItems; ++i )
-			{
-				AkPlacementNew( pNewItems + i ) T; 
-
-				TMovePolicy::Move( pNewItems[ i ], m_pItems[ i ] );
-	            
-				m_pItems[ i ].~T();
-			}
-
-			TAlloc::Free( m_pItems );
+			pNewItems = (T *)TAlloc::ReAlloc(m_pItems, sizeof(T) * ulNewReserve);
+			if (!pNewItems)
+				return false;			
 		}
+		else
+		{
+			pNewItems = (T *)TAlloc::Alloc(sizeof(T) * ulNewReserve);
+			if (!pNewItems)
+				return false;
 
-		m_pItems = pNewItems;
+			// Copy all elements in new array, destroy old ones			
+			if (m_pItems && m_pItems != pNewItems /*AkHybridAllocator may serve up same memory*/)
+			{
+				for (size_t i = 0; i < cItems; ++i)
+				{
+					AkPlacementNew(pNewItems + i) T;
+
+					TMovePolicy::Move(pNewItems[i], m_pItems[i]);
+
+					m_pItems[i].~T();
+				}
+
+				TAlloc::Free(m_pItems);
+			}
+		}
+	
+		m_pItems = pNewItems;		
 		m_ulReserved = ulNewReserve;
-
 		return true;
 	}
 
@@ -614,7 +658,7 @@ public:
 	{
 		Term();
 
-		TAlloc::TransferMem( (void **)&m_pItems, in_rSource, (void*)in_rSource.m_pItems );
+		TAlloc::TransferMem( (void*&)m_pItems, in_rSource, (void*)in_rSource.m_pItems );
 		m_uLength = in_rSource.m_uLength;
 		m_ulReserved = in_rSource.m_ulReserved;
 

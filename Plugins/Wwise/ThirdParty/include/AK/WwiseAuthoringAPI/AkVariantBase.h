@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -389,6 +389,39 @@ namespace AK
 			{
 				_SET_VALUE(m_boolean, in_val, AkVariantType_bool)
 			}
+
+			inline bool operator==(const AkVariantBase& rhs) const 
+			{
+				if (m_eType != rhs.m_eType)
+					return false;
+
+				switch (m_eType)
+				{
+				case AkVariantType_uint8:  return m_uint8  == rhs.m_uint8;
+				case AkVariantType_uint16: return m_uint16 == rhs.m_uint16;
+				case AkVariantType_uint32: return m_uint32 == rhs.m_uint32;
+				case AkVariantType_uint64: return m_uint64 == rhs.m_uint64;
+
+				case AkVariantType_int8:  return m_int8 == rhs.m_int8;
+				case AkVariantType_int16: return m_int16 == rhs.m_int16;
+				case AkVariantType_int32: return m_int32 == rhs.m_int32;
+				case AkVariantType_int64: return m_int64 == rhs.m_int64;
+
+				case AkVariantType_real32: return m_real32 == rhs.m_real32;
+				case AkVariantType_real64: return m_real64 == rhs.m_real64;
+
+				case AkVariantType_bool: return m_boolean == rhs.m_boolean;
+
+				case AkVariantType_string: return GetString().compare(rhs.GetString()) == 0;
+				case AkVariantType_wstring: return GetWString().compare(rhs.GetWString()) == 0;
+
+				case AkVariantType_guid: return GetGuid() == rhs.GetGuid();
+				default:
+					AKASSERT(false && "Trying to convert an AkVariant that doesn't contain a basic type");
+				}
+				return false;
+			}
+
 
 			// Typecast ----------------------------------------------------------------------------
 

@@ -30,7 +30,7 @@ UAkGameplayStatics::UAkGameplayStatics(const class FObjectInitializer& ObjectIni
 	// Property initialization
 }
 
-class UAkComponent * UAkGameplayStatics::GetAkComponent( class USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, EAttachLocation::Type LocationType )
+class UAkComponent * UAkGameplayStatics::GetAkComponent( class USceneComponent* AttachToComponent, bool& ComponentCreated, FName AttachPointName, FVector Location, EAttachLocation::Type LocationType )
 {
 	if ( AttachToComponent == NULL )
 	{
@@ -41,7 +41,7 @@ class UAkComponent * UAkGameplayStatics::GetAkComponent( class USceneComponent* 
 	FAkAudioDevice * AkAudioDevice = FAkAudioDevice::Get();
 	if( AkAudioDevice )
 	{
-		return AkAudioDevice->GetAkComponent( AttachToComponent, AttachPointName, &Location, LocationType );
+		return AkAudioDevice->GetAkComponent( AttachToComponent, AttachPointName, &Location, LocationType, ComponentCreated );
 	}
 
 	return NULL;
@@ -245,12 +245,45 @@ void UAkGameplayStatics::ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, AkAc
 	}
 }
 
-void UAkGameplayStatics::SetRTPCValue( FName RTPC, float Value, int32 InterpolationTimeMs = 0, class AActor* Actor = NULL )
+void UAkGameplayStatics::ExecuteActionOnPlayingID(AkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve)
+{
+	if (PlayingID == AK_INVALID_PLAYING_ID)
+	{
+		UE_LOG(LogScript, Warning, TEXT("UAkGameplayStatics::ExecuteActionOnPlayingID: Invalid Playing ID!"));
+		return;
+	}
+
+	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
+	if (AudioDevice)
+	{
+		AudioDevice->ExecuteActionOnPlayingID(ActionType, PlayingID, TransitionDuration, FadeCurve);
+	}
+}
+
+void UAkGameplayStatics::SetRTPCValue(FName RTPC, float Value, int32 InterpolationTimeMs = 0, class AActor* Actor = NULL)
 {
 	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
-	if( AudioDevice && RTPC.IsValid() )
+	if (AudioDevice && RTPC.IsValid())
 	{
-		AudioDevice->SetRTPCValue( *RTPC.ToString(), Value, InterpolationTimeMs, Actor );
+		AudioDevice->SetRTPCValue(*RTPC.ToString(), Value, InterpolationTimeMs, Actor);
+	}
+}
+
+void UAkGameplayStatics::GetRTPCValue(FName RTPC, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType, class AActor* Actor)
+{
+	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
+	if (AudioDevice && RTPC.IsValid())
+	{
+		AK::SoundEngine::Query::RTPCValue_type RTPCType = (AK::SoundEngine::Query::RTPCValue_type)InputValueType;
+		AkGameObjectID IdToGet = AK_INVALID_GAME_OBJECT;
+		if (Actor != nullptr)
+		{
+			UAkComponent * ComponentToGet = AudioDevice->GetAkComponent(Actor->GetRootComponent(), FName(), NULL, EAttachLocation::KeepRelativeOffset);
+			IdToGet = ComponentToGet->GetAkGameObjectID();
+		}
+
+		AudioDevice->GetRTPCValue(*RTPC.ToString(), IdToGet, PlayingID, Value, RTPCType);
+		OutputValueType = (ERTPCValueType)RTPCType;
 	}
 }
 
@@ -309,8 +342,11 @@ void UAkGameplayStatics::SetMultiplePositions(UAkComponent* GameObjectAkComponen
     }
 }
 
-void UAkGameplayStatics::SetMultipleChannelEmitterPositions(UAkComponent* GameObjectAkComponent, TArray<AkChannelConfiguration> ChannelMasks, TArray<FTransform> Positions,
-                                                            AkMultiPositionType MultiPositionType /*= AkMultiPositionType::MultiPositionType_MultiDirections*/)
+void UAkGameplayStatics::SetMultipleChannelEmitterPositions(UAkComponent* GameObjectAkComponent,
+	TArray<AkChannelConfiguration> ChannelMasks,
+	TArray<FTransform> Positions,
+	AkMultiPositionType MultiPositionType
+)
 {
 	if (GameObjectAkComponent == NULL)
 	{
@@ -323,6 +359,25 @@ void UAkGameplayStatics::SetMultipleChannelEmitterPositions(UAkComponent* GameOb
     {
         pAudioDevice->SetMultiplePositions(GameObjectAkComponent, ChannelMasks, Positions, MultiPositionType);
     }
+}
+
+void UAkGameplayStatics::SetMultipleChannelMaskEmitterPositions(UAkComponent* GameObjectAkComponent,
+	TArray<FAkChannelMask> ChannelMasks,
+	TArray<FTransform> Positions,
+	AkMultiPositionType MultiPositionType
+)
+{
+	if (GameObjectAkComponent == NULL)
+	{
+		UE_LOG(LogScript, Warning, TEXT("UAkGameplayStatics::SetMultipleChannelMaskEmitterPositions: NULL Component specified!"));
+		return;
+	}
+
+	FAkAudioDevice * pAudioDevice = FAkAudioDevice::Get();
+	if (pAudioDevice)
+	{
+		pAudioDevice->SetMultiplePositions(GameObjectAkComponent, ChannelMasks, Positions, MultiPositionType);
+	}
 }
 
 void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, class AActor* Actor )

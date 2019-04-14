@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}" SchemaVersion="89">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Car" ID="{D9726440-C945-4338-9A0A-B64E151033AA}" ShortID="554086477">
+					<ChildrenList>
+						<GameParameter Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="900"/>
+								<Property Name="Max" Type="Real64" Value="7000"/>
+								<Property Name="Min" Type="Real64" Value="900"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_Speed" ID="{1798CA33-1860-49BA-9C41-6EF9FB1DBBBB}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="90"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<GameParameter Name="RTPC_Car_Meter" ID="{CC009623-165F-4CEB-8B0E-9DC4F284FE12}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -31,7 +31,18 @@
 #include "AssetTypeActions_AkAcousticTexture.h"
 #include "Editor/LevelEditor/Public/LevelEditor.h"
 #include "ISettingsModule.h"
+#include "ISettingsSection.h"
 #include "AkSettings.h"
+#include "AkSettingsPerUser.h"
+#include "InitializationSettings/AkAndroidInitializationSettings.h"
+#include "InitializationSettings/AkIOSInitializationSettings.h"
+#include "InitializationSettings/AkLinuxInitializationSettings.h"
+#include "InitializationSettings/AkLuminInitializationSettings.h"
+#include "InitializationSettings/AkMacInitializationSettings.h"
+#include "InitializationSettings/AkPS4InitializationSettings.h"
+#include "InitializationSettings/AkSwitchInitializationSettings.h"
+#include "InitializationSettings/AkWindowsInitializationSettings.h"
+#include "InitializationSettings/AkXBoxOneInitializationSettings.h"
 #include "AkEventAssetBroker.h"
 #include "ComponentAssetBroker.h"
 #include "WaapiPicker/SWaapiPicker.h"
@@ -48,6 +59,7 @@
 #include "Editor/UnrealEdEngine.h"
 #include "Settings/ProjectPackagingSettings.h"
 #include "PropertyEditorModule.h"
+#include "AkAudioBankGenerationHelpers.h"
 
 #include "UnrealEdGlobals.h"
 #include "WorkspaceMenuStructure.h"
@@ -69,12 +81,13 @@
 #include "AkSurfaceReflectorSetComponentVisualizer.h"
 #include "WwisePicker/SWwisePicker.h"
 #include "AkAcousticPortalVisualizer.h"
+#include "Interfaces/IProjectManager.h"
+#include "ProjectDescriptor.h"
+
 
 #define LOCTEXT_NAMESPACE "AkAudio"
 
 DEFINE_LOG_CATEGORY_STATIC(LogAudiokineticTools, Log, All);
-
-extern void AddGenerateAkBanksToBuildMenu(FMenuBuilder& MenuBuilder);
 
 class FAudiokineticToolsModule : public IAudiokineticTools
 {
@@ -369,22 +382,9 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 		AkEventBroker = MakeShareable(new FAkEventAssetBroker);
 		FComponentAssetBrokerage::RegisterBroker(AkEventBroker, UAkComponent::StaticClass(), true, true);
 
-		UProjectPackagingSettings* PackagingSettings = Cast<UProjectPackagingSettings>(UProjectPackagingSettings::StaticClass()->GetDefaultObject());
-		FDirectoryPath WwiseAudioPath;
-		WwiseAudioPath.Path = FString(TEXT("WwiseAudio"));
-		int32 i;
-        for(i = 0; i < PackagingSettings->DirectoriesToAlwaysStageAsUFS.Num(); i++)
+		if (auto* AkSettings = GetMutableDefault<UAkSettings>())
 		{
-            if(PackagingSettings->DirectoriesToAlwaysStageAsUFS[i].Path == WwiseAudioPath.Path)
-			{
-				break;
-			}
-		}
-
-        if(i == PackagingSettings->DirectoriesToAlwaysStageAsUFS.Num())
-		{
-			PackagingSettings->DirectoriesToAlwaysStageAsUFS.Add(WwiseAudioPath);
-			PackagingSettings->UpdateDefaultConfigFile();
+			AkSettings->EnsureSoundBankPathIsInPackagingSettings();
 		}
 
 		FGlobalTabmanager::Get()->RegisterNomadTabSpawner(SWaapiPicker::WaapiPickerTabName, FOnSpawnTab::CreateRaw(this, &FAudiokineticToolsModule::CreateWaapiPickerWindow))
@@ -405,8 +405,7 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 		// Since we are initialized in the PostEngineInit phase, our Ambient Sound actor factory is not registered. We need to register it ourselves.
 		if (GEditor)
 		{
-			UActorFactoryAkAmbientSound* NewFactory = NewObject<UActorFactoryAkAmbientSound>();
-			if (NewFactory)
+			if (UActorFactoryAkAmbientSound* NewFactory = NewObject<UActorFactoryAkAmbientSound>())
 			{
 				GEditor->ActorFactories.Add(NewFactory);
 			}
@@ -445,6 +444,8 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 				LevelEditorModule.GetMenuExtensibilityManager()->RemoveExtender(MainMenuExtender);
 			}
 		}
+
+		UnregisterSettings();
 
 		if(GUnrealEd != NULL)
 		{
@@ -503,43 +504,204 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 	TSharedRef<FExtender> ExtendBuildContextMenuForAudiokinetic(const TSharedRef<FUICommandList> CommandList)
 	{
 		TSharedPtr<FExtender> Extender = MakeShareable(new FExtender);
-		Extender->AddMenuExtension("LevelEditorGeometry", EExtensionHook::After, CommandList, FMenuExtensionDelegate::CreateStatic(&AddGenerateAkBanksToBuildMenu));
+		Extender->AddMenuExtension("LevelEditorGeometry", EExtensionHook::After, CommandList, FMenuExtensionDelegate::CreateLambda([this](FMenuBuilder& MenuBuilder)
+		{
+			MenuBuilder.BeginSection("Audiokinetic", LOCTEXT("Audiokinetic", "Audiokinetic"));
+			{
+				FUIAction UIAction;
+
+				UIAction.ExecuteAction.BindStatic(&WwiseBnkGenHelper::CreateGenerateSoundBankWindow, (TArray<TWeakObjectPtr<UAkAudioBank>>*)nullptr, false);
+				MenuBuilder.AddMenuEntry(
+					LOCTEXT("AkAudioBank_GenerateSoundBanks", "Generate SoundBanks..."),
+					LOCTEXT("AkAudioBank_GenerateSoundBanksTooltip", "Generates Wwise SoundBanks."),
+					FSlateIcon(),
+					UIAction
+				);
+			}
+			MenuBuilder.EndSection();
+
+		}));
 		return Extender.ToSharedRef();
 	}
 
+
+
 private:
+
+	struct BaseSettingsRegistrationStruct
+	{
+		BaseSettingsRegistrationStruct(const FName& SectionName, const FText& DisplayName, const FText& Description)
+			: SectionName(SectionName), DisplayName(DisplayName), Description(Description)
+		{}
+
+		virtual ~BaseSettingsRegistrationStruct() {}
+
+		void Register(ISettingsModule* SettingsModule) const
+		{
+			SettingsModule->RegisterSettings("Project", "Wwise", SectionName, DisplayName, Description, SettingsObject());
+		}
+
+		void Unregister(ISettingsModule* SettingsModule) const
+		{
+			SettingsModule->UnregisterSettings("Project", "Wwise", SectionName);
+		}
+
+	private:
+		const FName SectionName;
+		const FText DisplayName;
+		const FText Description;
+
+		virtual UObject* SettingsObject() const = 0;
+	};
+
+	template<typename SettingsClass>
+	struct SettingsRegistrationStruct : BaseSettingsRegistrationStruct
+	{
+		SettingsRegistrationStruct(const FName& SectionName, const FText& DisplayName, const FText& Description)
+			: BaseSettingsRegistrationStruct(SectionName, DisplayName, Description)
+		{}
+
+	private:
+		virtual UObject* SettingsObject() const { return GetMutableDefault<SettingsClass>(); }
+	};
+
+	static const TMap<FString, const BaseSettingsRegistrationStruct*>& GetUnrealPlatformNameToSettingsRegistrationMap()
+	{
+		static const auto RegisterAndroid = SettingsRegistrationStruct<UAkAndroidInitializationSettings>("Android",
+			LOCTEXT("WwiseAndroidSettingsName", "Android"),
+			LOCTEXT("WwiseAndroidSettingsDescription", "Configure the Wwise Android Initialization Settings"));
+
+		static const auto RegisterIOS = SettingsRegistrationStruct<UAkIOSInitializationSettings>("iOS",
+			LOCTEXT("WwiseIOSSettingsName", "iOS"),
+			LOCTEXT("WwiseIOSSettingsDescription", "Configure the Wwise iOS Initialization Settings"));
+
+		static const auto RegisterLinux = SettingsRegistrationStruct<UAkLinuxInitializationSettings>("Linux",
+			LOCTEXT("WwiseLinuxSettingsName", "Linux"),
+			LOCTEXT("WwiseLinuxSettingsDescription", "Configure the Wwise Linux Initialization Settings"));
+
+		static const auto RegisterLumin = SettingsRegistrationStruct<UAkLuminInitializationSettings>("Lumin",
+			LOCTEXT("WwiseLuminSettingsName", "Lumin"),
+			LOCTEXT("WwiseLuminSettingsDescription", "Configure the Wwise Lumin Initialization Settings"));
+
+		static const auto RegisterMac = SettingsRegistrationStruct<UAkMacInitializationSettings>("Mac",
+			LOCTEXT("WwiseMacSettingsName", "Mac"),
+			LOCTEXT("WwiseMacSettingsDescription", "Configure the Wwise Mac Initialization Settings"));
+
+		static const auto RegisterPS4 = SettingsRegistrationStruct<UAkPS4InitializationSettings>("PS4",
+			LOCTEXT("WwisePS4SettingsName", "PS4"),
+			LOCTEXT("WwisePS4SettingsDescription", "Configure the Wwise PS4 Initialization Settings"));
+
+		static const auto RegisterSwitch = SettingsRegistrationStruct<UAkSwitchInitializationSettings>("Switch",
+			LOCTEXT("WwiseSwitchSettingsName", "Switch"),
+			LOCTEXT("WwiseSwitchSettingsDescription", "Configure the Wwise Switch Initialization Settings"));
+
+		static const auto RegisterWindows = SettingsRegistrationStruct<UAkWindowsInitializationSettings>("Windows",
+			LOCTEXT("WwiseWindowsSettingsName", "Windows"),
+			LOCTEXT("WwiseWindowsSettingsDescription", "Configure the Wwise Windows Initialization Settings"));
+
+		static const auto RegisterXboxOne = SettingsRegistrationStruct<UAkXBoxOneInitializationSettings>("XBoxOne",
+			LOCTEXT("WwiseXBoxOneSettingsName", "XBoxOne"),
+			LOCTEXT("WwiseXBoxOneSettingsDescription", "Configure the Wwise XBoxOne Initialization Settings"));
+
+		static const TMap<FString, const BaseSettingsRegistrationStruct*> UnrealPlatformNameToWwiseSettingsRegistrationMap =
+		{
+			{ TEXT("Android"), &RegisterAndroid },
+			{ TEXT("IOS"), &RegisterIOS },
+			{ TEXT("LinuxNoEditor"), &RegisterLinux },
+			{ TEXT("Lumin"), &RegisterLumin },
+			{ TEXT("MacNoEditor"), &RegisterMac },
+			{ TEXT("PS4"), &RegisterPS4 },
+			{ TEXT("Switch"), &RegisterSwitch },
+			{ TEXT("TVOS"), &RegisterIOS },
+			{ TEXT("WindowsNoEditor"), &RegisterWindows },
+			{ TEXT("XboxOne"), &RegisterXboxOne },
+		};
+
+		return UnrealPlatformNameToWwiseSettingsRegistrationMap;
+	}
+
+	static TSet<const BaseSettingsRegistrationStruct*> GetDefaultSettingsRegistrationStructs()
+	{
+		static const auto RegisterIntegrationSettings = SettingsRegistrationStruct<UAkSettings>("Integration",
+			LOCTEXT("WwiseIntegrationSettingsName", "Integration Settings"),
+			LOCTEXT("WwiseIntegrationSettingsDescription", "Configure the Wwise Integration"));
+
+		static const auto RegisterPerUserSettings = SettingsRegistrationStruct<UAkSettingsPerUser>("User Settings",
+			LOCTEXT("WwiseRuntimePerUserSettingsName", "User Settings"),
+			LOCTEXT("WwiseRuntimePerUserSettingsDescription", "Configure the Wwise Integration per user"));
+
+		return { &RegisterIntegrationSettings, &RegisterPerUserSettings };
+	}
+
+	TSet<const BaseSettingsRegistrationStruct*> RegisteredSettings;
+
 	void RegisterSettings()
 	{
-		if (ISettingsModule* SettingsModule = FModuleManager::GetModulePtr<ISettingsModule>("Settings"))
+		if (auto SettingsModule = FModuleManager::GetModulePtr<ISettingsModule>("Settings"))
 		{
-			SettingsModule->RegisterSettings("Project", "Wwise", "Game Settings",
-				LOCTEXT("WwiseRuntimeSettingsName", "Wwise Game Settings"),
-				LOCTEXT("WwiseRuntimeSettingsDescription", "Configure the Wwise Integration"),
-				GetMutableDefault<UAkSettings>()
-				);
+			auto UpdatePlatformSettings = [SettingsModule, this]
+			{
+				auto SettingsThatShouldBeRegistered = GetDefaultSettingsRegistrationStructs();
 
-			SettingsModule->RegisterSettings("Project", "Wwise", "User Settings",
-				LOCTEXT("WwiseRuntimePerUserSettingsName", "Wwise User Settings"),
-				LOCTEXT("WwiseRuntimePerUserSettingsDescription", "Configure the Wwise Integration per user"),
-				GetMutableDefault<UAkSettingsPerUser>()
-				);
+				auto& Map = GetUnrealPlatformNameToSettingsRegistrationMap();
+				for (const auto& AvailablePlatform : WwiseBnkGenHelper::GetSupportedPlatforms())
+				{
+					if (const auto* SettingsStruct = Map.FindRef(AvailablePlatform))
+					{
+						SettingsThatShouldBeRegistered.Add(SettingsStruct);
+					}
+				}
+
+				auto SettingsToBeUnregistered = RegisteredSettings.Difference(SettingsThatShouldBeRegistered);
+				for (const auto* SettingsStruct : SettingsToBeUnregistered)
+				{
+					SettingsStruct->Unregister(SettingsModule);
+					RegisteredSettings.Remove(SettingsStruct);
+				}
+
+				auto SettingsToBeRegistered = SettingsThatShouldBeRegistered.Difference(RegisteredSettings);
+				for (const auto* SettingsStruct : SettingsToBeRegistered)
+				{
+					if (RegisteredSettings.Contains(SettingsStruct))
+						continue;
+
+					SettingsStruct->Register(SettingsModule);
+					RegisteredSettings.Add(SettingsStruct);
+				}
+			};
+
+			UpdatePlatformSettings();
+
+			IProjectManager& ProjectManager = IProjectManager::Get();
+			ProjectManager.OnTargetPlatformsForCurrentProjectChanged().AddLambda(UpdatePlatformSettings);
+		}
+	}
+
+	void UnregisterSettings()
+	{
+		if (auto SettingsModule = FModuleManager::GetModulePtr<ISettingsModule>("Settings"))
+		{
+			for (const auto* SettingsStruct : RegisteredSettings)
+			{
+				SettingsStruct->Unregister(SettingsModule);
+			}
+			RegisteredSettings.Empty();
 		}
 	}
 
 	void OnEndPIE(const bool bIsSimulating)
 	{
-		FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-		if (AkAudioDevice)
+		if (auto* AkAudioDevice = FAkAudioDevice::Get())
 		{
 			AkAudioDevice->StopAllSounds(true);
 		}
 	}
 
 	/** Asset type actions for Audiokinetic assets.  Cached here so that we can unregister it during shutdown. */
-	TSharedPtr< FAssetTypeActions_AkAudioBank > AkAudioBankAssetTypeActions;
-	TSharedPtr< FAssetTypeActions_AkAudioEvent > AkAudioEventAssetTypeActions;
-	TSharedPtr< FAssetTypeActions_AkAuxBus > AkAuxBusAssetTypeActions;
-	TSharedPtr< FAssetTypeActions_AkAcousticTexture > AkAcousticTextureAssetTypeActions;
+	TSharedPtr<FAssetTypeActions_AkAudioBank> AkAudioBankAssetTypeActions;
+	TSharedPtr<FAssetTypeActions_AkAudioEvent> AkAudioEventAssetTypeActions;
+	TSharedPtr<FAssetTypeActions_AkAuxBus> AkAuxBusAssetTypeActions;
+	TSharedPtr<FAssetTypeActions_AkAcousticTexture> AkAcousticTextureAssetTypeActions;
 	TSharedPtr<FExtender> MainMenuExtender;
 	FLevelEditorModule::FLevelEditorMenuExtender LevelViewportToolbarBuildMenuExtenderAk;
 	FDelegateHandle LevelViewportToolbarBuildMenuExtenderAkHandle;
@@ -557,140 +719,6 @@ private:
 	TSharedPtr<SWwisePicker> AkWwisePicker;
 };
 
-IMPLEMENT_MODULE( FAudiokineticToolsModule, AudiokineticTools );
-
-void VerifyAkSettings()
-{
-	UAkSettings* AkSettings = GetMutableDefault<UAkSettings>();
-	UAkSettingsPerUser* AkSettingsPerUser = GetMutableDefault<UAkSettingsPerUser>();
-
-	if( AkSettings && AkSettingsPerUser )
-	{
-		if (AkSettings->WwiseProjectPath.FilePath.IsEmpty())
-		{
-			if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings)
-			{
-				if (EAppReturnType::Yes == FMessageDialog::Open(EAppMsgType::YesNo, LOCTEXT("SettingsNotSet", "Wwise settings do not seem to be set. Would you like to open the settings window to set them?")))
-				{
-					FModuleManager::LoadModuleChecked<ISettingsModule>("Settings").ShowViewer(FName("Project"), FName("Plugins"), FName("Wwise"));
-				}
-			}
-			else
-			{
-				UE_LOG(LogAudiokineticTools, Log, TEXT("Wwise project not found. The Ak Pickers will not be usable."));
-			}
-		}
-		else
-		{
-			// First-time plugin migration: Project might be relative to Engine path. Fix-up the path to make it relative to the game.
-#if UE_4_18_OR_LATER
-			const auto ProjectDir = FPaths::ProjectDir();
-#else
-			const auto ProjectDir = FPaths::GameDir();
-#endif // UE_4_18_OR_LATER
-
-			FString FullGameDir = FPaths::ConvertRelativePathToFull(ProjectDir);
-			FString TempPath = FPaths::ConvertRelativePathToFull(FullGameDir, AkSettings->WwiseProjectPath.FilePath);
-			if (!FPaths::FileExists(TempPath))
-			{
-				if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings)
-				{
-					TSharedPtr<SWindow> Dialog = SNew(SWindow)
-						.Title(LOCTEXT("ResetWwisePath", "Re-set Wwise Path"))
-						.SupportsMaximize(false)
-						.SupportsMinimize(false)
-						.FocusWhenFirstShown(true)
-						.SizingRule(ESizingRule::Autosized);
-
-					TSharedRef<SWidget> DialogContent = SNew(SVerticalBox)
-						+ SVerticalBox::Slot()
-						.FillHeight(0.25f)
-						[
-							SNew(SSpacer)
-						]
-						+ SVerticalBox::Slot()
-						.AutoHeight()
-						[
-							SNew(STextBlock)
-							.Text(LOCTEXT("AkUpdateWwisePath", "The Wwise UE4 Integration plug-in's update process requires the Wwise Project Path to be set in the Project Settings dialog. Would you like to open the Project Settings?"))
-						.AutoWrapText(true)
-						]
-						+ SVerticalBox::Slot()
-						.FillHeight(0.75f)
-						[
-							SNew(SSpacer)
-						]
-						+ SVerticalBox::Slot()
-						.AutoHeight()
-						[
-							SNew(SCheckBox)
-							.Padding(FMargin(6.0, 2.0))
-							.OnCheckStateChanged_Lambda([&](ECheckBoxState DontAskState) {
-								AkSettingsPerUser->SuppressWwiseProjectPathWarnings = (DontAskState == ECheckBoxState::Checked);
-							})
-							[
-								SNew(STextBlock)
-								.Text(LOCTEXT("AkDontShowAgain", "Don't show this again"))
-							]
-						]
-						+ SVerticalBox::Slot()
-						.AutoHeight()
-						[
-							SNew(SHorizontalBox)
-							+ SHorizontalBox::Slot()
-							.FillWidth(1.0f)
-							[
-								SNew(SSpacer)
-							]
-							+ SHorizontalBox::Slot()
-							.AutoWidth()
-							.Padding(0.0f, 3.0f, 0.0f, 3.0f)
-							[
-								SNew(SButton)
-								.Text(LOCTEXT("Yes", "Yes"))
-								.OnClicked_Lambda([&]() -> FReply {
-									FModuleManager::LoadModuleChecked<ISettingsModule>("Settings").ShowViewer(FName("Project"), FName("Plugins"), FName("Wwise"));
-									Dialog->RequestDestroyWindow();
-									AkSettings->UpdateDefaultConfigFile();
-									return FReply::Handled();
-								})
-							]
-							+ SHorizontalBox::Slot()
-							.AutoWidth()
-							.Padding(0.0f, 3.0f, 0.0f, 3.0f)
-							[
-								SNew(SButton)
-								.Text(LOCTEXT("No", "No"))
-								.OnClicked_Lambda([&]() -> FReply {
-									Dialog->RequestDestroyWindow();
-									AkSettings->UpdateDefaultConfigFile();
-									return FReply::Handled();
-								})
-							]
-						];
-
-					Dialog->SetContent(DialogContent);
-					FSlateApplication::Get().AddModalWindow(Dialog.ToSharedRef(), nullptr);
-				}
-				else
-				{
-					UE_LOG(LogAudiokineticTools, Log, TEXT("Wwise project not found. The Ak Pickers will not be usable."));
-				}
-			}
-			else
-			{
-				FPaths::MakePathRelativeTo(TempPath, *ProjectDir);
-				AkSettings->WwiseProjectPath.FilePath = TempPath;
-				AkSettings->UpdateDefaultConfigFile();
-			}
-		}
-	}
-
-	if (GUnrealEd != NULL)
-	{
-		GUnrealEd->RegisterComponentVisualizer(UAkComponent::StaticClass()->GetFName(), MakeShareable(new FAkComponentVisualizer));
-		GUnrealEd->RegisterComponentVisualizer(UAkSurfaceReflectorSetComponent::StaticClass()->GetFName(), MakeShareable(new FAkSurfaceReflectorSetComponentVisualizer));
-	}
-}
+IMPLEMENT_MODULE(FAudiokineticToolsModule, AudiokineticTools);
 
 #undef LOCTEXT_NAMESPACE

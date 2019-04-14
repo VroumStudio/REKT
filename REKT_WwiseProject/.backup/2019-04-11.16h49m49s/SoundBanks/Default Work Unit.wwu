@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D18D3C5E-4649-45F5-91DD-8D981DDCA53D}" SchemaVersion="89">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{D18D3C5E-4649-45F5-91DD-8D981DDCA53D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="SB_Garage" ID="{D2EFC970-8DB5-4EE0-B4DC-E9F99710B876}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_SFX_Wpn_FlameThrower_Shoot" ID="{41EFFAC2-8EE0-417E-8897-EA5A2E1F10FC}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Monsters_Run" ID="{99725B98-A830-43A2-8463-1B164EC2E8E8}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Music_BabyPark" ID="{0B203069-92DA-43D8-A4E6-AC04FF5C7F11}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Monsters_Die" ID="{6AAEE0FF-D2F2-46C2-8418-7F30E7DF4F29}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Trap_Mine_Explode" ID="{4A9A194F-91E0-47E3-9802-0BC3D87B78E0}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Trap_Mine_Trigger" ID="{62E18A1A-96CA-4895-B151-B15B6C818067}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Wpn_FlameThrower_Summon" ID="{0D4FA791-413D-48C3-AD82-19B161D181EF}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI" ID="{9D90592F-4CB2-4909-9B44-1CAD2F1D91D0}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Wpn_Gatling_Summon" ID="{26DE8396-D295-4A18-B8E1-57C245D4A678}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_Garage" ID="{57AD2673-21C7-4A1F-8E65-085214BF9547}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Amb_Garage" ID="{9ED2B48B-B807-4B6D-B4FD-9020A7E2B069}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Weapons" ID="{B2E20AFC-659E-4BD3-943E-81F35543E13F}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Pause" ID="{67AC84F7-F071-4C06-A756-05365ED79ECE}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Amb_BabyPark" ID="{968306DE-CDF8-4C93-A419-BCFEC96FF794}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Equipment" ID="{3B5E390C-5334-4D21-BFC2-52636BEC21DE}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Amb_Garage" ID="{3A21000B-A55F-4D40-BEB6-106BB435CC7E}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Trap_Mine_Idle" ID="{FD1F5DD0-4763-4E87-B517-0D0DBB09B9AC}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Movement" ID="{0BA3C7A7-84E3-4E95-8EC1-E175FC88460C}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Confirm" ID="{68E5CCE6-0BA8-4FD7-8671-CC7FED8A2A74}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_SFX_Wpn_Gatling_Shoot" ID="{D0931161-8E44-4FFB-A76D-3E5AB15C452B}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="SB_BabyPark" ID="{C91677B6-34DA-4AC0-8C91-4AE5AE2C07E5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Default Work Unit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI" ID="{9D90592F-4CB2-4909-9B44-1CAD2F1D91D0}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="SB_NeoOslo" ID="{D8D15AFE-99A7-4A4A-884E-7FC2B2FFC78F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Default Work Unit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

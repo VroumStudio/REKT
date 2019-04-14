@@ -27,9 +27,9 @@ public:
 	virtual class UThumbnailInfo* GetThumbnailInfo(UObject* Asset) const override { return NULL; };
 
 private:
-	/** Handler for when GenerateDefinitionFile is selected */
-	void GenerateDefinitionFile(TArray<TWeakObjectPtr<UAkAudioBank>> Objects);
-	
+	/** Handler for when GenerateSoundBanks is selected */
+	void CreateGenerateSoundBankWindow(TArray<TWeakObjectPtr<UAkAudioBank>> Objects);
+
 	/** Handler for when Load Bank is selected */
 	void LoadBank(TArray<TWeakObjectPtr<UAkAudioBank>> Objects);
 	

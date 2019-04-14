@@ -510,6 +510,20 @@ public:
 		AkPlayingID in_PlayingID = AK_INVALID_PLAYING_ID
 	);
 
+	/**
+	 * Executes an Action on the content associated to the specified playing ID. 
+	 * @param in_ActionType Action to execute on the specified playing ID.
+	 * @param in_PlayingID Playing ID on which to execute the action.
+	 * @param in_uTransitionDuration Fade duration
+	 * @param in_eFadeCurve Curve type to be used for the transition
+	 */
+	void ExecuteActionOnPlayingID(
+		AkActionOnEventType in_ActionType,
+		AkPlayingID in_PlayingID,
+		AkTimeMs in_uTransitionDuration = 0,
+		EAkCurveInterpolation in_eFadeCuve = EAkCurveInterpolation::Linear
+	);
+
     /** Seek on an event in the ak soundengine.
     * @param in_EventName            Name of the event on which to seek.
     * @param in_pComponent           The associated Actor.
@@ -571,6 +585,26 @@ public:
 		);
 
 	/**
+	*  Get the value of a real-time parameter control (by ID)
+	*  An RTPC can have a any combination of a global value, a unique value for each game object, or a unique value for each playing ID.
+	*  The value requested is determined by RTPCValue_type, in_gameObjectID and in_playingID.
+	*  If a value at the requested scope (determined by RTPCValue_type) is not found, the value that is available at the the next broadest scope will be returned, and io_rValueType will be changed to indicate this.
+	*  @note
+	* 		When looking up RTPC values via playing ID (ie. io_rValueType is RTPC_PlayingID), in_gameObjectID can be set to a specific game object (if it is available to the caller) to use as a fall back value.
+	* 		If the game object is unknown or unavailable, AK_INVALID_GAME_OBJECT can be passed in in_gameObjectID, and the game object will be looked up via in_playingID.
+	* 		However in this case, it is not possible to retrieve a game object value as a fall back value if the playing id does not exist.  It is best to pass in the game object if possible.
+	*
+	*  @return AK_Success if succeeded, AK_IDNotFound if the game object was not registered, or AK_Fail if the RTPC value could not be obtained
+	*/
+	AKRESULT GetRTPCValue(
+		const TCHAR * in_pszRtpcName,
+		AkGameObjectID in_gameObjectID,		///< Associated game object ID, ignored if io_rValueType is RTPCValue_Global.
+		AkPlayingID	in_playingID,			///< Associated playing ID, ignored if io_rValueType is not RTPC_PlayingID.
+		AkRtpcValue& out_rValue, 			///< Value returned
+		AK::SoundEngine::Query::RTPCValue_type&	io_rValueType		///< In/Out value, the user must specify the requested type. The function will return in this variable the type of the returned value.				);
+	);
+
+	/**
 	 * Set a state in ak soundengine
 	 *
 	 * @param in_pszStateGroup	Name of the state group
@@ -623,10 +657,27 @@ public:
     */
     AKRESULT SetMultiplePositions(
         UAkComponent* in_pGameObjectAkComponent,
-        TArray<AkChannelConfiguration> in_aChannelConfigurations,
-        TArray<FTransform> in_aPositions,
+        const TArray<AkChannelConfiguration>& in_aChannelConfigurations,
+        const TArray<FTransform>& in_aPositions,
         AkMultiPositionType in_eMultiPositionType = AkMultiPositionType::MultiDirections
     );
+
+	/** Sets multiple positions to a single game object, with flexible assignment of input channels.
+	*  Setting multiple positions on a single game object is a way to simulate multiple emission sources while using the resources of only one voice.
+	*  This can be used to simulate wall openings, area sounds, or multiple objects emitting the same sound in the same area.
+	*  Note: Calling AK::SoundEngine::SetMultiplePositions() with only one position is the same as calling AK::SoundEngine::SetPosition()
+	*  @param in_pGameObjectAkComponent Game Object AkComponent.
+	*  @param in_channelMasks Array of channel mask for each position.
+	*  @param in_pPositions Array of positions to apply.
+	*  @param in_eMultiPositionType Position type
+	*  @return AK_Success when successful, AK_InvalidParameter if parameters are not valid.
+	*/
+	AKRESULT SetMultiplePositions(
+		UAkComponent* in_pGameObjectAkComponent,
+		const TArray<FAkChannelMask>& in_channelMasks,
+		const TArray<FTransform>& in_aPositions,
+		AkMultiPositionType in_eMultiPositionType = AkMultiPositionType::MultiDirections
+	);
 
     /** Sets multiple positions to a single game object.
      *  Setting multiple positions on a single game object is a way to simulate multiple emission sources while using the resources of only one voice.
@@ -875,8 +926,11 @@ public:
 	/**
 	 * Get an ak audio component, or create it if none exists that fit the attachment criteria.
 	 */
-	static class UAkComponent* GetAkComponent( 
-		class USceneComponent* AttachToComponent, FName AttachPointName, const FVector * Location, EAttachLocation::Type LocationType );
+	static class UAkComponent* GetAkComponent(
+		class USceneComponent* AttachToComponent, FName AttachPointName, const FVector * Location, EAttachLocation::Type LocationType);
+
+	static class UAkComponent* GetAkComponent(
+		class USceneComponent* AttachToComponent, FName AttachPointName, const FVector * Location, EAttachLocation::Type LocationType, bool& ComponentCreated);
 
 	/**
 	 * Cancel the callback cookie for a dispatched event 
@@ -1224,6 +1278,8 @@ public:
 	AKRESULT RemoveImageSource(class AAkSpotReflector* in_pSpotReflector, AkUniqueID in_AuxBusID);
 
     static void GetChannelConfig(AkChannelConfiguration ChannelConfiguration, AkChannelConfig& config);
+	static void GetChannelConfig(FAkChannelMask SpeakerConfiguration, AkChannelConfig& config);
+
 	TMap<UWorld*, class UAkLateReverbComponent*>& GetHighestPriorityLateReverbComponentMap() { return HighestPriorityLateReverbComponentMap; }
 	TMap<UWorld*, class UAkRoomComponent*>& GetHighestPriorityRoomComponentMap() { return HighestPriorityRoomComponentMap; }
 
@@ -1254,6 +1310,14 @@ private:
 		FCreateCallbackPackage CreateCallbackPackage
 	);
 
+	template<typename ChannelConfig>
+	AKRESULT SetMultiplePositions(
+		UAkComponent* in_pGameObjectAkComponent,
+		const TArray<ChannelConfig>& in_aChannelConfigurations,
+		const TArray<FTransform>& in_aPositions,
+		AkMultiPositionType in_eMultiPositionType
+	);
+
 	// Overload allowing to modify StopWhenOwnerDestroyed after getting the AkComponent
 	AKRESULT GetGameObjectID(AActor * in_pActor, AkGameObjectID& io_GameObject, bool in_bStopWhenOwnerDestroyed );
 
@@ -1277,7 +1341,6 @@ private:
 
 #if UE_4_19_OR_LATER
 	void CleanupComponentMapsForLevel(ULevel* Level);
-
 	template<class COMPONENT_TYPE>
 	void RemovePrioritizedComponentsInLevel(TMap<UWorld*, COMPONENT_TYPE*>& HighestPriorityComponentMap, ULevel* Level);
 #else

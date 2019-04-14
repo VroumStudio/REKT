@@ -21,11 +21,11 @@ void FAssetTypeActions_AkAudioBank::GetActions( const TArray<UObject*>& InObject
 	if(Banks.Num() > 1)
 	{
 		MenuBuilder.AddMenuEntry(
-			LOCTEXT("AkAudioBank_GenerateDefinitionFile","Generate Selected SoundBanks..."),
-			LOCTEXT("AkAudioBank_GenerateDefinitionFileTooltip", "Generates the selected SoundBanks."),
+			LOCTEXT("AkAudioBank_GenerateSelectedSoundBanks","Generate Selected SoundBanks..."),
+			LOCTEXT("AkAudioBank_GenerateSelectedSoundBanksTooltip", "Generates the selected SoundBanks."),
 			FSlateIcon(),
 			FUIAction(
-				FExecuteAction::CreateSP( this, &FAssetTypeActions_AkAudioBank::GenerateDefinitionFile, Banks ),
+				FExecuteAction::CreateSP(this, &FAssetTypeActions_AkAudioBank::CreateGenerateSoundBankWindow, Banks ),
 				FCanExecuteAction()
 				)
 			);
@@ -33,11 +33,11 @@ void FAssetTypeActions_AkAudioBank::GetActions( const TArray<UObject*>& InObject
 	else
 	{
 		MenuBuilder.AddMenuEntry(
-			LOCTEXT("AkAudioBank_GenerateDefinitionFile","Generate Selected SoundBank..."),
-			LOCTEXT("AkAudioBank_GenerateDefinitionFileTooltip", "Generates the selected SoundBank."),
+			LOCTEXT("AkAudioBank_GenerateSelectedSoundBank","Generate Selected SoundBank..."),
+			LOCTEXT("AkAudioBank_GenerateSelectedSoundBankTooltip", "Generates the selected SoundBank."),
 			FSlateIcon(),
 			FUIAction(
-				FExecuteAction::CreateSP( this, &FAssetTypeActions_AkAudioBank::GenerateDefinitionFile, Banks ),
+				FExecuteAction::CreateSP(this, &FAssetTypeActions_AkAudioBank::CreateGenerateSoundBankWindow, Banks),
 				FCanExecuteAction()
 				)
 			);
@@ -114,7 +114,7 @@ void FAssetTypeActions_AkAudioBank::AssetsActivated( const TArray<UObject*>& InO
 	}
 }
 
-void FAssetTypeActions_AkAudioBank::GenerateDefinitionFile(TArray<TWeakObjectPtr<UAkAudioBank>> Objects)
+void FAssetTypeActions_AkAudioBank::CreateGenerateSoundBankWindow(TArray<TWeakObjectPtr<UAkAudioBank>> Objects)
 {
 	WwiseBnkGenHelper::CreateGenerateSoundBankWindow(&Objects, /*save Wwise project before generation*/false);
 }

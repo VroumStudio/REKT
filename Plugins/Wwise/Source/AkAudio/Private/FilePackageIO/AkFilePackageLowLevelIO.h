@@ -298,8 +298,6 @@ class CAkDefaultFileCustomParamPolicy
 //		 Base class must implement one of the low-level I/O hooks 
 //		 (AK::StreamMgr::IAkIOHookBlocking or AK::StreamMgr::IAkIOHookDeferred)
 //		 _and_ the AK::StreamMgr::IAkFileLocationResolver interface.
-//		 It must also define the following methods:
-//			- void Term()
 // Note: This class uses AkFileDesc::uCustomParamSize to store the block size 
 //		 of files opened from a package, and relies on the fact that it is 0 
 //		 when they are not part of the package.
@@ -344,14 +342,6 @@ public:
 	// WARNING: This method is not thread safe. Ensure there are no I/O occurring on this device
 	// when unloading a file package.
     virtual AKRESULT UnloadAllFilePackages();
-
-
-	//
-	// Overriden base class policies.
-	// ---------------------------------------------------------------
-
-    // Clean up.
-    void Term();
 
 protected:
 	//

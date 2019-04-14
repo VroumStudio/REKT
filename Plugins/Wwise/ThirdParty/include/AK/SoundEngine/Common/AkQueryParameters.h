@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -47,7 +47,7 @@ struct AkPositioningInfo
 	Ak3DPositionType	e3dPositioningType;	///< 3D position type: defines what acts as the emitter position for computing spatialization against the listener. 
 	bool				bHoldEmitterPosAndOrient;   ///< Hold emitter position and orientation values when starting playback.
 	Ak3DSpatializationMode e3DSpatializationMode; ///< Spatialization mode
-	bool				bUseAttenuation;	///< Use attenuation parameter set
+	bool				bEnableAttenuation;	///< Attenuation parameter set is active.
 
 	bool				bUseConeAttenuation; ///< Use the cone attenuation
 	AkReal32			fInnerAngle;		///< Inner angle
@@ -349,7 +349,6 @@ namespace AK
 			/// \aknote It is possible to call QueryAudioObjectIDs with io_ruNumItems = 0 to get the total size of the
 			/// structure that should be allocated for out_aObjectInfos. \endaknote
 			/// \return AK_Success if succeeded, AK_IDNotFound if the eventID cannot be found, AK_InvalidParameter if out_aObjectInfos is NULL while io_ruNumItems > 0
-			/// or AK_UnknownObject if the event contains an unknown audio object, 
 			/// or AK_PartialSuccess if io_ruNumItems was set to 0 to query the number of available items.
 			AK_EXTERNAPIFUNC( AKRESULT, QueryAudioObjectIDs )(
 				AkUniqueID in_eventID,				///< Event ID
@@ -362,7 +361,6 @@ namespace AK
 			/// \aknote It is possible to call QueryAudioObjectIDs with io_ruNumItems = 0 to get the total size of the
 			/// structure that should be allocated for out_aObjectInfos. \endaknote
 			/// \return AK_Success if succeeded, AK_IDNotFound if the event name cannot be found, AK_InvalidParameter if out_aObjectInfos is NULL while io_ruNumItems > 0
-			/// or AK_UnknownObject if the event contains an unknown audio object, 
 			/// or AK_PartialSuccess if io_ruNumItems was set to 0 to query the number of available items.
 			AK_EXTERNAPIFUNC( AKRESULT, QueryAudioObjectIDs )(
 				const wchar_t* in_pszEventName,		///< Event name
@@ -375,7 +373,6 @@ namespace AK
 			/// \aknote It is possible to call QueryAudioObjectIDs with io_ruNumItems = 0 to get the total size of the
 			/// structure that should be allocated for out_aObjectInfos. \endaknote
 			/// \return AK_Success if succeeded, AK_IDNotFound if the event name cannot be found, AK_InvalidParameter if out_aObjectInfos is NULL while io_ruNumItems > 0
-			/// or AK_UnknownObject if the event contains an unknown audio object, 
 			/// or AK_PartialSuccess if io_ruNumItems was set to 0 to query the number of available items.
 			AK_EXTERNAPIFUNC( AKRESULT, QueryAudioObjectIDs )(
 				const char* in_pszEventName,		///< Event name

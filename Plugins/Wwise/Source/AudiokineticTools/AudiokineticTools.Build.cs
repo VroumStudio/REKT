@@ -55,6 +55,7 @@ public class AudiokineticTools : ModuleRules
             new string[]
             {
 				"MovieScene",
+				"DesktopPlatform",
 				"MovieSceneTools",
 				"MovieSceneTracks",
 				"MatineeToLevelSequence",

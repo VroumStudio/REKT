@@ -45,8 +45,8 @@
 
 #if defined AK_SOUNDFRAME
 	#include <AK/SoundFrame/SF.h>
-	#include <AK/SoundEngine/Common/AkQueryParameters.h>
 #endif
+#include <AK/SoundEngine/Common/AkQueryParameters.h>
 
 #if PLATFORM_WINDOWS
 #include "Windows/HideWindowsPlatformTypes.h"

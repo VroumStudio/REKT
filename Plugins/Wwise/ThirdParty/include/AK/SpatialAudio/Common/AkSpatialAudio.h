@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-Version: v2018.1.6  Build: 6858
+Version: v2019.1.0  Build: 6947
 Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -32,6 +32,7 @@ Copyright (c) 2006-2019 Audiokinetic Inc.
 
 #include <AK/SpatialAudio/Common/AkSpatialAudioTypes.h>
 #include <AK/Plugin/AkReflectGameData.h>
+#include <AK/SoundEngine/Common/AkSoundEngine.h>
 
 /// AkDiffractionFlags determine if diffraction values for sound passing through portals will be calculated, and how to apply those calculations to Wwise parameters.
 enum AkDiffractionFlags
@@ -52,6 +53,7 @@ struct AkSpatialAudioInitSettings
 		, uDiffractionFlags((AkUInt32)DefaultDiffractionFlags)
 		, fDiffractionShadowAttenFactor(AK_DEFAULT_DIFFR_SHADOW_ATTEN)
 		, fDiffractionShadowDegrees(AK_DEFAULT_DIFFR_SHADOW_DEGREES)
+		, fMovementThreshold(AK_DEFAULT_MOVEMENT_THRESHOLD)
 	{}
 
 	AkMemPoolId uPoolID;					///< User-provided pool ID (see AK::MemoryMgr::CreatePool).
@@ -62,6 +64,8 @@ struct AkSpatialAudioInitSettings
 	AkReal32 fDiffractionShadowDegrees;		///< Interpolation angle, in degrees, over which the fDiffractionShadowAttenFactor is applied.  
 											///< At a diffraction of 0, a multiplier of 1 (ie. none) is applied, and at an angle of fDiffractionShadowDegrees or greater, fDiffractionShadowAttenFactor is applied.
 											///< A linear interpolation between 1 and fDiffractionShadowAttenFactor is applied when the angle is between 0 and fDiffractionShadowDegrees.
+
+	AkReal32 fMovementThreshold;			///< Amount that an emitter or listener has to move to trigger a recalculation of reflections/diffraction. Larger values can reduce the CPU load at the cost of reduced accuracy.
 };
 
 // Settings for individual image sources.
@@ -123,9 +127,9 @@ struct AkEmitterSettings
 						, reflectionsOrder(1)
 						, reflectorFilterMask(0xFFFFFFFF)
 						, roomReverbAuxBusGain(1.0f)
-						, diffractionMaxEdges(0)
-						, diffractionMaxPaths(8)
-						, diffractionMaxPathLength(kDefaultMaxPathLength)
+						, diffractionMaxEdges(kDefaultDiffractionMaxEdges)
+						, diffractionMaxPaths(kDefaultDiffractionMaxPaths)
+						, diffractionMaxPathLength(0.f)
 	{
 		useImageSources = true;
 	}
@@ -137,8 +141,10 @@ struct AkEmitterSettings
 	/// \aknote For proper operation with AkReflect and the SpatialAudio API, any aux bus using AkReflect should have 'Listener Relative Routing' checked and the 3D Spatialization set to None in the Wwise authoring tool. See \ref spatial_audio_wwiseprojectsetup_businstances for more details. \endaknote
 	AkUniqueID reflectAuxBusID;
 
-	/// A heuristic to stop the computation of reflections. Should be no longer (and possibly shorter for less CPU usage) than the maximum attenuation of
-	/// the sound emitter.
+	/// A heuristic to stop the computation of reflections, and reduce the search space for reflective surfaces. Should be no longer (and possibly shorter for less CPU usage) than the maximum attenuation of
+	/// the reflections, as defined in the AkReflect plug-in.
+	/// Setting \c reflectionMaxPathLength is critical for performance. This value should be set as small as possible to reduce the number of possible surfaces to consider for reflections. 
+	/// Setting \c reflectionMaxPathLength to 0.f effectively disables reflection processing for this sound emitter.
 	AkReal32 reflectionMaxPathLength;
 
 	/// Send gain (0.f-1.f) that is applied when sending to the bus that has the AkReflect plug-in. (reflectAuxBusID)
@@ -146,6 +152,8 @@ struct AkEmitterSettings
 
 	/// Maximum number of reflections that will be processed when computing indirect paths via the geometric reflections API. Reflection processing grows
 	/// exponentially with the order of reflections, so this number should be kept low.  Valid range: 1-4.
+	/// Setting \c reflectionsOrder to 0 effectively disables reflection processing for this sound emitter.
+	/// A good starting point is 1 (1st order reflections). \c reflectionsOrder can be increased to 2 or more if geometry is sufficiently simple, and there are a low number of sound emitters that need reflection processing at a given time.
 	AkUInt32 reflectionsOrder;
 
 	/// Bit field that allows for filtering of reflector surfaces (triangles) for this sound emitter. Setting/or clearing bits that correspond to the same bits set in 
@@ -161,17 +169,24 @@ struct AkEmitterSettings
 	/// - \ref AK::SpatialAudio::SetEmitterAuxSendValues
 	AkReal32 roomReverbAuxBusGain;
 
-	/// The maximum number of edges that the sound can diffract around between the emitter and the listener. Applies only to geometric diffraction, and not to sound propagation. 
+	/// The maximum number of edges that the sound can diffract around between the emitter and the listener, or the emitter and a single portal. Applies only to geometric diffraction, and not to sound propagation through rooms and portals. 
 	/// Setting \c diffractionMaxEdges to 0 effectively disables geometric diffraction for this sound emitter.
+	/// When using geometric diffraction, the default value is a good starting point.
 	AkUInt32 diffractionMaxEdges;
 
-	/// The maximum number of paths to the listener that the sound can take around obstacles.  Applies only to geometric diffraction, and not sound propagation. 
+	/// The maximum number of paths to the listener that the sound can take around obstacles between the emitter and the listener, or the emitter and a single portal. Applies only to geometric diffraction, and not sound propagation through rooms and portals. 
 	/// Diffraction paths map directly to virtual sound positions. Setting \c diffractionMaxPaths limits the number sound positions that are rendered for the game object. 
 	/// Setting \c diffractionMaxPaths to 0 effectively disables geometric diffraction for this sound emitter.
+	/// When using geometric diffraction, the default value is a good starting point.
 	AkUInt32 diffractionMaxPaths;
 
-	/// The maximum length that a diffracted sound can travel.  Should be no longer (and possibly shorter for less CPU usage) than the maximum attenuation of
-	/// the sound emitter. Applies only to geometric diffraction, and not to sound propagation. 
+	/// The maximum length of a geometric diffraction path between the emitter and the listener, in the case that they are in the same room. When the emitter and listener are in different rooms, this value represents 
+	/// the maximum possible diffracted path-segment length between the emitter and a portal (in the same room as the emitter). When the listener and emitter are in different rooms, calculated paths 
+	/// between the listener and portals, and/or those between two portals, are shared between all emitters requiring them, and so are not subject to \c diffractionMaxPathLength. The final path from the emitter to the listener may
+	/// end up being longer than \c diffractionMaxPathLength, when the total path traverses a number of rooms and portals.
+	/// Should generally be no longer (and possibly shorter for less CPU usage) than the maximum attenuation used on the sound emitter. 
+	/// Setting \c diffractionMaxPathLength to 0 effectively disables geometric diffraction for this sound emitter.
+	/// When using geometric diffraction, a good starting point is the maximum possible distance that the sound should travel.
 	AkReal32 diffractionMaxPathLength;
 
 	/// Enable reflections from image sources that have been added via the \c AK::SpatialAudio::SetImageSource() API. (Does not apply to geometric reflections.)
@@ -270,9 +285,6 @@ struct AkReflectionPathInfo
 	/// Diffraction amount, normalized to the range [0,1]
 	AkReal32 diffraction[AK_MAX_REFLECTION_PATH_LENGTH];
 	
-	/// The point that was hit to cause the path to be occluded. Note that the spatial audio library must be recompiled with \c \#define AK_DEBUG_OCCLUSION to enable generation of occluded paths.
-	AkVector occlusionPoint;
-
 	/// Linear gain applied to image source.
 	AkReal32 level;
 
@@ -281,75 +293,60 @@ struct AkReflectionPathInfo
 };
 
 /// Structure for retrieving information about diffraction paths for a given emitter. 
-/// Both the sound propagation (rooms and portals) system or the geometric diffraction system return infomation in this structure.
+/// The diffraction paths represent indirect sound paths from the emitter to the listener, whether they go through portals 
+/// (via the rooms and portals API) or are diffracted around edges (via the geometric diffraction API).
 struct AkDiffractionPathInfo
 {
 	/// Defines the maximum number of nodes that a user can retrieve information about.  Longer paths will be truncated. 
 	static const AkUInt32 kMaxNodes = AK_MAX_SOUND_PROPAGATION_DEPTH;
 
-	/// Diffraction points
+	/// Diffraction points along the path. nodes[0] is the point closest to the listener; nodes[numNodes-1] is the point closest to the emitter. 
+	/// Neither the emitter position nor the listener position are represented in this array.
 	AkVector nodes[kMaxNodes];
 
 	/// Raw diffraction angles at each point, in radians.
 	AkReal32 angles[kMaxNodes];
 
-	/// Virtual emitter position.
+	/// ID of the portals that the path passes through.  For a given node at position i (in the nodes array), if the path diffracts on a geometric edge, then portals[i] will be an invalid portal ID (ie. portals[i].IsValid() will return false). 
+	/// Otherwise, if the path diffracts through a portal at position i, then portals[i] will be the ID of that portal.
+	/// portal[0] represents the node closest to the listener; portal[numNodes-1] represents the node closest to the emitter.
+	AkPortalID portals[kMaxNodes];
+
+	/// ID's of the rooms that the path passes through. For a given node at position i, room[i] is the room on the listener's side of the node. If node i diffracts through a portal, 
+	/// then rooms[i] is on the listener's side of the portal, and rooms[i+1] is on the emitters side of the portal.
+	/// There is always one extra slot for a room so that the emitters room is always returned in slot room[numNodes] (assuming the path has not been truncated).
+	AkRoomID rooms[kMaxNodes + 1];
+
+	/// Virtual emitter position. This is the position that is passed to the sound engine to render the audio using multi-positioning, for this particular path.
 	AkTransform virtualPos;
 
-	/// Total number of nodes in the path.  Defines the number of valid entries in the \c nodes and \c angles arrays.
+	/// Total number of nodes in the path.  Defines the number of valid entries in the \c nodes, \c angles, and \c portals arrays. The \c rooms array has one extra slot to fit the emitter's room.
 	AkUInt32 nodeCount;
 
-	/// Calculated total diffraction from this path, normalize to the range [0,1]
+	/// Calculated total diffraction from this path, normalized to the range [0,1]
+	/// The diffraction amount is calculated from the sum of the deviation angles from a straight line, of all angles at each nodePoint. 
+	//	Can be thought of as how far into the 'shadow region' the sound has to 'bend' to reach the listener.
+	/// Depending on the spatial audio initialization settings, this value is applied internally, by spatial audio, to the obstruction or built-in parameter of the emitter game object.
+	/// \sa
+	/// - \ref AkDiffractionFlags
+	/// - \ref AkSpatialAudioInitSettings
 	AkReal32 diffraction;
 
 	/// Total path length
+	/// Represents the sum of the length of the individual segments between nodes, with a correction factor applied for diffraction. 
+	/// The correction factor simulates the phenomenon where by diffracted sound waves decay faster than incident sound waves and can be customized in the spatial audio init settings.
+	/// \sa
+	/// - \ref AkSpatialAudioInitSettings
 	AkReal32 totLength;
 
-	/// Obstruction value for this path.
+	/// Obstruction value for this path 
+	/// This value includes the accumulated portal obstruction for all portals along the path. In the case that no valid diffraction paths are found, this value is set to 1.0.
+	/// The obstruction value sent to the sound engine is normally calculated from the result of the \c diffraction calculation, and then max'ed with the portal obstruciton value.
+	/// If no path is found between the emitter and listener or if the maximum path length for a given sound is exceeded, the sound engine is sent 1.0 for obstruction.
+	/// In this case \c obstructionValue is set to 1.0, and \c nodeCount is set to 0. The maximum path length for an emitter is defined in \c AkEmitterSettings. 
+	/// \sa
+	/// - \ref AkEmitterSettings
 	AkReal32 obstructionValue;
-};
-
-/// Structure for retrieving information about the sound propagation paths that have been calculated via the rooms and portals API.  Useful for debug draw applications.
-struct AkPropagationPathInfo
-{
-	/// Defines the maximum number of nodes that a user can retrieve information about.  Longer paths will be truncated. 
-	static const AkUInt32 kMaxNodes = AK_MAX_SOUND_PROPAGATION_DEPTH;
-
-	///  Nodes in the path; they repreent vertices within the bounds of a portal's opening.  
-	AkVector nodePoint[kMaxNodes];
-
-	/// ID of the portal's that the path passes through.  portal[0] is the portal closest to the listener; portal[numNodes-1] is the portal closest to the emitter.
-	AkPortalID portals[kMaxNodes];
-
-	/// ID's of the rooms that the path passes through. There is always one more room than portal. room[0] is the listener's room; the emitters room is room[numNodes].
-	AkRoomID rooms[kMaxNodes+1];
-
-	/// Represents the number of valid nodes in nodePoint[] and the number of valid portals in portals[].  The number of rooms in rooms[] is numNodes+1. There is always one more room than portal.
-	AkUInt32 numNodes;
-
-	/// The sum of all straight line path segments, including the segment from the listener to nodePoint[0], between each subsequent nodePoint, and from nodePoint[numNodes-1] to the emitter.
-	AkReal32 length;
-	
-	/// The cumulative gain (linear) of all portals traversed.  
-	AkReal32 gain;
-
-	/// The dry diffraction amount is normalized in the range [0,1], and calculated from the maximum deviation angle from a straight line, of all angles at each nodePoint.  Can be thought of as how
-	//	far into the 'shadow region' the sound has to 'bend' to reach the listener.
-	/// Depending on the spatial audio initialization settings, this value that is applied internally, by spatial audio, to the obstruction or built-in parameter of the emitter game object.
-	/// \sa
-	/// - \ref AkDiffractionFlags
-	/// - \ref AkSpatialAudioInitSettings
-	AkReal32 dryDiffraction;
-
-	/// The wet diffraction amount for the portal closest to the listener, normalized in the range [0,1].  
-	/// The wet diffraction is calculated from how far into the 'shadow region' the listener is from the closest portal.  Unlike dry diffraction, the 
-	/// wet diffraction does not depend on the incident angle, but only the normal of the portal.
-	/// Depending on the spatial audio initialization settings, this value that is applied internally, by spatial audio, to the obstruction/built-in parameter of the room game object that is
-	/// on the other side of the portal closest to the listener.
-	/// \sa
-	/// - \ref AkDiffractionFlags
-	/// - \ref AkSpatialAudioInitSettings
-	AkReal32 wetDiffraction;
 };
 
 /// Parameters passed to \c SetPortal
@@ -500,6 +497,14 @@ struct AkGeometryParams
 	/// Number of of AkTriangleInfo structures in in_pTriangleInfo and number of AkTriIdx's in in_infoMap.
 	AkSurfIdx NumSurfaces;
 
+	/// Associate this geometry set with the room \c RoomID. Associating a geometry set with a particular room will limit the scope in which the geometry is visible/accessible. \c RoomID can be left as default (-1), in which case 
+	/// this geometry set will have a global scope. It is recommended to associate geometry with a room when the geometry is (1) fully contained within the room (ie. not visible to other rooms accept by portals), 
+	/// and (2) the room does not share geometry with other rooms. Doing so reduces the search space for ray casting performed by reflection and diffraction calculations. Take note that once one or more geometry sets 
+	/// are associated with a room, that room will no longer be able to access geometry that is in the global scope.
+	///	- \ref AK::SpatialAudio::SetRoom
+	///	- \ref AkRoomParams
+	AkRoomID RoomID;
+
 	/// Switch to enable or disable geometric diffraction for this Geometry.
 	bool EnableDiffraction;
 	
@@ -518,7 +523,7 @@ namespace AK
 		/// In order to use SpatialAudio, you need to initalize it using Init, and register all emitters and listeners that you plan on using with any of the services offered by SpatialAudio, using 
 		/// RegisterEmitter and RegisterListener respectively, _after_ having registered their corresponding game object to the sound engine. The position of these objects and game-defined sends should be updated with 
 		/// SetPosition and SetEmitterAuxSendValues instead of their AK::SoundEngine counterparts.
-		///\akwarning At the moment, there can be only one Spatial Audio listener registered at any given time.
+		/// \akwarning At the moment, there can be only one Spatial Audio listener registered at any given time.
 		//@{
 
 		/// Access the internal pool ID passed to Init.
@@ -732,11 +737,11 @@ namespace AK
 		/// to simulate sound transmission through walls.
 		/// If the listener and the emitter are in different rooms, the maximum of the obstruction value passed into SetEmitterObstructionAndOcclusion() and the the obstruction value calculated from the diffraction angle is passed to the sound engine.
 		/// If the game object is not registered as an emitter with Spatial Audio, then an error will be reported, and the call will have no effect.
-		/// \aknote The game is responsible to differentiate between obstruction between the emitter and the portal (where \c AK::SoundEngine::SetEmitterObstructionAndOcclusion() should be used), and occlusion from room boundaries, 
-		/// which is better handled by the spatial audio diffraction system.  For example, games that use ray-testing for obstruction may report 100 % obstruction when an object is very close to the the opening of a portal, 
-		/// because the ray between the emitter and the listener hits a nearby wall. If the game then sends 100 %, this will erroneously override the diffraction angle calculation which is probably much less than 180 degrees, 
-		/// and better matches the expected audibility of the sound. To prevent this scenario, games can ray-test for obstruction objects between the emitter and the portal, passing the results with \c AK::SoundEngine::SetEmitterObstructionAndOcclusion(), 
-		/// and then test for obstructing objects between the portal and the listener, passing the results with \c AK::SoundEngine::SetPortalObstructionAndOcclusion().
+		/// \aknote The game is responsible to differentiate between obstruction between the emitter and the portal (where \c AK::SpatialAudio::SetEmitterObstructionAndOcclusion() should be used), and occlusion from room boundaries, 
+		/// which is better handled by the spatial audio diffraction system.  For example, games that use ray-testing for obstruction may report 100 % obstruction when an object is very close to the opening of a portal, 
+		/// because the ray between the emitter and the listener hits a nearby wall. If the game then sends 100 %, this will erroneously override the diffraction calculation which is probably much less than 100% (180 degrees), 
+		/// and better matches the expected audibility of the sound. To prevent this scenario, games can ray-test for obstruction objects between the emitter and the portal, passing the results with \c AK::SpatialAudio::SetEmitterObstructionAndOcclusion(), 
+		/// and then test for obstructing objects between the portal and the listener, passing the results with \c AK::SpatialAudio::SetPortalObstructionAndOcclusion().
 		/// \sa 
 		///	- \ref AK::SpatialAudio::SetPortalObstructionAndOcclusion
 		AK_EXTERNAPIFUNC(AKRESULT, SetEmitterObstructionAndOcclusion)(
@@ -759,27 +764,33 @@ namespace AK
 			AkReal32 in_fOcclusion				///< Occlusion value.  Valid range 0.f-1.f
 			);
 
-		/// Query information about the sound propagation state for a particular listener and emitter, which has been calculated using the data provided via the rooms and portals API. This function can be used for debugging purposes.
+		/// Query information about the wet diffraction amount for the portal \c in_portal, returned as a normalized value \c out_wetDiffraction in the range [0,1].  
+		/// The wet diffraction is calculated from how far into the 'shadow region' the listener is from the portal.  Unlike dry diffraction, the 
+		/// wet diffraction does not depend on the incident angle, but only the normal of the portal.
+		/// Depending on the spatial audio initialization settings, this value is applied by spatial audio, to the obstruction and/or built-in game parameter of the room game object that is
+		/// on the other side of the portal (relative to the listener).
 		/// This function must acquire the global sound engine lock and therefore, may block waiting for the lock.
 		/// \sa
-		/// - \ref AkPropagationPathInfo
-		AK_EXTERNAPIFUNC(AKRESULT, QuerySoundPropagationPaths)(
-			AkGameObjectID in_gameObjectID,		///< The ID of the game object that the client wishes to query.
-			AkVector& out_listenerPos,			///< Returns the position of the listener game object that is associated with the game object \c in_gameObjectID.
-			AkVector& out_emitterPos,			///< Returns the position of the emitter game object \c in_gameObjectID.
-			AkPropagationPathInfo* out_aPaths,	///< Pointer to an array of \c AkPropagationPathInfo's which will be filled after returning.
-			AkUInt32& io_uArraySize				///< The number of slots in \c out_aPaths, after returning the number of valid elements written.
+		/// - \ref AkDiffractionFlags
+		/// - \ref AkSpatialAudioInitSettings
+		AK_EXTERNAPIFUNC(AKRESULT, QueryWetDiffraction)(
+			AkPortalID in_portal,			///< The ID of the game object that the client wishes to query.
+			AkReal32& out_wetDiffraction	///< The number of slots in \c out_aPaths, after returning the number of valid elements written.
 			);
 
 		/// Query information about the diffraction state for a particular listener and emitter, which has been calculated using the data provided via the spatial audio emitter API. This function can be used for debugging purposes.
-		/// This function must acquire the global sound engine lock and therefore, may block waiting for the lock.
+		/// Returned in \c out_aPaths, this array contains the sound paths calculated from diffraction around a geometric edge and/or diffraction through portals connecting rooms.
+		/// No paths will be returned in any of the following conditions: (1) the emitter game object has a direct line of sight to the listener game object, (2) the emitter and listener are in the same room, and the listener is completely outside the radius of the emitter as 
+		/// defined by <tt>AkEmitterSettings::diffractionMaxPathLength</tt>, or (3) The emitter and listener are in different rooms, but there are no paths found via portals between the emitter and the listener.
+		/// A single path with zero diffraction nodes is returned when all of the following conditions are met: (1) the emitter and listener are in the same room, (2) there is no direct line of sight, and (3) either \c AkEmitterSettings::diffractionMaxPathLength is exceeded or the accumulated diffraction coefficient exceeds 1.0.
+		/// This function must acquire the global sound engine lock and, therefore, may block waiting for the lock.
 		/// \sa
 		/// - \ref AkDiffractionPathInfo
 		AK_EXTERNAPIFUNC(AKRESULT, QueryDiffractionPaths)(
 			AkGameObjectID in_gameObjectID,		///< The ID of the game object that the client wishes to query.
 			AkVector& out_listenerPos,			///< Returns the position of the listener game object that is associated with the game object \c in_gameObjectID.
 			AkVector& out_emitterPos,			///< Returns the position of the emitter game object \c in_gameObjectID.
-			AkDiffractionPathInfo* out_aPaths,	///< Pointer to an array of \c AkPropagationPathInfo's which will be filled after returning.
+			AkDiffractionPathInfo* out_aPaths,	///< Pointer to an array of \c AkDiffractionPathInfo's which will be filled on return.
 			AkUInt32& io_uArraySize				///< The number of slots in \c out_aPaths, after returning the number of valid elements written.
 			);
 

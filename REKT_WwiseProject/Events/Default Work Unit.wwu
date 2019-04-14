@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" SchemaVersion="89">
+<WwiseDocument Type="WorkUnit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" SchemaVersion="94">
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" PersistMode="Standalone">
 			<ChildrenList>
@@ -606,6 +606,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Monster_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Turret_Drop" ID="{6216F828-0D33-49B2-8C2E-E12862284AB5}">
+					<ChildrenList>
+						<Action Name="" ID="{A45F7962-EDDC-4FD0-ACC7-E5AB93A50B42}" ShortID="246133563">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Turret_Drop" ID="{65076608-EC63-4955-A069-AC617578179F}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

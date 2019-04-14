@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 namespace ak {
@@ -130,6 +130,8 @@ namespace ak {
                 static const char* postDeleted =  "ak.wwise.core.object.postDeleted"; 
                 // Sent when the object's notes are changed.
                 static const char* notesChanged =  "ak.wwise.core.object.notesChanged"; 
+                // Retrieves information about an object property.
+                static const char* getPropertyInfo =  "ak.wwise.core.object.getPropertyInfo"; 
                 // Renames an object.
                 static const char* setName =  "ak.wwise.core.object.setName"; 
                 // Sets the object's notes.
@@ -142,8 +144,8 @@ namespace ak {
                 static const char* copy =  "ak.wwise.core.object.copy"; 
                 // Retrieves the status of a property.
                 static const char* isPropertyEnabled =  "ak.wwise.core.object.isPropertyEnabled"; 
-                // Retrieves information about an object property.
-                static const char* getPropertyInfo =  "ak.wwise.core.object.getPropertyInfo"; 
+                // Sets the randomizer values of a property of an object for a specific platform. Refer to \ref wobjects_index for more information on the properties available on each object type.
+                static const char* setRandomizer =  "ak.wwise.core.object.setRandomizer"; 
                 // Sets an object's reference value.
                 static const char* setReference =  "ak.wwise.core.object.setReference"; 
                 // Sent when an attenuation curve is changed.
@@ -171,6 +173,20 @@ namespace ak {
                 static const char* cancelGroup =  "ak.wwise.core.undo.cancelGroup"; 
                 // Begins an undo group. Make sure to call ak.wwise.core.endUndoGroup exactly once for every ak.wwise.core.beginUndoGroup call you make. Calls to ak.wwise.core.beginUndoGroup can be nested.
                 static const char* beginGroup =  "ak.wwise.core.undo.beginGroup";
+            } 
+            namespace profiler {
+                // Returns the current time of a Time Cursor in ms.
+                static const char* getCursorTime =  "ak.wwise.core.profiler.getCursorTime"; 
+                // Start the capture, return the time at the beginning of the capture in ms.
+                static const char* startCapture =  "ak.wwise.core.profiler.startCapture"; 
+                // Retrieves all parameters affecting voice volume, highpass and lowpass
+                static const char* getVoiceContributions =  "ak.wwise.core.profiler.getVoiceContributions"; 
+                // Retrieves the voices at a specific time.
+                static const char* getVoices =  "ak.wwise.core.profiler.getVoices"; 
+                // Retrieves the busses at a specific time.
+                static const char* getBusses =  "ak.wwise.core.profiler.getBusses"; 
+                // Stop the capture, return the time at the end of the capture in ms.
+                static const char* stopCapture =  "ak.wwise.core.profiler.stopCapture";
             } 
             namespace project {
                 // Sent when the after the project is completely closed.
@@ -210,7 +226,9 @@ namespace ak {
                 // Create Wwise objects and import audio files. This function is using the same importation processor available through the Tab Delimited import in the Audio File Importer. See \ref ak_wwise_core_audio_importtabdelimited. The function returns an array of all objects created, replaced or re-used. Use the options to specify how the objects are returned.
                 static const char* import =  "ak.wwise.core.audio.import"; 
                 // Scripted object creation and audio file import from a tab-delimited file.
-                static const char* importTabDelimited =  "ak.wwise.core.audio.importTabDelimited";
+                static const char* importTabDelimited =  "ak.wwise.core.audio.importTabDelimited"; 
+                // Sent at the end of an import operation.
+                static const char* imported =  "ak.wwise.core.audio.imported";
             } 
             namespace switchContainer {
                 // Remove an assignment between a Switch Container's child and a State.
@@ -252,7 +270,7 @@ namespace ak {
                 static const char* executed =  "ak.wwise.ui.commands.executed"; 
                 // Executes a command. Some commands can take a list of objects as parameter. Refer to \ref globalcommandsids for the available commands.
                 static const char* execute =  "ak.wwise.ui.commands.execute"; 
-                // Register an array of add-on UI commands.
+                // Register an array of add-on commands. Registered commands remain until the Wwise process is terminated. Refer to \ref defining_custom_commands for more information about registering commands. Also refer to \ref ak_wwise_ui_commands_executed.
                 static const char* register_ =  "ak.wwise.ui.commands.register"; 
                 // Get the list of commands.
                 static const char* getCommands =  "ak.wwise.ui.commands.getCommands";

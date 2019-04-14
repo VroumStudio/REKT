@@ -132,7 +132,7 @@ int32 UGenerateSoundBanksCommandlet::Main(const FString& Params)
 	bool SuccesfulDump = WwiseBnkGenHelper::GenerateDefinitionFile(BanksToGenerate, BankToEventSet);
 	if (SuccesfulDump)
 	{
-		ReturnCode = WwiseBnkGenHelper::GenerateSoundBanks(BanksToGenerate, PlatformsToGenerate, WwiseCliPath);
+		ReturnCode = WwiseBnkGenHelper::GenerateSoundBanksBlocking(BanksToGenerate, PlatformsToGenerate, WwiseCliPath);
 		if (ReturnCode == 0 || ReturnCode == 2)
 		{
 			WwiseBnkGenHelper::FetchAttenuationInfo(BankToEventSet);

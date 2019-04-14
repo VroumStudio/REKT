@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -38,16 +38,16 @@ the specific language governing permissions and limitations under the License.
 //@{
 
 /// Wwise SDK major version
-#define AK_WWISESDK_VERSION_MAJOR				2018
+#define AK_WWISESDK_VERSION_MAJOR				2019
 
 /// Wwise SDK minor version
 #define AK_WWISESDK_VERSION_MINOR				1
 
 /// Wwise SDK sub-minor version
-#define AK_WWISESDK_VERSION_SUBMINOR			6
+#define AK_WWISESDK_VERSION_SUBMINOR			0
 
 /// Wwise SDK build number
-#define AK_WWISESDK_VERSION_BUILD				6858
+#define AK_WWISESDK_VERSION_BUILD				6947
 
 /// Wwise SDK build date (year)
 #define AK_WWISESDK_BUILD_YEAR					2019
@@ -56,7 +56,7 @@ the specific language governing permissions and limitations under the License.
 #define AK_WWISESDK_BUILD_MONTH					3
 
 /// Wwise SDK build date (day)
-#define AK_WWISESDK_BUILD_DAY					6
+#define AK_WWISESDK_BUILD_DAY					29
 
 //@}
 
@@ -88,7 +88,7 @@ the specific language governing permissions and limitations under the License.
 											AK_WWISESDK_VERSION_NICKNAME_POSTFIX
 
 /// Wwise SDK branch
-#define AK_WWISESDK_BRANCH					"wwise_v2018.1"
+#define AK_WWISESDK_BRANCH					"wwise_v2019.1"
 
 /// @name Wwise SDK Copyright Notice
 

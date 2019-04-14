@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="89" WwiseVersion="v2018.1.4" WwiseBuild="6807">
+<WwiseDocument Type="Project" SchemaVersion="94" WwiseVersion="v2019.1.0" WwiseBuild="6947">
 	<ProjectInfo>
 		<Project Name="REKT_WwiseProject" ID="{762A181A-10BD-4F14-8DE0-BEA8FDC68A9E}">
 			<Platforms>
@@ -200,6 +200,11 @@
 						<Property Name="Color" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
@@ -621,11 +626,6 @@
 				</SharedPropertyList>
 				<SharedPropertyList ClassName="ADPCM" PluginType="1" CompanyID="0" PluginID="2">
 					<PropertyList>
-						<Property Name="EncodingMode" Type="int32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
 						<Property Name="FixLoopMethod" Type="int32">
 							<ValueList>
 								<Value>1</Value>
@@ -1193,6 +1193,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
 							<ValueList>
 								<Value>False</Value>
@@ -1610,6 +1615,11 @@
 						<Property Name="Color" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
@@ -2133,6 +2143,11 @@
 						<Property Name="Color" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
@@ -2780,6 +2795,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="GameAuxSendHPF" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -3199,6 +3219,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
 							<ValueList>
 								<Value>False</Value>
@@ -3608,6 +3633,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
 							<ValueList>
 								<Value>False</Value>
@@ -4005,6 +4035,11 @@
 						<Property Name="Color" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
@@ -4733,6 +4768,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="EnableLoudnessNormalization" Type="bool">
 							<ValueList>
 								<Value>False</Value>
@@ -5138,6 +5178,11 @@
 							</ValueList>
 						</Property>
 						<Property Name="ContinuePlay" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
 							<ValueList>
 								<Value>True</Value>
 							</ValueList>
@@ -5556,6 +5601,11 @@
 							</ValueList>
 						</Property>
 						<Property Name="DestinationJumpPositionPreset" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DestinationPlaylistJumpTo" Type="int16">
 							<ValueList>
 								<Value>0</Value>
 							</ValueList>
@@ -6251,6 +6301,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableAttenuation" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="GameAuxSendHPF" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -6743,6 +6798,15 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
+				<SharedPropertyList ClassName="MusicEventCue" PluginType="0" CompanyID="1" PluginID="77">
+					<PropertyList>
+						<Property Name="PlayAt" Type="Real64">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
 				<SharedPropertyList ClassName="ModulatorTime" PluginType="0" CompanyID="1" PluginID="78">
 					<PropertyList>
 						<Property Name="Color" Type="int16">
@@ -6792,6 +6856,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
+				<SharedPropertyList ClassName="CustomState" PluginType="0" CompanyID="1" PluginID="79"/>
 				<SharedPropertyList ClassName="Wwise Sine" PluginType="2" CompanyID="0" PluginID="100">
 					<PropertyList>
 						<Property Name="ChannelMask" Type="int32">
@@ -8611,6 +8676,63 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
+				<SharedPropertyList ClassName="ASIO Output" PluginType="7" CompanyID="0" PluginID="168">
+					<PropertyList>
+						<Property Name="BaseChannel" Type="int32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ChannelConfig" Type="int32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="Wwise Channel Router" PluginType="6" CompanyID="0" PluginID="172">
+					<PropertyList>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="AttachableMixerInput" PluginType="3" CompanyID="0" PluginID="173">
+					<PropertyList>
+						<Property Name="Channel" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
 				<SharedPropertyList ClassName="System" PluginType="7" CompanyID="0" PluginID="174">
 					<PropertyList>
 						<Property Name="Color" Type="int16">
@@ -8758,7 +8880,21 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Wwise Motion Generator (Deprecated)" PluginType="2" CompanyID="0" PluginID="405">
+				<SharedPropertyList ClassName="ASIO Input" PluginType="2" CompanyID="0" PluginID="204">
+					<PropertyList>
+						<Property Name="BaseChannel" Type="int32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ChannelConfig" Type="int32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="" PluginType="2" CompanyID="0" PluginID="405">
 					<PropertyList>
 						<Property Name="AttackTime" Type="Real32">
 							<ValueList>
@@ -8807,7 +8943,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Wwise Motion Source" PluginType="2" CompanyID="0" PluginID="409">
+				<SharedPropertyList ClassName="" PluginType="2" CompanyID="0" PluginID="409">
 					<PropertyList>
 						<Property Name="Channel1" Type="int16">
 							<ValueList>
@@ -8906,7 +9042,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Wwise Motion" PluginType="7" CompanyID="0" PluginID="507">
+				<SharedPropertyList ClassName="" PluginType="7" CompanyID="0" PluginID="507">
 					<PropertyList>
 						<Property Name="Color" Type="int16">
 							<ValueList>
@@ -9016,6 +9152,11 @@
 				</SharedPropertyList>
 				<SharedPropertyList ClassName="Marker" PluginType="0" CompanyID="0" PluginID="993">
 					<PropertyList>
+						<Property Name="Label" Type="string">
+							<ValueList>
+								<Value></Value>
+							</ValueList>
+						</Property>
 						<Property Name="Time" Type="Real64">
 							<ValueList>
 								<Value>0</Value>
@@ -9023,7 +9164,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Auro Headphone" PluginType="3" CompanyID="263" PluginID="1100">
+				<SharedPropertyList ClassName="" PluginType="3" CompanyID="263" PluginID="1100">
 					<PropertyList>
 						<Property Name="Bypass" Type="bool">
 							<ValueList>

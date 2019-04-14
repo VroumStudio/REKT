@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -377,7 +377,7 @@ namespace AKPLATFORM
 	{
         AkInt64 iFreq;
         PerformanceFrequency( &iFreq );
-        AK::g_fFreqRatio = (AkReal32)( iFreq / 1000 );
+		AK::g_fFreqRatio = (AkReal32)((AkReal64)iFreq / 1000);
 	}
 
 	/// Returns a time range in milliseconds, using the sound engine's updated count->milliseconds ratio.
@@ -552,6 +552,17 @@ namespace AKPLATFORM
 	inline int OsStrCmp( const AkOSChar* in_pszString1, const AkOSChar* in_pszString2 )
 	{
 		return ( wcscmp( in_pszString1,  in_pszString2 ) );
+	}
+
+	/// Compare two NULL-terminated AkOSChar strings up to the specified count of characters.
+	/// \return
+	/// - \< 0 if in_pszString1 \< in_pszString2
+	/// -    0 if the two strings are identical
+	/// - \> 0 if in_pszString1 \> in_pszString2
+	/// \remark The comparison is case-sensitive
+	inline int OsStrNCmp(  const AkOSChar* in_pszString1, const AkOSChar* in_pszString2, size_t in_MaxCountSize)
+	{
+		return wcsncmp(in_pszString1, in_pszString2, in_MaxCountSize);
 	}
 	
 	#define AK_UTF16_TO_WCHAR(	in_pdDest, in_pSrc, in_MaxSize )	AKPLATFORM::SafeStrCpy(		in_pdDest, in_pSrc, in_MaxSize )

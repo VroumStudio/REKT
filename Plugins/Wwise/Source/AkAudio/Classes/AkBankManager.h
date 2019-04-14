@@ -81,6 +81,7 @@ class AKAUDIO_API FAkBankManager
 {
 public:
 	FAkBankManager();
+	~FAkBankManager();
 
 	static FAkBankManager* GetInstance();
 

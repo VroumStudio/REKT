@@ -100,15 +100,15 @@ public:
 	float roomReverbAuxBusGain;
 
 	/** The maximum number of edges that the sound can diffract around between the emitter and the listener. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Geometric Diffraction (Experimental)", meta = (ClampMin = "0"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Geometric Diffraction", meta = (ClampMin = "0"))
 	int diffractionMaxEdges;
 
 	/** The maximum number of paths to the listener that the sound can take around obstacles. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Geometric Diffraction (Experimental)", meta = (ClampMin = "0"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Geometric Diffraction", meta = (ClampMin = "0"))
 	int diffractionMaxPaths;
 
 	/** The maximum length that a diffracted sound can travel.  Should be no longer (and possibly shorter for less CPU usage) than the maximum attenuation of the sound emitter. */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Geometric Diffraction (Experimental)", meta = (ClampMin = "0.0"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Geometric Diffraction", meta = (ClampMin = "0.0"))
 	float diffractionMaxPathLength;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Debug Draw")
@@ -121,11 +121,7 @@ public:
 	uint32 DrawHigherOrderReflections : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Debug Draw")
-	uint32 DrawGeometricDiffraction : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Debug Draw")
-	uint32 DrawSoundPropagation : 1;
-
+	uint32 DrawDiffraction : 1;
 
 	/** Stop sound when owner is destroyed? */
 	UPROPERTY()
@@ -195,15 +191,25 @@ public:
 	void Stop();
 	
 	/**
-	 * Sets an RTPC value, using this component as the game object source
-	 *
-	 * @param RTPC			The name of the RTPC to set
-	 * @param Value			The value of the RTPC
-	 * @param InterpolationTimeMs - Duration during which the RTPC is interpolated towards Value (in ms)
-	 */
-	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic|AkComponent")
-	void SetRTPCValue( FString RTPC, float Value, int32 InterpolationTimeMs );
-	
+	* Sets an RTPC value, using this component as the game object source
+	*
+	* @param RTPC			The name of the RTPC to set
+	* @param Value			The value of the RTPC
+	* @param InterpolationTimeMs - Duration during which the RTPC is interpolated towards Value (in ms)
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|AkComponent")
+	void SetRTPCValue(FString RTPC, float Value, int32 InterpolationTimeMs);
+
+	/**
+	* Sets an RTPC value, using this component as the game object source
+	*
+	* @param RTPC			The name of the RTPC to set
+	* @param Value			The value of the RTPC
+	* @param InterpolationTimeMs - Duration during which the RTPC is interpolated towards Value (in ms)
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|AkComponent")
+	void GetRTPCValue(FString RTPC, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType);
+
 	/**
 	 * Posts a trigger to wwise, using this component as the game object source
 	 *
@@ -244,7 +250,7 @@ public:
 	 *
 	 * @param inUseReverbVolumes	Whether to use reverb volumes or not.
 	 */
-	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic|AkComponent")
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic|AkComponent", meta = (DeprecatedFunction, DeprecationMessage = "Please use the \"UseReverbVolume\" property"))
 	void UseReverbVolumes(bool inUseReverbVolumes);
 
 	// Early Reflections
@@ -288,6 +294,11 @@ public:
 	/** Time interval between occlusion/obstruction checks. Set to 0 to disable occlusion on this component. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AkComponent")
 	float OcclusionRefreshInterval;
+
+	/** Whether to use reverb volumes or not */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AkComponent")
+	bool bUseReverbVolumes = true;
+
 
 	/**
 	 * Return the real attenuation radius for this component (AttenuationScalingFactor * AkAudioEvent->MaxAttenuationRadius)
@@ -430,9 +441,6 @@ private:
 	/** Room the AkComponent is currently in. nullptr if none */
 	class UAkRoomComponent* CurrentRoom;
 
-	/** Whether to use reverb volumes or not */
-	bool bUseReverbVolumes;
-
 	/** Whether to automatically destroy the component when the event is finished */
 	bool bAutoDestroy;
 
@@ -461,9 +469,6 @@ private:
 	void DebugDrawReflections() const;
 	void _DebugDrawReflections(const AkVector& akEmitterPos, const AkVector& akListenerPos, const AkReflectionPathInfo* paths, AkUInt32 uNumPaths) const;
 
-	void DebugDrawGeometricDiffraction() const;
-	void _DebugDrawGeometricDiffraction(const AkVector& akEmitterPos, const AkVector& akListenerPos, const AkDiffractionPathInfo* paths, AkUInt32 uNumPaths) const;
-
-	void DebugDrawSoundPropagation() const;
-	void _DebugDrawSoundPropagation(const AkVector& akEmitterPos, const AkVector& akListenerPos, const AkPropagationPathInfo* paths, AkUInt32 uNumPaths) const;
+	void DebugDrawDiffraction() const;
+	void _DebugDrawDiffraction(const AkVector& akEmitterPos, const AkVector& akListenerPos, const AkDiffractionPathInfo* paths, AkUInt32 uNumPaths) const;
 };

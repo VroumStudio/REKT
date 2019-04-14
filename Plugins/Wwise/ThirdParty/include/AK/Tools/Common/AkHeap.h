@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-Version: v2018.1.6  Build: 6858
+Version: v2019.1.0  Build: 6947
 Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -46,7 +46,7 @@ public:
 			{
 				int parentIdx = Parent(insertIdx);
 
-				if (Greater(U_KEY::Get(Base::m_pItems[parentIdx]), in_Key))
+				if (Lesser(in_Key, U_KEY::Get(Base::m_pItems[parentIdx])))
 				{
 					TMovePolicy::Move(Base::m_pItems[insertIdx], Base::m_pItems[parentIdx]);
 					insertIdx = parentIdx;
@@ -108,11 +108,6 @@ public:
 	}
 
 private:
-	AkForceInline bool Greater(T_KEY &a, T_KEY &b) const
-	{
-		return TComparePolicy::Greater((void*)this, a, b);
-	}
-
 	AkForceInline bool Lesser(T_KEY &a, T_KEY &b) const
 	{
 		return TComparePolicy::Lesser((void*)this, a, b);

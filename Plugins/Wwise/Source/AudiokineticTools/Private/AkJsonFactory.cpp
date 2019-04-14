@@ -31,7 +31,9 @@ bool UAkJsonFactory::FactoryCanImport(const FString& Filename)
 	//check extension
 	if (FPaths::GetExtension(Filename) == TEXT("json"))
 	{
-		if(Filename.Contains("WwiseAudio"))
+		const UAkSettings* AkSettings = GetDefault<UAkSettings>();
+
+		if (Filename.Contains(AkSettings ? AkSettings->WwiseSoundBankFolder.Path : UAkSettings::DefaultSoundBankFolder))
 		{
 			return true;
 		}

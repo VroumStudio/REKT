@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -35,6 +35,7 @@ the specific language governing permissions and limitations under the License.
 
 #include <AK/IBytes.h>
 #include <AK/SoundEngine/Common/AkSoundEngineExport.h>
+#include <AK/Tools/Common/AkBankReadHelpers.h>
 
 namespace AK
 {
@@ -108,8 +109,28 @@ namespace AK
 		// Public methods
 
 		AKSOUNDENGINE_API void SetMemPool( AkMemPoolId in_pool );
+
+		template<class T>
+		bool Write(const T & in_data)
+		{
+			AkInt32 cPos = m_cPos;
+			AkInt32 cNewPos = cPos + sizeof(T);
+
+			if ((m_cBytes >= cNewPos) || Grow(cNewPos))
+			{
+				AK::WriteUnaligned<T>(m_pBytes + cPos, in_data);
+				m_cPos = cNewPos;
+				return true;
+			}
+			else
+				return false;
+		}
 	
 	private:
+		bool Grow(
+			AkInt32 in_cBytes
+		);
+
 		AkInt32		m_cBytes;
 		AkUInt8 *	m_pBytes;
 	

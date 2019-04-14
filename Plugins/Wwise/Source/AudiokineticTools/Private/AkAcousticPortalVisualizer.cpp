@@ -76,7 +76,12 @@ void UAkPortalComponentVisualizer::DrawVisualization(const UActorComponent* Comp
 			}
 
 			// Allocate the material proxy and register it so it can be deleted properly once the rendering is done with it.
-			FDynamicColoredMaterialRenderProxy* SelectedColorInstance = new FDynamicColoredMaterialRenderProxy(GEngine->GeomMaterial->GetRenderProxy(false), SelectedColor);
+#if UE_4_22_OR_LATER
+			auto* renderProxy = GEngine->GeomMaterial->GetRenderProxy();
+#else
+			auto* renderProxy = GEngine->GeomMaterial->GetRenderProxy(false);
+#endif
+			FDynamicColoredMaterialRenderProxy* SelectedColorInstance = new FDynamicColoredMaterialRenderProxy(renderProxy, SelectedColor);
 			PDI->RegisterDynamicResource(SelectedColorInstance);
 
 			MeshBuilder.Draw(PDI, pPortal->GetTransform().ToMatrixWithScale(), SelectedColorInstance, SDPG_World, false, false);

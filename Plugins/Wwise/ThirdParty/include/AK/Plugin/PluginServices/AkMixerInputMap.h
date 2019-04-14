@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
  
@@ -78,6 +78,16 @@ public:
 	AkForceInline void Init( AK::IAkPluginMemAlloc * in_pAllocator ) { m_pAllocator = in_pAllocator; }
 protected:
 	AkForceInline void * Alloc( size_t in_uSize ) { AKASSERT( m_pAllocator || !"Allocator not set. Did you forget to call AkMixerInputMap::Init()?" ); return AK_PLUGIN_ALLOC( m_pAllocator, in_uSize ); }
+	AkForceInline void * ReAlloc(void * in_pCurrent, size_t in_uSize)
+	{
+		void* pNew = Alloc(in_uSize);
+		if (pNew && in_pCurrent)
+		{
+			AKPLATFORM::AkMemCpy(pNew, in_pCurrent, (AkUInt32)in_uSize);
+			Free(in_pCurrent);
+		}
+		return pNew;
+	}
 	AkForceInline void Free( void * in_pAddress ) { AKASSERT( m_pAllocator || !"Allocator not set. Did you forget to call AkMixerInputMap::Init()?" ); AK_PLUGIN_FREE( m_pAllocator, in_pAddress ); }
 	AkForceInline AK::IAkPluginMemAlloc * GetAllocator() { return m_pAllocator; }
 private:

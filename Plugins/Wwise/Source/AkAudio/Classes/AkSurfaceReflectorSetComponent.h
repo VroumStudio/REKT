@@ -6,6 +6,8 @@
 #include "Components/TextRenderComponent.h"
 #include "AkSurfaceReflectorSetComponent.generated.h"
 
+class UAkRoomComponent;
+
 DECLARE_DELEGATE(FOnRefreshDetails);
 
 
@@ -43,13 +45,20 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category ="AcousticSurfaces")
 	TArray<FAkPoly> AcousticPolys;
 
-	/** Enable or disable geometric diffraction for this mesh. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Acoustic Surface Diffraction (Experimental)")
+	/** Enable or disable geometric diffraction for this mesh. Check this box to have Wwise Spatial Audio generate diffraction edges on the geometry. The diffraction edges will be visible in the Wwise game object viewer when connected to the game. */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Acoustic Surface Properties")
 	uint32 bEnableDiffraction : 1;
 
-	/** Enable or disable geometric diffraction on boundary edges for this mesh. Boundary edges are edges that are connected to only one triangle. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Acoustic Surface Diffraction (Experimental)", meta = (EditCondition = "bEnableDiffraction"))
+	/** Enable or disable geometric diffraction on boundary edges for this Geometry. Boundary edges are edges that are connected to only one triangle. Depending on the specific shape of the geometry, boundary edges may or may not be useful and it is beneficial to reduce the total number of diffraction edges to process.  */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Acoustic Surface Properties", meta = (EditCondition = "bEnableDiffraction"))
 	uint32 bEnableDiffractionOnBoundaryEdges : 1;
+
+	/** (Optional) Associate this Surface Reflector Set with a Room.
+	Associating a surface reflector set with a particular room will limit the scope in which the geometry is visible/accessible. Leave it to None and this geometry will have a global scope.
+	It is recommended to associate geometry with a room when the geometry is (1) fully contained within the room (ie. not visible to other rooms except by portals), and (2) the room does not share geometry with other rooms. Doing so reduces the search space for ray casting performed by reflection and diffraction calculations.
+	Take note that once one or more geometry sets are associated with a room, that room will no longer be able to access geometry that is in the global scope.*/ 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Acoustic Surface Properties")
+	AActor* AssociatedRoom;
 
 	UModel* ParentBrush;
 
@@ -80,7 +89,6 @@ public:
 #endif
 
 	virtual void BeginPlay() override;
-	virtual void PostLoad() override;
 	virtual void OnRegister() override;
 	virtual void OnUnregister() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;

@@ -77,10 +77,11 @@ public:
 //		 (implemented in CAkFileLocationBase).
 //-----------------------------------------------------------------------------
 class CAkUnrealIOHookDeferred :	public AK::StreamMgr::IAkFileLocationResolver
-								,public AK::StreamMgr::IAkIOHookDeferred
+								, public AK::StreamMgr::IAkIOHookDeferred
 {
 public:
 
+	virtual ~CAkUnrealIOHookDeferred();
 	/** 
 	 * Initialization. Init() registers this object as the one and 
 	 * only File Location Resolver if none were registered before. Then 
@@ -90,11 +91,6 @@ public:
 	 * @return	true if initialization was successful, false otherwise
 	 */
 	bool Init(const AkDeviceSettings& in_deviceSettings);
-
-	/**
-	 * Terminate.
-	 */
-	void Term();
 
 	// Base path is prepended to all file names.
 	// Audio source path is appended to base path whenever uCompanyID is AK and uCodecID specifies an audio source.

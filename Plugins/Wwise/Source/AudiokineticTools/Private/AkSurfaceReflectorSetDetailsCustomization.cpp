@@ -140,7 +140,7 @@ void FAkSurfaceReflectorSetDetailsCustomization::CustomizeDetails(IDetailLayoutB
 		}
 		else
 		{
-			DetailLayout.HideCategory("Acoustic Surface Diffraction (Experimental)");
+			DetailLayout.HideCategory("Acoustic Surface Properties");
 		}
 	}
 }

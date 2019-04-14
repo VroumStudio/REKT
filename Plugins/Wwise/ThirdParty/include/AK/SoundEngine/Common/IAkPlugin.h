@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -40,6 +40,7 @@ the specific language governing permissions and limitations under the License.
 #include <AK/Tools/Common/AkMonitorError.h>
 #include <AK/SoundEngine/Common/AkSoundEngineExport.h>
 #include <AK/SoundEngine/Common/IAkProcessorFeatures.h>
+#include <AK/SoundEngine/Common/IAkPlatformContext.h>
 #include <AK/SoundEngine/Common/AkMidiTypes.h>
 #include <AK/SoundEngine/Common/AkCallback.h>
 #include <AK/AkWwiseSDKVersion.h>
@@ -1406,6 +1407,10 @@ namespace AK
 			AkUniqueID in_eventID = AK_INVALID_UNIQUE_ID,					///< Unique ID of the Event
 			AkGameObjectID in_gameObjectID = AK_INVALID_GAME_OBJECT			///< Associated game object ID
 			) = 0;
+
+		/// \return The gateway to platform-specific functionality
+		/// \sa IAkPlatformContext
+		virtual IAkPlatformContext * GetPlatformContext() const = 0;
 	};
 
 	/// This class takes care of the registration of plug-ins in the Wwise engine.  Plug-in developers must provide one instance of this class for each plug-in.

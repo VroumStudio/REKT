@@ -11,7 +11,6 @@
 #include "Engine/GameEngine.h"
 #include "AkCallbackInfoPool.h"
 
-
 UAkCallbackInfo* AkCallbackTypeHelpers::GetBlueprintableCallbackInfo(AkCallbackType CallbackType, AkCallbackInfo* CallbackInfo)
 {
 	switch (CallbackType)
@@ -58,7 +57,6 @@ EAkCallbackType AkCallbackTypeHelpers::GetBlueprintCallbackTypeFromAkCallbackTyp
 	}
 	return (EAkCallbackType)BitIndex;
 }
-
 
 UAkCallbackInfo::UAkCallbackInfo( class FObjectInitializer const & ObjectInitializer) :
 	Super(ObjectInitializer)

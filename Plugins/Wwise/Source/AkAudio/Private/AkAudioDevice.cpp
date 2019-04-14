@@ -31,8 +31,10 @@
 #include "Runtime/Launch/Resources/Version.h"
 #include "AkComponentCallbackManager.h"
 #include "FilePackageIO/AkFilePackageLowLevelIO.h"
+#include "InitializationSettings/AkInitializationSettings.h"
 #include "AkUnrealIOHookDeferred.h"
 #include "AkLateReverbComponent.h"
+#include "AkUnrealHelper.h"
 #include "AkCallbackInfoPool.h"
 
 #include "Async/TaskGraphInterfaces.h"
@@ -59,10 +61,6 @@
 #include "UnrealEdMisc.h"
 #endif
 
-#if PLATFORM_ANDROID && !PLATFORM_LUMIN
-#include "Android/AndroidApplication.h"
-#endif
-
 // Register plugins that are static linked in this DLL.
 #include <AK/Plugin/AkVorbisDecoderFactory.h>
 #include <AK/Plugin/AkSilenceSourceFactory.h>
@@ -86,11 +84,6 @@
 #include <AK/Plugin/AkRoomVerbFXFactory.h>
 #include <AK/Plugin/AkSynthOneSourceFactory.h>
 #include <AK/Plugin/AkRecorderFXFactory.h>
-#include <AK/Plugin/AkMotionGeneratorSourceFactory.h>
-
-#if AK_WITH_AKMOTIONSINK
-#include <AK/Plugin/AkMotionSinkFactory.h>
-#endif
 
 #if AK_WITH_AUROHEADPHONEFX
 #include <AK/Plugin/AuroHeadphoneFXFactory.h>
@@ -120,14 +113,6 @@
 
 // Add additional plug-ins here.
 	
-// OCULUS_START
-#include "Runtime/HeadMountedDisplay/Public/IHeadMountedDisplayModule.h"
-// OCULUS_END
-
-
-#if PLATFORM_XBOXONE
-	#include <apu.h>
-#endif
 
 DEFINE_LOG_CATEGORY(LogAkAudio);	
 
@@ -153,66 +138,15 @@ bool FAkAudioDevice::m_EngineExiting = false;
 
 namespace AK
 {
-	void * AllocHook( size_t in_size )
+	void* AllocHook(size_t in_size)
 	{
-		return FMemory::Malloc( in_size );
-	}
-	void FreeHook( void * in_ptr )
-	{
-		FMemory::Free( in_ptr );
+		return FMemory::Malloc(in_size);
 	}
 
-#ifdef _WIN32 // only on PC and XBox360
-	void * VirtualAllocHook(
-		void * in_pMemAddress,
-		size_t in_size,
-		unsigned long in_dwAllocationType,
-		unsigned long in_dwProtect
-		)
+	void FreeHook(void* in_ptr)
 	{
-		return VirtualAlloc( in_pMemAddress, in_size, in_dwAllocationType, in_dwProtect );
+		FMemory::Free(in_ptr);
 	}
-	void VirtualFreeHook( 
-		void * in_pMemAddress,
-		size_t in_size,
-		unsigned long in_dwFreeType
-		)
-	{
-		VirtualFree( in_pMemAddress, in_size, in_dwFreeType );
-	}
-#endif // only on PC and XBox360
-
-#if PLATFORM_SWITCH
-	void * AlignedAllocHook(size_t in_size, size_t in_alignment)
-	{
-		return aligned_alloc(in_alignment, in_size);
-	}
-
-	void AlignedFreeHook(void * in_ptr)
-	{
-		free(in_ptr);
-	}
-#endif
-
-
-#if PLATFORM_XBOXONE
-	void * APUAllocHook( 
-		size_t in_size,				///< Number of bytes to allocate.
-		unsigned int in_alignment	///< Alignment in bytes (must be power of two, greater than or equal to four).
-		)
-	{
-		void * pReturn = nullptr;
-		ApuAlloc( &pReturn, NULL, (UINT32) in_size, in_alignment );
-		return pReturn;
-	}
-
-	void APUFreeHook( 
-		void * in_pMemAddress	///< Virtual address as returned by APUAllocHook.
-		)
-	{
-		ApuFree( in_pMemAddress );
-	}
-#endif
 }
 
 /*------------------------------------------------------------------------------------
@@ -399,13 +333,15 @@ bool FAkAudioDevice::Init( void )
 #else
 	FEditorSupportDelegates::CleanseEditor.AddLambda(
 		[this]()
-	{
-		RemoveInvalidPrioritizedComponents<UAkRoomComponent>(HighestPriorityRoomComponentMap);
-		RemoveInvalidPrioritizedComponents<UAkLateReverbComponent>(HighestPriorityLateReverbComponentMap);
-	}
+		{
+			RemoveInvalidPrioritizedComponents<UAkRoomComponent>(HighestPriorityRoomComponentMap);
+			RemoveInvalidPrioritizedComponents<UAkLateReverbComponent>(HighestPriorityLateReverbComponentMap);
+		}
 	);
 #endif// UE_4_19_OR_LATER
 #endif// WITH_EDITOR
+
+
 
 	m_SpatialAudioListener = nullptr;
 
@@ -461,7 +397,12 @@ bool FAkAudioDevice::Init( void )
 		FEditorDelegates::OnEditorCameraMoved.AddLambda(
 			[&](const FVector& Location, const FRotator& Rotation, ELevelViewportType ViewportType, int32 ViewIndex)
 			{
-				if (GEditor->AllViewportClients[ViewIndex]->Viewport && GEditor->AllViewportClients[ViewIndex]->Viewport->HasFocus())
+#if UE_4_22_OR_LATER
+			auto& allViewportClient = GEditor->GetAllViewportClients();
+#else
+			auto& allViewportClient = GEditor->AllViewportClients;
+#endif
+				if (allViewportClient[ViewIndex]->Viewport && allViewportClient[ViewIndex]->Viewport->HasFocus())
 				{
 					if (ListenerTransforms.Num() <= ViewIndex)
 					{
@@ -470,7 +411,7 @@ bool FAkAudioDevice::Init( void )
 					ListenerTransforms[ViewIndex].SetLocation(Location);
 					ListenerTransforms[ViewIndex].SetRotation(Rotation.Quaternion());
 
-					UWorld * ViewportWorld = GEditor->AllViewportClients[ViewIndex]->GetWorld();
+					UWorld * ViewportWorld = allViewportClient[ViewIndex]->GetWorld();
 					if (ViewportWorld && ViewportWorld->WorldType == EWorldType::PIE)
 					{
 						auto Quat = Rotation.Quaternion();
@@ -549,7 +490,6 @@ void FAkAudioDevice::CleanupComponentMapsForWorld(UWorld* World)
 #if UE_4_19_OR_LATER
 void FAkAudioDevice::CleanupComponentMapsForLevel(ULevel* Level)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Level Cleanup"));
 	RemovePrioritizedComponentsInLevel<UAkRoomComponent>(HighestPriorityRoomComponentMap, Level);
 	RemovePrioritizedComponentsInLevel<UAkLateReverbComponent>(HighestPriorityLateReverbComponentMap, Level);
 }
@@ -559,8 +499,8 @@ void FAkAudioDevice::RemovePrioritizedComponentsInLevel(TMap<UWorld*, COMPONENT_
 {
 	auto World = Level->GetWorld();
 	auto ComponentsToRemove = TArray<COMPONENT_TYPE*>();
-
 	COMPONENT_TYPE** TopComponent = HighestPriorityComponentMap.Find(World);
+
 	if (TopComponent)
 	{
 		COMPONENT_TYPE* CurrentComponent = *TopComponent;
@@ -572,7 +512,6 @@ void FAkAudioDevice::RemovePrioritizedComponentsInLevel(TMap<UWorld*, COMPONENT_
 			CurrentComponent = CurrentComponent->NextLowerPriorityComponent;
 		}
 	}
-
 	for (auto Component : ComponentsToRemove)
 		RemovePrioritizedComponentFromList(Component, HighestPriorityComponentMap);
 }
@@ -594,6 +533,8 @@ void FAkAudioDevice::RemoveInvalidPrioritizedComponents(TMap<UWorld*, COMPONENT_
 		RemovePrioritizedComponentFromList(Component, HighestPriorityComponentMap);
 }
 #endif// UE_4_19_OR_LATER
+
+
 
 /**
  * Update the audio device and calculates the cached inverse transform later
@@ -639,20 +580,11 @@ bool FAkAudioDevice::Update( float DeltaTime )
  */
 void FAkAudioDevice::Teardown()
 {
-	if (m_bSoundEngineInitialized == true)
+	if (m_bSoundEngineInitialized)
 	{
 		// Unload all loaded banks before teardown
-		if( AkBankManager )
+		if (AkBankManager)
 		{
-			const TSet<UAkAudioBank*>* LoadedBanks = AkBankManager->GetLoadedBankList();
-			TSet<UAkAudioBank*> LoadedBanksCopy(*LoadedBanks);
-			for(TSet<UAkAudioBank*>::TConstIterator LoadIter(LoadedBanksCopy); LoadIter; ++LoadIter)
-			{
-				if( (*LoadIter) != NULL && (*LoadIter)->IsValidLowLevel() )
-				{
-					(*LoadIter)->Unload();
-				}
-			}
 			delete AkBankManager;
 			AkBankManager = nullptr;
 		}
@@ -667,40 +599,22 @@ void FAkAudioDevice::Teardown()
 
 		m_EngineExiting = true;
 
-		UnloadAllFilePackages();
+		if (LowLevelIOHook)
+		{
+			delete LowLevelIOHook;
+			LowLevelIOHook = nullptr;
+		}
 
 		AK::Monitor::SetLocalOutput(0, NULL);
 
-#ifndef AK_OPTIMIZED
-#if !PLATFORM_LINUX
-		//
-		// Terminate Communication Services
-		//
-		AK::Comm::Term();
-#endif
-#endif // AK_OPTIMIZED
+		AK::SoundEngine::UnregisterGameObj(DUMMY_GAMEOBJ);
 
-		AK::SoundEngine::UnregisterGameObj( DUMMY_GAMEOBJ );
-
-		//
-		// Terminate the music engine
-		//
-		AK::MusicEngine::Term();
-
-		//
-		// Unregister game objects. Since we're about to terminate the sound engine
-		// anyway, we don't really have to unregister those game objects here. But
-		// in general it is good practice to unregister game objects as soon as they
-		// become obsolete, to free up resources.
-		//
-		if ( AK::SoundEngine::IsInitialized() )
+		if (AK::SoundEngine::IsInitialized())
 		{
-			//
-			// Terminate the sound engine
-			//
-			AK::SoundEngine::Term();
 			FAkAudioDevice_Helpers::UnregisterAllGlobalCallbacks();
 		}
+
+		FAkSoundEngineInitialization::Finalize();
 
 		if (CallbackManager)
 		{
@@ -708,35 +622,19 @@ void FAkAudioDevice::Teardown()
 			CallbackManager = nullptr;
 		}
 
-		if (LowLevelIOHook)
-		{
-			LowLevelIOHook->Term();
-			delete LowLevelIOHook;
-			LowLevelIOHook = nullptr;
-		}
-
-		// Terminate the streaming manager
-		if ( AK::IAkStreamMgr::Get() )
-		{
-			AK::IAkStreamMgr::Get()->Destroy();
-		}
-
-		// Terminate the Memory Manager
-		AK::MemoryMgr::Term();
-
 		m_bSoundEngineInitialized = false;
 	}
 
 	// Terminate SoundFrame
 #ifdef AK_SOUNDFRAME
-	if ( m_pSoundFrame )
+	if (m_pSoundFrame)
 	{
 		m_pSoundFrame->Release();
 		m_pSoundFrame = NULL;
 	}
 #endif
 
-	FWorldDelegates::LevelRemovedFromWorld.RemoveAll( this );
+	FWorldDelegates::LevelRemovedFromWorld.RemoveAll(this);
 
 	UE_LOG(LogInit, Log, TEXT("Audiokinetic Audio Device terminated."));
 }
@@ -746,9 +644,9 @@ void FAkAudioDevice::Teardown()
  *
  * @param bShouldStopUISounds If true, this function will stop UI sounds as well
  */
-void FAkAudioDevice::StopAllSounds( bool bShouldStopUISounds )
+void FAkAudioDevice::StopAllSounds(bool bShouldStopUISounds)
 {
-	AK::SoundEngine::StopAll( DUMMY_GAMEOBJ );
+	AK::SoundEngine::StopAll(DUMMY_GAMEOBJ);
 	AK::SoundEngine::StopAll();
 }
 
@@ -760,24 +658,24 @@ void FAkAudioDevice::StopAllSounds( bool bShouldStopUISounds )
  */
 void FAkAudioDevice::Flush(UWorld* WorldToFlush)
 {
-	AK::SoundEngine::StopAll( DUMMY_GAMEOBJ );
+	AK::SoundEngine::StopAll(DUMMY_GAMEOBJ);
 	AK::SoundEngine::StopAll();
 }
 
 /**
  * Clears all loaded soundbanks
  *
- * @return Result from ak sound engine 
+ * @return Result from ak sound engine
  */
 AKRESULT FAkAudioDevice::ClearBanks()
 {
-	if ( m_bSoundEngineInitialized )
+	if (m_bSoundEngineInitialized)
 	{
 		AKRESULT eResult = AK::SoundEngine::ClearBanks();
-		if( eResult == AK_Success && AkBankManager != NULL )
-			{
-				FScopeLock Lock(&AkBankManager->m_BankManagerCriticalSection);
-				AkBankManager->ClearLoadedBanks();
+		if (eResult == AK_Success && AkBankManager != NULL)
+		{
+			FScopeLock Lock(&AkBankManager->m_BankManagerCriticalSection);
+			AkBankManager->ClearLoadedBanks();
 		}
 
 		return eResult;
@@ -1099,6 +997,7 @@ void FAkAudioDevice::ReloadAllReferencedBanks()
 		FPlatformProcess::Sleep(0.1f);
 		ClearBanks();
 		UnloadAllFilePackages();
+		SetBankDirectory();
 		LoadAllReferencedBanks();
 	}
 }
@@ -1422,6 +1321,21 @@ AKRESULT FAkAudioDevice::ExecuteActionOnEvent(
 	return AKRESULT::AK_Fail;
 }
 
+void FAkAudioDevice::ExecuteActionOnPlayingID(
+	AkActionOnEventType in_ActionType,
+	AkPlayingID in_PlayingID,
+	AkTimeMs in_uTransitionDuration,
+	EAkCurveInterpolation in_eFadeCuve
+)
+{
+	AK::SoundEngine::ExecuteActionOnPlayingID(
+		static_cast<AK::SoundEngine::AkActionOnEventType>(in_ActionType),
+		in_PlayingID,
+		in_uTransitionDuration,
+		static_cast<AkCurveInterpolation>(in_eFadeCuve)
+	);
+}
+
 /** Seek on an event in the ak soundengine.
 * @param in_EventName            Name of the event on which to seek.
 * @param in_pActor               The associated Actor. If this is nullptr, defaul object will be used.
@@ -1497,6 +1411,7 @@ TArray<COMPONENT_TYPE*> FAkAudioDevice::FindPrioritizedComponentsAtLocation(cons
 	if(TopComponent)
 	{
 		COMPONENT_TYPE* CurrentComponent = *TopComponent;
+
 		while(CurrentComponent)
 		{
   			if(CurrentComponent->HasEffectOnLocation(Loc) && CurrentComponent->bEnable )
@@ -1857,32 +1772,60 @@ AKRESULT FAkAudioDevice::PostTrigger(
 } 
 
 /**
- * Set a RTPC in ak soundengine
- *
- * @param in_pszRtpcName	Name of the RTPC
- * @param in_value			Value to set
- * @param in_pActor			Actor on which to set the RTPC
- * @return Result from ak sound engine
- */
-AKRESULT FAkAudioDevice::SetRTPCValue( 
+* Set a RTPC in ak soundengine
+*
+* @param in_pszRtpcName	Name of the RTPC
+* @param in_value			Value to set
+* @param in_pActor			Actor on which to set the RTPC
+* @return Result from ak sound engine
+*/
+AKRESULT FAkAudioDevice::SetRTPCValue(
 	const TCHAR * in_pszRtpcName,
 	AkRtpcValue in_value,
 	int32 in_interpolationTimeMs = 0,
 	AActor * in_pActor = NULL
-	)
+)
 {
 	AKRESULT eResult = AK_Success;
-	if ( m_bSoundEngineInitialized )
+	if (m_bSoundEngineInitialized)
 	{
 		AkGameObjectID GameObjID = AK_INVALID_GAME_OBJECT; // RTPC at global scope is supported
-		if ( in_pActor )
+		if (in_pActor)
 		{
-			eResult = GetGameObjectID( in_pActor, GameObjID );
-			if ( eResult != AK_Success )
+			eResult = GetGameObjectID(in_pActor, GameObjID);
+			if (eResult != AK_Success)
 				return eResult;
 		}
 
-		eResult = AK::SoundEngine::SetRTPCValue(TCHAR_TO_AK(in_pszRtpcName), in_value, GameObjID, in_interpolationTimeMs );
+		eResult = AK::SoundEngine::SetRTPCValue(TCHAR_TO_AK(in_pszRtpcName), in_value, GameObjID, in_interpolationTimeMs);
+	}
+	return eResult;
+}
+
+/**
+ *  Get the value of a real-time parameter control (by ID)
+ *  An RTPC can have a any combination of a global value, a unique value for each game object, or a unique value for each playing ID.  
+ *  The value requested is determined by RTPCValue_type, in_gameObjectID and in_playingID.  
+ *  If a value at the requested scope (determined by RTPCValue_type) is not found, the value that is available at the the next broadest scope will be returned, and io_rValueType will be changed to indicate this.
+ *  @note
+ * 		When looking up RTPC values via playing ID (ie. io_rValueType is RTPC_PlayingID), in_gameObjectID can be set to a specific game object (if it is available to the caller) to use as a fall back value.
+ * 		If the game object is unknown or unavailable, AK_INVALID_GAME_OBJECT can be passed in in_gameObjectID, and the game object will be looked up via in_playingID.  
+ * 		However in this case, it is not possible to retrieve a game object value as a fall back value if the playing id does not exist.  It is best to pass in the game object if possible.
+ * 		
+ *  @return AK_Success if succeeded, AK_IDNotFound if the game object was not registered, or AK_Fail if the RTPC value could not be obtained
+ */
+AKRESULT FAkAudioDevice::GetRTPCValue(
+	const TCHAR * in_pszRtpcName,
+	AkGameObjectID in_gameObjectID,		///< Associated game object ID, ignored if io_rValueType is RTPCValue_Global.
+	AkPlayingID	in_playingID,			///< Associated playing ID, ignored if io_rValueType is not RTPC_PlayingID.
+	AkRtpcValue& out_rValue, 			///< Value returned
+	AK::SoundEngine::Query::RTPCValue_type&	io_rValueType		///< In/Out value, the user must specify the requested type. The function will return in this variable the type of the returned value.				);
+)
+{
+	AKRESULT eResult = AK_Success;
+	if (m_bSoundEngineInitialized)
+	{
+		eResult = AK::SoundEngine::Query::GetRTPCValue(TCHAR_TO_AK(in_pszRtpcName), in_gameObjectID, in_playingID, out_rValue, io_rValueType);
 	}
 	return eResult;
 }
@@ -1987,21 +1930,12 @@ AKRESULT FAkAudioDevice::SetMultiplePositions(
                                                  aPositions.Num(), GetSoundEngineMultiPositionType(in_eMultiPositionType));
 }
 
-/** Sets multiple positions to a single game object, with flexible assignment of input channels.
-*  Setting multiple positions on a single game object is a way to simulate multiple emission sources while using the resources of only one voice.
-*  This can be used to simulate wall openings, area sounds, or multiple objects emitting the same sound in the same area.
-*  Note: Calling AK::SoundEngine::SetMultiplePositions() with only one position is the same as calling AK::SoundEngine::SetPosition()
-*  @param in_pGameObjectAkComponent Game Object AkComponent.
-*  @param in_aChannelConfigurations Array of channel configurations for each position.
-*  @param in_pPositions Array of positions to apply.
-*  @param in_eMultiPositionType Position type
-*  @return AK_Success when successful, AK_InvalidParameter if parameters are not valid.
-*/
+template<typename ChannelConfig>
 AKRESULT FAkAudioDevice::SetMultiplePositions(
-    UAkComponent* in_pGameObjectAkComponent,
-    TArray<AkChannelConfiguration> in_aChannelConfigurations,
-    TArray<FTransform> in_aPositions,
-    AkMultiPositionType in_eMultiPositionType /*= AkMultiPositionType::MultiDirections*/
+	UAkComponent* in_pGameObjectAkComponent,
+	const TArray<ChannelConfig>& in_aChannelConfigurations,
+	const TArray<FTransform>& in_aPositions,
+	AkMultiPositionType in_eMultiPositionType /*= AkMultiPositionType::MultiDirections*/
 )
 {
 	if (!in_pGameObjectAkComponent)
@@ -2015,21 +1949,45 @@ AKRESULT FAkAudioDevice::SetMultiplePositions(
 		return AK_Fail;
 	}
 
-	const int numPositions = in_aPositions.Num();
-    TArray<AkChannelEmitter> emitters;
-    emitters.Empty();
-    for (int i = 0; i < numPositions; ++i)
-    {
-        AkSoundPosition soundpos;
+	const int32 numPositions = FMath::Min(in_aPositions.Num(), in_aChannelConfigurations.Num());
+
+	TArray<AkChannelEmitter> emitters;
+	emitters.Reserve(numPositions);
+	for (int i = 0; i < numPositions; ++i)
+	{
+		AkSoundPosition soundpos;
 		FAkAudioDevice::FVectorsToAKTransform(in_aPositions[i].GetLocation(), in_aPositions[i].GetRotation().GetForwardVector(), in_aPositions[i].GetRotation().GetUpVector(), soundpos);
+
 		AkChannelConfig config;
-        GetChannelConfig(in_aChannelConfigurations[i], config);
-        emitters.Add(AkChannelEmitter());
-        emitters[i].uInputChannels = config.uChannelMask;
-        emitters[i].position = soundpos;
-    }
-    return AK::SoundEngine::SetMultiplePositions(in_pGameObjectAkComponent->GetAkGameObjectID(), emitters.GetData(), 
-                                                 emitters.Num(), GetSoundEngineMultiPositionType(in_eMultiPositionType));
+		GetChannelConfig(in_aChannelConfigurations[i], config);
+
+		emitters.Add(AkChannelEmitter());
+		emitters[i].uInputChannels = config.uChannelMask;
+		emitters[i].position = soundpos;
+	}
+
+	return AK::SoundEngine::SetMultiplePositions(in_pGameObjectAkComponent->GetAkGameObjectID(), emitters.GetData(),
+		emitters.Num(), GetSoundEngineMultiPositionType(in_eMultiPositionType));
+}
+
+AKRESULT FAkAudioDevice::SetMultiplePositions(
+	UAkComponent* in_pGameObjectAkComponent,
+	const TArray<AkChannelConfiguration>& in_aChannelConfigurations,
+	const TArray<FTransform>& in_aPositions,
+	AkMultiPositionType in_eMultiPositionType
+)
+{
+	return SetMultiplePositions<AkChannelConfiguration>(in_pGameObjectAkComponent, in_aChannelConfigurations, in_aPositions, in_eMultiPositionType);
+}
+
+AKRESULT FAkAudioDevice::SetMultiplePositions(
+	UAkComponent* in_pGameObjectAkComponent,
+	const TArray<FAkChannelMask>& in_channelMasks,
+	const TArray<FTransform>& in_aPositions,
+	AkMultiPositionType in_eMultiPositionType
+)
+{
+	return SetMultiplePositions<FAkChannelMask>(in_pGameObjectAkComponent, in_channelMasks, in_aPositions, in_eMultiPositionType);
 }
 
 /** Sets multiple positions to a single game object.
@@ -2041,7 +1999,6 @@ AKRESULT FAkAudioDevice::SetMultiplePositions(
 *  @param in_NumPositions Number of positions specified in the provided array.
 *  @param in_eMultiPositionType Position type
 *  @return AK_Success when successful, AK_InvalidParameter if parameters are not valid.
-*
 */
 AKRESULT FAkAudioDevice::SetMultiplePositions(
     AkGameObjectID in_GameObjectID,
@@ -2099,8 +2056,8 @@ AKRESULT FAkAudioDevice::SetAuxSends(
 
 void FAkAudioDevice::GetChannelConfig(AkChannelConfiguration ChannelConfiguration, AkChannelConfig& config)
 {
-    switch (ChannelConfiguration)
-    {
+	switch (ChannelConfiguration)
+	{
 	case AkChannelConfiguration::Ak_LFE:
 		config.SetStandard(AK_SPEAKER_SETUP_0POINT1);
 		break;
@@ -2132,43 +2089,48 @@ void FAkAudioDevice::GetChannelConfig(AkChannelConfiguration ChannelConfiguratio
 		config.SetStandard(AK_SPEAKER_SETUP_5POINT1);
 		break;
 	case AkChannelConfiguration::Ak_7_1:
-        config.SetStandard(AK_SPEAKER_SETUP_7POINT1);
-        break;
-    case AkChannelConfiguration::Ak_5_1_2:
-        config.SetStandard(AK_SPEAKER_SETUP_DOLBY_5_1_2);
-        break;
-    case AkChannelConfiguration::Ak_7_1_2:
-        config.SetStandard(AK_SPEAKER_SETUP_DOLBY_7_1_2);
-        break;
-    case AkChannelConfiguration::Ak_7_1_4:
-        config.SetStandard(AK_SPEAKER_SETUP_DOLBY_7_1_4);
-        break;
-    case AkChannelConfiguration::Ak_Auro_9_1:
-        config.SetStandard(AK_SPEAKER_SETUP_AURO_9POINT1);
-        break;
-    case AkChannelConfiguration::Ak_Auro_10_1:
-        config.SetStandard(AK_SPEAKER_SETUP_AURO_10POINT1);
-        break;
-    case AkChannelConfiguration::Ak_Auro_11_1:
-        config.SetStandard(AK_SPEAKER_SETUP_AURO_11POINT1);
-        break;
-    case AkChannelConfiguration::Ak_Auro_13_1:
-        config.SetStandard(AK_SPEAKER_SETUP_AURO_13POINT1_751);
-        break;
-    case AkChannelConfiguration::Ak_Ambisonics_1st_order:
-        config.SetAmbisonic(4);
-        break;
-    case AkChannelConfiguration::Ak_Ambisonics_2nd_order:
-        config.SetAmbisonic(9);
-        break;
-    case AkChannelConfiguration::Ak_Ambisonics_3rd_order:
-        config.SetAmbisonic(16);
-        break;
-    case AkChannelConfiguration::Ak_Parent:
-    default:
-        config.Clear();
-        break;
-    }
+		config.SetStandard(AK_SPEAKER_SETUP_7POINT1);
+		break;
+	case AkChannelConfiguration::Ak_5_1_2:
+		config.SetStandard(AK_SPEAKER_SETUP_DOLBY_5_1_2);
+		break;
+	case AkChannelConfiguration::Ak_7_1_2:
+		config.SetStandard(AK_SPEAKER_SETUP_DOLBY_7_1_2);
+		break;
+	case AkChannelConfiguration::Ak_7_1_4:
+		config.SetStandard(AK_SPEAKER_SETUP_DOLBY_7_1_4);
+		break;
+	case AkChannelConfiguration::Ak_Auro_9_1:
+		config.SetStandard(AK_SPEAKER_SETUP_AURO_9POINT1);
+		break;
+	case AkChannelConfiguration::Ak_Auro_10_1:
+		config.SetStandard(AK_SPEAKER_SETUP_AURO_10POINT1);
+		break;
+	case AkChannelConfiguration::Ak_Auro_11_1:
+		config.SetStandard(AK_SPEAKER_SETUP_AURO_11POINT1);
+		break;
+	case AkChannelConfiguration::Ak_Auro_13_1:
+		config.SetStandard(AK_SPEAKER_SETUP_AURO_13POINT1_751);
+		break;
+	case AkChannelConfiguration::Ak_Ambisonics_1st_order:
+		config.SetAmbisonic(4);
+		break;
+	case AkChannelConfiguration::Ak_Ambisonics_2nd_order:
+		config.SetAmbisonic(9);
+		break;
+	case AkChannelConfiguration::Ak_Ambisonics_3rd_order:
+		config.SetAmbisonic(16);
+		break;
+	case AkChannelConfiguration::Ak_Parent:
+	default:
+		config.Clear();
+		break;
+	}
+}
+
+void FAkAudioDevice::GetChannelConfig(FAkChannelMask SpeakerConfig, AkChannelConfig& config)
+{
+	config.SetStandard(SpeakerConfig.ChannelMask);
 }
 
 /**
@@ -2269,8 +2231,7 @@ AKRESULT FAkAudioDevice::SetSpeakerAngles(
 
 	if (m_bSoundEngineInitialized)
 	{
-		AkReal32* speakerAngles = const_cast<AkReal32*>(in_pfSpeakerAngles.GetData());
-		eResult = AK::SoundEngine::SetSpeakerAngles(speakerAngles, in_pfSpeakerAngles.Num(), in_fHeightAngle, in_idOutput);
+		eResult = AK::SoundEngine::SetSpeakerAngles(in_pfSpeakerAngles.GetData(), in_pfSpeakerAngles.Num(), in_fHeightAngle, in_idOutput);
 	}
 
 	return eResult;
@@ -2604,7 +2565,13 @@ UAkComponent* FAkAudioDevice::GetSpatialAudioListener() const
 	return m_SpatialAudioListener;
 }
 
-UAkComponent* FAkAudioDevice::GetAkComponent( class USceneComponent* AttachToComponent, FName AttachPointName, const FVector * Location, EAttachLocation::Type LocationType )
+UAkComponent* FAkAudioDevice::GetAkComponent(class USceneComponent* AttachToComponent, FName AttachPointName, const FVector * Location, EAttachLocation::Type LocationType)
+{
+	bool ComponentCreated;
+	return GetAkComponent(AttachToComponent, AttachPointName, Location, LocationType, ComponentCreated);
+}
+
+UAkComponent* FAkAudioDevice::GetAkComponent( class USceneComponent* AttachToComponent, FName AttachPointName, const FVector * Location, EAttachLocation::Type LocationType, bool& ComponentCreated )
 {
 	if (!AttachToComponent)
 	{
@@ -2661,6 +2628,7 @@ UAkComponent* FAkAudioDevice::GetAkComponent( class USceneComponent* AttachToCom
 					}
 
 					// AkComponent found which exactly matches the attachment: reuse it.
+					ComponentCreated = false;
 					return pCompI;
 				}
 			}
@@ -2675,6 +2643,7 @@ UAkComponent* FAkAudioDevice::GetAkComponent( class USceneComponent* AttachToCom
 				if ( pCompI && pCompI->IsRegistered() )
 				{
 					// There is an associated AkComponent to AttachToComponent, no need to add another one.
+					ComponentCreated = false;
 					return pCompI;
 				}
 			}
@@ -2692,6 +2661,7 @@ UAkComponent* FAkAudioDevice::GetAkComponent( class USceneComponent* AttachToCom
 			}
 		}
 
+		ComponentCreated = true;
 		check( AkComponent );
 
 		if (Location)
@@ -2863,30 +2833,6 @@ static void UELocalOutputFunc(
 }
 #endif
 
-thread_local uint32 threadIndex = UINT32_MAX;
-FThreadSafeCounter g_nextThreadIndex(0);
-
-static void AkUE4_ParallelForFunc(void* data, AkUInt32 beginIndex, AkUInt32 endIndex, AkUInt32 /*tileSize*/, AkParallelForFunc func, void* userData, const char * in_szDebugName)
-{
-	check(func);
-	check(endIndex >= beginIndex);
-
-	if (func != nullptr && endIndex - beginIndex > 0)
-	{
-		ParallelFor(endIndex - beginIndex,
-			[data, beginIndex, func, userData](int32 Index)
-			{
-				check(data);
-
-				AkTaskContext ctx;
-				threadIndex = (threadIndex == UINT32_MAX) ? g_nextThreadIndex.Add(1) : threadIndex;
-				ctx.uIdxThread = threadIndex;
-				func(data, beginIndex + Index, beginIndex + Index + 1, ctx, userData);
-			}
-		);
-	}
-}
-
 bool FAkAudioDevice::EnsureInitialized()
 {
 	// We don't want sound in those cases.
@@ -2895,185 +2841,39 @@ bool FAkAudioDevice::EnsureInitialized()
 		return false;
 	}
 
-	if ( m_bSoundEngineInitialized )
+	if (m_bSoundEngineInitialized)
 	{
 		return true;
 	}
 
-#if PLATFORM_XBOXONE
-#ifndef AK_OPTIMIZED
-	try
-	{
-		// Make sure networkmanifest.xml is loaded by instantiating a Microsoft.Xbox.Networking object.
-		auto secureDeviceAssociationTemplate = Windows::Xbox::Networking::SecureDeviceAssociationTemplate::GetTemplateByName( "WwiseDiscovery" );
-	}
-	catch(...)
-	{
-		UE_LOG(LogAkAudio, Log, TEXT("Could not find Wwise network ports in AppxManifest. Network communication will not be available."));
-	}
-#endif
-#endif
-
-	UE_LOG(	LogAkAudio,
-			Log,
-			TEXT("Wwise(R) SDK Version %d.%d.%d Build %d. Copyright (c) 2006-%d Audiokinetic Inc."),
-			AK_WWISESDK_VERSION_MAJOR, 
-			AK_WWISESDK_VERSION_MINOR, 
-			AK_WWISESDK_VERSION_SUBMINOR, 
-			AK_WWISESDK_VERSION_BUILD,
-			AK_WWISESDK_VERSION_MAJOR );
-
-	AkMemSettings memSettings;
-	memSettings.uMaxNumPools = 256;
-
-	if ( AK::MemoryMgr::Init( &memSettings ) != AK_Success )
-	{
-        return false;
-	}
-
-	AkStreamMgrSettings stmSettings;
-	AK::StreamMgr::GetDefaultSettings( stmSettings );
-	AK::IAkStreamMgr * pStreamMgr = AK::StreamMgr::Create( stmSettings );
-	if ( ! pStreamMgr )
-	{
-        return false;
-	}
-
-	AkDeviceSettings deviceSettings;
-	AK::StreamMgr::GetDefaultDeviceSettings( deviceSettings );
-
-	deviceSettings.uGranularity = AK_UNREAL_IO_GRANULARITY;
-	deviceSettings.uSchedulerTypeFlags = AK_SCHEDULER_DEFERRED_LINED_UP;
-	deviceSettings.uMaxConcurrentIO = AK_UNREAL_MAX_CONCURRENT_IO;
-
-#if PLATFORM_MAC
-	deviceSettings.threadProperties.uStackSize = 4 * 1024 * 1024; // From FRunnableThreadMac
-#elif PLATFORM_APPLE
-	deviceSettings.threadProperties.uStackSize = 256 * 1024; // From FRunnableThreadApple
-#elif PLATFORM_SWITCH
-	deviceSettings.threadProperties.uStackSize = 1 * 1024 * 1024;
-#endif
+	UE_LOG(LogAkAudio,
+		Log,
+		TEXT("Wwise(R) SDK Version %d.%d.%d Build %d. Copyright (c) 2006-%d Audiokinetic Inc."),
+		AK_WWISESDK_VERSION_MAJOR,
+		AK_WWISESDK_VERSION_MINOR,
+		AK_WWISESDK_VERSION_SUBMINOR,
+		AK_WWISESDK_VERSION_BUILD,
+		AK_WWISESDK_VERSION_MAJOR);
 
 	LowLevelIOHook = new CAkFilePackageLowLevelIO<CAkUnrealIOHookDeferred, CAkDiskPackage, AkFileCustomParamPolicy>();
-	if (!LowLevelIOHook->Init( deviceSettings ))
+
+	if (!FAkSoundEngineInitialization::Initialize(LowLevelIOHook))
 	{
-		delete LowLevelIOHook;
-		LowLevelIOHook = nullptr;
-        return false;
-	}
-
-	AkInitSettings initSettings;
-	AkPlatformInitSettings platformInitSettings;
-	AK::SoundEngine::GetDefaultInitSettings( initSettings );
-	AK::SoundEngine::GetDefaultPlatformInitSettings( platformInitSettings );
-
-	initSettings.eFloorPlane = AkFloorPlane_XY;
-	
-#if !(PLATFORM_ANDROID || PLATFORM_IOS)
-	// Keep default size on mobile platforms.
-	platformInitSettings.uLEngineDefaultPoolSize = 128 * 1024 * 1024;
-#endif
-
-#if PLATFORM_ANDROID && !PLATFORM_LUMIN
-	extern JavaVM* GJavaVM;
-	platformInitSettings.pJavaVM = GJavaVM;
-	platformInitSettings.jNativeActivity = FAndroidApplication::GetGameActivityThis();
-#endif
-#if defined AK_WIN
-	// OCULUS_START vhamm audio redirect with build of wwise >= 2015.1.5
-	if (IHeadMountedDisplayModule::IsAvailable())
-	{
-		FString AudioOutputDevice;
-		IHeadMountedDisplayModule& Hmd = IHeadMountedDisplayModule::Get();
-		AudioOutputDevice = Hmd.GetAudioOutputDevice();
-		if(!AudioOutputDevice.IsEmpty())
-			initSettings.settingsMainOutput.idDevice = AK::GetDeviceIDFromName((wchar_t*)*AudioOutputDevice);
-	}
-	// OCULUS_END
-
-#endif
-
-	const UAkSettings* AkSettings = GetDefault<UAkSettings>();
-	if (AkSettings && AkSettings->bEnableMultiCoreRendering)
-	{
-		initSettings.taskSchedulerDesc.fcnParallelFor = AkUE4_ParallelForFunc;
-
-		check(FTaskGraphInterface::Get().IsRunning());
-		check(FPlatformProcess::SupportsMultithreading());
-		check(ENamedThreads::bHasHighPriorityThreads);
-
-		initSettings.taskSchedulerDesc.uNumSchedulerWorkerThreads =	FTaskGraphInterface::Get().GetNumWorkerThreads();
-	}
-
-	if ( AK::SoundEngine::Init( &initSettings, &platformInitSettings ) != AK_Success )
-	{
-        return false;
-	}
-	
-	AkMusicSettings musicInit;
-	AK::MusicEngine::GetDefaultInitSettings( musicInit );
-
-	if ( AK::MusicEngine::Init( &musicInit ) != AK_Success )
-	{
-        return false;
-	}
-
-	AkSpatialAudioInitSettings spatialAudioInit;
-	if ( AK::SpatialAudio::Init(spatialAudioInit) != AK_Success)
-	{
+		FAkSoundEngineInitialization::Finalize();
 		return false;
 	}
 
 #if PLATFORM_WINDOWS || PLATFORM_MAC
 	// Enable AK error redirection to UE log.
-	AK::Monitor::SetLocalOutput( AK::Monitor::ErrorLevel_All, UELocalOutputFunc );
+	AK::Monitor::SetLocalOutput(AK::Monitor::ErrorLevel_All, UELocalOutputFunc);
 #endif
 
-#ifndef AK_OPTIMIZED
-#if !PLATFORM_LINUX
-    //
-    // Initialize communications, not in release build, and only for a game (and not the project selection screen, for example)
-    //
-#if UE_4_18_OR_LATER
-	const bool HasProjectName = FApp::HasProjectName();
-#else
-	const bool HasProjectName = FApp::HasGameName();
-#endif // UE_4_18_OR_LATER
-
-	if(HasProjectName)
-	{
-#if UE_4_18_OR_LATER
-		FString GameName = FApp::GetProjectName();
-#else
-		FString GameName = FApp::GetGameName();
-#endif // UE_4_18_OR_LATER
-
-#if WITH_EDITORONLY_DATA
-		if(!IsRunningGame())
-			GameName += TEXT(" (Editor)");
-#endif
-		AkCommSettings commSettings;
-		AK::Comm::GetDefaultInitSettings( commSettings );
-#if PLATFORM_SWITCH
-		commSettings.bInitSystemLib = false;
-#endif
-		FCStringAnsi::Strcpy(commSettings.szAppNetworkName, AK_COMM_SETTINGS_MAX_STRING_SIZE, TCHAR_TO_ANSI(*GameName));
-		if ( AK::Comm::Init( commSettings ) != AK_Success )
-		{
-			UE_LOG(LogInit, Warning, TEXT("Could not initialize communication. GameName is %s"), *GameName);
-			//return false;
-		}
-	}
-#endif
-#endif // AK_OPTIMIZED
-
-	//
 	// Setup banks path
-	//
 	SetBankDirectory();
 
 	// Init dummy game object
 	AK::SoundEngine::RegisterGameObj(DUMMY_GAMEOBJ, "Unreal Global");
+
 #if WITH_EDITOR
 	if (!IsRunningGame())
 	{
@@ -3083,7 +2883,7 @@ bool FAkAudioDevice::EnsureInitialized()
 #endif
 
 	m_bSoundEngineInitialized = true;
-	
+
 	AkBankManager = new FAkBankManager;
 
 	CallbackInfoPool = new AkCallbackInfoPool;
@@ -3092,18 +2892,14 @@ bool FAkAudioDevice::EnsureInitialized()
 
 	// Go get the max number of Aux busses
 	MaxAuxBus = AK_MAX_AUX_PER_OBJ;
-	if( AkSettings )
+	if (const UAkSettings* AkSettings = GetDefault<UAkSettings>())
 	{
 		MaxAuxBus = AkSettings->MaxSimultaneousReverbVolumes;
 	}
 
+	//TUniquePtr
 	CallbackManager = new FAkComponentCallbackManager();
-	if (CallbackManager == nullptr)
-	{
-		return false;
-	}
-
-	return true;
+	return CallbackManager != nullptr;
 }
 
 void FAkAudioDevice::AddDefaultListener(UAkComponent* in_pListener)
@@ -3170,13 +2966,7 @@ void FAkAudioDevice::OnActorSpawned(AActor* SpawnedActor)
 
 FString FAkAudioDevice::GetBasePath()
 {
-#if UE_4_18_OR_LATER
-	const auto ContentPath = FPaths::ProjectContentDir();
-#else
-	const auto ContentPath = FPaths::GameContentDir();
-#endif // UE_4_18_OR_LATER
-
-	FString BasePath = FPaths::Combine(*ContentPath, TEXT("WwiseAudio"));
+	FString BasePath = AkUnrealHelper::GetSoundBankDirectory();
 
 #if defined AK_WIN
 	BasePath = FPaths::Combine(*BasePath, TEXT("Windows/"));

@@ -1079,7 +1079,11 @@ TSharedPtr<SWidget> FMovieSceneAkAudioEventTrackEditor::BuildOutlinerEditWidget(
 		.AutoWidth()
 		.VAlign(VAlign_Center)
 		[
+#if UE_4_22_OR_LATER
+			FSequencerUtilities::MakeAddButton(LOCTEXT("AudioText", "AkAudioEvent"), FOnGetContent::CreateSP(this, &FMovieSceneAkAudioEventTrackEditor::BuildAudioSubMenu, Track), Params.NodeIsHovered, GetSequencer())
+#else
 			FSequencerUtilities::MakeAddButton(LOCTEXT("AudioText", "AkAudioEvent"), FOnGetContent::CreateSP(this, &FMovieSceneAkAudioEventTrackEditor::BuildAudioSubMenu, Track), Params.NodeIsHovered)
+#endif
 		];
 }
 

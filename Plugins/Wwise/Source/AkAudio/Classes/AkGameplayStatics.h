@@ -25,7 +25,7 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary
 	 * @param AttachPointName - Optional named point within the AttachComponent to play the sound at.
 	 */
 	UFUNCTION(BlueprintCallable, Category="Audiokinetic")
-	static class UAkComponent * GetAkComponent( class USceneComponent* AttachToComponent, FName AttachPointName = NAME_None, FVector Location = FVector(ForceInit), EAttachLocation::Type LocationType = EAttachLocation::KeepRelativeOffset );
+	static class UAkComponent * GetAkComponent( class USceneComponent* AttachToComponent, bool& ComponentCreated, FName AttachPointName = NAME_None, FVector Location = FVector(ForceInit), EAttachLocation::Type LocationType = EAttachLocation::KeepRelativeOffset );
 
 	UFUNCTION(BlueprintCallable, Category="Audiokinetic")
 	static bool IsEditor();
@@ -111,6 +111,15 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|Actor")
 	static void ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, AkActionOnEventType ActionType, class AActor* Actor, int32 TransitionDuration = 0, EAkCurveInterpolation FadeCurve = EAkCurveInterpolation::Linear, int32 PlayingID = 0);
 
+	/** Execute action on specific playing ID
+	 * @param ActionType - Which action to do.
+	 * @param PlayingID - Use the return value of a Post Event to act only on this specific instance of an event.
+	 * @param TransitionDuration - Transition duration in milliseconds.
+	 * @param FadeCurve - The interpolation curve of the transition.
+	 */
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|Actor")
+	static void ExecuteActionOnPlayingID(AkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration = 0, EAkCurveInterpolation FadeCurve = EAkCurveInterpolation::Linear);
+
 	/** Spawn an AkComponent at a location. Allows, for example, to set a switch on a fire and forget sound.
 	 * @param AkEvent - Wwise Event to post.
 	 * @param EarlyReflectionsBus - Use the provided auxiliary bus to process early reflections.  If NULL, EarlyReflectionsBusName will be used.
@@ -124,14 +133,24 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary
 	static class UAkComponent* SpawnAkComponentAtLocation(UObject* WorldContextObject, class UAkAudioEvent* AkEvent, class UAkAuxBus* EarlyReflectionsBus, FVector Location, FRotator Orientation, bool AutoPost, const FString& EventName, const FString& EarlyReflectionsBusName = FString(""), bool AutoDestroy = true);
 
 	/**
-	 * Sets the value of a Game Parameter, optionally targetting the root component of a specified actor.
-	 * @param RTPC - The name of the Game Parameter to set
-	 * @param Value - The value of the Game Parameter
-	 * @param InterpolationTimeMs - Duration during which the Game Parameter is interpolated towards Value (in ms)
-	 * @param Actor - (Optional) Actor on which to set the Game Parameter value
-	 */
-	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic")
-	static void SetRTPCValue( FName RTPC, float Value, int32 InterpolationTimeMs, class AActor* Actor );
+	* Sets the value of a Game Parameter, optionally targetting the root component of a specified actor.
+	* @param RTPC - The name of the Game Parameter to set
+	* @param Value - The value of the Game Parameter
+	* @param InterpolationTimeMs - Duration during which the Game Parameter is interpolated towards Value (in ms)
+	* @param Actor - (Optional) Actor on which to set the Game Parameter value
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic")
+	static void SetRTPCValue(FName RTPC, float Value, int32 InterpolationTimeMs, class AActor* Actor);
+
+	/**
+	* Gets the value of a Game Parameter, optionally targetting the root component of a specified actor.
+	* @param RTPC - The name of the Game Parameter to set
+	* @param Value - The value of the Game Parameter
+	* @param InterpolationTimeMs - Duration during which the Game Parameter is interpolated towards Value (in ms)
+	* @param Actor - (Optional) Actor on which to set the Game Parameter value
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic")
+	static void GetRTPCValue(FName RTPC, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType, class AActor* Actor = nullptr);
 
 	/**
 	 * Set the active State for a given State Group.
@@ -177,14 +196,35 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary
     *  This can be used to simulate wall openings, area sounds, or multiple objects emitting the same sound in the same area.
     *  Note: Calling AK::SoundEngine::SetMultiplePositions() with only one position is the same as calling AK::SoundEngine::SetPosition()
     *  @param GameObjectAkComponent AkComponent of the game object on which to set positions.
-    *  @param ChannelMasks Array of channel masks to apply for each position.
+    *  @param ChannelMasks Array of channel configuration to apply for each position.
     *  @param Positions Array of transforms to apply.
     *  @param MultiPositionType Position type
     *  @return AK_Success when successful, AK_InvalidParameter if parameters are not valid.
     */
     UFUNCTION(BlueprintCallable, Category = "Audiokinetic")
-    static void SetMultipleChannelEmitterPositions(UAkComponent* GameObjectAkComponent, TArray<AkChannelConfiguration> ChannelMasks, TArray<FTransform> Positions,
-                                                   AkMultiPositionType MultiPositionType = AkMultiPositionType::MultiDirections);
+    static void SetMultipleChannelEmitterPositions(UAkComponent* GameObjectAkComponent,
+			TArray<AkChannelConfiguration> ChannelMasks,
+			TArray<FTransform> Positions,
+			AkMultiPositionType MultiPositionType = AkMultiPositionType::MultiDirections
+	);
+
+	/** Sets multiple positions to a single game object, with flexible assignment of input channels.
+	*  Setting multiple positions on a single game object is a way to simulate multiple emission sources while using the resources of only one voice.
+	*  This can be used to simulate wall openings, area sounds, or multiple objects emitting the same sound in the same area.
+	*  Note: Calling AK::SoundEngine::SetMultiplePositions() with only one position is the same as calling AK::SoundEngine::SetPosition()
+	*  @param GameObjectAkComponent AkComponent of the game object on which to set positions.
+	*  @param ChannelMasks Array of channel mask to apply for each position.
+	*  @param Positions Array of transforms to apply.
+	*  @param MultiPositionType Position type
+	*  @return AK_Success when successful, AK_InvalidParameter if parameters are not valid.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Audiokinetic")
+	static void SetMultipleChannelMaskEmitterPositions(UAkComponent* GameObjectAkComponent,
+			TArray<FAkChannelMask> ChannelMasks,
+			TArray<FTransform> Positions,
+			AkMultiPositionType MultiPositionType = AkMultiPositionType::MultiDirections
+	);
+
 	/**
 	* Sets UseReverbVolumes flag on a specified actor. Set value to true to use reverb volumes on this component.
 	*

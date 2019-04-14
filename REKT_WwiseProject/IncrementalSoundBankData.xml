@@ -3,30 +3,30 @@
 	<Platform GUID="{8AF17D77-59C1-42B2-8C0A-81007E8A4D14}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="2016311620" Timestamp="1552476777"/>
-				<File Name="SB_BabyPark" Hash="1048905541" Timestamp="1552476777"/>
-				<File Name="SB_Garage" Hash="920147743" Timestamp="1552476777"/>
-				<File Name="SB_NeoOslo" Hash="2040662310" Timestamp="1552476777"/>
+				<File Name="Init" Hash="1526306638" Timestamp="1555167678"/>
+				<File Name="SB_BabyPark" Hash="4227311825" Timestamp="1555167678"/>
+				<File Name="SB_Garage" Hash="22953162" Timestamp="1555167678"/>
+				<File Name="SB_NeoOslo" Hash="1327838093" Timestamp="1555167678"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="277692693" Timestamp="1552476777"/>
+				<File Name="" Hash="3297252422" Timestamp="1555167678"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{8D20EEC7-62F5-4726-B5C1-6531CBCBD6C3}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="2645744711" Timestamp="1550705433"/>
-				<File Name="SB_BabyPark" Hash="2743975436" Timestamp="1550705568"/>
-				<File Name="SB_Garage" Hash="3906358402" Timestamp="1550705433"/>
-				<File Name="SB_NeoOslo" Hash="358678946" Timestamp="1550705568"/>
+				<File Name="Init" Hash="1390649824" Timestamp="1555167676"/>
+				<File Name="SB_BabyPark" Hash="4227311825" Timestamp="1555167675"/>
+				<File Name="SB_Garage" Hash="22953162" Timestamp="1555167675"/>
+				<File Name="SB_NeoOslo" Hash="1327838093" Timestamp="1555167676"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1792856715" Timestamp="1550705568"/>
+				<File Name="" Hash="1408570920" Timestamp="1555167676"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -41,36 +41,47 @@ the specific language governing permissions and limitations under the License.
 
 #ifdef AK_WIN
 #include <AK/SoundEngine/Platforms/Windows/AkWinSoundEngine.h>
+#include <AK/SoundEngine/Platforms/Windows/AkPlatformContext.h>
 
 #elif defined (AK_MAC_OS_X)
 #include <AK/SoundEngine/Platforms/Mac/AkMacSoundEngine.h>
+#include <AK/SoundEngine/Platforms/Mac/AkPlatformContext.h>
 
 #elif defined (AK_IOS)
 #include <AK/SoundEngine/Platforms/iOS/AkiOSSoundEngine.h>
+#include <AK/SoundEngine/Platforms/iOS/AkPlatformContext.h>
 
 #elif defined (AK_XBOXONE)
 #include <AK/SoundEngine/Platforms/XboxOne/AkXboxOneSoundEngine.h>
+#include <AK/SoundEngine/Platforms/XboxOne/AkPlatformContext.h>
 
 #elif defined( AK_LUMIN )
 #include <AK/SoundEngine/Platforms/Lumin/AkLuminSoundEngine.h>
+#include <AK/SoundEngine/Platforms/Lumin/AkPlatformContext.h>
 
 #elif defined( AK_ANDROID )
 #include <AK/SoundEngine/Platforms/Android/AkAndroidSoundEngine.h>
+#include <AK/SoundEngine/Platforms/Android/AkPlatformContext.h>
 
 #elif defined (AK_PS4)
 #include <AK/SoundEngine/Platforms/PS4/AkPS4SoundEngine.h>
+#include <AK/SoundEngine/Platforms/PS4/AkPlatformContext.h>
 
 #elif defined( AK_LINUX )
 #include <AK/SoundEngine/Platforms/Linux/AkLinuxSoundEngine.h>
+#include <AK/SoundEngine/Platforms/Linux/AkPlatformContext.h>
 
 #elif defined( AK_EMSCRIPTEN )
 #include <AK/SoundEngine/Platforms/Emscripten/AkEmscriptenSoundEngine.h>
+#include <AK/SoundEngine/Platforms/Emscripten/AkPlatformContext.h>
 
 #elif defined( AK_QNX  )
 #include <AK/SoundEngine/Platforms/QNX/AkQNXSoundEngine.h>
+#include <AK/SoundEngine/Platforms/QNX/AkPlatformContext.h>
 
 #elif defined( AK_NX )
 #include <AK/SoundEngine/Platforms/NX/AkNXSoundEngine.h>
+#include <AK/SoundEngine/Platforms/NX/AkPlatformContext.h>
 
 #else
 #error AkSoundEngine.h: Undefined platform
@@ -93,7 +104,6 @@ the specific language governing permissions and limitations under the License.
 ///
 /// \sa
 /// - \ref AkGlobalCallbackFunc
-/// - \ref AK::SoundEngine::iOS::AudioInterruptionCallbackFunc
 /// - \ref AkPlatformInitSettings
 /// - \ref background_music_and_dvr
 ///
@@ -406,7 +416,7 @@ namespace AK
 		/// \return AK_Success if successful.
 		/// \sa GetSpeakerAngles()
 		AK_EXTERNAPIFUNC( AKRESULT, SetSpeakerAngles )(
-			AkReal32 *			in_pfSpeakerAngles,			///< Array of loudspeaker pair angles, in degrees relative to azimuth [0,180].
+			const AkReal32 *	in_pfSpeakerAngles,			///< Array of loudspeaker pair angles, in degrees relative to azimuth [0,180].
 			AkUInt32			in_uNumAngles,				///< Number of elements in in_pfSpeakerAngles. It must correspond to AK::GetNumberOfAnglesForConfig( AK_SPEAKER_SETUP_DEFAULT_PLANE ) (the value returned by GetSpeakerAngles()).
 			AkReal32 			in_fHeightAngle,			///< Elevation of the height layer, in degrees relative to the plane  [-90,90].
 			AkOutputDeviceID	in_idOutput = 0				///< Output ID to set the bus on.  As returned from AddOutput or GetOutputID.  You can pass 0 for the main (default) output			
@@ -1342,8 +1352,23 @@ namespace AK
 			);
 
 		/// Stop the current content playing associated to the specified playing ID.
-		AK_EXTERNAPIFUNC( void, StopPlayingID )( 
+		/// \aknote 
+		///	This function is deprecated. Please use ExecuteActionOnPlayingID() in its place.
+		/// \endaknote
+		/// \sa
+		///  - <tt>AK::SoundEngine::ExecuteActionOnPlayingID()</tt>
+		AK_EXTERNAPIFUNC( void, StopPlayingID )(
 			AkPlayingID in_playingID,											///< Playing ID to be stopped.
+			AkTimeMs in_uTransitionDuration = 0,								///< Fade duration
+			AkCurveInterpolation in_eFadeCurve = AkCurveInterpolation_Linear	///< Curve type to be used for the transition
+			);
+
+		/// Executes an Action on the content associated to the specified playing ID.
+		/// \sa
+		/// - <tt>AK::SoundEngine::AkActionOnEventType</tt>
+		AK_EXTERNAPIFUNC(void, ExecuteActionOnPlayingID)(
+			AkActionOnEventType in_ActionType,									///< Action to execute on the specified playing ID.
+			AkPlayingID in_playingID,											///< Playing ID on which to execute the action.
 			AkTimeMs in_uTransitionDuration = 0,								///< Fade duration
 			AkCurveInterpolation in_eFadeCurve = AkCurveInterpolation_Linear	///< Curve type to be used for the transition
 			);
@@ -3589,8 +3614,8 @@ namespace AK
 		/// \return 
 		/// - AK_NotImplemented: Feature not supported
 		/// - AK_InvalidParameter: Out of range parameters or unsupported parameter combinations (see parameter list below).
-		/// - AK_IDNotFound: Shareset ID doesn't exist.  Possibly, the Init bank isn't loaded yet or was not updated with latest changes.
-		/// - AK_DeviceNotReady: The in_iDeviceID doesn't match with a valid hardware device.  Either the device doesn't exist or is disabled.  Disconnected devices (headphones) are not considered "not ready" therefore won't cause this error.
+		/// - AK_IDNotFound: The audioDeviceShareset on in_settings doesn't exist.  Possibly, the Init bank isn't loaded yet or was not updated with latest changes.
+		/// - AK_DeviceNotReady: The idDevice on in_settings doesn't match with a valid hardware device.  Either the device doesn't exist or is disabled.  Disconnected devices (headphones) are not considered "not ready" therefore won't cause this error.
 		/// - AK_Success: Parameters are valid.		
 		AK_EXTERNAPIFUNC(AKRESULT, AddOutput)(			
 			const AkOutputSettings & in_Settings,	///< Creation parameters for this output.  \ref AkOutputSettings							
@@ -3609,7 +3634,24 @@ namespace AK
 		/// \sa AK::SoundEngine::AddOutput
 		/// \return AK_Success: Parameters are valid.
 		AK_EXTERNAPIFUNC(AKRESULT, RemoveOutput)(
-			AkOutputDeviceID in_idOutput	///< ID of the output to remove.  Use the returned ID from AddOutput or GetOutputID
+			AkOutputDeviceID in_idOutput	///< ID of the output to remove.  Use the returned ID from AddOutput, GetOutputID, or ReplaceOutput
+			);
+
+		/// Replaces an output device previously created during engine initialization or from AddOutput, with a new output device.
+		/// In addition to simply removing one output device and adding a new one, the new output device will also be used on all of the master buses
+		/// that the old output device was associated with, and preserve all listeners that were attached to the old output device.
+		/// \sa AK::SoundEngine::AddOutput
+		/// \return 
+		/// - AK_InvalidID: The audioDeviceShareset on in_settings was not valid.
+		/// - AK_IDNotFound: The audioDeviceShareset on in_settings doesn't exist.  Possibly, the Init bank isn't loaded yet or was not updated with latest changes.
+		/// - AK_DeviceNotReady: The idDevice on in_settings doesn't match with a valid hardware device.  Either the device doesn't exist or is disabled.  Disconnected devices (headphones) are not considered "not ready" therefore won't cause this error.
+		/// - AK_DeviceNotFound: The in_outputDeviceId provided does not match with any of the output devices that the sound engine is currently using.
+		/// - AK_InvalidParameter: Out of range parameters or unsupported parameter combinations on in_settings
+		/// - AK_Success: parameters were valid, and the remove and add will occur.
+		AK_EXTERNAPIFUNC(AKRESULT, ReplaceOutput)(
+			const AkOutputSettings & in_Settings,				///< Creation parameters for this output.  \ref AkOutputSettings
+			AkOutputDeviceID in_outputDeviceId,					///< AkOutputDeviceID of the output to replace. For example, use the AkOuptutDeviceID returned from AddOutput() or ReplaceOutput(), or generated by GetOutputID()
+			AkOutputDeviceID *out_pOutputDeviceId = NULL		///< (Optional) Pointer into which the method writes the AkOutputDeviceID of the new output device. If the call fails, the value pointed to will not be modified.
 			);
 
 		/// Gets the compounded output ID from shareset and device id.
@@ -3646,6 +3688,7 @@ namespace AK
 
 		/// Sets the Audio Device to which a master bus outputs.  This overrides the setting in the Wwise project.	
 		/// Can only be set on top-level busses. The Init bank should be successfully loaded prior to this call.
+		/// SetBusDevice must be preceded by a call to AddOutput for the new device shareset to be registered as an output.
 		/// \return 
 		/// AK_IDNotFound when either the Bus ID or the Device ID are not present in the Init bank or the bank was not loaded
 		/// AK_InvalidParameter when the specified bus is not a Master Bus.  This function can be called only on busses that have no parent bus.
@@ -3656,6 +3699,7 @@ namespace AK
 
 		/// Sets the Audio Device to which a master bus outputs.  This overrides the setting in the Wwise project.	
 		/// Can only be set on top-level busses. The Init bank should be successfully loaded prior to this call.
+		/// SetBusDevice must be preceded by a call to AddOutput for the new device shareset to be registered as an output.
 		/// \return 
 		/// AK_IDNotFound when either the Bus ID or the Device ID are not present in the Init bank or the bank was not loaded
 		/// AK_InvalidParameter when the specified bus is not a Master Bus.  This function can be called only on busses that have no parent bus.
@@ -3667,6 +3711,7 @@ namespace AK
 		#ifdef AK_SUPPORT_WCHAR
 		/// Sets the Audio Device to which a master bus outputs.  This overrides the setting in the Wwise project.	
 		/// Can only be set on top-level busses. The Init bank should be successfully loaded prior to this call.
+		/// SetBusDevice must be preceded by a call to AddOutput for the new device shareset to be registered as an output.
 		/// \return 
 		/// AK_IDNotFound when either the Bus ID or the Device ID are not present in the Init bank or the bank was not loaded
 		/// AK_InvalidParameter when the specified bus is not a Master Bus.  This function can be called only on busses that have no parent bus.
@@ -3681,6 +3726,23 @@ namespace AK
 			AkOutputDeviceID in_idOutput,	///< Output ID to set the volume on.  As returned from AddOutput or GetOutputID
 			AkReal32 in_fVolume				///< Volume (0.0 = Muted, 1.0 = Volume max)
 			);
+
+		/// Returns whether or not the audio device matching the device ID provided supports spatial audio (i.e. the functionality is enabled, and more than 0 dynamic objects are supported).
+		/// If Spatial Audio is supported, then you can call Init, AddOutput, or ReplaceOutput with an Audio Device Shareset corresponding to the respective platform-specific plug-in that
+		/// provides spatial audio, such as the Microsoft Spatial Sound Platform for Windows. Note that on Xbox One, you need to call EnableSpatialAudio() before the sound engine is
+		/// initialized, or initialize the sound engine with AkPlatformInitSettings::bEnableSpatialAudio set to true if you want spatial audio support; otherwise this will always return AK_NotCompatible.
+		/// \return
+		/// AK_NotCompatible when the device ID provided does not support spatial audio, or the platform does not support spatial audio
+		/// AK_Fail when there is some other miscellaneous failure, or the device ID provided does not match a device that the system knows about
+		/// AK_Success when the device ID provided does support spatial audio
+		AK_EXTERNAPIFUNC( AKRESULT, GetDeviceSpatialAudioSupport ) (
+			AkUInt32 in_idDevice			///< Device specific identifier, when multiple devices of the same type are possible.  If only one device is possible, leave to 0.
+											///< - PS4 Controller-Speakers: UserID as returned from sceUserServiceGetLoginUserIdList
+											///< - XBoxOne Controller-Headphones: Use the AK::GetDeviceID function to get the ID from an IMMDevice. Find the player's device with the WASAPI API (IMMDeviceEnumerator, see Microsoft documentation) or use AK::GetDeviceIDFromName.
+											///< - Windows: Use AK::GetDeviceID or AK::GetDeviceIDFromName to get the correct ID.		
+											///< - All others output: use 0 to select the default device for that type.
+			);
+
 
 		//@}
 

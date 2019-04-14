@@ -115,6 +115,8 @@
                 postDeleted: "ak.wwise.core.object.postDeleted", 
                 /** Sent when the object's notes are changed. */
                 notesChanged: "ak.wwise.core.object.notesChanged", 
+                /** Retrieves information about an object property. */
+                getPropertyInfo: "ak.wwise.core.object.getPropertyInfo", 
                 /** Renames an object. */
                 setName: "ak.wwise.core.object.setName", 
                 /** Sets the object's notes. */
@@ -127,8 +129,8 @@
                 copy: "ak.wwise.core.object.copy", 
                 /** Retrieves the status of a property. */
                 isPropertyEnabled: "ak.wwise.core.object.isPropertyEnabled", 
-                /** Retrieves information about an object property. */
-                getPropertyInfo: "ak.wwise.core.object.getPropertyInfo", 
+                /** Sets the randomizer values of a property of an object for a specific platform. Refer to \ref wobjects_index for more information on the properties available on each object type. */
+                setRandomizer: "ak.wwise.core.object.setRandomizer", 
                 /** Sets an object's reference value. */
                 setReference: "ak.wwise.core.object.setReference", 
                 /** Sent when an attenuation curve is changed. */
@@ -158,6 +160,20 @@
                 cancelGroup: "ak.wwise.core.undo.cancelGroup", 
                 /** Begins an undo group. Make sure to call ak.wwise.core.endUndoGroup exactly once for every ak.wwise.core.beginUndoGroup call you make. Calls to ak.wwise.core.beginUndoGroup can be nested. */
                 beginGroup: "ak.wwise.core.undo.beginGroup"
+            }, 
+            profiler: {
+                /** Returns the current time of a Time Cursor in ms. */
+                getCursorTime: "ak.wwise.core.profiler.getCursorTime", 
+                /** Start the capture, return the time at the beginning of the capture in ms. */
+                startCapture: "ak.wwise.core.profiler.startCapture", 
+                /** Retrieves all parameters affecting voice volume, highpass and lowpass */
+                getVoiceContributions: "ak.wwise.core.profiler.getVoiceContributions", 
+                /** Retrieves the voices at a specific time. */
+                getVoices: "ak.wwise.core.profiler.getVoices", 
+                /** Retrieves the busses at a specific time. */
+                getBusses: "ak.wwise.core.profiler.getBusses", 
+                /** Stop the capture, return the time at the end of the capture in ms. */
+                stopCapture: "ak.wwise.core.profiler.stopCapture"
             }, 
             project: {
                 /** Sent when the after the project is completely closed. */
@@ -197,7 +213,9 @@
                 /** Create Wwise objects and import audio files. This function is using the same importation processor available through the Tab Delimited import in the Audio File Importer. See \ref ak_wwise_core_audio_importtabdelimited. The function returns an array of all objects created, replaced or re-used. Use the options to specify how the objects are returned. */
                 import_: "ak.wwise.core.audio.import", 
                 /** Scripted object creation and audio file import from a tab-delimited file. */
-                importTabDelimited: "ak.wwise.core.audio.importTabDelimited"
+                importTabDelimited: "ak.wwise.core.audio.importTabDelimited", 
+                /** Sent at the end of an import operation. */
+                imported: "ak.wwise.core.audio.imported"
             }, 
             switchContainer: {
                 /** Remove an assignment between a Switch Container's child and a State. */
@@ -245,7 +263,7 @@
                 executed: "ak.wwise.ui.commands.executed", 
                 /** Executes a command. Some commands can take a list of objects as parameter. Refer to \ref globalcommandsids for the available commands. */
                 execute: "ak.wwise.ui.commands.execute", 
-                /** Register an array of add-on UI commands. */
+                /** Register an array of add-on commands. Registered commands remain until the Wwise process is terminated. Refer to \ref defining_custom_commands for more information about registering commands. Also refer to \ref ak_wwise_ui_commands_executed. */
                 register: "ak.wwise.ui.commands.register", 
                 /** Get the list of commands. */
                 getCommands: "ak.wwise.ui.commands.getCommands"

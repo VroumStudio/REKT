@@ -191,12 +191,16 @@ bool CAkUnrealIOHookDeferred::Init(const AkDeviceSettings& in_deviceSettings)
 	return m_deviceID != AK_INVALID_DEVICE_ID;
 }
 
-void CAkUnrealIOHookDeferred::Term()
+CAkUnrealIOHookDeferred::~CAkUnrealIOHookDeferred()
 {
 	if (AK::StreamMgr::GetFileLocationResolver() == this)
 		AK::StreamMgr::SetFileLocationResolver(NULL);
 
-	AK::StreamMgr::DestroyDevice(m_deviceID);
+	if (m_deviceID != AK_INVALID_DEVICE_ID)
+	{
+		AK::StreamMgr::DestroyDevice(m_deviceID);
+		m_deviceID = AK_INVALID_DEVICE_ID;
+	}
 }
 
 //

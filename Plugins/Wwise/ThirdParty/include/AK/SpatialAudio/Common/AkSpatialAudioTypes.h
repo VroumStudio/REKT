@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-Version: v2018.1.6  Build: 6858
+Version: v2019.1.0  Build: 6947
 Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -45,12 +45,21 @@ class AkImageSourcePlane;
 #define AK_MAX_SOUND_PROPAGATION_DEPTH 8
 #define AK_DEFAULT_DIFFR_SHADOW_DEGREES (30.0f)
 #define AK_DEFAULT_DIFFR_SHADOW_ATTEN (2.0f)
+#define AK_DEFAULT_MOVEMENT_THRESHOLD (1.0f)
 #define AK_SA_EPSILON (0.001f)
+#define AK_SA_DIFFRACTION_EPSILON (0.1f) // Radians
 #define AK_SA_PLANE_THICKNESS_RATIO (0.005f)
 
 const AkReal32 kDefaultMaxPathLength = 100.f;
 
+const AkUInt32 kDefaultDiffractionMaxEdges = 8;
+const AkUInt32 kDefaultDiffractionMaxPaths = 8;
 const AkReal32 kMaxDiffraction = 1.0f;
+
+// Max values that are used for calculating diffraction paths between the listener and a portal.
+const AkUInt32 kListenerDiffractionMaxEdges = 8;
+const AkUInt32 kListenerDiffractionMaxPaths = 8;
+const AkUInt32 kPortalToPortalDiffractionMaxPaths = 8;
 
 extern AkMemPoolId g_SpatialAudioPoolId;
 

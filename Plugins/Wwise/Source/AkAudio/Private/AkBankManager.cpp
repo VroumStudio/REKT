@@ -3,6 +3,7 @@
 #include "AkBankManager.h"
 #include "AkAudioDevice.h"
 #include "AkInclude.h"
+#include "AkAudioBank.h"
 #include "Misc/ScopeLock.h"
 #include "Async/Async.h"
 
@@ -100,3 +101,19 @@ FAkBankManager::FAkBankManager()
 	Instance = this;
 }
 
+FAkBankManager::~FAkBankManager()
+{
+	if (Instance == this)
+	{
+		TSet<UAkAudioBank*> LoadedBanksCopy(m_LoadedBanks);
+		for (auto* AudioBank : LoadedBanksCopy)
+		{
+			if (AudioBank != nullptr && AudioBank->IsValidLowLevel())
+			{
+				AudioBank->Unload();
+			}
+		}
+
+		Instance = nullptr;
+	}
+}

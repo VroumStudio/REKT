@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.6  Build: 6858
+  Version: v2019.1.0  Build: 6947
   Copyright (c) 2006-2019 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -165,6 +165,9 @@ namespace AK
 			ErrorCode_UnkownOpusError,
 
 			ErrorCode_AudioDeviceInitFailure,
+			ErrorCode_AudioDeviceRemoveFailure,
+			ErrorCode_AudioDeviceNotFound,
+			ErrorCode_AudioDeviceNotValid,
 
 			Num_ErrorCodes // THIS STAYS AT END OF ENUM
 		};
@@ -369,12 +372,15 @@ AKTEXT("Source plugin not found in currently loaded banks."), //ErrorCode_Source
 
 AKTEXT("Number of Resume and/or Play-From-Beginning virtual voices has reached warning limit (see Project Settings > Log tab). There may be some infinite, leaked voices.") , // ErrorCode_VirtualVoiceLimit
 
-AKTEXT("AK::SoundEngine::AddOutput() - Device ShareSet not found in Init bank."),	//ErrorCode_AudioDeviceShareSetNotFound
+AKTEXT("AK::SoundEngine::AddOutput()/ReplaceOutput() - Device ShareSet not found in Init bank."),	//ErrorCode_AudioDeviceShareSetNotFound
 
 AKTEXT("Not enough memory to start sound."),	//ErrorCode_NotEnoughMemoryToStart
 AKTEXT("Error while decoding Opus header."),	//ErrorCode_UnkownOpusError
-AKTEXT("The Output Device specified by AddOutput() or Init() could not be initialized."), //ErrorCode_AudioDeviceInitFailure
 
+			AKTEXT("The Output Device specified by AddOutput() or Init() could not be initialized."), //ErrorCode_AudioDeviceInitFailure
+			AKTEXT("ReplaceOutput could not properly remove old output device."), // ErrorCode_AudioDeviceRemoveFailure
+			AKTEXT("Device ID to remove not found as an active device."), // ErrorCode_AudioDeviceNotFound
+			AKTEXT("Device ID not recognized by platform or is disabled."), // ErrorCode_AudioDeviceNotValid
 		};
 	}
 }

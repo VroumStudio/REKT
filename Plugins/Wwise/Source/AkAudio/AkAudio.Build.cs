@@ -246,10 +246,9 @@ public class AkAudio : ModuleRules
 #endif
             akPlatformLibDir.Add(tempDir);
             string LibFolder = (Target.Platform == UnrealTargetPlatform.Win32) ? "x86" : "x64";
-            string DXSDK_DIR = Path.GetFullPath(Path.Combine(EngineDirectory, "Source/ThirdParty/Windows/DirectX"));
-            PublicLibraryPaths.Add(DXSDK_DIR + Path.DirectorySeparatorChar + "Lib" + Path.DirectorySeparatorChar + LibFolder);
+            PublicLibraryPaths.Add("$(DXSDK_DIR)" + Path.DirectorySeparatorChar + "Lib" + Path.DirectorySeparatorChar + LibFolder);
 
-            if (BuildConfig.bBuildEditor == true)
+			if (BuildConfig.bBuildEditor == true)
             {
                 // Sound frame is required for enabling communication between Wwise Application and the unreal editor.
                 // Not to be defined in shipping mode.
@@ -406,12 +405,10 @@ public class AkAudio : ModuleRules
 		AddWwiseLib(Target, "AkAudioInputSource");
 		AddWwiseLib(Target, "AkSynthOneSource");
 		AddWwiseLib(Target, "AkRecorderFX");
-        AddWwiseLib(Target, "AkMotionGeneratorSource");
 
         AddWwisePlugin(Target, "AkReflectFX");
         AddWwisePlugin(Target, "AkConvolutionReverbFX");
         AddWwisePlugin(Target, "AuroHeadphoneFX");
-		AddWwisePlugin(Target, "AkMotionSink");
 
         if (SupportsAkAutobahn())
         {

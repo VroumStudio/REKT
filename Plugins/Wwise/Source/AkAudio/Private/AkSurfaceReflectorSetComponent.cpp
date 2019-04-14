@@ -1,5 +1,6 @@
 #include "AkSurfaceReflectorSetComponent.h"
 #include "AkAudioDevice.h"
+#include "AkRoomComponent.h"
 #include "Components/BrushComponent.h"
 #include "Model.h"
 #include "Engine/Polys.h"
@@ -62,19 +63,6 @@ void UAkSurfaceReflectorSetComponent::InitializeParentBrush()
 	}
 }
 
-
-void UAkSurfaceReflectorSetComponent::PostLoad()
-{
-	Super::PostLoad();
-
-#if WITH_EDITOR
-	InitializeParentBrush();
-	UpdatePolys();
-	UpdateText(IsSelected());
-#endif
-}
-
-
 void UAkSurfaceReflectorSetComponent::OnUnregister()
 {
 #if WITH_EDITOR
@@ -99,6 +87,11 @@ void UAkSurfaceReflectorSetComponent::PostEditChangeProperty(FPropertyChangedEve
 	}
 
 	UpdateText(bEnableSurfaceReflectors);
+
+	if (AssociatedRoom && !Cast<UAkRoomComponent>(AssociatedRoom->GetComponentByClass(UAkRoomComponent::StaticClass())))
+	{
+		UE_LOG(LogAkAudio, Warning, TEXT("%s: The Surface Reflector Set's Associated Room is not of type UAkRoomComponent."), *GetOwner()->GetName());
+	}
 }
 
 void UAkSurfaceReflectorSetComponent::PostEditUndo()
@@ -324,6 +317,14 @@ void UAkSurfaceReflectorSetComponent::SendSurfaceReflectorSet()
 			params.Vertices = VertsToSend.GetData();
 			params.EnableDiffraction = bEnableDiffraction;
 			params.EnableDiffractionOnBoundaryEdges = bEnableDiffractionOnBoundaryEdges;
+
+			if (AssociatedRoom)
+			{
+				UAkRoomComponent* room = Cast<UAkRoomComponent>(AssociatedRoom->GetComponentByClass(UAkRoomComponent::StaticClass()));
+
+				if (room != nullptr)
+					params.RoomID = room->GetRoomID();
+			}
 
 			if (AkAudioDevice->SetGeometry(AkGeometrySetID(this), params) == AK_Success)
 				GeometryHasBeenSent = true;
