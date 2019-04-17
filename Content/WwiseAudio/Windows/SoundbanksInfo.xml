@@ -9,6 +9,10 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
+		<File Id="58705363" Language="SFX">
+			<ShortName>SFX_Car_Mustang_Med.wav</ShortName>
+			<Path>SFX\SFX_Car_Mustang_Med_D79FB2B7.wem</Path>
+		</File>
 		<File Id="89081979" Language="SFX">
 			<ShortName>Amb_Babypark_Police_Dry.wav</ShortName>
 			<Path>SFX\Amb_Babypark_Police_Dry_8956FC97.wem</Path>
@@ -17,13 +21,9 @@
 			<ShortName>SFX_Car_Engine_Idle.wav</ShortName>
 			<Path>SFX\SFX_Car_Engine_Idle_8956FC97.wem</Path>
 		</File>
-		<File Id="232015800" Language="SFX">
-			<ShortName>SFX_Car_Engine_Strong.wav</ShortName>
-			<Path>SFX\SFX_Car_Engine_Strong_8956FC97.wem</Path>
-		</File>
-		<File Id="242782528" Language="SFX">
-			<ShortName>SFX_Car_Engine_Medium.wav</ShortName>
-			<Path>SFX\SFX_Car_Engine_Medium_8956FC97.wem</Path>
+		<File Id="311753274" Language="SFX">
+			<ShortName>SFX_Car_Mustang_High.wav</ShortName>
+			<Path>SFX\SFX_Car_Mustang_High_D79FB2B7.wem</Path>
 		</File>
 		<File Id="670022925" Language="SFX">
 			<ShortName>20181220_SDLF_REKT_AMB_COURSE.wav</ShortName>
@@ -102,10 +102,10 @@
 				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Transmission"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
+				<File Id="58705363"/>
 				<File Id="89081979"/>
 				<File Id="131386122"/>
-				<File Id="232015800"/>
-				<File Id="242782528"/>
+				<File Id="311753274"/>
 				<File Id="670022925"/>
 				<File Id="707811912"/>
 				<File Id="829940235"/>
