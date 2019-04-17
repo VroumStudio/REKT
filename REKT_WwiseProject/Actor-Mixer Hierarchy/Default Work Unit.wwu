@@ -76,7 +76,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Police_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
+											<ObjectRef Name="Turret_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -128,7 +128,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="Police_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
+											<ObjectRef Name="Turret_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -207,11 +207,6 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -307,11 +302,6 @@
 													<Modifier Name="" ID="{F1B6355A-B568-419C-9504-5BFF4DCBB395}"/>
 												</ModifierInfo>
 											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -446,10 +436,9 @@
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.03"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>12</Value>
 													</ValueList>
 													<RTPCList>
 														<RTPC Name="" ID="{0C6FEF29-C086-4111-8839-5F55F3B9D560}" ShortID="161471243">
@@ -788,11 +777,7 @@
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.03"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-13</Value>
-													</ValueList>
 													<RTPCList>
 														<RTPC Name="" ID="{3EA7FE01-7750-499E-8615-9F590D8E4E86}" ShortID="889437205">
 															<ReferenceList>
@@ -1188,6 +1173,9 @@
 											</ModifierList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{D926730D-F174-4A56-A2D0-E752629C3D81}" ShortID="528321968">
 													<ReferenceList>
@@ -1207,7 +1195,7 @@
 																<SegmentShape>Log3</SegmentShape>
 															</Point>
 															<Point>
-																<XPos>7000</XPos>
+																<XPos>5000</XPos>
 																<YPos>0</YPos>
 																<Flags>37</Flags>
 															</Point>
@@ -1242,7 +1230,7 @@
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-15</Value>
+														<Value>-23</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1275,11 +1263,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-6</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1294,9 +1277,19 @@
 													<Language>SFX</Language>
 													<AudioFile>SFX_Car_Engine_Medium.wav</AudioFile>
 												</AudioFileSource>
+												<AudioFileSource Name="SFX_Car_Mustang_Med" ID="{547C8F07-853A-48F5-A23D-D41D916E3382}" ShortID="108940233">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Mustang_Med.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="SFX_Car_Engine_Medium" ID="{E3EA60F3-AAFD-47F2-A08A-F3E800805933}" Platform="Linked"/>
+												<ActiveSource Name="SFX_Car_Mustang_Med" ID="{547C8F07-853A-48F5-A23D-D41D916E3382}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Car_Engine_Strong" ID="{BE6BD24E-6415-49AF-B664-F13422A04AF7}" ShortID="915804983">
@@ -1305,11 +1298,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1326,9 +1314,19 @@
 													<Language>SFX</Language>
 													<AudioFile>SFX_Car_Engine_Strong.wav</AudioFile>
 												</AudioFileSource>
+												<AudioFileSource Name="SFX_Car_Mustang_High" ID="{9F42D977-8F72-4DDA-868D-1E5B41025175}" ShortID="487297546">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Mustang_High.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="SFX_Car_Engine_Strong" ID="{BB27EFE6-2E58-4823-B60E-45822D3AB3B1}" Platform="Linked"/>
+												<ActiveSource Name="SFX_Car_Mustang_High" ID="{9F42D977-8F72-4DDA-868D-1E5B41025175}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Car_Engine_Idle" ID="{F3A2C862-F940-4571-883B-6BAFFD773FD6}" ShortID="16697602">
@@ -1382,11 +1380,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1474,12 +1467,12 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>4820.84993</XPos>
+																		<XPos>3535.32536278689</XPos>
 																		<YPos>-760</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>7000</XPos>
+																		<XPos>5000</XPos>
 																		<YPos>87</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1508,22 +1501,22 @@
 																		<SegmentShape>Exp3</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>1151.12882</XPos>
+																		<XPos>1068.79150196721</XPos>
 																		<YPos>-200</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>2779.41567</XPos>
+																		<XPos>2163.21381098361</XPos>
 																		<YPos>-200</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>2990.03984</XPos>
+																		<XPos>2304.78087606557</XPos>
 																		<YPos>-0.08557</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>7000</XPos>
+																		<XPos>5000</XPos>
 																		<YPos>0.31589</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1544,25 +1537,25 @@
 													<CrossfadingInfo>
 														<LeftEdgePos>900</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>1483.26693227092</RightEdgePos>
+														<RightEdgePos>1292.03187250996</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
 												<BlendTrackAssoc>
 													<ItemRef Name="SFX_Car_Engine_Silence" ID="{370EC9D6-0873-4C51-ACFE-F79CBB25DE89}"/>
 													<CrossfadingInfo>
-														<LeftEdgePos>3500.80357785525</LeftEdgePos>
+														<LeftEdgePos>2648.08109331254</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>5093.44634013944</RightEdgePos>
+														<RightEdgePos>3718.54590074946</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
 												<BlendTrackAssoc>
 													<ItemRef Name="SFX_Car_Engine_Strong" ID="{BE6BD24E-6415-49AF-B664-F13422A04AF7}"/>
 													<CrossfadingInfo>
-														<LeftEdgePos>4597.26427622842</LeftEdgePos>
+														<LeftEdgePos>3385.04648074369</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>7000</RightEdgePos>
+														<RightEdgePos>5000</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
@@ -1590,7 +1583,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>7000</XPos>
+																		<XPos>5000</XPos>
 																		<YPos>-85</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1619,12 +1612,12 @@
 																		<SegmentShape>Exp2</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>1264.54183</XPos>
+																		<XPos>1145.01991852459</XPos>
 																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>7000</XPos>
+																		<XPos>5000</XPos>
 																		<YPos>0.15651</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1645,16 +1638,16 @@
 													<CrossfadingInfo>
 														<LeftEdgePos>900</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>5513.47966567065</RightEdgePos>
+														<RightEdgePos>4000.86338184421</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
 												<BlendTrackAssoc>
 													<ItemRef Name="SFX_Car_Engine_Silence" ID="{370EC9D6-0873-4C51-ACFE-F79CBB25DE89}"/>
 													<CrossfadingInfo>
-														<LeftEdgePos>4611.84619953519</LeftEdgePos>
+														<LeftEdgePos>3394.84744558923</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>7000</RightEdgePos>
+														<RightEdgePos>5000</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
@@ -1682,7 +1675,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>7000</XPos>
+																		<XPos>5000</XPos>
 																		<YPos>1285</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1703,7 +1696,7 @@
 													<CrossfadingInfo>
 														<LeftEdgePos>900</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>7000</RightEdgePos>
+														<RightEdgePos>5000</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
@@ -1731,8 +1724,42 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>7000</XPos>
+																		<XPos>5000</XPos>
 																		<YPos>1970</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{0CB62D31-8188-45A9-AFF7-EC2EE83F7D1F}" ShortID="408081182">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{18E92093-508B-4193-837B-995800527417}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>900</XPos>
+																		<YPos>-8.51937000000001</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>1145.01991852459</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>5000</XPos>
+																		<YPos>0.156509999999997</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1750,9 +1777,9 @@
 												<BlendTrackAssoc>
 													<ItemRef Name="SFX_Car_Engine_Plane" ID="{58614CA1-0EEB-460D-B1ED-D267AE1DCC36}"/>
 													<CrossfadingInfo>
-														<LeftEdgePos>900</LeftEdgePos>
+														<LeftEdgePos>996.596858638744</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>7000</RightEdgePos>
+														<RightEdgePos>5000</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
@@ -1892,11 +1919,46 @@
 							<ChildrenList>
 								<BlendContainer Name="SFX_Monster_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" ShortID="466827219">
 									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="Lowpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{E4F5DE2A-85A5-4C4B-9E34-39B6B5BCCB7B}" ShortID="752000620">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="RTPC_Azimuth" ID="{19D25DDC-CC00-45C0-93BD-EF5C4856EBDF}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{C7510AEA-1A9F-43BD-92B3-8C3DFE4C82BA}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-180</XPos>
+																<YPos>25</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>180</XPos>
+																<YPos>24</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
-												<Value>1</Value>
+												<Value>10</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -1906,6 +1968,7 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -1913,8 +1976,39 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>3</Value>
 											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{170E0466-D5CB-4E74-8AC8-B6ECDA0215D9}" ShortID="118762300">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="RTPC_Azimuth" ID="{19D25DDC-CC00-45C0-93BD-EF5C4856EBDF}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{652595B0-0F72-4D51-81BE-2CC499FC3D32}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-180</XPos>
+																<YPos>-6</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>180</XPos>
+																<YPos>-6</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -1931,7 +2025,12 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="SFX_Monster_Run_Asphalt" ID="{875FFA64-E4B0-476F-BA9E-BF533B2E05FC}" ShortID="432738028">
 											<PropertyList>
-												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1950,6 +2049,11 @@
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.02"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-11</Value>
@@ -2710,13 +2814,32 @@
 										</RandomSequenceContainer>
 										<Sound Name="SFX_Monster_Run_Rouling" ID="{9F83E908-A9BD-42AF-BE2A-8D6A79729548}" ShortID="682054637">
 											<PropertyList>
+												<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{E5449D41-E31D-49AC-A5E7-EA60271052AE}"/>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -2738,6 +2861,9 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{166BB706-9012-4A4D-8FFF-EAD67896D27D}"/>
+									</PositioningInfo>
 								</BlendContainer>
 								<BlendContainer Name="SFX_Monster_Die" ID="{DAABDAED-0BA1-4782-BA24-792C7391CE53}" ShortID="724139286">
 									<ReferenceList>
@@ -2780,7 +2906,13 @@
 								<Folder Name="SFX_Wpn_FlameThrower_" ID="{69FDB32D-DB52-4F4E-971D-C9ABCEC96C9D}" ShortID="1037571761">
 									<ChildrenList>
 										<BlendContainer Name="SFX_Wpn_FlameThrower_Summon" ID="{A06EA54B-658C-4D72-A10E-310865CA2D7C}" ShortID="95826358">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Turret_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 												</Reference>
@@ -2796,7 +2928,7 @@
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
-															<ObjectRef Name="Police_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
+															<ObjectRef Name="Turret_Attenuation" ID="{8FCD7ED3-4DB1-4AEA-A2B1-C6ACE38B3382}" WorkUnitID="{0EF5E458-6D29-4DA9-9E3E-CD4173A2EAAF}"/>
 														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2808,10 +2940,12 @@
 													<ChildrenList>
 														<AudioFileSource Name="SFX_Turret_Drop" ID="{523B14EE-1DA0-46EB-9B9E-72CD2452D777}" ShortID="1071402905">
 															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.515099208047945"/>
 																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
 																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.48028510273973"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_Turret_Drop.wav</AudioFile>
@@ -2819,6 +2953,40 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="SFX_Turret_Drop" ID="{523B14EE-1DA0-46EB-9B9E-72CD2452D777}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Turret_Confirm" ID="{AD3C10DA-ABB3-40D6-AD4F-1ECDDEBFC6D0}" ShortID="724256809">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_Turret_Confirm" ID="{FE9D731F-F35D-4B5E-9DC9-76CBD700EA92}" ShortID="1040050685">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.273286101598174"/>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.645520619292237"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>SFX_Turret_Confirm.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_Turret_Confirm" ID="{FE9D731F-F35D-4B5E-9DC9-76CBD700EA92}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>

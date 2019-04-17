@@ -72,7 +72,7 @@
 								<Action Name="" ID="{8961E9D1-6846-44D5-844C-A3D41710B2B7}" ShortID="465644332">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="177.631578947368"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="414.473684210526"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -122,7 +122,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Car_Drift" ID="{E2792444-AF8C-443D-AD2E-9015824BD8B4}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Car_Drift_Loop" ID="{9EAF53A9-7E52-43AC-BC12-8368D6C93DB1}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -620,6 +620,34 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Turret_Drop" ID="{65076608-EC63-4955-A069-AC617578179F}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Turret_Confirm" ID="{5B3DCE08-989F-4509-A307-EE0ADE1FE498}">
+					<ChildrenList>
+						<Action Name="" ID="{1FFF7A95-A5D1-49D1-BA2F-5952516E8DD4}" ShortID="975349837">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Turret_Confirm" ID="{AD3C10DA-ABB3-40D6-AD4F-1ECDDEBFC6D0}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Build_Error" ID="{8EE61937-D7C9-4161-8DE1-F7D435B3CC62}">
+					<ChildrenList>
+						<Action Name="" ID="{6F6F0E45-956D-48CE-BF59-F37AE606EADB}" ShortID="1026389426">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Build_Error" ID="{0FF93168-9DB7-4720-B9F3-37D4DAC75B63}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

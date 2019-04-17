@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>E:\REKT\REKT_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<ProjectRoot>E:\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
 		<SoundBanksRoot>E:\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
-		<File Id="58705363" Language="SFX">
-			<ShortName>SFX_Car_Mustang_Med.wav</ShortName>
-			<Path>SFX\SFX_Car_Mustang_Med_D79FB2B7.wem</Path>
-		</File>
 		<File Id="89081979" Language="SFX">
 			<ShortName>Amb_Babypark_Police_Dry.wav</ShortName>
 			<Path>SFX\Amb_Babypark_Police_Dry_8956FC97.wem</Path>
+		</File>
+		<File Id="108940233" Language="SFX">
+			<ShortName>SFX_Car_Mustang_Med.wav</ShortName>
+			<Path>SFX\SFX_Car_Mustang_Med_D79FB2B7.wem</Path>
 		</File>
 		<File Id="131386122" Language="SFX">
 			<ShortName>SFX_Car_Engine_Idle.wav</ShortName>
 			<Path>SFX\SFX_Car_Engine_Idle_8956FC97.wem</Path>
 		</File>
-		<File Id="311753274" Language="SFX">
+		<File Id="342314681" Language="SFX">
+			<ShortName>SFX_Car_Engine_Plane.wav</ShortName>
+			<Path>SFX\SFX_Car_Engine_Plane_D79FB2B7.wem</Path>
+		</File>
+		<File Id="487297546" Language="SFX">
 			<ShortName>SFX_Car_Mustang_High.wav</ShortName>
 			<Path>SFX\SFX_Car_Mustang_High_D79FB2B7.wem</Path>
 		</File>
@@ -36,10 +40,6 @@
 		<File Id="829940235" Language="SFX">
 			<ShortName>Amb_Babypark_Police_Wet.wav</ShortName>
 			<Path>SFX\Amb_Babypark_Police_Wet_8956FC97.wem</Path>
-		</File>
-		<File Id="873029971" Language="SFX">
-			<ShortName>SFX_Car_Engine_Plane.wav</ShortName>
-			<Path>SFX\SFX_Car_Engine_Plane_8956FC97.wem</Path>
 		</File>
 		<File Id="906881567" Language="SFX">
 			<ShortName>SFX_Car_Engine_Idle_Synth_Loop.wav</ShortName>
@@ -102,14 +102,14 @@
 				<Event Id="3258270161" Name="Transmission" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Transmission"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
-				<File Id="58705363"/>
 				<File Id="89081979"/>
+				<File Id="108940233"/>
 				<File Id="131386122"/>
-				<File Id="311753274"/>
+				<File Id="342314681"/>
+				<File Id="487297546"/>
 				<File Id="670022925"/>
 				<File Id="707811912"/>
 				<File Id="829940235"/>
-				<File Id="873029971"/>
 				<File Id="906881567"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
@@ -140,10 +140,6 @@
 				<File Id="90233645" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTEQUIP.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem</Path>
-				</File>
-				<File Id="93465549" Language="SFX">
-					<ShortName>SFX_Turret_Confirm.wav</ShortName>
-					<Path>SFX\SFX_Turret_Confirm_10C4C929.wem</Path>
 				</File>
 				<File Id="116157522" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_31.wav</ShortName>
@@ -209,10 +205,6 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop-13.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-13_56D34C19.wem</Path>
 				</File>
-				<File Id="337891537" Language="SFX">
-					<ShortName>SFX_Turret_Drop.wav</ShortName>
-					<Path>SFX\SFX_Turret_Drop_0AF3813D.wem</Path>
-				</File>
 				<File Id="338627591" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-03.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-03_56D34C19.wem</Path>
@@ -253,6 +245,10 @@
 					<ShortName>SFX_Monster_Run_Asphalt_20.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_20_56D34C19.wem</Path>
 				</File>
+				<File Id="535989292" Language="SFX">
+					<ShortName>UI_Build_Error.wav</ShortName>
+					<Path>SFX\UI_Build_Error_10C4C929.wem</Path>
+				</File>
 				<File Id="539231935" Language="SFX">
 					<ShortName>AMB_COURSE_PAUSE.wav</ShortName>
 					<Path>SFX\AMB_COURSE_PAUSE_56D34C19.wem</Path>
@@ -284,10 +280,6 @@
 				<File Id="647363192" Language="SFX">
 					<ShortName>AMB_GARAGE.wav</ShortName>
 					<Path>SFX\AMB_GARAGE_56D34C19.wem</Path>
-				</File>
-				<File Id="668105377" Language="SFX">
-					<ShortName>UI_Build_Error.wav</ShortName>
-					<Path>SFX\UI_Build_Error_7471E314.wem</Path>
 				</File>
 				<File Id="673637251" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-07.wav</ShortName>
@@ -409,9 +401,17 @@
 					<ShortName>SFX_Monster_Run_Asphalt_13.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_13_56D34C19.wem</Path>
 				</File>
+				<File Id="1040050685" Language="SFX">
+					<ShortName>SFX_Turret_Confirm.wav</ShortName>
+					<Path>SFX\SFX_Turret_Confirm_2A2C6018.wem</Path>
+				</File>
 				<File Id="1065341630" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-08.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-08_56D34C19.wem</Path>
+				</File>
+				<File Id="1071402905" Language="SFX">
+					<ShortName>SFX_Turret_Drop.wav</ShortName>
+					<Path>SFX\SFX_Turret_Drop_A9763A47.wem</Path>
 				</File>
 				<File Id="1072533953" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_22.wav</ShortName>
@@ -534,6 +534,10 @@
 					<ShortName>SFX_Monster_Run_Asphalt_20.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_20_56D34C19.wem</Path>
 				</File>
+				<File Id="535989292" Language="SFX">
+					<ShortName>UI_Build_Error.wav</ShortName>
+					<Path>SFX\UI_Build_Error_10C4C929.wem</Path>
+				</File>
 				<File Id="539231935" Language="SFX">
 					<ShortName>AMB_COURSE_PAUSE.wav</ShortName>
 					<Path>SFX\AMB_COURSE_PAUSE_56D34C19.wem</Path>
@@ -565,10 +569,6 @@
 				<File Id="647363192" Language="SFX">
 					<ShortName>AMB_GARAGE.wav</ShortName>
 					<Path>SFX\AMB_GARAGE_56D34C19.wem</Path>
-				</File>
-				<File Id="668105377" Language="SFX">
-					<ShortName>UI_Build_Error.wav</ShortName>
-					<Path>SFX\UI_Build_Error_7471E314.wem</Path>
 				</File>
 				<File Id="680259220" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_35.wav</ShortName>
@@ -645,6 +645,14 @@
 				<File Id="1038994047" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_13.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_13_56D34C19.wem</Path>
+				</File>
+				<File Id="1040050685" Language="SFX">
+					<ShortName>SFX_Turret_Confirm.wav</ShortName>
+					<Path>SFX\SFX_Turret_Confirm_2A2C6018.wem</Path>
+				</File>
+				<File Id="1071402905" Language="SFX">
+					<ShortName>SFX_Turret_Drop.wav</ShortName>
+					<Path>SFX\SFX_Turret_Drop_A9763A47.wem</Path>
 				</File>
 				<File Id="1072533953" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_22.wav</ShortName>
