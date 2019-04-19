@@ -39,6 +39,13 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="ST_Garage" ID="{23C899B3-84A4-4950-8385-5E270965F21C}">
+					<ChildrenList>
+						<State Name="None" ID="{C259F19E-19EE-4849-89A8-B0209E2B4981}"/>
+						<State Name="ST_Menu" ID="{6EF15CF4-72CC-4EC9-8807-9842D5D3A293}"/>
+						<State Name="ST_Stage_Select" ID="{76B9E385-BA25-48EA-824C-E7F76C919000}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

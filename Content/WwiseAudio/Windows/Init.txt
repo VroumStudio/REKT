@@ -1,9 +1,13 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	298685580	ST_Garage			\Default Work Unit\ST_Garage	
 	3030367241	ST_Car_View			\Default Work Unit\ST_Car_View	
 	3557541768	ST_SlowMo			\Default Work Unit\ST_SlowMo	
 	4054796535	ST_Pause			\Default Work Unit\ST_Pause	
 
 State	ID	Name	State Group			Notes
+	0	None	ST_Garage			
+	1879342754	ST_Stage_Select	ST_Garage			
+	2481250406	ST_Menu	ST_Garage			
 	0	None	ST_Car_View			
 	340398852	Indoor	ST_Car_View			
 	1160234136	Normal	ST_Car_View			

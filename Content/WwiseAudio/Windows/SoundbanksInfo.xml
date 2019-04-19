@@ -70,6 +70,9 @@
 				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start"/>
 				<Event Id="3345503513" Name="Play_SFX_Car_Nitro" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro"/>
 				<Event Id="2880876640" Name="Play_SFX_Car_Nitro_Refill" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro_Refill"/>
+				<Event Id="1940817097" Name="Play_SFX_Lift" ObjectPath="\Events\Default Work Unit\SFX\Lift\Play_SFX_Lift"/>
+				<Event Id="1167921499" Name="Play_SFX_Mine_Deploy" ObjectPath="\Events\Default Work Unit\Play_SFX_Mine_Deploy"/>
+				<Event Id="2263304631" Name="Play_SFX_Monster_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monster_Die"/>
 				<Event Id="2528789258" Name="Play_SFX_Monster_Run" ObjectPath="\Events\Default Work Unit\Play_SFX_Monster_Run"/>
 				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die"/>
 				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Run"/>
@@ -89,6 +92,7 @@
 				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Movement"/>
 				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Pause"/>
 				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
+				<Event Id="3550362706" Name="Play_VO_Minion_Run" ObjectPath="\Events\Default Work Unit\Play_VO_Minion_Run"/>
 				<Event Id="177170041" Name="Set_State_Indoor" ObjectPath="\Events\Default Work Unit\States\Set_State_Indoor"/>
 				<Event Id="2630068541" Name="Set_State_Normal" ObjectPath="\Events\Default Work Unit\States\Set_State_Normal"/>
 				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\States\Set_State_PauseOff"/>
@@ -96,6 +100,8 @@
 				<Event Id="1871393852" Name="Set_State_ST_Build" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_Build"/>
 				<Event Id="3091697021" Name="Set_State_ST_Normal" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_Normal"/>
 				<Event Id="434512859" Name="Set_State_ST_SlowMo" ObjectPath="\Events\Default Work Unit\States\Set_State_ST_SlowMo"/>
+				<Event Id="4140093725" Name="Set_Switch_Lift_Down" ObjectPath="\Events\Default Work Unit\SFX\Lift\Set_Switch_Lift_Down"/>
+				<Event Id="1334060522" Name="Set_Switch_Lift_Up" ObjectPath="\Events\Default Work Unit\SFX\Lift\Set_Switch_Lift_Up"/>
 				<Event Id="152581" Name="StartLevelConfig" ObjectPath="\Events\Default Work Unit\New Virtual Folder\StartLevelConfig"/>
 				<Event Id="3237579210" Name="Stop_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\SFX_Car\Stop_SFX_Car_Drift"/>
 				<Event Id="1857540444" Name="Stop_SFX_Monster_Run" ObjectPath="\Events\Default Work Unit\Stop_SFX_Monster_Run"/>
@@ -117,6 +123,10 @@
 					<ShortName>20181219_SDLF_REKT2_Intro.wav</ShortName>
 					<Path>SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem</Path>
 				</File>
+				<File Id="25546923" Language="SFX">
+					<ShortName>VO_Minions-27.wav</ShortName>
+					<Path>SFX\VO_Minions-27_10C4C929.wem</Path>
+				</File>
 				<File Id="35856289" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_28.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_28_56D34C19.wem</Path>
@@ -137,9 +147,33 @@
 					<ShortName>SFX_Monster_Run_Asphalt_38.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_38_56D34C19.wem</Path>
 				</File>
+				<File Id="85285287" Language="SFX">
+					<ShortName>VO_Minions-22.wav</ShortName>
+					<Path>SFX\VO_Minions-22_10C4C929.wem</Path>
+				</File>
+				<File Id="86250247" Language="SFX">
+					<ShortName>VO_Minions-10.wav</ShortName>
+					<Path>SFX\VO_Minions-10_10C4C929.wem</Path>
+				</File>
 				<File Id="90233645" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTEQUIP.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem</Path>
+				</File>
+				<File Id="97264880" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_03.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_03_10C4C929.wem</Path>
+				</File>
+				<File Id="98801455" Language="SFX">
+					<ShortName>VO_Minions-18.wav</ShortName>
+					<Path>SFX\VO_Minions-18_10C4C929.wem</Path>
+				</File>
+				<File Id="100859020" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_01.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_01_10C4C929.wem</Path>
+				</File>
+				<File Id="101603523" Language="SFX">
+					<ShortName>VO_Minions-02.wav</ShortName>
+					<Path>SFX\VO_Minions-02_10C4C929.wem</Path>
 				</File>
 				<File Id="116157522" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_31.wav</ShortName>
@@ -149,21 +183,49 @@
 					<ShortName>SFX_Monster_Run_Asphalt_39.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_39_56D34C19.wem</Path>
 				</File>
+				<File Id="126222834" Language="SFX">
+					<ShortName>VO_Minions-07.wav</ShortName>
+					<Path>SFX\VO_Minions-07_10C4C929.wem</Path>
+				</File>
 				<File Id="127778559" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_33.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_33_56D34C19.wem</Path>
+				</File>
+				<File Id="133157363" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_02.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_02_10C4C929.wem</Path>
 				</File>
 				<File Id="138180119" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-09.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-09_56D34C19.wem</Path>
 				</File>
+				<File Id="144273874" Language="SFX">
+					<ShortName>VO_Minions-33.wav</ShortName>
+					<Path>SFX\VO_Minions-33_10C4C929.wem</Path>
+				</File>
+				<File Id="151260125" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_02.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_02_10C4C929.wem</Path>
+				</File>
 				<File Id="151755535" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-01_56D34C19.wem</Path>
 				</File>
+				<File Id="154644001" Language="SFX">
+					<ShortName>VO_Minions-37.wav</ShortName>
+					<Path>SFX\VO_Minions-37_10C4C929.wem</Path>
+				</File>
+				<File Id="155211351" Language="SFX">
+					<ShortName>VO_Minions-39.wav</ShortName>
+					<Path>SFX\VO_Minions-39_10C4C929.wem</Path>
+				</File>
 				<File Id="159642181" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_4.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_4_56D34C19.wem</Path>
+				</File>
+				<File Id="163662963" Language="SFX">
+					<ShortName>VO_Minions-08.wav</ShortName>
+					<Path>SFX\VO_Minions-08_10C4C929.wem</Path>
 				</File>
 				<File Id="168048995" Language="SFX">
 					<ShortName>SFX_SlowMo-02.wav</ShortName>
@@ -181,6 +243,14 @@
 					<ShortName>AMB_COURSE_SELECTARMES.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTARMES_56D34C19.wem</Path>
 				</File>
+				<File Id="227042817" Language="SFX">
+					<ShortName>VO_Minions-01.wav</ShortName>
+					<Path>SFX\VO_Minions-01_10C4C929.wem</Path>
+				</File>
+				<File Id="238080646" Language="SFX">
+					<ShortName>VO_Minions-13.wav</ShortName>
+					<Path>SFX\VO_Minions-13_10C4C929.wem</Path>
+				</File>
 				<File Id="246661573" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTLEFTRIGHT.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTLEFTRIGHT_56D34C19.wem</Path>
@@ -189,6 +259,10 @@
 					<ShortName>UI_Babypark_Checkpoint.wav</ShortName>
 					<Path>SFX\UI_Babypark_Checkpoint_56D34C19.wem</Path>
 				</File>
+				<File Id="259676439" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_04.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_04_10C4C929.wem</Path>
+				</File>
 				<File Id="268113833" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_21.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_21_56D34C19.wem</Path>
@@ -196,6 +270,34 @@
 				<File Id="271719483" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_1.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_1_56D34C19.wem</Path>
+				</File>
+				<File Id="277094116" Language="SFX">
+					<ShortName>VO_Minions-45.wav</ShortName>
+					<Path>SFX\VO_Minions-45_10C4C929.wem</Path>
+				</File>
+				<File Id="293275728" Language="SFX">
+					<ShortName>VO_Minions-11.wav</ShortName>
+					<Path>SFX\VO_Minions-11_10C4C929.wem</Path>
+				</File>
+				<File Id="293395486" Language="SFX">
+					<ShortName>VO_Minions-12.wav</ShortName>
+					<Path>SFX\VO_Minions-12_10C4C929.wem</Path>
+				</File>
+				<File Id="295335497" Language="SFX">
+					<ShortName>VO_Minions-46.wav</ShortName>
+					<Path>SFX\VO_Minions-46_10C4C929.wem</Path>
+				</File>
+				<File Id="297114072" Language="SFX">
+					<ShortName>VO_Minions-19.wav</ShortName>
+					<Path>SFX\VO_Minions-19_10C4C929.wem</Path>
+				</File>
+				<File Id="304171451" Language="SFX">
+					<ShortName>VO_Minions-34.wav</ShortName>
+					<Path>SFX\VO_Minions-34_10C4C929.wem</Path>
+				</File>
+				<File Id="322860509" Language="SFX">
+					<ShortName>VO_Minions-38.wav</ShortName>
+					<Path>SFX\VO_Minions-38_10C4C929.wem</Path>
 				</File>
 				<File Id="328045296" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-02.wav</ShortName>
@@ -213,6 +315,10 @@
 					<ShortName>SFX_Monster_Run_Asphalt_8.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_8_56D34C19.wem</Path>
 				</File>
+				<File Id="348497741" Language="SFX">
+					<ShortName>VO_Minions-09.wav</ShortName>
+					<Path>SFX\VO_Minions-09_10C4C929.wem</Path>
+				</File>
 				<File Id="357001961" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-15.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-15_56D34C19.wem</Path>
@@ -221,9 +327,21 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop_56D34C19.wem</Path>
 				</File>
+				<File Id="361625307" Language="SFX">
+					<ShortName>VO_Minions-32.wav</ShortName>
+					<Path>SFX\VO_Minions-32_10C4C929.wem</Path>
+				</File>
+				<File Id="370879609" Language="SFX">
+					<ShortName>VO_Minions-29.wav</ShortName>
+					<Path>SFX\VO_Minions-29_10C4C929.wem</Path>
+				</File>
 				<File Id="373229762" Language="SFX">
 					<ShortName>SFX_Car_Nitro_Boost-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Nitro_Boost-01_56D34C19.wem</Path>
+				</File>
+				<File Id="399508028" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_03.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_03_10C4C929.wem</Path>
 				</File>
 				<File Id="415854430" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-11.wav</ShortName>
@@ -232,6 +350,10 @@
 				<File Id="424078183" Language="SFX">
 					<ShortName>PH_SFX_Car_Transmission.wav</ShortName>
 					<Path>SFX\PH_SFX_Car_Transmission_56D34C19.wem</Path>
+				</File>
+				<File Id="455904396" Language="SFX">
+					<ShortName>VO_Minions-24.wav</ShortName>
+					<Path>SFX\VO_Minions-24_10C4C929.wem</Path>
 				</File>
 				<File Id="473618790" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTOK.wav</ShortName>
@@ -261,6 +383,30 @@
 					<ShortName>SFX_Monster_Run_Asphalt_11.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_11_56D34C19.wem</Path>
 				</File>
+				<File Id="567412570" Language="SFX">
+					<ShortName>VO_Minions-16.wav</ShortName>
+					<Path>SFX\VO_Minions-16_10C4C929.wem</Path>
+				</File>
+				<File Id="567565694" Language="SFX">
+					<ShortName>VO_Minions-21.wav</ShortName>
+					<Path>SFX\VO_Minions-21_10C4C929.wem</Path>
+				</File>
+				<File Id="589012012" Language="SFX">
+					<ShortName>VO_Minions-06.wav</ShortName>
+					<Path>SFX\VO_Minions-06_10C4C929.wem</Path>
+				</File>
+				<File Id="590704914" Language="SFX">
+					<ShortName>SFX_Garage_Lift_Down.wav</ShortName>
+					<Path>SFX\SFX_Garage_Lift_Down_10C4C929.wem</Path>
+				</File>
+				<File Id="594295153" Language="SFX">
+					<ShortName>VO_Minions-42.wav</ShortName>
+					<Path>SFX\VO_Minions-42_10C4C929.wem</Path>
+				</File>
+				<File Id="614361376" Language="SFX">
+					<ShortName>VO_Minions-14.wav</ShortName>
+					<Path>SFX\VO_Minions-14_10C4C929.wem</Path>
+				</File>
 				<File Id="615726283" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_12.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_12_56D34C19.wem</Path>
@@ -281,6 +427,18 @@
 					<ShortName>AMB_GARAGE.wav</ShortName>
 					<Path>SFX\AMB_GARAGE_56D34C19.wem</Path>
 				</File>
+				<File Id="650239712" Language="SFX">
+					<ShortName>VO_Minions-25.wav</ShortName>
+					<Path>SFX\VO_Minions-25_10C4C929.wem</Path>
+				</File>
+				<File Id="669123038" Language="SFX">
+					<ShortName>SFX_Mine_Deploy_01.wav</ShortName>
+					<Path>SFX\SFX_Mine_Deploy_01_10C4C929.wem</Path>
+				</File>
+				<File Id="672406368" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_01.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_01_10C4C929.wem</Path>
+				</File>
 				<File Id="673637251" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-07.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-07_56D34C19.wem</Path>
@@ -293,9 +451,37 @@
 					<ShortName>SFX_Monster_Run_Asphalt_35.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_35_56D34C19.wem</Path>
 				</File>
+				<File Id="683080600" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_01.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_01_10C4C929.wem</Path>
+				</File>
 				<File Id="685125525" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_5.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_5_56D34C19.wem</Path>
+				</File>
+				<File Id="693565182" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_04.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_04_10C4C929.wem</Path>
+				</File>
+				<File Id="695237997" Language="SFX">
+					<ShortName>VO_Minions-47.wav</ShortName>
+					<Path>SFX\VO_Minions-47_10C4C929.wem</Path>
+				</File>
+				<File Id="702257288" Language="SFX">
+					<ShortName>VO_Minions-05.wav</ShortName>
+					<Path>SFX\VO_Minions-05_10C4C929.wem</Path>
+				</File>
+				<File Id="712891595" Language="SFX">
+					<ShortName>VO_Minions-40.wav</ShortName>
+					<Path>SFX\VO_Minions-40_10C4C929.wem</Path>
+				</File>
+				<File Id="714795758" Language="SFX">
+					<ShortName>VO_Minions-17.wav</ShortName>
+					<Path>SFX\VO_Minions-17_10C4C929.wem</Path>
+				</File>
+				<File Id="714939548" Language="SFX">
+					<ShortName>VO_Minions-15.wav</ShortName>
+					<Path>SFX\VO_Minions-15_10C4C929.wem</Path>
 				</File>
 				<File Id="719328683" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_16.wav</ShortName>
@@ -309,6 +495,14 @@
 					<ShortName>SFX_Car_Tire_Drift_Start-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem</Path>
 				</File>
+				<File Id="761706438" Language="SFX">
+					<ShortName>VO_Minions-23.wav</ShortName>
+					<Path>SFX\VO_Minions-23_10C4C929.wem</Path>
+				</File>
+				<File Id="763520401" Language="SFX">
+					<ShortName>VO_Minions-43.wav</ShortName>
+					<Path>SFX\VO_Minions-43_10C4C929.wem</Path>
+				</File>
 				<File Id="789886876" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_19.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_19_56D34C19.wem</Path>
@@ -317,17 +511,37 @@
 					<ShortName>SFX_Car_Nitro_Boost-02.wav</ShortName>
 					<Path>SFX\SFX_Car_Nitro_Boost-02_56D34C19.wem</Path>
 				</File>
+				<File Id="793238133" Language="SFX">
+					<ShortName>VO_Minions-26.wav</ShortName>
+					<Path>SFX\VO_Minions-26_10C4C929.wem</Path>
+				</File>
 				<File Id="800857768" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_15.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_15_56D34C19.wem</Path>
+				</File>
+				<File Id="804439789" Language="SFX">
+					<ShortName>SFX_Mine_Deploy_02.wav</ShortName>
+					<Path>SFX\SFX_Mine_Deploy_02_10C4C929.wem</Path>
 				</File>
 				<File Id="815904793" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_9.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_9_56D34C19.wem</Path>
 				</File>
+				<File Id="821765287" Language="SFX">
+					<ShortName>VO_Minions-35.wav</ShortName>
+					<Path>SFX\VO_Minions-35_10C4C929.wem</Path>
+				</File>
+				<File Id="828574803" Language="SFX">
+					<ShortName>VO_Minions-36.wav</ShortName>
+					<Path>SFX\VO_Minions-36_10C4C929.wem</Path>
+				</File>
 				<File Id="841573623" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_27.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_27_56D34C19.wem</Path>
+				</File>
+				<File Id="852890476" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_04.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_04_10C4C929.wem</Path>
 				</File>
 				<File Id="853301487" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_3.wav</ShortName>
@@ -349,21 +563,45 @@
 					<ShortName>SFX_Monster_Run_Asphalt_10.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_10_56D34C19.wem</Path>
 				</File>
+				<File Id="884978022" Language="SFX">
+					<ShortName>VO_Minions-03.wav</ShortName>
+					<Path>SFX\VO_Minions-03_10C4C929.wem</Path>
+				</File>
 				<File Id="885566710" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_34.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_34_56D34C19.wem</Path>
+				</File>
+				<File Id="887829737" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_03.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_03_10C4C929.wem</Path>
 				</File>
 				<File Id="894102337" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-04.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-04_56D34C19.wem</Path>
 				</File>
+				<File Id="897573943" Language="SFX">
+					<ShortName>VO_Minions-44.wav</ShortName>
+					<Path>SFX\VO_Minions-44_10C4C929.wem</Path>
+				</File>
+				<File Id="901693732" Language="SFX">
+					<ShortName>SFX_Garage_Lift_Up.wav</ShortName>
+					<Path>SFX\SFX_Garage_Lift_Up_10C4C929.wem</Path>
+				</File>
 				<File Id="912985413" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_29.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_29_56D34C19.wem</Path>
 				</File>
+				<File Id="914356035" Language="SFX">
+					<ShortName>VO_Minions-41.wav</ShortName>
+					<Path>SFX\VO_Minions-41_10C4C929.wem</Path>
+				</File>
 				<File Id="926201035" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-14.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem</Path>
+				</File>
+				<File Id="930520401" Language="SFX">
+					<ShortName>VO_Minions.wav</ShortName>
+					<Path>SFX\VO_Minions_10C4C929.wem</Path>
 				</File>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
@@ -372,6 +610,10 @@
 				<File Id="943796425" Language="SFX">
 					<ShortName>SFX_Car_Nitro_Boost.wav</ShortName>
 					<Path>SFX\SFX_Car_Nitro_Boost_56D34C19.wem</Path>
+				</File>
+				<File Id="981376012" Language="SFX">
+					<ShortName>VO_Minions-20.wav</ShortName>
+					<Path>SFX\VO_Minions-20_10C4C929.wem</Path>
 				</File>
 				<File Id="982930451" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_7.wav</ShortName>
@@ -393,9 +635,17 @@
 					<ShortName>SFX_Monster_Run_Asphalt_24.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_24_56D34C19.wem</Path>
 				</File>
+				<File Id="1013313836" Language="SFX">
+					<ShortName>VO_Minions-31.wav</ShortName>
+					<Path>SFX\VO_Minions-31_10C4C929.wem</Path>
+				</File>
 				<File Id="1026971028" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Start-04.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-04_56D34C19.wem</Path>
+				</File>
+				<File Id="1032468217" Language="SFX">
+					<ShortName>VO_Minions-04.wav</ShortName>
+					<Path>SFX\VO_Minions-04_10C4C929.wem</Path>
 				</File>
 				<File Id="1038994047" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_13.wav</ShortName>
@@ -404,6 +654,14 @@
 				<File Id="1040050685" Language="SFX">
 					<ShortName>SFX_Turret_Confirm.wav</ShortName>
 					<Path>SFX\SFX_Turret_Confirm_2A2C6018.wem</Path>
+				</File>
+				<File Id="1056370684" Language="SFX">
+					<ShortName>VO_Minions-30.wav</ShortName>
+					<Path>SFX\VO_Minions-30_10C4C929.wem</Path>
+				</File>
+				<File Id="1057961994" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_02.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_02_10C4C929.wem</Path>
 				</File>
 				<File Id="1065341630" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-08.wav</ShortName>
@@ -478,6 +736,14 @@
 					<ShortName>AMB_COURSE_SELECTEQUIP.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem</Path>
 				</File>
+				<File Id="97264880" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_03.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_03_10C4C929.wem</Path>
+				</File>
+				<File Id="100859020" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_01.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_01_10C4C929.wem</Path>
+				</File>
 				<File Id="116157522" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_31.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_31_56D34C19.wem</Path>
@@ -489,6 +755,14 @@
 				<File Id="127778559" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_33.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_33_56D34C19.wem</Path>
+				</File>
+				<File Id="133157363" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_02.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_02_10C4C929.wem</Path>
+				</File>
+				<File Id="151260125" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_02.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_02_10C4C929.wem</Path>
 				</File>
 				<File Id="159642181" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_4.wav</ShortName>
@@ -510,6 +784,10 @@
 					<ShortName>UI_Babypark_Checkpoint.wav</ShortName>
 					<Path>SFX\UI_Babypark_Checkpoint_56D34C19.wem</Path>
 				</File>
+				<File Id="259676439" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_04.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_04_10C4C929.wem</Path>
+				</File>
 				<File Id="268113833" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_21.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_21_56D34C19.wem</Path>
@@ -521,6 +799,10 @@
 				<File Id="341212262" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_8.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_8_56D34C19.wem</Path>
+				</File>
+				<File Id="399508028" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_03.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_03_10C4C929.wem</Path>
 				</File>
 				<File Id="473618790" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTOK.wav</ShortName>
@@ -570,13 +852,25 @@
 					<ShortName>AMB_GARAGE.wav</ShortName>
 					<Path>SFX\AMB_GARAGE_56D34C19.wem</Path>
 				</File>
+				<File Id="672406368" Language="SFX">
+					<ShortName>SFX_Minion_Death_Rattle_01.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Rattle_01_10C4C929.wem</Path>
+				</File>
 				<File Id="680259220" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_35.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_35_56D34C19.wem</Path>
 				</File>
+				<File Id="683080600" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_01.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_01_10C4C929.wem</Path>
+				</File>
 				<File Id="685125525" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_5.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_5_56D34C19.wem</Path>
+				</File>
+				<File Id="693565182" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_04.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_04_10C4C929.wem</Path>
 				</File>
 				<File Id="719328683" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_16.wav</ShortName>
@@ -602,6 +896,10 @@
 					<ShortName>SFX_Monster_Run_Asphalt_27.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_27_56D34C19.wem</Path>
 				</File>
+				<File Id="852890476" Language="SFX">
+					<ShortName>SFX_Minion_Death_Impact_04.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Impact_04_10C4C929.wem</Path>
+				</File>
 				<File Id="853301487" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_3.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_3_56D34C19.wem</Path>
@@ -621,6 +919,10 @@
 				<File Id="885566710" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_34.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_34_56D34C19.wem</Path>
+				</File>
+				<File Id="887829737" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_03.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_03_10C4C929.wem</Path>
 				</File>
 				<File Id="912985413" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_29.wav</ShortName>
@@ -649,6 +951,10 @@
 				<File Id="1040050685" Language="SFX">
 					<ShortName>SFX_Turret_Confirm.wav</ShortName>
 					<Path>SFX\SFX_Turret_Confirm_2A2C6018.wem</Path>
+				</File>
+				<File Id="1057961994" Language="SFX">
+					<ShortName>SFX_Minion_Death_Debris_02.wav</ShortName>
+					<Path>SFX\SFX_Minion_Death_Debris_02_10C4C929.wem</Path>
 				</File>
 				<File Id="1071402905" Language="SFX">
 					<ShortName>SFX_Turret_Drop.wav</ShortName>
