@@ -72,7 +72,7 @@
 								<Action Name="" ID="{8961E9D1-6846-44D5-844C-A3D41710B2B7}" ShortID="465644332">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="177.631578947368"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="414.473684210526"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -122,7 +122,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Car_Drift" ID="{E2792444-AF8C-443D-AD2E-9015824BD8B4}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Car_Drift_Loop" ID="{9EAF53A9-7E52-43AC-BC12-8368D6C93DB1}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -178,7 +178,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Trap_Mine_Explode" ID="{F540DD7A-4817-40C2-A502-B35309E13F2E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Mine_Explode" ID="{F540DD7A-4817-40C2-A502-B35309E13F2E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -192,7 +192,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Trap_Mine_Idle" ID="{67D2B98D-2161-4C82-A79F-D0E8C8F9848E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Mine_Idle" ID="{67D2B98D-2161-4C82-A79F-D0E8C8F9848E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -206,7 +206,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Trap_Mine_Trigger" ID="{E8A01A03-19EF-4E8A-B199-D489B36CFE60}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Mine_Deploy" ID="{E8A01A03-19EF-4E8A-B199-D489B36CFE60}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -620,6 +620,126 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Turret_Drop" ID="{65076608-EC63-4955-A069-AC617578179F}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Turret_Confirm" ID="{5B3DCE08-989F-4509-A307-EE0ADE1FE498}">
+					<ChildrenList>
+						<Action Name="" ID="{1FFF7A95-A5D1-49D1-BA2F-5952516E8DD4}" ShortID="975349837">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Turret_Confirm" ID="{AD3C10DA-ABB3-40D6-AD4F-1ECDDEBFC6D0}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Build_Error" ID="{8EE61937-D7C9-4161-8DE1-F7D435B3CC62}">
+					<ChildrenList>
+						<Action Name="" ID="{6F6F0E45-956D-48CE-BF59-F37AE606EADB}" ShortID="1026389426">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Build_Error" ID="{0FF93168-9DB7-4720-B9F3-37D4DAC75B63}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="SFX" ID="{26820D6B-D5AF-48BF-A918-1C49A8020582}" ShortID="184782266">
+					<ChildrenList>
+						<Folder Name="Lift" ID="{1C6867F6-71B3-4623-91AF-8721C404C7A0}" ShortID="905699355">
+							<ChildrenList>
+								<Event Name="Play_SFX_Lift" ID="{5E4551B0-E117-4318-B257-374A9E90CFAE}">
+									<ChildrenList>
+										<Action Name="" ID="{67DD3A9F-9601-48A4-9F84-51DC9317B7B7}" ShortID="806689462">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="SFX_Lift" ID="{FD1CF9DC-5746-4B98-8C58-CB54229E5F25}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Set_Switch_Lift_Down" ID="{3EC2723C-3F30-446D-A1D5-26DB73A02188}">
+									<ChildrenList>
+										<Action Name="" ID="{A7DA016E-8821-401D-9E14-293B5E891712}" ShortID="682856028">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="23"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Lift_Down" ID="{6845179A-1926-4E63-A77F-2A7607686AEA}" WorkUnitID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Set_Switch_Lift_Up" ID="{211B65E3-398E-41B8-A514-C2544E9E371C}">
+									<ChildrenList>
+										<Action Name="" ID="{D734AF2E-2A56-4E90-B782-C20B30F2E2BA}" ShortID="978255644">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="23"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Lift_Up" ID="{5D30F94A-B911-49B2-84FF-E8A6F369408A}" WorkUnitID="{DDF8CFEE-D5D9-4AC9-9985-FAA2531373CB}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_SFX_Mine_Deploy" ID="{C08032C9-0EE7-4F01-96EE-2F1555919C90}">
+					<ChildrenList>
+						<Action Name="" ID="{FAC6C2FE-0EE0-4FB2-BBF1-10BF0C9B4CB3}" ShortID="25620613">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Mine_Deploy" ID="{BF9108F3-7237-491F-A2A2-244BDBD705E4}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Monster_Die" ID="{7C2D173A-9704-4EDC-A646-56811AE95E2C}">
+					<ChildrenList>
+						<Action Name="" ID="{18BDDFDB-80D6-4A6F-9433-6ED1340D80A7}" ShortID="1013983287">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Monster_Die" ID="{DAABDAED-0BA1-4782-BA24-792C7391CE53}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Minion_Run" ID="{2A85D5E3-4FCC-4819-BDB1-FAD191CADBA5}">
+					<ChildrenList>
+						<Action Name="" ID="{1A335D21-C803-4467-AA71-356CFCFDADEC}" ShortID="703153857">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Minion_Run" ID="{F50857B5-5FE2-4AE9-B281-07E7940715E7}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
