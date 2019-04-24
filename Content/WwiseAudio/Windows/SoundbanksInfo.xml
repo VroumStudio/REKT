@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>E:\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Users\timot\Documents\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Users\timot\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
