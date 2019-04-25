@@ -7,6 +7,13 @@
 			</PropertyList>
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{F13E2F4C-2ECE-41C1-8731-3A102876DB55}" WorkUnitID="{AE1DCC86-6E82-4B1F-A8A6-32D073A78674}"/>

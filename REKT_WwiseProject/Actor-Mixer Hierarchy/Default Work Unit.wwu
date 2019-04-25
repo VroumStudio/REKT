@@ -2049,7 +2049,7 @@
 							<ChildrenList>
 								<BlendContainer Name="SFX_Monster_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" ShortID="466827219">
 									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="Lowpass" Type="int16">
@@ -2200,6 +2200,19 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="SFX_Monster_Run_Asphalt_1" ID="{C49945F3-3DC3-4BCD-A57D-15FDCA823119}" ShortID="186581573">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2219,6 +2232,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_2" ID="{4FD51B3E-7F4D-40B6-977E-4D7823ABD571}" ShortID="27527142">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2238,6 +2264,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_3" ID="{69411B04-6D87-4E4D-BB6F-42A850CFB797}" ShortID="521287986">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2257,6 +2296,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_4" ID="{1622BF65-7F6E-498A-BE1D-43A7ECFC91FE}" ShortID="210798276">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2276,6 +2328,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_5" ID="{72BBDF64-1FAF-4714-91A5-CA8234EF778E}" ShortID="255850296">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2295,6 +2360,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_6" ID="{FB16AD21-085F-4C42-B646-9D49872AB4A5}" ShortID="387177965">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2314,6 +2392,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_7" ID="{D3A66DD3-6757-4545-A770-2D2A0BAC4C63}" ShortID="612835534">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2333,6 +2424,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_8" ID="{7F760A55-30B2-4AB7-8937-553D8AFB61A0}" ShortID="1002121891">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2352,6 +2456,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_9" ID="{5470BC1E-5899-4B56-8CAC-0377C294E103}" ShortID="133456727">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2371,6 +2488,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_10" ID="{34E9A8F4-467B-46DC-92E5-3CBE1630C4F3}" ShortID="925317490">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2390,6 +2520,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_11" ID="{656873C0-CDE9-4743-8DEE-304A85B74A4F}" ShortID="708537593">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2409,6 +2552,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_12" ID="{69CDAAFF-38E1-440F-99C2-04FC5DD05EEE}" ShortID="525210897">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2428,6 +2584,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_13" ID="{441D2199-B07F-40BF-B354-F6FA2A2E6381}" ShortID="464524190">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2447,6 +2616,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_14" ID="{FC10672C-668C-4BDB-A6BC-E55F458EB77D}" ShortID="518863887">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2466,6 +2648,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_15" ID="{D4E6C3C1-FE8E-473B-BB2D-1F1000E6ADBE}" ShortID="328735787">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2485,6 +2680,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_16" ID="{414823B4-2694-4AEE-B33A-7355269DB010}" ShortID="141107586">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2504,6 +2712,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_17" ID="{7E0EF465-9050-4F9F-BE00-4000024FE3A1}" ShortID="737016964">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2523,6 +2744,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_18" ID="{3DA92C27-8D4F-42CB-BCD7-3C478633FE6C}" ShortID="1035744265">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2542,6 +2776,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_19" ID="{5255514D-A046-4B47-9F48-57B56F8BAE6A}" ShortID="548510038">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2561,6 +2808,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_20" ID="{E22516F0-1B8C-4C8A-B6BE-A2D92BA5D8F7}" ShortID="754095341">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2580,6 +2840,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_21" ID="{8EC4D927-C742-482B-8B1E-A5380B59B0E2}" ShortID="97528056">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2599,6 +2872,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_22" ID="{10697FC8-1272-422D-AA5C-9CB0F2C3FEA2}" ShortID="118833480">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2618,6 +2904,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_23" ID="{8D692E08-2470-402D-8E78-DAE6EAB503D9}" ShortID="680032934">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2637,6 +2936,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_24" ID="{D0CC8CE5-B607-4EF2-A4EB-5BE6D1CA83C3}" ShortID="5437973">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2656,6 +2968,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_25" ID="{16A47601-1675-4E17-996D-5B0FCEE41AE0}" ShortID="971277754">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2675,6 +3000,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_26" ID="{5F8F89D9-2E23-4606-999D-669DAEDA6DE0}" ShortID="760019747">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2694,6 +3032,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_27" ID="{BED66A56-808E-4D6A-8E7E-B4D9952597C9}" ShortID="908979967">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2713,6 +3064,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_28" ID="{6ADCC1C2-DB4A-4F19-860F-4EDDB6C1A0B1}" ShortID="403660765">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2732,6 +3096,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_29" ID="{8D0DB054-C875-4748-AA0A-869CA2997A35}" ShortID="845024053">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2751,6 +3128,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_30" ID="{4E25C6AF-1588-4F6C-9E82-F7916676F1D6}" ShortID="307016885">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2770,6 +3160,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_31" ID="{C79BD176-BC3A-4B39-84FA-1D6C43601D13}" ShortID="200576735">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2789,6 +3192,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_32" ID="{38B5B3B4-3C5B-4A40-A5A1-DC7C6BB5DBB7}" ShortID="269321045">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2808,6 +3224,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_33" ID="{256A85FD-6482-4D0C-809B-FB280CDF5CF0}" ShortID="802899985">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2827,6 +3256,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_34" ID="{AF386F16-B183-40B7-AA12-4516B07F9B20}" ShortID="587906907">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2846,6 +3288,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_35" ID="{A9E48C8D-0DC3-4AD7-BA5B-44011EC6B715}" ShortID="10515128">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2865,6 +3320,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_36" ID="{F58DFE1E-05D6-4D4E-BAC8-E9D92EBF5481}" ShortID="662230340">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2884,6 +3352,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_37" ID="{E64D652E-C18C-4715-94B0-F85D6CC06F42}" ShortID="952762902">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2903,6 +3384,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_38" ID="{2ABB0FDE-24C0-4E4B-8DCB-19A89EEF345C}" ShortID="867458223">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -2922,6 +3416,19 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SFX_Monster_Run_Asphalt_39" ID="{E35BF2F4-F57D-415B-AC91-A19D2D3A57A2}" ShortID="503577491">
+													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -3036,6 +3543,17 @@
 											<ChildrenList>
 												<Sound Name="VO_Minions-02" ID="{D5CFF3CF-8B36-42BC-A1ED-89CE298B9314}" ShortID="515949618">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3068,6 +3586,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-03" ID="{0CE026FB-A02B-43CA-8325-E2BE6BDFA5A5}" ShortID="647123514">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3100,6 +3629,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-04" ID="{7373E204-1E16-49A8-B120-0EC41DB86726}" ShortID="159009392">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3132,6 +3672,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-05" ID="{D857658A-79BA-429B-86E4-B5BC47E77BD4}" ShortID="291372509">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3164,6 +3715,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-06" ID="{2C35B2D1-93EB-4E47-BEA4-3BFA896EDCFF}" ShortID="128239103">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3196,6 +3758,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-07" ID="{BBBFCEEB-916E-499F-AE49-64B67A970FA7}" ShortID="455343216">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3228,6 +3801,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-08" ID="{4ABDA6D3-7E31-47F6-BCF2-D51CA1307FE3}" ShortID="900304216">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3260,6 +3844,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-09" ID="{6C668FD2-A384-4CCE-BA77-7FCCAB77E6AE}" ShortID="310053689">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3292,6 +3887,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-10" ID="{B1FC7C17-9B9D-4035-98F8-74D5456F275B}" ShortID="385451176">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3324,6 +3930,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-11" ID="{88888D1B-02DE-4C14-AA4C-043FDA250E1E}" ShortID="758470184">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3356,6 +3973,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-12" ID="{57E8B544-E6F1-4624-BC95-DFA39FC1055E}" ShortID="271729051">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3388,6 +4016,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-13" ID="{72CD1C0A-DE9B-4863-985D-65A4B1A34021}" ShortID="415841531">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3420,6 +4059,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-15" ID="{7E61E9DF-D5FA-4EE2-9A11-769E745808D9}" ShortID="445980175">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3452,6 +4102,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-16" ID="{AE7C9FA3-A04C-482A-B731-4962C9FAE455}" ShortID="1013952984">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3484,6 +4145,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-17" ID="{922BAB52-3F56-4FDA-9B88-021E0A02CF73}" ShortID="418109517">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3516,6 +4188,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-18" ID="{FBAAF76A-EF2F-4992-A067-E10E3656052B}" ShortID="1014738080">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3548,6 +4231,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-19" ID="{040DF9FC-A5B9-4A20-8289-ADA4B994A634}" ShortID="199766222">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3580,6 +4274,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-21" ID="{742FF150-9B6E-410A-B91F-D3466ED13CE7}" ShortID="514485824">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3612,6 +4317,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-22" ID="{76A83034-E297-4575-AF1C-3181B897F26A}" ShortID="332885521">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3644,6 +4360,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-23" ID="{FF966A96-7772-4688-B6F9-3C3E67F32567}" ShortID="485048883">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3676,6 +4403,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-24" ID="{1C4C2C9C-F6DA-4463-9A0A-F7BA002AAC54}" ShortID="160124852">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3708,6 +4446,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-25" ID="{850DC9EC-2FB6-4F92-9594-EB563C01C82C}" ShortID="662088835">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3740,6 +4489,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-26" ID="{FBAEDF7A-188A-4D3B-B0D2-2C32047AF7ED}" ShortID="151155457">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3772,6 +4532,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-27" ID="{3A716495-B664-45EF-AF3A-D860258B1FAE}" ShortID="485078772">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3804,6 +4575,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-29" ID="{4A3CD9BA-BE7D-4B49-90BF-30DF2ADCA33C}" ShortID="308852240">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3836,6 +4618,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-30" ID="{51B26663-0F8F-4EC1-9D49-E3479B2EDF38}" ShortID="675265128">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3868,6 +4661,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-31" ID="{50821EB7-7EBF-44B1-B3B5-268E116318D0}" ShortID="892234359">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3900,6 +4704,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-32" ID="{EA44E79A-9EA4-4A54-887D-627987D01419}" ShortID="557238535">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3932,6 +4747,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-33" ID="{769356D5-53B2-487E-A3CA-4954B3A2DF6A}" ShortID="147970664">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3964,6 +4790,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-34" ID="{89D66A14-ADFA-4074-B74A-28B67E4DC4B2}" ShortID="1054079831">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -3996,6 +4833,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-35" ID="{279423B3-E9C7-4317-8DBB-C64855D74FC8}" ShortID="180711570">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4028,6 +4876,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-36" ID="{9897D2D7-E0B1-489C-A8FB-486EC4CD1461}" ShortID="877490094">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4060,6 +4919,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-37" ID="{C7AF380F-1332-41BA-99BB-535D68565A70}" ShortID="728427121">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4092,6 +4962,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-38" ID="{FD34DDA1-0B65-49A3-B25C-BD7367FF7ABE}" ShortID="568585654">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4124,6 +5005,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-39" ID="{4C5059B2-31BD-4C5E-980F-A95A12048D23}" ShortID="855714933">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4156,6 +5048,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-40" ID="{441B8160-8283-4A2A-AF74-06D01ECB1599}" ShortID="147474516">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4188,6 +5091,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-41" ID="{351FF848-A268-48D7-B0D0-59132B7EA3D8}" ShortID="387612961">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4220,6 +5134,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-42" ID="{A3C4B145-A3FC-465A-B6FE-42667AF9C4D2}" ShortID="9921563">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4252,6 +5177,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-43" ID="{1BECEBDC-F339-4792-B054-233B8DF5B2CD}" ShortID="1029963765">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4284,6 +5220,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-44" ID="{72BCFE1D-BF26-47F5-B39F-408F45F2B484}" ShortID="402376765">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4316,6 +5263,17 @@
 												</Sound>
 												<Sound Name="VO_Minions-45" ID="{707DA181-299A-4DE5-8683-E70D215874E4}" ShortID="665477870">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>30</Value>
@@ -4349,6 +5307,17 @@
 												<Sound Name="VO_Minions_None" ID="{291AD471-732A-494F-866B-AD2513BD448F}" ShortID="542924570">
 													<PropertyList>
 														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>80</Value>
@@ -4398,7 +5367,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -4831,6 +5800,11 @@
 											<PropertyList>
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
@@ -4865,7 +5839,7 @@
 											<PropertyList>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
-														<Value>0.3</Value>
+														<Value>0.8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4947,13 +5921,6 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Turret_Laserbeam_Shoot_Start" ID="{429D8513-A13A-49B2-B006-00A44F75B4CE}" ShortID="560596769">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>12</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -5639,6 +6606,17 @@
 								</Sound>
 								<Sound Name="VO_Minions_None" ID="{C4AA7C83-AC8C-4B90-A2D8-758606595024}" ShortID="621567751">
 									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
 												<Value>80</Value>
