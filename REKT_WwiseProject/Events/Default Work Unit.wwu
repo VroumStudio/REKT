@@ -605,6 +605,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{5B4AEDCC-4BFD-4783-9896-405396B0CD4E}" ShortID="783528456">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="4.124"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Monster_Run" ID="{D1E0E6D0-4981-4B73-970B-5C72BFBB570E}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C82001C8-C697-41E5-A461-E9ED20CD0ED8}" ShortID="755562216">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="4.124"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Minion_Run" ID="{F50857B5-5FE2-4AE9-B281-07E7940715E7}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Stop_SFX_Monster_Run" ID="{E35FC08A-9C76-47D6-A756-135BAEC9C4E1}">

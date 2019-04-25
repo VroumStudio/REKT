@@ -161,7 +161,7 @@
 						</Property>
 						<Property Name="ConeInnerAngle" Type="int32" Value="65"/>
 						<Property Name="ConeOuterAngle" Type="int32" Value="180"/>
-						<Property Name="RadiusMax" Type="Real64" Value="3000"/>
+						<Property Name="RadiusMax" Type="Real64" Value="5000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -177,13 +177,13 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>1812.43001</XPos>
+											<XPos>3020.71668333333</XPos>
 											<YPos>-4.59477</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>3000</XPos>
+											<XPos>5000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -213,7 +213,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>3000</XPos>
+											<XPos>5000</XPos>
 											<YPos>28</YPos>
 											<Flags>37</Flags>
 										</Point>

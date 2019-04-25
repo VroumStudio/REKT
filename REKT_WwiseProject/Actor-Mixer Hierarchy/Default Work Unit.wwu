@@ -337,6 +337,11 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2051,7 +2056,6 @@
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
-										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="Lowpass" Type="int16">
 											<RTPCList>
 												<RTPC Name="" ID="{E4F5DE2A-85A5-4C4B-9E34-39B6B5BCCB7B}" ShortID="752000620">
@@ -2088,7 +2092,7 @@
 										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
-												<Value>10</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
@@ -2106,7 +2110,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>-6</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{170E0466-D5CB-4E74-8AC8-B6ECDA0215D9}" ShortID="118762300">
@@ -2155,6 +2159,7 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="SFX_Monster_Run_Asphalt" ID="{875FFA64-E4B0-476F-BA9E-BF533B2E05FC}" ShortID="432738028">
 											<PropertyList>
+												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
@@ -2204,7 +2209,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2236,7 +2241,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2268,7 +2273,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2300,7 +2305,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2332,7 +2337,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2364,7 +2369,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2396,7 +2401,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2428,7 +2433,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2460,7 +2465,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2492,7 +2497,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2524,7 +2529,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2556,7 +2561,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2588,7 +2593,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2620,7 +2625,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2652,7 +2657,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2684,7 +2689,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2716,7 +2721,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2748,7 +2753,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2780,7 +2785,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2812,7 +2817,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2844,7 +2849,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2876,7 +2881,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2908,7 +2913,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2940,7 +2945,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -2972,7 +2977,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3004,7 +3009,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3036,7 +3041,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3068,7 +3073,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3100,7 +3105,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3132,7 +3137,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3164,7 +3169,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3196,7 +3201,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3228,7 +3233,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3260,7 +3265,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3292,7 +3297,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3324,7 +3329,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3356,7 +3361,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3388,7 +3393,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3420,7 +3425,7 @@
 														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
-																<Value>10</Value>
+																<Value>1</Value>
 															</ValueList>
 														</Property>
 														<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -3475,7 +3480,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>11</Value>
+														<Value>3</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -5367,7 +5372,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -6478,11 +6483,6 @@
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
