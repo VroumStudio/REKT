@@ -8,7 +8,7 @@
 						<GameParameter Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}">
 							<PropertyList>
 								<Property Name="InitialValue" Type="Real64" Value="900"/>
-								<Property Name="Max" Type="Real64" Value="5000"/>
+								<Property Name="Max" Type="Real64" Value="7000"/>
 								<Property Name="Min" Type="Real64" Value="900"/>
 							</PropertyList>
 						</GameParameter>

@@ -72,7 +72,7 @@
 								<Action Name="" ID="{8961E9D1-6846-44D5-844C-A3D41710B2B7}" ShortID="465644332">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="39"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="414.473684210526"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="177.631578947368"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -220,7 +220,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Wpn_FlameThrower_Shoot" ID="{DD3501F5-2692-44B3-8AE6-84F66A83AC59}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Turret_FlameThrower_Shoot" ID="{DD3501F5-2692-44B3-8AE6-84F66A83AC59}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -234,7 +234,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Wpn_FlameThrower_Summon" ID="{A06EA54B-658C-4D72-A10E-310865CA2D7C}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Turret_Summon" ID="{A06EA54B-658C-4D72-A10E-310865CA2D7C}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -248,7 +248,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Wpn_Gatling_Shoot" ID="{1AC392AE-99A6-435E-9CB2-7A3415636877}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Turret_Laser_Shoot" ID="{1AC392AE-99A6-435E-9CB2-7A3415636877}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -262,7 +262,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Wpn_Gatling_Summon" ID="{38294818-FB13-4259-9C50-B479CFAA8F34}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+											<ObjectRef Name="SFX_Turret_Laser_Summon" ID="{38294818-FB13-4259-9C50-B479CFAA8F34}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -595,6 +595,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{0C593D9F-CADE-4E86-9C9A-925675FDD6FA}" ShortID="36620773">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Minion_Run" ID="{F50857B5-5FE2-4AE9-B281-07E7940715E7}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Stop_SFX_Monster_Run" ID="{E35FC08A-9C76-47D6-A756-135BAEC9C4E1}">
@@ -729,6 +739,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{A41B5781-BD3A-425E-AD05-1A508165F3E9}" ShortID="850365409">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Minion_Death" ID="{228EDA62-C2A9-42BA-B071-7DE93C4E0D40}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_VO_Minion_Run" ID="{2A85D5E3-4FCC-4819-BDB1-FAD191CADBA5}">
@@ -740,6 +760,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="VO_Minion_Run" ID="{F50857B5-5FE2-4AE9-B281-07E7940715E7}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Turret_Laser_Shoot" ID="{CAC9585D-352B-4E6E-A1C0-B50BC3381EA4}">
+					<ChildrenList>
+						<Action Name="" ID="{84E03C50-75A2-4E38-AB14-E1F08397AF60}" ShortID="675199361">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Turret_Laserbeam_Shoot_Start" ID="{429D8513-A13A-49B2-B006-00A44F75B4CE}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

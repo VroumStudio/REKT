@@ -81,7 +81,7 @@
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64" Value="-6"/>
 												<Property Name="Highpass" Type="int16" Value="18"/>
-												<Property Name="Lowpass" Type="int16" Value="58"/>
+												<Property Name="Lowpass" Type="int16" Value="62"/>
 												<Property Name="Pitch" Type="int32" Value="-1200"/>
 											</PropertyList>
 										</CustomState>
