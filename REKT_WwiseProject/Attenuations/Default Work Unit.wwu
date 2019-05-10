@@ -375,7 +375,7 @@
 				</Attenuation>
 				<Attenuation Name="Turret_Shoot_Attenuation" ID="{1CB11A73-DD42-46D7-8083-621727F3C088}" ShortID="702355229">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="40000"/>
+						<Property Name="RadiusMax" Type="Real64" Value="20000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -391,22 +391,22 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>6624.70316</XPos>
+											<XPos>3312.35158</XPos>
 											<YPos>-0.42584</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>26761.80416</XPos>
+											<XPos>13380.90208</XPos>
 											<YPos>-19.3632</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>38589.0257558789</XPos>
+											<XPos>19294.5128779395</XPos>
 											<YPos>-20.3294653208791</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>40000</XPos>
+											<XPos>20000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -430,7 +430,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>40000</XPos>
+											<XPos>20000</XPos>
 											<YPos>-5.89359</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -451,12 +451,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>5449.14</XPos>
+											<XPos>2724.57</XPos>
 											<YPos>13</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>40000</XPos>
+											<XPos>20000</XPos>
 											<YPos>15</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -478,7 +478,7 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>40000</XPos>
+											<XPos>20000</XPos>
 											<YPos>30</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -499,12 +499,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>11646.1366133333</XPos>
+											<XPos>5823.06830666665</XPos>
 											<YPos>12.64042</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>40000</XPos>
+											<XPos>20000</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>

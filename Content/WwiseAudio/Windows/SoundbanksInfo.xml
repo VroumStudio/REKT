@@ -70,6 +70,7 @@
 				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start"/>
 				<Event Id="3345503513" Name="Play_SFX_Car_Nitro" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro"/>
 				<Event Id="2880876640" Name="Play_SFX_Car_Nitro_Refill" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Nitro_Refill"/>
+				<Event Id="3494116989" Name="Play_SFX_Door_Garage_Open" ObjectPath="\Events\Default Work Unit\Play_SFX_Door_Garage_Open"/>
 				<Event Id="1940817097" Name="Play_SFX_Lift" ObjectPath="\Events\Default Work Unit\SFX\Lift\Play_SFX_Lift"/>
 				<Event Id="1167921499" Name="Play_SFX_Mine_Deploy" ObjectPath="\Events\Default Work Unit\Play_SFX_Mine_Deploy"/>
 				<Event Id="2263304631" Name="Play_SFX_Monster_Die" ObjectPath="\Events\Default Work Unit\Play_SFX_Monster_Die"/>
@@ -88,8 +89,10 @@
 				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon"/>
 				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Babypark_Checkpoint"/>
 				<Event Id="2441311662" Name="Play_UI_Build_Error" ObjectPath="\Events\Default Work Unit\Play_UI_Build_Error"/>
+				<Event Id="2033981283" Name="Play_UI_Coin_Pickup" ObjectPath="\Events\Default Work Unit\Play_UI_Coin_Pickup"/>
 				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Confirm"/>
 				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Equipment"/>
+				<Event Id="3702949984" Name="Play_UI_Lap_Finish" ObjectPath="\Events\Default Work Unit\Play_UI_Lap_Finish"/>
 				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Movement"/>
 				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Pause"/>
 				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
@@ -135,6 +138,10 @@
 				<File Id="50865050" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_25.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_25_56D34C19.wem</Path>
+				</File>
+				<File Id="56188644" Language="SFX">
+					<ShortName>SFX_Coin_Pickup-01.wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup-01_10C4C929.wem</Path>
 				</File>
 				<File Id="59304707" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_6.wav</ShortName>
@@ -223,6 +230,10 @@
 				<File Id="159642181" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_4.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_4_56D34C19.wem</Path>
+				</File>
+				<File Id="162277977" Language="SFX">
+					<ShortName>SFX_Coin_Pickup-02.wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup-02_10C4C929.wem</Path>
 				</File>
 				<File Id="163662963" Language="SFX">
 					<ShortName>VO_Minions-08.wav</ShortName>
@@ -496,6 +507,10 @@
 					<ShortName>SFX_Monster_Run_Asphalt_16.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_16_56D34C19.wem</Path>
 				</File>
+				<File Id="734327665" Language="SFX">
+					<ShortName>SFX_Coin_Synth.wav</ShortName>
+					<Path>SFX\SFX_Coin_Synth_10C4C929.wem</Path>
+				</File>
 				<File Id="746319321" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_23.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_23_56D34C19.wem</Path>
@@ -543,6 +558,14 @@
 				<File Id="828574803" Language="SFX">
 					<ShortName>VO_Minions-36.wav</ShortName>
 					<Path>SFX\VO_Minions-36_10C4C929.wem</Path>
+				</File>
+				<File Id="840294410" Language="SFX">
+					<ShortName>SFX_Coin_Pickup (2).wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup (2)_10C4C929.wem</Path>
+				</File>
+				<File Id="841395511" Language="SFX">
+					<ShortName>SFX_Coin_Pickup.wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup_10C4C929.wem</Path>
 				</File>
 				<File Id="841573623" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_27.wav</ShortName>
@@ -636,6 +659,10 @@
 					<ShortName>SFX_Car_Tire_Drift_Start-05.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-05_56D34C19.wem</Path>
 				</File>
+				<File Id="994024452" Language="SFX">
+					<ShortName>SFX_Door_Garage_Open.wav</ShortName>
+					<Path>SFX\SFX_Door_Garage_Open_10C4C929.wem</Path>
+				</File>
 				<File Id="1007014752" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_24.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_24_56D34C19.wem</Path>
@@ -706,8 +733,10 @@
 				<Event Id="1576113860" Name="Play_SFX_Wpn_Gatling_Summon" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon"/>
 				<Event Id="2226512720" Name="Play_UI_Babypark_Checkpoint" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Babypark_Checkpoint"/>
 				<Event Id="2441311662" Name="Play_UI_Build_Error" ObjectPath="\Events\Default Work Unit\Play_UI_Build_Error"/>
+				<Event Id="2033981283" Name="Play_UI_Coin_Pickup" ObjectPath="\Events\Default Work Unit\Play_UI_Coin_Pickup"/>
 				<Event Id="3022734157" Name="Play_UI_Confirm" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Confirm"/>
 				<Event Id="878452949" Name="Play_UI_Equipment" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Equipment"/>
+				<Event Id="3702949984" Name="Play_UI_Lap_Finish" ObjectPath="\Events\Default Work Unit\Play_UI_Lap_Finish"/>
 				<Event Id="3626629520" Name="Play_UI_Movement" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Movement"/>
 				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Pause"/>
 				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
@@ -732,6 +761,10 @@
 				<File Id="50865050" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_25.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_25_56D34C19.wem</Path>
+				</File>
+				<File Id="56188644" Language="SFX">
+					<ShortName>SFX_Coin_Pickup-01.wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup-01_10C4C929.wem</Path>
 				</File>
 				<File Id="59304707" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_6.wav</ShortName>
@@ -812,6 +845,10 @@
 				<File Id="159642181" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_4.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_4_56D34C19.wem</Path>
+				</File>
+				<File Id="162277977" Language="SFX">
+					<ShortName>SFX_Coin_Pickup-02.wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup-02_10C4C929.wem</Path>
 				</File>
 				<File Id="163662963" Language="SFX">
 					<ShortName>VO_Minions-08.wav</ShortName>
@@ -1013,6 +1050,10 @@
 					<ShortName>SFX_Monster_Run_Asphalt_16.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_16_56D34C19.wem</Path>
 				</File>
+				<File Id="734327665" Language="SFX">
+					<ShortName>SFX_Coin_Synth.wav</ShortName>
+					<Path>SFX\SFX_Coin_Synth_10C4C929.wem</Path>
+				</File>
 				<File Id="746319321" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_23.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_23_56D34C19.wem</Path>
@@ -1048,6 +1089,14 @@
 				<File Id="828574803" Language="SFX">
 					<ShortName>VO_Minions-36.wav</ShortName>
 					<Path>SFX\VO_Minions-36_10C4C929.wem</Path>
+				</File>
+				<File Id="840294410" Language="SFX">
+					<ShortName>SFX_Coin_Pickup (2).wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup (2)_10C4C929.wem</Path>
+				</File>
+				<File Id="841395511" Language="SFX">
+					<ShortName>SFX_Coin_Pickup.wav</ShortName>
+					<Path>SFX\SFX_Coin_Pickup_10C4C929.wem</Path>
 				</File>
 				<File Id="841573623" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_27.wav</ShortName>

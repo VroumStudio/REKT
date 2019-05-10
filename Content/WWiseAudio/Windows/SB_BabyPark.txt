@@ -22,6 +22,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1925799616	Play_Amb_Babypark_Police_Dry			\Default Work Unit\AMB\Play_Amb_Babypark_Police_Dry	
 	1940817097	Play_SFX_Lift			\Default Work Unit\SFX\Lift\Play_SFX_Lift	
 	1944695683	Play_Amb_Babypark_Police_Wet			\Default Work Unit\AMB\Play_Amb_Babypark_Police_Wet	
+	2033981283	Play_UI_Coin_Pickup			\Default Work Unit\Play_UI_Coin_Pickup	
 	2201148061	Set_State_PauseOn			\Default Work Unit\States\Set_State_PauseOn	
 	2207983986	Play_Amb_Garage			\Default Work Unit\AMB\Play_Amb_Garage	
 	2226512720	Play_UI_Babypark_Checkpoint			\Default Work Unit\UI\Play_UI_Babypark_Checkpoint	
@@ -42,9 +43,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3362377689	Play_SFX_Turret_Confirm			\Default Work Unit\Play_SFX_Turret_Confirm	
 	3364113413	Play_SFX_Car_Drift_Start			\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start	
 	3417507024	Play_SFX_Monsters_Die			\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die	
+	3494116989	Play_SFX_Door_Garage_Open			\Default Work Unit\Play_SFX_Door_Garage_Open	
 	3550362706	Play_VO_Minion_Run			\Default Work Unit\Play_VO_Minion_Run	
 	3624587671	Play_UI_Pause			\Default Work Unit\UI\Play_UI_Pause	
 	3626629520	Play_UI_Movement			\Default Work Unit\UI\Play_UI_Movement	
+	3702949984	Play_UI_Lap_Finish			\Default Work Unit\Play_UI_Lap_Finish	
 	4140093725	Set_Switch_Lift_Down			\Default Work Unit\SFX\Lift\Set_Switch_Lift_Down	
 	4185453606	Play_SFX_Trap_Mine_Trigger			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Trigger	
 	4265925356	Play_SFX_Trap_Mine_Idle			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Idle	
@@ -102,6 +105,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	25546923	VO_Minions-27	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-27_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-27		32504
 	35856289	SFX_Monster_Run_Asphalt_28	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_28_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_28		6514
 	50865050	SFX_Monster_Run_Asphalt_25	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_25_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_25		6514
+	56188644	SFX_Coin_Pickup-01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\UI_Coin_RDM\SFX_Coin_Pickup-01		213880
 	59304707	SFX_Monster_Run_Asphalt_6	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_6		6512
 	81053282	SFX_Monster_Run_Asphalt_36	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_36_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_36		6512
 	81337290	SFX_Monster_Run_Asphalt_38	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_38_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_38		6512
@@ -124,6 +128,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	154644001	VO_Minions-37	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-37_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-37		26780
 	155211351	VO_Minions-39	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-39_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-39		87968
 	159642181	SFX_Monster_Run_Asphalt_4	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_4		6512
+	162277977	SFX_Coin_Pickup-02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\UI_Coin_RDM\SFX_Coin_Pickup-02		213880
 	163662963	VO_Minions-08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-08		18480
 	168048995	SFX_SlowMo	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_SlowMo-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_SlowMo		165704
 	174565045	SFX_Monster_Run_Asphalt_32	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_32_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_32		6512
@@ -192,6 +197,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	714795758	VO_Minions-17	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-17_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-17		57052
 	714939548	VO_Minions-15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-15		68928
 	719328683	SFX_Monster_Run_Asphalt_16	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_16_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_16		6512
+	734327665	UI_Lap_Finish	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Synth_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Lap_Finish		235032
 	746319321	SFX_Monster_Run_Asphalt_23	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_23_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_23		6514
 	746364561	SFX_Car_Tire_Drift_Start-01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-01		173920
 	761706438	VO_Minions-23	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-23_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-23		16520
@@ -204,6 +210,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	815904793	SFX_Monster_Run_Asphalt_9	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_9_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_9		6512
 	821765287	VO_Minions-35	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-35_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-35		52536
 	828574803	VO_Minions-36	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-36_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-36		10652
+	840294410	SFX_Coin_Pickup (2)	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup (2)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\SFX_Coin_Pickup (2)		167700
+	841395511	SFX_Coin_Pickup	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\UI_Coin_RDM\SFX_Coin_Pickup		213880
 	841573623	SFX_Monster_Run_Asphalt_27	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_27_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_27		6514
 	852890476	SFX_Minion_Death_Impact_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Impact_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Impact\SFX_Minion_Death_Impact_04		400444
 	853301487	SFX_Monster_Run_Asphalt_3	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_3		6512
@@ -227,6 +235,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	984508822	SFX_Car_Tire_Drift_Start	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start		142952
 	984626086	SFX_Monster_Run_Asphalt_17	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_17_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_17		6512
 	984893858	SFX_Car_Tire_Drift_Start-05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-05		167248
+	994024452	SFX_Door_Garage_Open	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Door_Garage_Open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Door_Garage_Open		500088
 	1007014752	SFX_Monster_Run_Asphalt_24	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_24_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_24		6514
 	1013313836	VO_Minions-31	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-31_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-31		30624
 	1026971028	SFX_Car_Tire_Drift_Start-04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-04		212732

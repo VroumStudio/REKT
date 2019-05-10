@@ -801,6 +801,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_UI_Coin_Pickup" ID="{330EA498-C1CB-4E54-9B51-5A93FEA9522B}">
+					<ChildrenList>
+						<Action Name="" ID="{2D11C950-2816-4FAE-AF10-ED2070A62A52}" ShortID="602307123">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Coin_Pickup" ID="{65E0BE4F-A156-4C17-8FDC-80A2F4C57E70}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Lap_Finish" ID="{2C86C108-AB95-468A-9FFF-3B677033AA4D}">
+					<ChildrenList>
+						<Action Name="" ID="{70B99184-76A0-48FF-9C79-E32EFBC25825}" ShortID="865099370">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Lap_Finish" ID="{D61C9CDF-0C0E-4DE5-860F-28426DE77163}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Door_Garage_Open" ID="{AE418E7F-6FFD-402A-AC37-460E65723C73}">
+					<ChildrenList>
+						<Action Name="" ID="{ECA88D60-8155-4C90-AE3C-BE7A68763C55}" ShortID="604180479">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Door_Garage_Open" ID="{B212C6AE-1A78-42C5-96D0-8C0F83DE0760}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -25,6 +25,36 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{8D1790AF-45E5-4CF7-B716-CD82E6B80690}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="UI_Coin_Pickup" ID="{65E0BE4F-A156-4C17-8FDC-80A2F4C57E70}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Azimuth" ID="{19D25DDC-CC00-45C0-93BD-EF5C4856EBDF}"/>
+							<Value>-180</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Speed" ID="{1798CA33-1860-49BA-9C41-6EF9FB1DBBBB}"/>
+							<Value>90</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_RPM" ID="{8C303CE6-F896-49F4-899F-A77963C66C78}"/>
+							<Value>900</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Car_Meter" ID="{CC009623-165F-4CEB-8B0E-9DC4F284FE12}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Lift_Down" ID="{6845179A-1926-4E63-A77F-2A7607686AEA}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>
