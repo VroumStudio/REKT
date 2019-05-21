@@ -12,12 +12,8 @@
 			"Name": "NiagaraExtras",
 			"Enabled": true
 		},
-    {
-      "Name": "RawInput",
-      "Enabled": true
-    },
-    {
-			"Name": "LogitechWheelPlugin",
+		{
+			"Name": "RawInput",
 			"Enabled": true
 		}
 	],
