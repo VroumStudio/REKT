@@ -6425,6 +6425,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="UI_Movement" ID="{1FACF867-193C-4E81-A19F-D36634689832}" ShortID="307048078">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -6444,6 +6451,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="UI_Confirm" ID="{E1A19204-0BFB-4B09-9444-81D25D8E2C79}" ShortID="476828866">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
@@ -6932,6 +6946,2552 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="VO_Minions-20" ID="{555A0F03-DCAF-404C-8C3C-BC39CE85315C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VO_Synthia_Go" ID="{074513C0-36C8-4ED7-AB6F-7060B1AEF674}" ShortID="10871339">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VO_Synthia_Go" ID="{7249EFC9-A80F-4F1C-909A-B9C38C8B26FC}" ShortID="631007891">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go" ID="{A4B08F3F-528F-4808-98A8-6D585F2C1790}" ShortID="1042271659">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go" ID="{A4B08F3F-528F-4808-98A8-6D585F2C1790}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_01" ID="{2A3A2C2C-A5B5-4DF9-B441-208C592D51F8}" ShortID="340768388">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_01" ID="{6C90F24A-02B3-4AB9-AB88-4ACBCB655B39}" ShortID="460982667">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_01" ID="{6C90F24A-02B3-4AB9-AB88-4ACBCB655B39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_02" ID="{E8C84D17-5638-498E-8E9C-3CF3B0E794E4}" ShortID="892161033">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_02" ID="{23332A4C-EC0A-4CDC-8314-4E23649761BE}" ShortID="974347877">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_02" ID="{23332A4C-EC0A-4CDC-8314-4E23649761BE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_03" ID="{87D719A5-E7A7-4637-8360-5EF8C2D9577E}" ShortID="278559569">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_03" ID="{AC3EC4CC-23CC-4D93-9CE4-92DDD29FBBBD}" ShortID="181723323">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_03" ID="{AC3EC4CC-23CC-4D93-9CE4-92DDD29FBBBD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_04" ID="{059D0C9F-8CC0-499A-8631-0298BC8AB172}" ShortID="1067662799">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_04" ID="{4550936A-787C-4983-8C61-D632333D518F}" ShortID="420083138">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_04" ID="{4550936A-787C-4983-8C61-D632333D518F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_05" ID="{590C8C23-A552-47F8-B37C-64F79BEF190E}" ShortID="988528944">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_05" ID="{F6245E40-CA1F-4AC0-80B3-BEFD6CC0B2D9}" ShortID="636177381">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_05" ID="{F6245E40-CA1F-4AC0-80B3-BEFD6CC0B2D9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_06" ID="{64A0BCA4-297B-4B52-AA09-F615760ABBA6}" ShortID="86860962">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_06" ID="{05E21083-A4F5-4DCB-9A1E-55CF1D0E9204}" ShortID="109279567">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_06" ID="{05E21083-A4F5-4DCB-9A1E-55CF1D0E9204}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_07" ID="{810E8D7A-3E57-4F5A-AF63-62990429BD14}" ShortID="552785294">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_07" ID="{7DA1B7AC-39AB-4144-9246-85FBB0877A43}" ShortID="397395142">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_07" ID="{7DA1B7AC-39AB-4144-9246-85FBB0877A43}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_08" ID="{B03FF410-7D11-4A97-92E8-6F66DAA943CD}" ShortID="995088313">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_08" ID="{AAC1DD8A-41BC-4573-B53D-F57970F6EDE1}" ShortID="334575657">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_08" ID="{AAC1DD8A-41BC-4573-B53D-F57970F6EDE1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_09" ID="{4A38D7B1-E893-40D0-AB72-58B6C007C895}" ShortID="26131241">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_09" ID="{A918E937-2329-4507-9CF9-24A8CB07E926}" ShortID="154803322">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_09" ID="{A918E937-2329-4507-9CF9-24A8CB07E926}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_10" ID="{A0E9019D-24D1-4945-81D5-A08D1FF07B92}" ShortID="815871772">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_10" ID="{C574FFC9-A1C4-436F-B4F1-2AE0111EC85F}" ShortID="758270199">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_10" ID="{C574FFC9-A1C4-436F-B4F1-2AE0111EC85F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_11" ID="{EB3CFFD8-E2C1-424C-84F4-28AF7156819A}" ShortID="138075098">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_11" ID="{33B004A9-6EF2-4551-97DB-A5B600C62547}" ShortID="397691542">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_11" ID="{33B004A9-6EF2-4551-97DB-A5B600C62547}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_12" ID="{FE981765-98BD-4C9E-982A-FADAC76D02F3}" ShortID="923321718">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_12" ID="{2BB776D6-5EA0-42E9-ABB3-6DEC98BABF78}" ShortID="215564687">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_12" ID="{2BB776D6-5EA0-42E9-ABB3-6DEC98BABF78}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_13" ID="{CA0B6F49-B52D-4F30-A1E6-9D9C734620C6}" ShortID="278788046">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_13" ID="{273D254A-0E4F-40B6-8453-86C2D9F3EBCA}" ShortID="271916315">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_13" ID="{273D254A-0E4F-40B6-8453-86C2D9F3EBCA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_14" ID="{B468DD7E-88EC-435C-B061-3AC111C059DB}" ShortID="971974391">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_14" ID="{8D1749D4-B889-440B-9519-491DF5A35E51}" ShortID="79273622">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_14.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_14" ID="{8D1749D4-B889-440B-9519-491DF5A35E51}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_15" ID="{1EE33D17-D89D-4531-B800-72545C17328F}" ShortID="17609079">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_15" ID="{354AA062-697B-40B5-8D5C-27A3CD5E56B2}" ShortID="579426921">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_15.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_15" ID="{354AA062-697B-40B5-8D5C-27A3CD5E56B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_16" ID="{39CD1D51-3714-412C-B956-F90087106669}" ShortID="148022562">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_16" ID="{F6F49BF2-777D-43C1-8AA8-0C56E187F359}" ShortID="1011809134">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_16.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_16" ID="{F6F49BF2-777D-43C1-8AA8-0C56E187F359}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_17" ID="{96B08E87-ACF6-44C7-99E2-EBF95A445C22}" ShortID="1069501568">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_17" ID="{1C9B41C9-F246-4A7F-A689-521DADB89910}" ShortID="422822986">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_17.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_17" ID="{1C9B41C9-F246-4A7F-A689-521DADB89910}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Go_18" ID="{77D82045-3A6C-4E7A-82C1-0D7E4A54CA2D}" ShortID="109052258">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Go_18" ID="{60575629-A622-4BC9-ABFA-EBD81045B775}" ShortID="484851149">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Go_18.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Go_18" ID="{60575629-A622-4BC9-ABFA-EBD81045B775}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VO_Synthia_Three" ID="{60EC3CBD-4833-43C9-9554-4B3A9E05D83A}" ShortID="241613569">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VO_Synthia_Three_01" ID="{E72585F7-59C9-430E-A6BC-4E5EAFF00E9F}" ShortID="900337686">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_01" ID="{11826420-018A-4E94-86EA-F4AA1A9D1DB6}" ShortID="164003645">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_01" ID="{11826420-018A-4E94-86EA-F4AA1A9D1DB6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_02" ID="{5CB6B444-097C-470D-A04A-4B40721FB616}" ShortID="599226357">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_02" ID="{6DE11AFD-E9E8-4AA7-939B-D0B2ABBA1BFD}" ShortID="498449104">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_02" ID="{6DE11AFD-E9E8-4AA7-939B-D0B2ABBA1BFD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_03" ID="{E32CEF76-6C6E-47C1-BFF4-CCA172104508}" ShortID="962527571">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_03" ID="{4736AA4F-E81B-435D-AB09-6C2D3C7EB90A}" ShortID="427721546">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_03" ID="{4736AA4F-E81B-435D-AB09-6C2D3C7EB90A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_04" ID="{5898CA0E-466D-4D0F-89BD-13F98CEA70B3}" ShortID="389182730">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_04" ID="{F71E076D-82BB-49E3-8EE0-2EBF597D9399}" ShortID="406641233">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_04" ID="{F71E076D-82BB-49E3-8EE0-2EBF597D9399}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_05" ID="{464AF490-B7F2-487F-BCA0-0D6547DE50FA}" ShortID="484551073">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_05" ID="{319DF1F3-DC9F-477B-9C11-840A0ABD6C76}" ShortID="263858540">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_05" ID="{319DF1F3-DC9F-477B-9C11-840A0ABD6C76}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_06" ID="{00B4D22D-7569-44F2-815F-DA6E572E125B}" ShortID="475469258">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_06" ID="{9B6A0E1E-2B0E-410E-916E-A9D2B04B6793}" ShortID="803238940">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_06" ID="{9B6A0E1E-2B0E-410E-916E-A9D2B04B6793}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_07" ID="{DC44BF33-E4D6-49EC-8246-30BF598B36AA}" ShortID="413191335">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_07" ID="{B88D34D0-4B49-480D-BEF9-A058A348D8BA}" ShortID="536342918">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_07" ID="{B88D34D0-4B49-480D-BEF9-A058A348D8BA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_08" ID="{51F0A736-1ED5-4572-AA7C-886C70BC926F}" ShortID="290737577">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_08" ID="{401A0D04-D752-4559-9424-E22A96853532}" ShortID="79167828">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_08" ID="{401A0D04-D752-4559-9424-E22A96853532}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_09" ID="{EDA813B3-A990-4352-9EF8-D710CF8BBA73}" ShortID="332031443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_09" ID="{0DAF9540-C9CA-4900-ABF7-793870CBFCEB}" ShortID="201893659">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_09" ID="{0DAF9540-C9CA-4900-ABF7-793870CBFCEB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Three_10" ID="{A0D1174A-E009-42F9-9FDA-C6F3CA7C6599}" ShortID="744547642">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Three_10" ID="{EC18F148-4AE1-4ED0-8F36-C26672F76738}" ShortID="445992740">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Three_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Three_10" ID="{EC18F148-4AE1-4ED0-8F36-C26672F76738}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VO_Synthia_Two" ID="{34273EBC-4E33-42AC-B761-64FFA7EDF1EA}" ShortID="1028225783">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VO_Synthia_Two" ID="{9C18107E-2DBE-4B1E-A3B5-CD2EF406BE3D}" ShortID="854895418">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two" ID="{36D82443-71E0-46E7-8128-ABBB6D27B346}" ShortID="158882460">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two" ID="{36D82443-71E0-46E7-8128-ABBB6D27B346}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_01" ID="{6F6717C3-0F1D-485F-A908-E55B259A942C}" ShortID="733259262">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_01" ID="{788DD21F-8D4D-420F-A590-24A8B8424C48}" ShortID="1043701217">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_01" ID="{788DD21F-8D4D-420F-A590-24A8B8424C48}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_02" ID="{EFE67833-E0E5-4BD3-B5F1-9C005B5222B6}" ShortID="274411894">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_02" ID="{17395CC3-79A6-4246-8E24-7C8A1C89C67A}" ShortID="776889763">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_02" ID="{17395CC3-79A6-4246-8E24-7C8A1C89C67A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_03" ID="{0A4AD8D2-2E5A-4209-B873-80FD0FB99F80}" ShortID="453672589">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_03" ID="{37DB3A46-6E55-4472-950D-A6C9D9B15ED2}" ShortID="305327269">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_03" ID="{37DB3A46-6E55-4472-950D-A6C9D9B15ED2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_04" ID="{6D4E0697-AD14-42DD-96D8-55E9DB24A0CA}" ShortID="566997408">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_04" ID="{9A9DE23D-7AF6-418B-8D68-1B1619FF440A}" ShortID="416625651">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_04" ID="{9A9DE23D-7AF6-418B-8D68-1B1619FF440A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_05" ID="{A50216E7-B32C-4FB8-903D-8FD13F2C28D0}" ShortID="773386429">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_05" ID="{0CF628A3-63A2-4982-BE48-EB42C74FB9EB}" ShortID="144088336">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_05" ID="{0CF628A3-63A2-4982-BE48-EB42C74FB9EB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_06" ID="{61949514-7AB1-4D11-A802-4E89AD55F99B}" ShortID="67284700">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_06" ID="{D85B7FA2-CFE0-4AEF-A939-52E1523C8FCB}" ShortID="888005451">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_06" ID="{D85B7FA2-CFE0-4AEF-A939-52E1523C8FCB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_07" ID="{710CC30D-8539-4D7F-B8C1-7E883204050C}" ShortID="501370032">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_07" ID="{9EF80F11-16F8-4B90-A5F6-C071EF9553A7}" ShortID="1065598430">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_07" ID="{9EF80F11-16F8-4B90-A5F6-C071EF9553A7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_08" ID="{A78B82F7-8E25-4427-BE18-64163EA486CC}" ShortID="701568504">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_08" ID="{27A7300C-7FE1-47CC-B0F5-6977F814CB4C}" ShortID="745268514">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_08" ID="{27A7300C-7FE1-47CC-B0F5-6977F814CB4C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Two_09" ID="{58C3A7A7-E221-4032-B6C0-1D2CF07847CE}" ShortID="648402648">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Two_09" ID="{73DAF04C-4EAF-4619-8BF5-C0B5AEB45209}" ShortID="510449137">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Two_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Two_09" ID="{73DAF04C-4EAF-4619-8BF5-C0B5AEB45209}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VO_Synthia_One" ID="{83FA138B-90AE-4EF4-8118-1D42DA533D43}" ShortID="876662151">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VO_Synthia_One" ID="{A0CE34F0-FAFA-4C56-B8B3-CE2C263867B0}" ShortID="611373817">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One" ID="{A7668FF5-1AB1-42EE-BA07-31BAB50535BF}" ShortID="349039423">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One" ID="{A7668FF5-1AB1-42EE-BA07-31BAB50535BF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_01" ID="{6AD246D0-75E8-4E30-8040-23FC8152D5CA}" ShortID="365883156">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_01" ID="{485F3661-CEEC-4034-AD1B-4FA2C32679BA}" ShortID="55373068">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_01" ID="{485F3661-CEEC-4034-AD1B-4FA2C32679BA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_02" ID="{404F8368-6548-483C-9B08-E979C55FD129}" ShortID="66280497">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_02" ID="{1CFFF74B-D57E-4728-A249-A571F5EFB158}" ShortID="954423297">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_02" ID="{1CFFF74B-D57E-4728-A249-A571F5EFB158}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_03" ID="{9CCB7F54-76AE-4202-AB0E-1E652A52654E}" ShortID="847860409">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_03" ID="{C68C39F6-ACE8-4DE5-A773-2901D9BCF892}" ShortID="933065559">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_03" ID="{C68C39F6-ACE8-4DE5-A773-2901D9BCF892}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_04" ID="{BBB5F5CE-BDC6-4379-A9DC-FEE9C3A97568}" ShortID="835037788">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_04" ID="{888A70D4-24DA-4F59-B96B-D228807EDC66}" ShortID="819775711">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_04" ID="{888A70D4-24DA-4F59-B96B-D228807EDC66}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_05" ID="{7D1D5486-9E95-46F2-B331-4A209655513E}" ShortID="129608184">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_05" ID="{F5DE5FAB-BA5E-4745-B340-4F9C498FE2B2}" ShortID="695095058">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_05" ID="{F5DE5FAB-BA5E-4745-B340-4F9C498FE2B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_06" ID="{EE3467CD-80BB-4FF7-888C-36039EBF1A81}" ShortID="100032024">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_06" ID="{1CB8CF6A-D62B-4D5B-8186-533413FD0649}" ShortID="89486570">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_06" ID="{1CB8CF6A-D62B-4D5B-8186-533413FD0649}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_07" ID="{1464BD8E-A54B-40F1-BC8C-DC2B81341F88}" ShortID="841740840">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_07" ID="{B532D374-45B4-4570-ABDC-70F468DD0E4D}" ShortID="165192627">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_07" ID="{B532D374-45B4-4570-ABDC-70F468DD0E4D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_08" ID="{BC21B0EB-6CA6-476B-A16E-816FC7E531D8}" ShortID="746712448">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_08" ID="{22E13AF3-32D2-4A5D-A5E7-6A4D0E79F3FA}" ShortID="764687448">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_08" ID="{22E13AF3-32D2-4A5D-A5E7-6A4D0E79F3FA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_One_09" ID="{D06A718E-6177-4E69-B947-173823C135C5}" ShortID="238946834">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_One_09" ID="{ABBD70E1-7DA5-4FC5-A26E-1F1ACDDA54C2}" ShortID="320709872">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_One_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_One_09" ID="{ABBD70E1-7DA5-4FC5-A26E-1F1ACDDA54C2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VO_Synthia_Spawn" ID="{1DBDBEE8-D024-4062-815F-C3C4A2B6AA3C}" ShortID="582421842">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VO_Synthia_Spawn" ID="{73055F52-9EF0-4968-AF60-EC3E0D4D0B4A}" ShortID="868049820">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn" ID="{50698B72-26A7-48F2-A0B0-CC47004ED7B8}" ShortID="870415777">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn" ID="{50698B72-26A7-48F2-A0B0-CC47004ED7B8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_01" ID="{78F9CC15-6EA7-45B5-AE03-75C5F62C8C8F}" ShortID="467910348">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_01" ID="{DBAB8F37-E72A-45AB-901D-B0F1347FE4D6}" ShortID="437159244">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_01" ID="{DBAB8F37-E72A-45AB-901D-B0F1347FE4D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_02" ID="{EEE88EC5-26C0-429A-B98D-91242E996B44}" ShortID="278528524">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_02" ID="{04B1DBA5-2353-4A61-86FB-ABEABD18A796}" ShortID="441781800">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_02" ID="{04B1DBA5-2353-4A61-86FB-ABEABD18A796}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_03" ID="{3DC7B0CF-29E8-4A22-8C47-2F9D3CE4E593}" ShortID="626204564">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_03" ID="{DDC0DB02-2673-4307-B1FF-243AC619E071}" ShortID="527839902">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_03" ID="{DDC0DB02-2673-4307-B1FF-243AC619E071}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_04" ID="{93BF3A84-1B67-4CAC-A6B7-208880A05ACD}" ShortID="457514108">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_04" ID="{0ECC44C9-60E6-409D-84F8-3415614D564B}" ShortID="828479876">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_04" ID="{0ECC44C9-60E6-409D-84F8-3415614D564B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_05" ID="{DA46B99B-C846-4306-9BA6-6EDFE66019B5}" ShortID="695520378">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_05" ID="{B79612F6-A4CE-4658-8787-25849CEEE60A}" ShortID="706192090">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_05" ID="{B79612F6-A4CE-4658-8787-25849CEEE60A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_06" ID="{98C1C10D-746E-4630-8E11-7AA790BE6D87}" ShortID="431965189">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_06" ID="{2DAB41FD-C6AA-4515-B7B0-AA591AE68379}" ShortID="608257067">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_06" ID="{2DAB41FD-C6AA-4515-B7B0-AA591AE68379}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_07" ID="{A0D3F532-D976-469A-8050-62BDFBB7169C}" ShortID="617030200">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_07" ID="{9BB38F78-23E6-4F1D-93E4-2ADC2607AF39}" ShortID="666799234">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_07" ID="{9BB38F78-23E6-4F1D-93E4-2ADC2607AF39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_08" ID="{BFEC2A68-4BC4-46B3-B14B-9AD90EB108BD}" ShortID="116201420">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_08" ID="{ED7502D8-3D2E-4DC0-9CB2-8EC59B8D1704}" ShortID="530724377">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_08" ID="{ED7502D8-3D2E-4DC0-9CB2-8EC59B8D1704}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_09" ID="{53EB91E3-7048-4265-BD36-E1C6A21CC8C2}" ShortID="323175498">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_09" ID="{83F1E2A9-6ED9-4DEB-8F93-F74885088E36}" ShortID="89019445">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_09" ID="{83F1E2A9-6ED9-4DEB-8F93-F74885088E36}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_11" ID="{112072EA-2008-4E9C-8C66-04C6A6738F47}" ShortID="169204753">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_11" ID="{CDE4AA7D-2B39-4CAD-837E-309541B84522}" ShortID="825668780">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_11" ID="{CDE4AA7D-2B39-4CAD-837E-309541B84522}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Spawn_10" ID="{EF7D44DC-1363-4273-B320-F6A4189AD795}" ShortID="248798575">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Spawn_13" ID="{25CB3159-AFD6-4569-87CC-4531CCCD3CD8}" ShortID="1002060247">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Spawn_13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Spawn_13" ID="{25CB3159-AFD6-4569-87CC-4531CCCD3CD8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VO_Synthia_Saw" ID="{F527916A-4292-4ACD-9015-B6D47D67B161}" ShortID="1065401927">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VO_Synthia_Saw_01" ID="{18B07278-1F82-44B6-BA25-1C1404D13E1F}" ShortID="531555653">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_01" ID="{057BAB07-171D-44F4-9545-9E966944874D}" ShortID="706595022">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_01" ID="{057BAB07-171D-44F4-9545-9E966944874D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_02" ID="{AE25CD60-C788-4797-879A-B99A6570D40C}" ShortID="434065158">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_02" ID="{0649562C-6CBB-4E8A-8B20-9EACFC3F651F}" ShortID="262888605">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_02" ID="{0649562C-6CBB-4E8A-8B20-9EACFC3F651F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_05" ID="{0ED73492-6B2B-4ACA-A548-B7447107239A}" ShortID="22087412">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_05" ID="{64574714-1C26-4518-B6F6-060183A90AE0}" ShortID="735521324">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_05" ID="{64574714-1C26-4518-B6F6-060183A90AE0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_06" ID="{26B5BB47-D69F-4C11-8F18-518BF27C384B}" ShortID="814191152">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_06" ID="{9CA44AA9-226E-4D96-AACF-DA4528537538}" ShortID="438319513">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_06" ID="{9CA44AA9-226E-4D96-AACF-DA4528537538}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_07" ID="{547E89B2-7761-4AAC-927F-B1E3056BEDEC}" ShortID="11920886">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_07" ID="{2D7D1F23-59B5-4DD1-B466-862E5B917ADB}" ShortID="84702937">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_07" ID="{2D7D1F23-59B5-4DD1-B466-862E5B917ADB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_08" ID="{E5DFBE24-2153-4232-8565-5530E4AD345C}" ShortID="585433493">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_08" ID="{C02215B2-F79D-4578-89C3-7BD8EE417946}" ShortID="844732184">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.60638716466895"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_08" ID="{C02215B2-F79D-4578-89C3-7BD8EE417946}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_09" ID="{17EDD9BE-0E76-4E49-AFEB-1619D7E3818C}" ShortID="483909985">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_09" ID="{996CAD91-A53C-4537-B4E7-380D1BDD11BD}" ShortID="27220805">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_09" ID="{996CAD91-A53C-4537-B4E7-380D1BDD11BD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_10" ID="{406311F3-D9FE-4F39-A9DF-CEC031353496}" ShortID="373052728">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_10" ID="{B65FAD55-4206-45CC-A641-FD537B550639}" ShortID="876432009">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_10" ID="{B65FAD55-4206-45CC-A641-FD537B550639}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_11" ID="{23CDF2C9-BE9D-4C35-AA2B-93A03B2B621B}" ShortID="64016073">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_11" ID="{24085435-CD49-4F34-8BF0-7B3A94938822}" ShortID="90019473">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_11" ID="{24085435-CD49-4F34-8BF0-7B3A94938822}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_12" ID="{D3FCB818-F826-412F-9532-4E1112F83E62}" ShortID="282891098">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_12" ID="{56F1130B-C346-4670-A720-D58F6EDBC030}" ShortID="640494538">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_12" ID="{56F1130B-C346-4670-A720-D58F6EDBC030}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_13" ID="{5DC314D7-7F71-4B91-9EDE-3052B32AB09C}" ShortID="88753715">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_13" ID="{DC545FB8-A46A-4703-B67D-02E1F16EB165}" ShortID="881279757">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_13" ID="{DC545FB8-A46A-4703-B67D-02E1F16EB165}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_14" ID="{464732E1-1880-48D3-833E-0C311808D8D8}" ShortID="150704426">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_14" ID="{D828D7DB-82EB-48AA-B5DA-A8BCEEC9D48F}" ShortID="407151145">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_14.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_14" ID="{D828D7DB-82EB-48AA-B5DA-A8BCEEC9D48F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Saw_15" ID="{16446139-E059-49F2-84A1-F3DAFA2C2831}" ShortID="451716097">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Saw_15" ID="{ABF0A094-D0DF-4558-B0C2-BE64DED0846A}" ShortID="28428759">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Saw_15.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Saw_15" ID="{ABF0A094-D0DF-4558-B0C2-BE64DED0846A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="VO_Synthia_Mine" ID="{0F658503-0CDD-42A0-8445-88F30A2E8288}" ShortID="239197830">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="VO_Synthia_Mine" ID="{7E46E08E-44AD-4D3A-AC67-076DE28D1902}" ShortID="633746179">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine" ID="{A9BE0F1D-F5F4-441B-B611-AE4576111815}" ShortID="117778155">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine" ID="{A9BE0F1D-F5F4-441B-B611-AE4576111815}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_01" ID="{24C243F6-4D95-44F8-A974-65472D5145EA}" ShortID="626472473">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_01" ID="{EA70235E-F356-4659-BFE6-50847685753E}" ShortID="794867810">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_01" ID="{EA70235E-F356-4659-BFE6-50847685753E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_02" ID="{0EC05AF8-0F19-417F-82EB-E2E4E1AB8E43}" ShortID="697476721">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_02" ID="{24ECEEC5-E201-40C3-9F0E-3CDB19E37A2D}" ShortID="778571574">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_02" ID="{24ECEEC5-E201-40C3-9F0E-3CDB19E37A2D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_03" ID="{1A8F993F-23D9-414D-AA05-B47706F995C5}" ShortID="472693587">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_03" ID="{3D35D9CF-044E-4B55-A7EF-981C67632C22}" ShortID="404527519">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_03" ID="{3D35D9CF-044E-4B55-A7EF-981C67632C22}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_04" ID="{1CD57329-182B-44D2-80D0-A9D5DE488E23}" ShortID="455536108">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_04" ID="{97DEE271-4B51-4AC7-BA17-E4D7566D3A89}" ShortID="399314938">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_04" ID="{97DEE271-4B51-4AC7-BA17-E4D7566D3A89}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_05" ID="{5996FEC7-4B10-4EE9-916A-01929B1D7ACB}" ShortID="874169208">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_05" ID="{888B004F-1E42-47EC-9583-FDE6B52E5080}" ShortID="595763816">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_05" ID="{888B004F-1E42-47EC-9583-FDE6B52E5080}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_06" ID="{3FF3F971-DAFB-4EFA-9FFD-8A601D54C969}" ShortID="981270059">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_06" ID="{127FF813-9716-4328-9282-CA3BAE7C204A}" ShortID="117951165">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_06" ID="{127FF813-9716-4328-9282-CA3BAE7C204A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_07" ID="{D31ECBA3-8053-4E37-8953-995B4C4311C5}" ShortID="442028282">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_07" ID="{EFBEA3E1-BD1E-45E7-8EC5-3577D63672B5}" ShortID="306837974">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_07" ID="{EFBEA3E1-BD1E-45E7-8EC5-3577D63672B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_08" ID="{DE58D183-B0A3-4406-8061-B4F6ED11274C}" ShortID="533774966">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_08" ID="{4E7A041A-7DD9-49F6-B03F-4A4F49A97713}" ShortID="594183268">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_08" ID="{4E7A041A-7DD9-49F6-B03F-4A4F49A97713}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_09" ID="{72DD7630-74BA-451D-9253-3A2AC54B3D0F}" ShortID="582313781">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_09" ID="{821568CA-A2BA-4382-A788-C1108D755C9B}" ShortID="1060458933">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_09" ID="{821568CA-A2BA-4382-A788-C1108D755C9B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_10" ID="{8EEE9FDC-EBA0-42F4-A098-320ED6251207}" ShortID="155231552">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_10" ID="{9AFE2DF8-3D94-432F-AD65-24EB54117D4A}" ShortID="566265899">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_10" ID="{9AFE2DF8-3D94-432F-AD65-24EB54117D4A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_11" ID="{FFA39E49-CE4B-4305-BC94-16570195A514}" ShortID="514033363">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_11" ID="{87A50A5E-CC00-46C2-92D4-13283F32C8BC}" ShortID="170813890">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_11" ID="{87A50A5E-CC00-46C2-92D4-13283F32C8BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_12" ID="{9A7958A0-BA58-4439-AA5F-892D115196EA}" ShortID="248296919">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_12" ID="{F50FA1E3-A854-4B32-8096-BFF8985790D1}" ShortID="708324875">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_12" ID="{F50FA1E3-A854-4B32-8096-BFF8985790D1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_13" ID="{5F6505FA-5D77-4C1A-B1C2-71ACCB657772}" ShortID="187831241">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_13" ID="{394367D8-3363-4BA7-93CB-4526980CF743}" ShortID="616484168">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_13" ID="{394367D8-3363-4BA7-93CB-4526980CF743}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_14" ID="{D03DD2F8-E7BC-4E83-A1EA-41FCD3F5E7E8}" ShortID="1065815992">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_14" ID="{65C71703-170D-4A2A-9060-695C18A0A0F1}" ShortID="985724857">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_14.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_14" ID="{65C71703-170D-4A2A-9060-695C18A0A0F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_15" ID="{A9AD53E0-1778-4406-A3CF-1A96D28D1C15}" ShortID="372194086">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_15" ID="{5A3066BE-FA0B-4FE4-ADD7-CDCBB490DA2E}" ShortID="937508447">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_15.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_15" ID="{5A3066BE-FA0B-4FE4-ADD7-CDCBB490DA2E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_16" ID="{BD1217ED-D08D-4A5D-94A4-50951247BD55}" ShortID="414186087">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_16" ID="{DE48354E-5F8A-46C8-B18E-DF6DF78C16D1}" ShortID="74918014">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_16.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_16" ID="{DE48354E-5F8A-46C8-B18E-DF6DF78C16D1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_17" ID="{B9828314-6683-4687-8B5C-665292148B44}" ShortID="213866002">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_17" ID="{D0F7BF03-A72C-4231-998C-C08D420E3D5D}" ShortID="561104097">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_17.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_17" ID="{D0F7BF03-A72C-4231-998C-C08D420E3D5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_18" ID="{69234B8F-9343-4A59-B709-091E9E8EEC1D}" ShortID="294168813">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_18" ID="{F1AEA99A-86E9-427D-964E-4432AF6F264D}" ShortID="786370355">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_18.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_18" ID="{F1AEA99A-86E9-427D-964E-4432AF6F264D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_19" ID="{3504D339-C575-40B5-9E74-F55DFFA84E12}" ShortID="778539013">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_19" ID="{6D3FB282-EF18-437A-82DD-93CAB34EE608}" ShortID="500171617">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_19.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_19" ID="{6D3FB282-EF18-437A-82DD-93CAB34EE608}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_20" ID="{361C8C71-4CB8-4464-9620-C823B5D28C8A}" ShortID="46571140">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_20" ID="{62877A2B-8595-4572-9717-A8EEBBCC5EE5}" ShortID="887878734">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_20.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_20" ID="{62877A2B-8595-4572-9717-A8EEBBCC5EE5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Synthia_Mine_21" ID="{1BA892C0-F2A4-4D88-A99F-3B69910FDE04}" ShortID="180163099">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Synthia_Mine_21" ID="{A2E7AF28-A904-40FD-92F0-9EE0760F3102}" ShortID="875088475">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VO_Synthia_Mine_21.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Synthia_Mine_21" ID="{A2E7AF28-A904-40FD-92F0-9EE0760F3102}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

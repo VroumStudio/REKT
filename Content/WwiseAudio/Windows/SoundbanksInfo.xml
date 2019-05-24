@@ -97,6 +97,13 @@
 				<Event Id="3624587671" Name="Play_UI_Pause" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Pause"/>
 				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
 				<Event Id="3550362706" Name="Play_VO_Minion_Run" ObjectPath="\Events\Default Work Unit\Play_VO_Minion_Run"/>
+				<Event Id="4087323339" Name="Play_VO_Synthia_Go" ObjectPath="\Events\Default Work Unit\Play_VO_Synthia_Go"/>
+				<Event Id="342744984" Name="Play_VO_Synthia_Mine" ObjectPath="\Events\Default Work Unit\Play_VO_Synthia_Mine"/>
+				<Event Id="1311581219" Name="Play_VO_Synthia_One" ObjectPath="\Events\Default Work Unit\Play_VO_Synthia_One"/>
+				<Event Id="1365165500" Name="Play_VO_Synthia_Saw" ObjectPath="\Events\Default Work Unit\Play_VO_Synthia_Saw"/>
+				<Event Id="4249960378" Name="Play_VO_Synthia_Spawn" ObjectPath="\Events\Default Work Unit\Play_VO_Synthia_Spawn"/>
+				<Event Id="3770034227" Name="Play_VO_Synthia_Three" ObjectPath="\Events\Default Work Unit\Play_VO_Synthia_Three"/>
+				<Event Id="1735406049" Name="Play_VO_Synthia_Two" ObjectPath="\Events\Default Work Unit\Play_VO_Synthia_Two"/>
 				<Event Id="177170041" Name="Set_State_Indoor" ObjectPath="\Events\Default Work Unit\States\Set_State_Indoor"/>
 				<Event Id="2630068541" Name="Set_State_Normal" ObjectPath="\Events\Default Work Unit\States\Set_State_Normal"/>
 				<Event Id="504240361" Name="Set_State_PauseOff" ObjectPath="\Events\Default Work Unit\States\Set_State_PauseOff"/>
@@ -131,6 +138,14 @@
 					<ShortName>VO_Minions-27.wav</ShortName>
 					<Path>SFX\VO_Minions-27_10C4C929.wem</Path>
 				</File>
+				<File Id="27220805" Language="SFX">
+					<ShortName>VO_Synthia_Saw_09.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_09_10C4C929.wem</Path>
+				</File>
+				<File Id="28428759" Language="SFX">
+					<ShortName>VO_Synthia_Saw_15.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_15_10C4C929.wem</Path>
+				</File>
 				<File Id="35856289" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_28.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_28_56D34C19.wem</Path>
@@ -138,6 +153,10 @@
 				<File Id="50865050" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_25.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_25_56D34C19.wem</Path>
+				</File>
+				<File Id="55373068" Language="SFX">
+					<ShortName>VO_Synthia_One_01.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_01_10C4C929.wem</Path>
 				</File>
 				<File Id="56188644" Language="SFX">
 					<ShortName>SFX_Coin_Pickup-01.wav</ShortName>
@@ -147,6 +166,22 @@
 					<ShortName>SFX_Monster_Run_Asphalt_6.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_6_56D34C19.wem</Path>
 				</File>
+				<File Id="72016270" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_10.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_10_10C4C929.wem</Path>
+				</File>
+				<File Id="74918014" Language="SFX">
+					<ShortName>VO_Synthia_Mine_16.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_16_10C4C929.wem</Path>
+				</File>
+				<File Id="79167828" Language="SFX">
+					<ShortName>VO_Synthia_Three_08.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_08_10C4C929.wem</Path>
+				</File>
+				<File Id="79273622" Language="SFX">
+					<ShortName>VO_Synthia_Go_14.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_14_10C4C929.wem</Path>
+				</File>
 				<File Id="81053282" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_36.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_36_56D34C19.wem</Path>
@@ -155,6 +190,10 @@
 					<ShortName>SFX_Monster_Run_Asphalt_38.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_38_56D34C19.wem</Path>
 				</File>
+				<File Id="84702937" Language="SFX">
+					<ShortName>VO_Synthia_Saw_07.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_07_10C4C929.wem</Path>
+				</File>
 				<File Id="85285287" Language="SFX">
 					<ShortName>VO_Minions-22.wav</ShortName>
 					<Path>SFX\VO_Minions-22_10C4C929.wem</Path>
@@ -162,6 +201,18 @@
 				<File Id="86250247" Language="SFX">
 					<ShortName>VO_Minions-10.wav</ShortName>
 					<Path>SFX\VO_Minions-10_10C4C929.wem</Path>
+				</File>
+				<File Id="89019445" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_09.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_09_10C4C929.wem</Path>
+				</File>
+				<File Id="89486570" Language="SFX">
+					<ShortName>VO_Synthia_One_06.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_06_10C4C929.wem</Path>
+				</File>
+				<File Id="90019473" Language="SFX">
+					<ShortName>VO_Synthia_Saw_11.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_11_10C4C929.wem</Path>
 				</File>
 				<File Id="90233645" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTEQUIP.wav</ShortName>
@@ -183,9 +234,21 @@
 					<ShortName>VO_Minions-02.wav</ShortName>
 					<Path>SFX\VO_Minions-02_10C4C929.wem</Path>
 				</File>
+				<File Id="109279567" Language="SFX">
+					<ShortName>VO_Synthia_Go_06.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_06_10C4C929.wem</Path>
+				</File>
 				<File Id="116157522" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_31.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_31_56D34C19.wem</Path>
+				</File>
+				<File Id="117778155" Language="SFX">
+					<ShortName>VO_Synthia_Mine.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_10C4C929.wem</Path>
+				</File>
+				<File Id="117951165" Language="SFX">
+					<ShortName>VO_Synthia_Mine_06.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_06_10C4C929.wem</Path>
 				</File>
 				<File Id="120863485" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_39.wav</ShortName>
@@ -207,6 +270,10 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop-09.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-09_56D34C19.wem</Path>
 				</File>
+				<File Id="144088336" Language="SFX">
+					<ShortName>VO_Synthia_Two_05.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_05_10C4C929.wem</Path>
+				</File>
 				<File Id="144273874" Language="SFX">
 					<ShortName>VO_Minions-33.wav</ShortName>
 					<Path>SFX\VO_Minions-33_10C4C929.wem</Path>
@@ -223,9 +290,17 @@
 					<ShortName>VO_Minions-37.wav</ShortName>
 					<Path>SFX\VO_Minions-37_10C4C929.wem</Path>
 				</File>
+				<File Id="154803322" Language="SFX">
+					<ShortName>VO_Synthia_Go_09.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_09_10C4C929.wem</Path>
+				</File>
 				<File Id="155211351" Language="SFX">
 					<ShortName>VO_Minions-39.wav</ShortName>
 					<Path>SFX\VO_Minions-39_10C4C929.wem</Path>
+				</File>
+				<File Id="158882460" Language="SFX">
+					<ShortName>VO_Synthia_Two.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_10C4C929.wem</Path>
 				</File>
 				<File Id="159642181" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_4.wav</ShortName>
@@ -239,21 +314,45 @@
 					<ShortName>VO_Minions-08.wav</ShortName>
 					<Path>SFX\VO_Minions-08_10C4C929.wem</Path>
 				</File>
+				<File Id="164003645" Language="SFX">
+					<ShortName>VO_Synthia_Three_01.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_01_10C4C929.wem</Path>
+				</File>
+				<File Id="165192627" Language="SFX">
+					<ShortName>VO_Synthia_One_07.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_07_10C4C929.wem</Path>
+				</File>
 				<File Id="168048995" Language="SFX">
 					<ShortName>SFX_SlowMo-02.wav</ShortName>
 					<Path>SFX\SFX_SlowMo-02_56D34C19.wem</Path>
+				</File>
+				<File Id="170813890" Language="SFX">
+					<ShortName>VO_Synthia_Mine_11.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_11_10C4C929.wem</Path>
 				</File>
 				<File Id="174565045" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_32.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_32_56D34C19.wem</Path>
 				</File>
+				<File Id="181723323" Language="SFX">
+					<ShortName>VO_Synthia_Go_03.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_03_10C4C929.wem</Path>
+				</File>
 				<File Id="188807683" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-10.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-10_56D34C19.wem</Path>
 				</File>
+				<File Id="201893659" Language="SFX">
+					<ShortName>VO_Synthia_Three_09.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_09_10C4C929.wem</Path>
+				</File>
 				<File Id="209010448" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTARMES.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTARMES_56D34C19.wem</Path>
+				</File>
+				<File Id="215564687" Language="SFX">
+					<ShortName>VO_Synthia_Go_12.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_12_10C4C929.wem</Path>
 				</File>
 				<File Id="227042817" Language="SFX">
 					<ShortName>VO_Minions-01.wav</ShortName>
@@ -275,6 +374,14 @@
 					<ShortName>SFX_Minion_Death_Rattle_04.wav</ShortName>
 					<Path>SFX\SFX_Minion_Death_Rattle_04_10C4C929.wem</Path>
 				</File>
+				<File Id="262888605" Language="SFX">
+					<ShortName>VO_Synthia_Saw_02.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_02_10C4C929.wem</Path>
+				</File>
+				<File Id="263858540" Language="SFX">
+					<ShortName>VO_Synthia_Three_05.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_05_10C4C929.wem</Path>
+				</File>
 				<File Id="268113833" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_21.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_21_56D34C19.wem</Path>
@@ -283,9 +390,17 @@
 					<ShortName>SFX_Monster_Run_Asphalt_1.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_1_56D34C19.wem</Path>
 				</File>
+				<File Id="271916315" Language="SFX">
+					<ShortName>VO_Synthia_Go_13.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_13_10C4C929.wem</Path>
+				</File>
 				<File Id="277094116" Language="SFX">
 					<ShortName>VO_Minions-45.wav</ShortName>
 					<Path>SFX\VO_Minions-45_10C4C929.wem</Path>
+				</File>
+				<File Id="284437187" Language="SFX">
+					<ShortName>VO_Synthia_Saw_03.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_03_10C4C929.wem</Path>
 				</File>
 				<File Id="293275728" Language="SFX">
 					<ShortName>VO_Minions-11.wav</ShortName>
@@ -311,6 +426,18 @@
 					<ShortName>VO_Minions-34.wav</ShortName>
 					<Path>SFX\VO_Minions-34_10C4C929.wem</Path>
 				</File>
+				<File Id="305327269" Language="SFX">
+					<ShortName>VO_Synthia_Two_03.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_03_10C4C929.wem</Path>
+				</File>
+				<File Id="306837974" Language="SFX">
+					<ShortName>VO_Synthia_Mine_07.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_07_10C4C929.wem</Path>
+				</File>
+				<File Id="320709872" Language="SFX">
+					<ShortName>VO_Synthia_One_09.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_09_10C4C929.wem</Path>
+				</File>
 				<File Id="322860509" Language="SFX">
 					<ShortName>VO_Minions-38.wav</ShortName>
 					<Path>SFX\VO_Minions-38_10C4C929.wem</Path>
@@ -318,6 +445,10 @@
 				<File Id="328045296" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-02.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-02_56D34C19.wem</Path>
+				</File>
+				<File Id="334575657" Language="SFX">
+					<ShortName>VO_Synthia_Go_08.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_08_10C4C929.wem</Path>
 				</File>
 				<File Id="337410547" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-13.wav</ShortName>
@@ -334,6 +465,10 @@
 				<File Id="348497741" Language="SFX">
 					<ShortName>VO_Minions-09.wav</ShortName>
 					<Path>SFX\VO_Minions-09_10C4C929.wem</Path>
+				</File>
+				<File Id="349039423" Language="SFX">
+					<ShortName>VO_Synthia_One.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_10C4C929.wem</Path>
 				</File>
 				<File Id="357001961" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-15.wav</ShortName>
@@ -355,21 +490,85 @@
 					<ShortName>SFX_Car_Nitro_Boost-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Nitro_Boost-01_56D34C19.wem</Path>
 				</File>
+				<File Id="397395142" Language="SFX">
+					<ShortName>VO_Synthia_Go_07.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_07_10C4C929.wem</Path>
+				</File>
+				<File Id="397691542" Language="SFX">
+					<ShortName>VO_Synthia_Go_11.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_11_10C4C929.wem</Path>
+				</File>
+				<File Id="399314938" Language="SFX">
+					<ShortName>VO_Synthia_Mine_04.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_04_10C4C929.wem</Path>
+				</File>
 				<File Id="399508028" Language="SFX">
 					<ShortName>SFX_Minion_Death_Rattle_03.wav</ShortName>
 					<Path>SFX\SFX_Minion_Death_Rattle_03_10C4C929.wem</Path>
+				</File>
+				<File Id="404527519" Language="SFX">
+					<ShortName>VO_Synthia_Mine_03.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_03_10C4C929.wem</Path>
+				</File>
+				<File Id="406641233" Language="SFX">
+					<ShortName>VO_Synthia_Three_04.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_04_10C4C929.wem</Path>
+				</File>
+				<File Id="407151145" Language="SFX">
+					<ShortName>VO_Synthia_Saw_14.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_14_10C4C929.wem</Path>
 				</File>
 				<File Id="415854430" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-11.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-11_56D34C19.wem</Path>
 				</File>
+				<File Id="416625651" Language="SFX">
+					<ShortName>VO_Synthia_Two_04.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_04_10C4C929.wem</Path>
+				</File>
+				<File Id="417819292" Language="SFX">
+					<ShortName>VO_Synthia_Saw.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_10C4C929.wem</Path>
+				</File>
+				<File Id="420083138" Language="SFX">
+					<ShortName>VO_Synthia_Go_04.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_04_10C4C929.wem</Path>
+				</File>
+				<File Id="422822986" Language="SFX">
+					<ShortName>VO_Synthia_Go_17.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_17_10C4C929.wem</Path>
+				</File>
 				<File Id="424078183" Language="SFX">
 					<ShortName>PH_SFX_Car_Transmission.wav</ShortName>
 					<Path>SFX\PH_SFX_Car_Transmission_56D34C19.wem</Path>
 				</File>
+				<File Id="427721546" Language="SFX">
+					<ShortName>VO_Synthia_Three_03.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_03_10C4C929.wem</Path>
+				</File>
+				<File Id="437159244" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_01.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_01_10C4C929.wem</Path>
+				</File>
+				<File Id="438319513" Language="SFX">
+					<ShortName>VO_Synthia_Saw_06.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_06_10C4C929.wem</Path>
+				</File>
+				<File Id="441781800" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_02.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_02_10C4C929.wem</Path>
+				</File>
+				<File Id="445992740" Language="SFX">
+					<ShortName>VO_Synthia_Three_10.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_10_10C4C929.wem</Path>
+				</File>
 				<File Id="455904396" Language="SFX">
 					<ShortName>VO_Minions-24.wav</ShortName>
 					<Path>SFX\VO_Minions-24_10C4C929.wem</Path>
+				</File>
+				<File Id="460982667" Language="SFX">
+					<ShortName>VO_Synthia_Go_01.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_01_10C4C929.wem</Path>
 				</File>
 				<File Id="473618790" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTOK.wav</ShortName>
@@ -379,6 +578,30 @@
 					<ShortName>SFX_Monster_Run_Asphalt_18.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_18_56D34C19.wem</Path>
 				</File>
+				<File Id="484851149" Language="SFX">
+					<ShortName>VO_Synthia_Go_18.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_18_10C4C929.wem</Path>
+				</File>
+				<File Id="498449104" Language="SFX">
+					<ShortName>VO_Synthia_Three_02.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_02_10C4C929.wem</Path>
+				</File>
+				<File Id="500171617" Language="SFX">
+					<ShortName>VO_Synthia_Mine_19.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_19_10C4C929.wem</Path>
+				</File>
+				<File Id="510449137" Language="SFX">
+					<ShortName>VO_Synthia_Two_09.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_09_10C4C929.wem</Path>
+				</File>
+				<File Id="527839902" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_03.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_03_10C4C929.wem</Path>
+				</File>
+				<File Id="530724377" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_08.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_08_10C4C929.wem</Path>
+				</File>
 				<File Id="533488739" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_20.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_20_56D34C19.wem</Path>
@@ -386,6 +609,10 @@
 				<File Id="535989292" Language="SFX">
 					<ShortName>UI_Build_Error.wav</ShortName>
 					<Path>SFX\UI_Build_Error_10C4C929.wem</Path>
+				</File>
+				<File Id="536342918" Language="SFX">
+					<ShortName>VO_Synthia_Three_07.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_07_10C4C929.wem</Path>
 				</File>
 				<File Id="539231935" Language="SFX">
 					<ShortName>AMB_COURSE_PAUSE.wav</ShortName>
@@ -395,9 +622,17 @@
 					<ShortName>SFX_Monster_Run_Asphalt_37.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_37_56D34C19.wem</Path>
 				</File>
+				<File Id="561104097" Language="SFX">
+					<ShortName>VO_Synthia_Mine_17.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_17_10C4C929.wem</Path>
+				</File>
 				<File Id="561559514" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_11.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_11_56D34C19.wem</Path>
+				</File>
+				<File Id="566265899" Language="SFX">
+					<ShortName>VO_Synthia_Mine_10.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_10_10C4C929.wem</Path>
 				</File>
 				<File Id="567412570" Language="SFX">
 					<ShortName>VO_Minions-16.wav</ShortName>
@@ -407,6 +642,10 @@
 					<ShortName>VO_Minions-21.wav</ShortName>
 					<Path>SFX\VO_Minions-21_10C4C929.wem</Path>
 				</File>
+				<File Id="579426921" Language="SFX">
+					<ShortName>VO_Synthia_Go_15.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_15_10C4C929.wem</Path>
+				</File>
 				<File Id="589012012" Language="SFX">
 					<ShortName>VO_Minions-06.wav</ShortName>
 					<Path>SFX\VO_Minions-06_10C4C929.wem</Path>
@@ -415,13 +654,25 @@
 					<ShortName>SFX_Garage_Lift_Down.wav</ShortName>
 					<Path>SFX\SFX_Garage_Lift_Down_10C4C929.wem</Path>
 				</File>
+				<File Id="594183268" Language="SFX">
+					<ShortName>VO_Synthia_Mine_08.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_08_10C4C929.wem</Path>
+				</File>
 				<File Id="594295153" Language="SFX">
 					<ShortName>VO_Minions-42.wav</ShortName>
 					<Path>SFX\VO_Minions-42_10C4C929.wem</Path>
 				</File>
+				<File Id="595763816" Language="SFX">
+					<ShortName>VO_Synthia_Mine_05.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_05_10C4C929.wem</Path>
+				</File>
 				<File Id="600397813" Language="SFX">
 					<ShortName>SFX_Turret_Flamethrower_Shoot.wav</ShortName>
 					<Path>SFX\SFX_Turret_Flamethrower_Shoot_10C4C929.wem</Path>
+				</File>
+				<File Id="608257067" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_06.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_06_10C4C929.wem</Path>
 				</File>
 				<File Id="614361376" Language="SFX">
 					<ShortName>VO_Minions-14.wav</ShortName>
@@ -430,6 +681,10 @@
 				<File Id="615726283" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_12.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_12_56D34C19.wem</Path>
+				</File>
+				<File Id="616484168" Language="SFX">
+					<ShortName>VO_Synthia_Mine_13.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_13_10C4C929.wem</Path>
 				</File>
 				<File Id="625407417" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_30.wav</ShortName>
@@ -443,6 +698,14 @@
 					<ShortName>SFX_Monster_Run_Asphalt_2.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_2_56D34C19.wem</Path>
 				</File>
+				<File Id="636177381" Language="SFX">
+					<ShortName>VO_Synthia_Go_05.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_05_10C4C929.wem</Path>
+				</File>
+				<File Id="640494538" Language="SFX">
+					<ShortName>VO_Synthia_Saw_12.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_12_10C4C929.wem</Path>
+				</File>
 				<File Id="647363192" Language="SFX">
 					<ShortName>AMB_GARAGE.wav</ShortName>
 					<Path>SFX\AMB_GARAGE_56D34C19.wem</Path>
@@ -450,6 +713,10 @@
 				<File Id="650239712" Language="SFX">
 					<ShortName>VO_Minions-25.wav</ShortName>
 					<Path>SFX\VO_Minions-25_10C4C929.wem</Path>
+				</File>
+				<File Id="666799234" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_07.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_07_10C4C929.wem</Path>
 				</File>
 				<File Id="669123038" Language="SFX">
 					<ShortName>SFX_Mine_Deploy_01.wav</ShortName>
@@ -483,6 +750,10 @@
 					<ShortName>SFX_Minion_Death_Debris_04.wav</ShortName>
 					<Path>SFX\SFX_Minion_Death_Debris_04_10C4C929.wem</Path>
 				</File>
+				<File Id="695095058" Language="SFX">
+					<ShortName>VO_Synthia_One_05.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_05_10C4C929.wem</Path>
+				</File>
 				<File Id="695237997" Language="SFX">
 					<ShortName>VO_Minions-47.wav</ShortName>
 					<Path>SFX\VO_Minions-47_10C4C929.wem</Path>
@@ -490,6 +761,18 @@
 				<File Id="702257288" Language="SFX">
 					<ShortName>VO_Minions-05.wav</ShortName>
 					<Path>SFX\VO_Minions-05_10C4C929.wem</Path>
+				</File>
+				<File Id="706192090" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_05.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_05_10C4C929.wem</Path>
+				</File>
+				<File Id="706595022" Language="SFX">
+					<ShortName>VO_Synthia_Saw_01.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_01_10C4C929.wem</Path>
+				</File>
+				<File Id="708324875" Language="SFX">
+					<ShortName>VO_Synthia_Mine_12.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_12_10C4C929.wem</Path>
 				</File>
 				<File Id="712891595" Language="SFX">
 					<ShortName>VO_Minions-40.wav</ShortName>
@@ -511,6 +794,14 @@
 					<ShortName>SFX_Coin_Synth.wav</ShortName>
 					<Path>SFX\SFX_Coin_Synth_10C4C929.wem</Path>
 				</File>
+				<File Id="735521324" Language="SFX">
+					<ShortName>VO_Synthia_Saw_05.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_05_10C4C929.wem</Path>
+				</File>
+				<File Id="745268514" Language="SFX">
+					<ShortName>VO_Synthia_Two_08.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_08_10C4C929.wem</Path>
+				</File>
 				<File Id="746319321" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_23.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_23_56D34C19.wem</Path>
@@ -519,6 +810,10 @@
 					<ShortName>SFX_Car_Tire_Drift_Start-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem</Path>
 				</File>
+				<File Id="758270199" Language="SFX">
+					<ShortName>VO_Synthia_Go_10.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_10_10C4C929.wem</Path>
+				</File>
 				<File Id="761706438" Language="SFX">
 					<ShortName>VO_Minions-23.wav</ShortName>
 					<Path>SFX\VO_Minions-23_10C4C929.wem</Path>
@@ -526,6 +821,22 @@
 				<File Id="763520401" Language="SFX">
 					<ShortName>VO_Minions-43.wav</ShortName>
 					<Path>SFX\VO_Minions-43_10C4C929.wem</Path>
+				</File>
+				<File Id="764687448" Language="SFX">
+					<ShortName>VO_Synthia_One_08.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_08_10C4C929.wem</Path>
+				</File>
+				<File Id="776889763" Language="SFX">
+					<ShortName>VO_Synthia_Two_02.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_02_10C4C929.wem</Path>
+				</File>
+				<File Id="778571574" Language="SFX">
+					<ShortName>VO_Synthia_Mine_02.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_02_10C4C929.wem</Path>
+				</File>
+				<File Id="786370355" Language="SFX">
+					<ShortName>VO_Synthia_Mine_18.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_18_10C4C929.wem</Path>
 				</File>
 				<File Id="789886876" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_19.wav</ShortName>
@@ -539,9 +850,17 @@
 					<ShortName>VO_Minions-26.wav</ShortName>
 					<Path>SFX\VO_Minions-26_10C4C929.wem</Path>
 				</File>
+				<File Id="794867810" Language="SFX">
+					<ShortName>VO_Synthia_Mine_01.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_01_10C4C929.wem</Path>
+				</File>
 				<File Id="800857768" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_15.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_15_56D34C19.wem</Path>
+				</File>
+				<File Id="803238940" Language="SFX">
+					<ShortName>VO_Synthia_Three_06.wav</ShortName>
+					<Path>SFX\VO_Synthia_Three_06_10C4C929.wem</Path>
 				</File>
 				<File Id="804439789" Language="SFX">
 					<ShortName>SFX_Mine_Deploy_02.wav</ShortName>
@@ -551,13 +870,29 @@
 					<ShortName>SFX_Monster_Run_Asphalt_9.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_9_56D34C19.wem</Path>
 				</File>
+				<File Id="819775711" Language="SFX">
+					<ShortName>VO_Synthia_One_04.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_04_10C4C929.wem</Path>
+				</File>
 				<File Id="821765287" Language="SFX">
 					<ShortName>VO_Minions-35.wav</ShortName>
 					<Path>SFX\VO_Minions-35_10C4C929.wem</Path>
 				</File>
+				<File Id="825668780" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_11.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_11_10C4C929.wem</Path>
+				</File>
+				<File Id="828479876" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_04.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_04_10C4C929.wem</Path>
+				</File>
 				<File Id="828574803" Language="SFX">
 					<ShortName>VO_Minions-36.wav</ShortName>
 					<Path>SFX\VO_Minions-36_10C4C929.wem</Path>
+				</File>
+				<File Id="833747934" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_12.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_12_10C4C929.wem</Path>
 				</File>
 				<File Id="840294410" Language="SFX">
 					<ShortName>SFX_Coin_Pickup (2).wav</ShortName>
@@ -570,6 +905,10 @@
 				<File Id="841573623" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_27.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_27_56D34C19.wem</Path>
+				</File>
+				<File Id="844732184" Language="SFX">
+					<ShortName>VO_Synthia_Saw_08.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_08_F6B81630.wem</Path>
 				</File>
 				<File Id="852890476" Language="SFX">
 					<ShortName>SFX_Minion_Death_Impact_04.wav</ShortName>
@@ -587,6 +926,18 @@
 					<ShortName>SFX_Car_Nitro_Refill.wav</ShortName>
 					<Path>SFX\SFX_Car_Nitro_Refill_56D34C19.wem</Path>
 				</File>
+				<File Id="870415777" Language="SFX">
+					<ShortName>VO_Synthia_Spawn.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_10C4C929.wem</Path>
+				</File>
+				<File Id="875088475" Language="SFX">
+					<ShortName>VO_Synthia_Mine_21.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_21_10C4C929.wem</Path>
+				</File>
+				<File Id="876432009" Language="SFX">
+					<ShortName>VO_Synthia_Saw_10.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_10_10C4C929.wem</Path>
+				</File>
 				<File Id="876872529" Language="SFX">
 					<ShortName>SFX_Monster_Run_Rouling.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Rouling_8956FC97.wem</Path>
@@ -594,6 +945,10 @@
 				<File Id="877861424" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_10.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_10_56D34C19.wem</Path>
+				</File>
+				<File Id="881279757" Language="SFX">
+					<ShortName>VO_Synthia_Saw_13.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_13_10C4C929.wem</Path>
 				</File>
 				<File Id="884978022" Language="SFX">
 					<ShortName>VO_Minions-03.wav</ShortName>
@@ -606,6 +961,18 @@
 				<File Id="887829737" Language="SFX">
 					<ShortName>SFX_Minion_Death_Debris_03.wav</ShortName>
 					<Path>SFX\SFX_Minion_Death_Debris_03_10C4C929.wem</Path>
+				</File>
+				<File Id="887878734" Language="SFX">
+					<ShortName>VO_Synthia_Mine_20.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_20_10C4C929.wem</Path>
+				</File>
+				<File Id="888005451" Language="SFX">
+					<ShortName>VO_Synthia_Two_06.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_06_10C4C929.wem</Path>
+				</File>
+				<File Id="888628812" Language="SFX">
+					<ShortName>VO_Synthia_Saw_04.wav</ShortName>
+					<Path>SFX\VO_Synthia_Saw_04_10C4C929.wem</Path>
 				</File>
 				<File Id="894102337" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-04.wav</ShortName>
@@ -631,6 +998,14 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop-14.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem</Path>
 				</File>
+				<File Id="933065559" Language="SFX">
+					<ShortName>VO_Synthia_One_03.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_03_10C4C929.wem</Path>
+				</File>
+				<File Id="937508447" Language="SFX">
+					<ShortName>VO_Synthia_Mine_15.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_15_10C4C929.wem</Path>
+				</File>
 				<File Id="942125961" Language="SFX">
 					<ShortName>MUSIC_GARAGE_DRY.wav</ShortName>
 					<Path>SFX\MUSIC_GARAGE_DRY_8956FC97.wem</Path>
@@ -638,6 +1013,14 @@
 				<File Id="943796425" Language="SFX">
 					<ShortName>SFX_Car_Nitro_Boost.wav</ShortName>
 					<Path>SFX\SFX_Car_Nitro_Boost_56D34C19.wem</Path>
+				</File>
+				<File Id="954423297" Language="SFX">
+					<ShortName>VO_Synthia_One_02.wav</ShortName>
+					<Path>SFX\VO_Synthia_One_02_10C4C929.wem</Path>
+				</File>
+				<File Id="974347877" Language="SFX">
+					<ShortName>VO_Synthia_Go_02.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_02_10C4C929.wem</Path>
 				</File>
 				<File Id="981376012" Language="SFX">
 					<ShortName>VO_Minions-20.wav</ShortName>
@@ -659,13 +1042,25 @@
 					<ShortName>SFX_Car_Tire_Drift_Start-05.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-05_56D34C19.wem</Path>
 				</File>
+				<File Id="985724857" Language="SFX">
+					<ShortName>VO_Synthia_Mine_14.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_14_10C4C929.wem</Path>
+				</File>
 				<File Id="994024452" Language="SFX">
 					<ShortName>SFX_Door_Garage_Open.wav</ShortName>
 					<Path>SFX\SFX_Door_Garage_Open_10C4C929.wem</Path>
 				</File>
+				<File Id="1002060247" Language="SFX">
+					<ShortName>VO_Synthia_Spawn_13.wav</ShortName>
+					<Path>SFX\VO_Synthia_Spawn_13_10C4C929.wem</Path>
+				</File>
 				<File Id="1007014752" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_24.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_24_56D34C19.wem</Path>
+				</File>
+				<File Id="1011809134" Language="SFX">
+					<ShortName>VO_Synthia_Go_16.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_16_10C4C929.wem</Path>
 				</File>
 				<File Id="1013313836" Language="SFX">
 					<ShortName>VO_Minions-31.wav</ShortName>
@@ -687,6 +1082,14 @@
 					<ShortName>SFX_Turret_Confirm.wav</ShortName>
 					<Path>SFX\SFX_Turret_Confirm_2A2C6018.wem</Path>
 				</File>
+				<File Id="1042271659" Language="SFX">
+					<ShortName>VO_Synthia_Go.wav</ShortName>
+					<Path>SFX\VO_Synthia_Go_10C4C929.wem</Path>
+				</File>
+				<File Id="1043701217" Language="SFX">
+					<ShortName>VO_Synthia_Two_01.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_01_10C4C929.wem</Path>
+				</File>
 				<File Id="1045634337" Language="SFX">
 					<ShortName>SFX_Turret_Laserbeam_Loop.wav</ShortName>
 					<Path>SFX\SFX_Turret_Laserbeam_Loop_D79FB2B7.wem</Path>
@@ -699,9 +1102,17 @@
 					<ShortName>SFX_Minion_Death_Debris_02.wav</ShortName>
 					<Path>SFX\SFX_Minion_Death_Debris_02_10C4C929.wem</Path>
 				</File>
+				<File Id="1060458933" Language="SFX">
+					<ShortName>VO_Synthia_Mine_09.wav</ShortName>
+					<Path>SFX\VO_Synthia_Mine_09_10C4C929.wem</Path>
+				</File>
 				<File Id="1065341630" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-08.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-08_56D34C19.wem</Path>
+				</File>
+				<File Id="1065598430" Language="SFX">
+					<ShortName>VO_Synthia_Two_07.wav</ShortName>
+					<Path>SFX\VO_Synthia_Two_07_10C4C929.wem</Path>
 				</File>
 				<File Id="1071402905" Language="SFX">
 					<ShortName>SFX_Turret_Drop.wav</ShortName>

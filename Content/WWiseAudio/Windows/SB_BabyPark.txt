@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	152581	StartLevelConfig			\Default Work Unit\New Virtual Folder\StartLevelConfig	
 	35730698	Play_SFX_Wpn_Gatling_Shoot			\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Shoot	
 	177170041	Set_State_Indoor			\Default Work Unit\States\Set_State_Indoor	
+	342744984	Play_VO_Synthia_Mine			\Default Work Unit\Play_VO_Synthia_Mine	
 	434512859	Set_State_ST_SlowMo			\Default Work Unit\States\Set_State_ST_SlowMo	
 	504240361	Set_State_PauseOff			\Default Work Unit\States\Set_State_PauseOff	
 	624714026	Play_UI_Weapons			\Default Work Unit\UI\Play_UI_Weapons	
@@ -9,13 +10,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	878452949	Play_UI_Equipment			\Default Work Unit\UI\Play_UI_Equipment	
 	1020321262	Car_Engine			\Default Work Unit\New Virtual Folder\Car_Engine	
 	1167921499	Play_SFX_Mine_Deploy			\Default Work Unit\Play_SFX_Mine_Deploy	
+	1311581219	Play_VO_Synthia_One			\Default Work Unit\Play_VO_Synthia_One	
 	1331039088	Play_SFX_Turret_Drop			\Default Work Unit\Play_SFX_Turret_Drop	
 	1334060522	Set_Switch_Lift_Up			\Default Work Unit\SFX\Lift\Set_Switch_Lift_Up	
+	1365165500	Play_VO_Synthia_Saw			\Default Work Unit\Play_VO_Synthia_Saw	
 	1472165566	Play_Music_BabyPark			\Default Work Unit\Play_Music_BabyPark	
 	1485572176	Play_SFX_Turret_Laser_Shoot			\Default Work Unit\Play_SFX_Turret_Laser_Shoot	
 	1501458217	Play_Amb_BabyPark			\Default Work Unit\AMB\Play_Amb_BabyPark	
 	1569993949	Play_SFX_Trap_Mine_Explode			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Explode	
 	1576113860	Play_SFX_Wpn_Gatling_Summon			\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon	
+	1735406049	Play_VO_Synthia_Two			\Default Work Unit\Play_VO_Synthia_Two	
 	1857540444	Stop_SFX_Monster_Run			\Default Work Unit\Stop_SFX_Monster_Run	
 	1868201586	Play_SFX_Wpn_FlameThrower_Summon			\Default Work Unit\SFX_Car\Play_SFX_Wpn_FlameThrower_Summon	
 	1871393852	Set_State_ST_Build			\Default Work Unit\States\Set_State_ST_Build	
@@ -48,8 +52,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3624587671	Play_UI_Pause			\Default Work Unit\UI\Play_UI_Pause	
 	3626629520	Play_UI_Movement			\Default Work Unit\UI\Play_UI_Movement	
 	3702949984	Play_UI_Lap_Finish			\Default Work Unit\Play_UI_Lap_Finish	
+	3770034227	Play_VO_Synthia_Three			\Default Work Unit\Play_VO_Synthia_Three	
+	4087323339	Play_VO_Synthia_Go			\Default Work Unit\Play_VO_Synthia_Go	
 	4140093725	Set_Switch_Lift_Down			\Default Work Unit\SFX\Lift\Set_Switch_Lift_Down	
 	4185453606	Play_SFX_Trap_Mine_Trigger			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Trigger	
+	4249960378	Play_VO_Synthia_Spawn			\Default Work Unit\Play_VO_Synthia_Spawn	
 	4265925356	Play_SFX_Trap_Mine_Idle			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Idle	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -103,86 +110,151 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	22608017	Music_BabyPark_Intro	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Intro		6144068
 	25546923	VO_Minions-27	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-27_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-27		32504
+	27220805	VO_Synthia_Saw_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_09		300604
+	28428759	VO_Synthia_Saw_15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_15		330364
 	35856289	SFX_Monster_Run_Asphalt_28	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_28_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_28		6514
 	50865050	SFX_Monster_Run_Asphalt_25	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_25_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_25		6514
+	55373068	VO_Synthia_One_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_01		165948
 	56188644	SFX_Coin_Pickup-01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\UI_Coin_RDM\SFX_Coin_Pickup-01		213880
 	59304707	SFX_Monster_Run_Asphalt_6	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_6		6512
+	72016270	VO_Synthia_Spawn_10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_10		341908
+	74918014	VO_Synthia_Mine_16	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_16		345128
+	79167828	VO_Synthia_Three_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_08		182128
+	79273622	VO_Synthia_Go_14	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_14		197684
 	81053282	SFX_Monster_Run_Asphalt_36	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_36_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_36		6512
 	81337290	SFX_Monster_Run_Asphalt_38	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_38_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_38		6512
+	84702937	VO_Synthia_Saw_07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_07		374052
 	85285287	VO_Minions-22	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-22_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-22		36796
 	86250247	VO_Minions-10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-10		18020
+	89019445	VO_Synthia_Spawn_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_09		437672
+	89486570	VO_Synthia_One_06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_06		205680
+	90019473	VO_Synthia_Saw_11	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_11		283036
 	90233645	UI_Equipment	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTEQUIP_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Equipment		240116
 	97264880	SFX_Minion_Death_Impact_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Impact_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Impact\SFX_Minion_Death_Impact_03		596028
 	98801455	VO_Minions-18	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-18_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-18		42648
 	100859020	SFX_Minion_Death_Impact_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Impact_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Impact\SFX_Minion_Death_Impact_01		487488
 	101603523	VO_Minions-02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-02		34824
+	109279567	VO_Synthia_Go_06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_06		262388
 	116157522	SFX_Monster_Run_Asphalt_31	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_31_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_31		6514
+	117778155	VO_Synthia_Mine	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine		299880
+	117951165	VO_Synthia_Mine_06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_06		327464
 	120863485	SFX_Monster_Run_Asphalt_39	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_39_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_39		6512
 	126222834	VO_Minions-07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-07		80512
 	127778559	SFX_Monster_Run_Asphalt_33	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_33_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_33		6512
 	133157363	SFX_Minion_Death_Rattle_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Rattle_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Rattle\SFX_Minion_Death_Rattle_02		478452
 	138180119	SFX_Car_Tire_Drift_Loop-09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-09_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-09		26720
+	144088336	VO_Synthia_Two_05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_05		197940
 	144273874	VO_Minions-33	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-33_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-33		43036
 	151260125	SFX_Minion_Death_Impact_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Impact_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Impact\SFX_Minion_Death_Impact_02		407616
 	151755535	SFX_Car_Tire_Drift_Loop-01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-01		33384
 	154644001	VO_Minions-37	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-37_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-37		26780
+	154803322	VO_Synthia_Go_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_09		212456
 	155211351	VO_Minions-39	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-39_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-39		87968
+	158882460	VO_Synthia_Two	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two		192016
 	159642181	SFX_Monster_Run_Asphalt_4	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_4		6512
 	162277977	SFX_Coin_Pickup-02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\UI_Coin_RDM\SFX_Coin_Pickup-02		213880
 	163662963	VO_Minions-08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-08		18480
+	164003645	VO_Synthia_Three_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_01		191408
+	165192627	VO_Synthia_One_07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_07		197640
 	168048995	SFX_SlowMo	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_SlowMo-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_SlowMo		165704
+	170813890	VO_Synthia_Mine_11	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_11		344892
 	174565045	SFX_Monster_Run_Asphalt_32	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_32_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_32		6512
+	181723323	VO_Synthia_Go_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_03		247252
 	188807683	SFX_Car_Tire_Drift_Loop-10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-10		46712
+	201893659	VO_Synthia_Three_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_09		232684
 	209010448	UI_Weapons	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTARMES_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Weapons		232656
+	215564687	VO_Synthia_Go_12	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_12		240352
 	227042817	VO_Minions-01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Minion_Death\VO_Minions-01		222244
 	238080646	VO_Minions-13	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-13		47640
 	246661573	UI_Movement	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTLEFTRIGHT_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Movement		4864
 	247985915	UI_Babypark_Checkpoint	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\UI_Babypark_Checkpoint_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Babypark_Checkpoint		480072
 	259676439	SFX_Minion_Death_Rattle_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Rattle_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Rattle\SFX_Minion_Death_Rattle_04		478452
+	262888605	VO_Synthia_Saw_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_02		296052
+	263858540	VO_Synthia_Three_05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_05		207556
 	268113833	SFX_Monster_Run_Asphalt_21	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_21_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_21		6512
 	271719483	SFX_Monster_Run_Asphalt_1	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_1		4830
+	271916315	VO_Synthia_Go_13	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_13		299752
 	277094116	VO_Minions-45	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-45_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-45		29068
+	284437187	VO_Synthia_Saw_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_03		310080
 	293275728	VO_Minions-11	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-11		65360
 	293395486	VO_Minions-12	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-12		24476
 	295335497	VO_Minions-46	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-46_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Minion_Death\VO_Minions-46		298480
 	297114072	VO_Minions-19	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-19_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-19		10656
 	298591253	SFX_Turret_Laserbeam_Shoot_Start	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Turret_Laserbeam_Shoot_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Turret\SFX_Turret_Laser_Shoot\SFX_Turret_Laserbeam_Shoot_Start		145372
 	304171451	VO_Minions-34	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-34_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-34		28228
+	305327269	VO_Synthia_Two_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_03		206724
+	306837974	VO_Synthia_Mine_07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_07		323072
+	320709872	VO_Synthia_One_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_09		199072
 	322860509	VO_Minions-38	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-38_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-38		44064
 	328045296	SFX_Car_Tire_Drift_Loop-02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-02		35608
+	334575657	VO_Synthia_Go_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_08		304912
 	337410547	SFX_Car_Tire_Drift_Loop-13	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-13_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-13		51152
 	338627591	SFX_Car_Tire_Drift_Loop-03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-03		42268
 	341212262	SFX_Monster_Run_Asphalt_8	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_8		6512
 	348497741	VO_Minions-09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-09		38204
+	349039423	VO_Synthia_One	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One		200376
 	357001961	SFX_Car_Tire_Drift_Loop-15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-15_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-15		33384
 	357915156	SFX_Car_Tire_Drift_Loop	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop		33384
 	361625307	VO_Minions-32	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-32_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-32		11528
 	370879609	VO_Minions-29	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-29_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-29		15276
 	373229762	SFX_Car_Nitro_Boost-01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Boost-01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro\SFX_Car_Nitro_Boost-01		238644
+	397395142	VO_Synthia_Go_07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_07		227620
+	397691542	VO_Synthia_Go_11	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_11		272568
+	399314938	VO_Synthia_Mine_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_04		318596
 	399508028	SFX_Minion_Death_Rattle_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Rattle_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Rattle\SFX_Minion_Death_Rattle_03		343772
+	404527519	VO_Synthia_Mine_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_03		304216
+	406641233	VO_Synthia_Three_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_04		242392
+	407151145	VO_Synthia_Saw_14	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_14		307936
 	415854430	SFX_Car_Tire_Drift_Loop-11	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-11_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-11		40048
+	416625651	VO_Synthia_Two_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_04		189280
+	417819292	VO_Synthia_Saw	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw		330480
+	420083138	VO_Synthia_Go_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_04		223364
+	422822986	VO_Synthia_Go_17	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_17_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_17		226280
 	424078183	PH_SFX_Car_Transmission	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\PH_SFX_Car_Transmission_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\PH_SFX_Car_Transmission		445264
+	427721546	VO_Synthia_Three_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_03		251060
+	437159244	VO_Synthia_Spawn_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_01		451096
+	438319513	VO_Synthia_Saw_06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_06		347168
+	441781800	VO_Synthia_Spawn_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_02		341984
+	445992740	VO_Synthia_Three_10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_10		188852
 	455904396	VO_Minions-24	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-24_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-24		27812
+	460982667	VO_Synthia_Go_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_01		234740
 	473618790	UI_Confirm	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_SELECTOK_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Confirm		14160
 	477144447	SFX_Monster_Run_Asphalt_18	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_18_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_18		6512
+	484851149	VO_Synthia_Go_18	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_18_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_18		246600
+	498449104	VO_Synthia_Three_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_02		232348
+	500171617	VO_Synthia_Mine_19	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_19_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_19		368776
+	510449137	VO_Synthia_Two_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_09		184608
+	527839902	VO_Synthia_Spawn_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_03		349252
+	530724377	VO_Synthia_Spawn_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_08		442832
 	533488739	SFX_Monster_Run_Asphalt_20	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_20_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_20		6512
 	535989292	UI_Build_Error	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\UI_Build_Error_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Build_Error		101520
+	536342918	VO_Synthia_Three_07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_07		190380
 	539231935	UI_Pause	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_COURSE_PAUSE_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Pause		96064
 	542680252	SFX_Monster_Run_Asphalt_37	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_37_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_37		6514
+	561104097	VO_Synthia_Mine_17	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_17_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_17		300988
 	561559514	SFX_Monster_Run_Asphalt_11	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_11_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_11		6512
+	566265899	VO_Synthia_Mine_10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_10		367416
 	567412570	VO_Minions-16	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-16		32076
 	567565694	VO_Minions-21	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-21_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-21		27716
+	579426921	VO_Synthia_Go_15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_15		252672
 	589012012	VO_Minions-06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-06		47660
 	590704914	SFX_Garage_Lift_Down	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Garage_Lift_Down_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Lift\SFX_Garage_Lift_Down		488984
+	594183268	VO_Synthia_Mine_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_08		364472
 	594295153	VO_Minions-42	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-42_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-42		68428
+	595763816	VO_Synthia_Mine_05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_05		327464
 	600397813	SFX_Turret_Flamethrower_Shoot	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Turret_Flamethrower_Shoot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Turret\SFX_Turret_FlameThrower_Shoot\SFX_Turret_Flamethrower_Shoot		379120
+	608257067	VO_Synthia_Spawn_06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_06		307052
 	614361376	VO_Minions-14	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Minion_Death\VO_Minions-14		102704
 	615726283	SFX_Monster_Run_Asphalt_12	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_12_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_12		6512
+	616484168	VO_Synthia_Mine_13	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_13		388712
 	625407417	SFX_Monster_Run_Asphalt_30	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_30_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_30		6514
 	630336622	SFX_Monster_Run_Asphalt_26	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_26_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_26		6514
 	630750179	SFX_Monster_Run_Asphalt_2	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_2		6512
+	636177381	VO_Synthia_Go_05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_05		274724
+	640494538	VO_Synthia_Saw_12	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_12		325880
 	647363192	Amb_BabyPark	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\AMB_GARAGE_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark		39832304
 	650239712	VO_Minions-25	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-25_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-25		45896
+	666799234	VO_Synthia_Spawn_07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_07		454748
 	669123038	SFX_Mine_Deploy_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Mine_Deploy_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\SFX_Mine_Deploy\SFX_Mine_Deploy_01		455460
 	672406368	SFX_Minion_Death_Rattle_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Rattle_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Rattle\SFX_Minion_Death_Rattle_01		396276
 	673637251	SFX_Car_Tire_Drift_Loop-07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-07		28944
@@ -191,61 +263,97 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	683080600	SFX_Minion_Death_Debris_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Debris_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Debris\SFX_Minion_Death_Debris_01		432064
 	685125525	SFX_Monster_Run_Asphalt_5	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_5		6512
 	693565182	SFX_Minion_Death_Debris_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Debris_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Debris\SFX_Minion_Death_Debris_04		446440
+	695095058	VO_Synthia_One_05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_05		161624
 	695237997	VO_Minions-47	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-47_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Minion_Death\VO_Minions-47		74332
 	702257288	VO_Minions-05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-05		72636
+	706192090	VO_Synthia_Spawn_05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_05		368672
+	706595022	VO_Synthia_Saw_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_01		305372
+	708324875	VO_Synthia_Mine_12	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_12		344220
 	712891595	VO_Minions-40	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-40_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-40		26876
 	714795758	VO_Minions-17	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-17_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-17		57052
 	714939548	VO_Minions-15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-15		68928
 	719328683	SFX_Monster_Run_Asphalt_16	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_16_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_16		6512
 	734327665	UI_Lap_Finish	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Synth_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Lap_Finish		235032
+	735521324	VO_Synthia_Saw_05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_05		343012
+	745268514	VO_Synthia_Two_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_08		180460
 	746319321	SFX_Monster_Run_Asphalt_23	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_23_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_23		6514
 	746364561	SFX_Car_Tire_Drift_Start-01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-01		173920
+	758270199	VO_Synthia_Go_10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_10		193184
 	761706438	VO_Minions-23	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-23_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-23		16520
 	763520401	VO_Minions-43	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-43_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-43		72368
+	764687448	VO_Synthia_One_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_08		183220
+	776889763	VO_Synthia_Two_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_02		205032
+	778571574	VO_Synthia_Mine_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_02		299504
+	786370355	VO_Synthia_Mine_18	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_18_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_18		330364
 	789886876	SFX_Monster_Run_Asphalt_19	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_19_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_19		6512
 	792734688	SFX_Car_Nitro_Boost-02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Boost-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro\SFX_Car_Nitro_Boost-02		250344
 	793238133	VO_Minions-26	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-26_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-26		35872
+	794867810	VO_Synthia_Mine_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_01		319980
 	800857768	SFX_Monster_Run_Asphalt_15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_15_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_15		6512
+	803238940	VO_Synthia_Three_06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Three_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Three\VO_Synthia_Three_06		208780
 	804439789	SFX_Mine_Deploy_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Mine_Deploy_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\SFX_Mine_Deploy\SFX_Mine_Deploy_02		441452
 	815904793	SFX_Monster_Run_Asphalt_9	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_9_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_9		6512
+	819775711	VO_Synthia_One_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_04		171616
 	821765287	VO_Minions-35	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-35_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-35		52536
+	825668780	VO_Synthia_Spawn_11	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_11		339400
+	828479876	VO_Synthia_Spawn_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_04		386516
 	828574803	VO_Minions-36	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-36_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-36		10652
+	833747934	VO_Synthia_Spawn_12	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_12		353160
 	840294410	SFX_Coin_Pickup (2)	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup (2)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\SFX_Coin_Pickup (2)		167700
 	841395511	SFX_Coin_Pickup	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\UI_Coin_RDM\SFX_Coin_Pickup		213880
 	841573623	SFX_Monster_Run_Asphalt_27	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_27_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_27		6514
+	844732184	VO_Synthia_Saw_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_08_F6B81630.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_08		308492
 	852890476	SFX_Minion_Death_Impact_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Impact_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Impact\SFX_Minion_Death_Impact_04		400444
 	853301487	SFX_Monster_Run_Asphalt_3	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_3		6512
 	857524936	SFX_Monster_Run_Asphalt_14	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_14_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_14		6512
 	862043951	SFX_Car_Nitro_Refill	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Refill_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro_Refill		167832
+	870415777	VO_Synthia_Spawn	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn		451096
+	875088475	VO_Synthia_Mine_21	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_21_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_21		354392
+	876432009	VO_Synthia_Saw_10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_10		300548
 	876872529	SFX_Monster_Run_Rouling	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Rouling_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Rouling		793604
 	877861424	SFX_Monster_Run_Asphalt_10	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_10		6512
+	881279757	VO_Synthia_Saw_13	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_13		353212
 	884978022	VO_Minions-03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-03		39680
 	885566710	SFX_Monster_Run_Asphalt_34	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_34_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_34		6512
 	887829737	SFX_Minion_Death_Debris_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Debris_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Debris\SFX_Minion_Death_Debris_03		446440
+	887878734	VO_Synthia_Mine_20	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_20_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_20		304964
+	888005451	VO_Synthia_Two_06	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_06		198220
+	888628812	VO_Synthia_Saw_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_04		314132
 	894102337	SFX_Car_Tire_Drift_Loop-04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-04		26720
 	897573943	VO_Minions-44	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-44_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-44		96284
 	901693732	SFX_Garage_Lift_Up	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Garage_Lift_Up_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Lift\SFX_Garage_Lift_Up		462120
 	912985413	SFX_Monster_Run_Asphalt_29	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_29_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_29		6514
 	914356035	VO_Minions-41	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-41_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-41		10676
 	926201035	SFX_Car_Tire_Drift_Loop-14	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-14_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-14		35604
+	933065559	VO_Synthia_One_03	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_03		166788
+	937508447	VO_Synthia_Mine_15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_15		331736
 	942125961	Music_Garage	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\MUSIC_GARAGE_DRY_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_Garage		8192068
 	943796425	SFX_Car_Nitro_Boost	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Nitro_Boost_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Nitro\SFX_Car_Nitro_Boost		252144
+	954423297	VO_Synthia_One_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_One_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_One\VO_Synthia_One_02		182276
+	974347877	VO_Synthia_Go_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_02		281488
 	981376012	VO_Minions-20	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-20_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Minion_Death\VO_Minions-20		131276
 	982930451	SFX_Monster_Run_Asphalt_7	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_7		6512
 	984508822	SFX_Car_Tire_Drift_Start	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start		142952
 	984626086	SFX_Monster_Run_Asphalt_17	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_17_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_17		6512
 	984893858	SFX_Car_Tire_Drift_Start-05	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-05		167248
+	985724857	VO_Synthia_Mine_14	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_14		282416
 	994024452	SFX_Door_Garage_Open	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Door_Garage_Open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Door_Garage_Open		500088
+	1002060247	VO_Synthia_Spawn_13	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Spawn_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Spawn\VO_Synthia_Spawn_13		345104
 	1007014752	SFX_Monster_Run_Asphalt_24	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_24_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_24		6514
+	1011809134	VO_Synthia_Go_16	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go_16		229056
 	1013313836	VO_Minions-31	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-31_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-31		30624
 	1026971028	SFX_Car_Tire_Drift_Start-04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Start-04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Start\SFX_Car_Tire_Drift_Start-04		212732
 	1032468217	VO_Minions-04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-04		57736
 	1038994047	SFX_Monster_Run_Asphalt_13	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_13_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_13		6512
 	1040050685	SFX_Turret_Confirm	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Turret_Confirm_2A2C6018.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Turret\SFX_Turret_Summon\SFX_Turret_Confirm		404452
+	1042271659	VO_Synthia_Go	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Go_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Go\VO_Synthia_Go		254268
+	1043701217	VO_Synthia_Two_01	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_01		223248
 	1045634337	SFX_Turret_Laserbeam_Loop	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Turret_Laserbeam_Loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Turret\SFX_Turret_Laser_Shoot\SFX_Turret_Laserbeam_Loop		1546254
 	1056370684	VO_Minions-30	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-30_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-30		63064
 	1057961994	SFX_Minion_Death_Debris_02	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Debris_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Debris\SFX_Minion_Death_Debris_02		387348
+	1060458933	VO_Synthia_Mine_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Mine_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Mine\VO_Synthia_Mine_09		364148
 	1065341630	SFX_Car_Tire_Drift_Loop-08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Tire_Drift_Loop-08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Drift\SFX_Car_Drift_Loop\SFX_Car_Tire_Drift_Loop-08		42268
+	1065598430	VO_Synthia_Two_07	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Two_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Two\VO_Synthia_Two_07		194712
 	1071402905	SFX_Turret_Drop	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Turret_Drop_A9763A47.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Turret\SFX_Turret_Summon\SFX_Turret_Drop		284280
 	1072533953	SFX_Monster_Run_Asphalt_22	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_22_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_22		6514
 

@@ -30,6 +30,13 @@
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="SB_BabyPark" ID="{C91677B6-34DA-4AC0-8C91-4AE5AE2C07E5}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>100000000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Default Work Unit" ID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" WorkUnitID="{B47FBB31-A91D-4088-A195-F3B91C46AE15}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="UI" ID="{9D90592F-4CB2-4909-9B44-1CAD2F1D91D0}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}" Filter="7" Origin="Manual"/>

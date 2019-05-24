@@ -643,20 +643,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_SFX_Turret_Drop" ID="{6216F828-0D33-49B2-8C2E-E12862284AB5}">
-					<ChildrenList>
-						<Action Name="" ID="{A45F7962-EDDC-4FD0-ACC7-E5AB93A50B42}" ShortID="246133563">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Turret_Drop" ID="{65076608-EC63-4955-A069-AC617578179F}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_SFX_Turret_Confirm" ID="{5B3DCE08-989F-4509-A307-EE0ADE1FE498}">
 					<ChildrenList>
 						<Action Name="" ID="{1FFF7A95-A5D1-49D1-BA2F-5952516E8DD4}" ShortID="975349837">
@@ -787,20 +773,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_SFX_Turret_Laser_Shoot" ID="{CAC9585D-352B-4E6E-A1C0-B50BC3381EA4}">
-					<ChildrenList>
-						<Action Name="" ID="{84E03C50-75A2-4E38-AB14-E1F08397AF60}" ShortID="675199361">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Turret_Laserbeam_Shoot_Start" ID="{429D8513-A13A-49B2-B006-00A44F75B4CE}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_UI_Coin_Pickup" ID="{330EA498-C1CB-4E54-9B51-5A93FEA9522B}">
 					<ChildrenList>
 						<Action Name="" ID="{2D11C950-2816-4FAE-AF10-ED2070A62A52}" ShortID="602307123">
@@ -838,6 +810,104 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Door_Garage_Open" ID="{B212C6AE-1A78-42C5-96D0-8C0F83DE0760}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Synthia_Go" ID="{E04E2F35-1060-446B-985C-EA11284D2EB2}">
+					<ChildrenList>
+						<Action Name="" ID="{709C2A5D-5AA3-47A0-9077-F04F207664C1}" ShortID="858770772">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Synthia_Go" ID="{074513C0-36C8-4ED7-AB6F-7060B1AEF674}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Synthia_Mine" ID="{80B9B56F-C19D-4B89-B816-D5A48992F5F8}">
+					<ChildrenList>
+						<Action Name="" ID="{F1C91E74-E4DB-4DAB-B002-4162888E3279}" ShortID="157250039">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Synthia_Mine" ID="{0F658503-0CDD-42A0-8445-88F30A2E8288}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Synthia_One" ID="{9001B7DC-D932-4178-A1D2-A7F0A60EA3FB}">
+					<ChildrenList>
+						<Action Name="" ID="{8C5A7107-B97F-49BC-B9E7-9533B24EB323}" ShortID="464118197">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Synthia_One" ID="{83FA138B-90AE-4EF4-8118-1D42DA533D43}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Synthia_Saw" ID="{2343C385-9E72-4E69-9C3E-C96AF3D97AC9}">
+					<ChildrenList>
+						<Action Name="" ID="{C76031CA-0F8B-4ACD-B8CC-FA5B46991B59}" ShortID="998900789">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Synthia_Saw" ID="{F527916A-4292-4ACD-9015-B6D47D67B161}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Synthia_Spawn" ID="{D371E732-4152-4C48-BEBB-77EF09F2D5E7}">
+					<ChildrenList>
+						<Action Name="" ID="{6B1E1435-1F5D-4CB8-AA24-78FE921CF765}" ShortID="890768163">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Synthia_Spawn" ID="{1DBDBEE8-D024-4062-815F-C3C4A2B6AA3C}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Synthia_Three" ID="{D928A356-6C2E-45B0-8AA3-04866EBBE292}">
+					<ChildrenList>
+						<Action Name="" ID="{C8DDAE11-E407-41AB-B2F6-AD2F755060CD}" ShortID="998524890">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Synthia_Three" ID="{60EC3CBD-4833-43C9-9554-4B3A9E05D83A}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Synthia_Two" ID="{B4FED486-DEC2-4AC1-B68D-E8CF8DBDC3C4}">
+					<ChildrenList>
+						<Action Name="" ID="{3F913893-C4CA-442E-820F-0AEDB54AAB04}" ShortID="791547474">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Synthia_Two" ID="{34273EBC-4E33-42AC-B761-64FFA7EDF1EA}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
