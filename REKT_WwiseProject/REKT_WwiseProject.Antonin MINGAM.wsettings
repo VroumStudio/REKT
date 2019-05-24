@@ -91,7 +91,7 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Windows"/>
 				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="x+4gjfViJke1wWUxy8vWw3d98YrBWbJCjAqBAH6KTRQ="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="d33xisFZskKMCoEAfopNFA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="tncWydo0wEqMkUrlriwH5XDJ79K1jeBOtNzp+ZcQuHY="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="Interactive Music\x64_{988AC3A4-A9DE-4330-B322-E8CA8D8ED110} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAkGxAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
