@@ -98,20 +98,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_Music_BabyPark" ID="{0B203069-92DA-43D8-A4E6-AC04FF5C7F11}">
-					<ChildrenList>
-						<Action Name="" ID="{9438214E-FF6C-41FB-9FB1-05D9DE11328B}" ShortID="92116203">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music_BabyPark" ID="{A5755EFE-85DB-4F50-B802-B411C82B78CE}" WorkUnitID="{5556B571-4C1F-44ED-BB02-F30E7A6B7D8D}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="SFX_Car" ID="{779072B9-6EE2-4B25-9745-B6B862AEEB1B}" ShortID="197854971">
 					<ChildrenList>
 						<Event Name="Play_SFX_Car_Drift" ID="{72284702-B79F-4D9E-931D-1D7BAB1E4594}">

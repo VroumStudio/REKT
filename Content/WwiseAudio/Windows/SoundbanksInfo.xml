@@ -21,6 +21,10 @@
 			<ShortName>SFX_Car_Engine_Idle.wav</ShortName>
 			<Path>SFX\SFX_Car_Engine_Idle_8956FC97.wem</Path>
 		</File>
+		<File Id="207637835" Language="SFX">
+			<ShortName>20190527_ARTFX_REKT_ZIKTHEME3_Test2.wav</ShortName>
+			<Path>SFX\20190527_ARTFX_REKT_ZIKTHEME3_Test2_D79FB2B7.wem</Path>
+		</File>
 		<File Id="342314681" Language="SFX">
 			<ShortName>SFX_Car_Engine_Plane.wav</ShortName>
 			<Path>SFX\SFX_Car_Engine_Plane_D79FB2B7.wem</Path>
@@ -120,6 +124,7 @@
 				<File Id="89081979"/>
 				<File Id="108940233"/>
 				<File Id="131386122"/>
+				<File Id="207637835"/>
 				<File Id="342314681"/>
 				<File Id="487297546"/>
 				<File Id="670022925"/>
@@ -1087,6 +1092,7 @@
 				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
+				<File Id="207637835"/>
 				<File Id="670022925"/>
 				<File Id="707811912"/>
 			</ReferencedStreamedFiles>

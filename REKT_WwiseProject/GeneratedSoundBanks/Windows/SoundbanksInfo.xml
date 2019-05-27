@@ -33,10 +33,6 @@
 			<ShortName>20181220_SDLF_REKT_AMB_COURSE.wav</ShortName>
 			<Path>SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem</Path>
 		</File>
-		<File Id="707811912" Language="SFX">
-			<ShortName>20181219_SDLF_REKT2_Boucle.wav</ShortName>
-			<Path>SFX\20181219_SDLF_REKT2_Boucle_8956FC97.wem</Path>
-		</File>
 		<File Id="829940235" Language="SFX">
 			<ShortName>Amb_Babypark_Police_Wet.wav</ShortName>
 			<Path>SFX\Amb_Babypark_Police_Wet_8956FC97.wem</Path>
@@ -64,7 +60,6 @@
 				<Event Id="1925799616" Name="Play_Amb_Babypark_Police_Dry" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Dry"/>
 				<Event Id="1944695683" Name="Play_Amb_Babypark_Police_Wet" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Wet"/>
 				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Garage"/>
-				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
 				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift"/>
 				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start"/>
@@ -123,15 +118,10 @@
 				<File Id="342314681"/>
 				<File Id="487297546"/>
 				<File Id="670022925"/>
-				<File Id="707811912"/>
 				<File Id="829940235"/>
 				<File Id="906881567"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="22608017" Language="SFX">
-					<ShortName>20181219_SDLF_REKT2_Intro.wav</ShortName>
-					<Path>SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem</Path>
-				</File>
 				<File Id="25546923" Language="SFX">
 					<ShortName>VO_Minions-27.wav</ShortName>
 					<Path>SFX\VO_Minions-27_10C4C929.wem</Path>
@@ -858,7 +848,7 @@
 				</File>
 				<File Id="844732184" Language="SFX">
 					<ShortName>VO_Synthia_Saw_08.wav</ShortName>
-					<Path>SFX\VO_Synthia_Saw_08_3D7F9407.wem</Path>
+					<Path>SFX\VO_Synthia_Saw_08_F6B81630.wem</Path>
 				</File>
 				<File Id="852890476" Language="SFX">
 					<ShortName>SFX_Minion_Death_Impact_04.wav</ShortName>
@@ -1065,7 +1055,6 @@
 			<IncludedEvents>
 				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_BabyPark"/>
 				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Garage"/>
-				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
 				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die"/>
 				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Run"/>
@@ -1088,13 +1077,8 @@
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
 				<File Id="670022925"/>
-				<File Id="707811912"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="22608017" Language="SFX">
-					<ShortName>20181219_SDLF_REKT2_Intro.wav</ShortName>
-					<Path>SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem</Path>
-				</File>
 				<File Id="25546923" Language="SFX">
 					<ShortName>VO_Minions-27.wav</ShortName>
 					<Path>SFX\VO_Minions-27_10C4C929.wem</Path>

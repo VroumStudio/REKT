@@ -13,7 +13,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1311581219	Play_VO_Synthia_One			\Default Work Unit\Play_VO_Synthia_One	
 	1334060522	Set_Switch_Lift_Up			\Default Work Unit\SFX\Lift\Set_Switch_Lift_Up	
 	1365165500	Play_VO_Synthia_Saw			\Default Work Unit\Play_VO_Synthia_Saw	
-	1472165566	Play_Music_BabyPark			\Default Work Unit\Play_Music_BabyPark	
 	1501458217	Play_Amb_BabyPark			\Default Work Unit\AMB\Play_Amb_BabyPark	
 	1569993949	Play_SFX_Trap_Mine_Explode			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Explode	
 	1576113860	Play_SFX_Wpn_Gatling_Summon			\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon	
@@ -106,7 +105,6 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	568337441	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions_None\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	22608017	Music_BabyPark_Intro	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Intro		6144068
 	25546923	VO_Minions-27	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-27_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-27		32504
 	27220805	VO_Synthia_Saw_09	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_09		300604
 	28428759	VO_Synthia_Saw_15	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_15		330364
@@ -288,7 +286,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	840294410	SFX_Coin_Pickup (2)	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup (2)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\SFX_Coin_Pickup (2)		167700
 	841395511	SFX_Coin_Pickup	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Coin_Pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Coin_Pickup\UI_Coin_RDM\SFX_Coin_Pickup		213880
 	841573623	SFX_Monster_Run_Asphalt_27	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_27_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_27		6514
-	844732184	VO_Synthia_Saw_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_08_3D7F9407.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_08		308492
+	844732184	VO_Synthia_Saw_08	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Synthia_Saw_08_F6B81630.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Synthia_Saw\VO_Synthia_Saw_08		308492
 	852890476	SFX_Minion_Death_Impact_04	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Minion_Death_Impact_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Die\SFX_Minion_Death_Impact\SFX_Minion_Death_Impact_04		400444
 	853301487	SFX_Monster_Run_Asphalt_3	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_3		6512
 	857524936	SFX_Monster_Run_Asphalt_14	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_14_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_14		6512
@@ -346,7 +344,6 @@ Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	
 	342314681	SFX_Car_Engine_Plane	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Engine_Plane_D79FB2B7.wem	342314681.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Plane	
 	487297546	SFX_Car_Engine_Strong	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Mustang_High_D79FB2B7.wem	487297546.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Strong	
 	670022925	Amb_Garage	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem	670022925.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_Garage	
-	707811912	Music_BabyPark_Loop	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Boucle_8956FC97.wem	707811912.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Loop	
 	829940235	Amb_Babypark_Police_Wet	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\Amb_Babypark_Police_Wet_8956FC97.wem	829940235.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_BabyPark_Police\Amb_Babypark_Police_Wet	
 	906881567	SFX_Car_Engine_Idle_Synth_Loop	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Car_Engine_Idle_Synth_Loop_8956FC97.wem	906881567.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Car\SFX_Car_Engine\SFX_Car_Engine_Idle_Synth_Loop	
 

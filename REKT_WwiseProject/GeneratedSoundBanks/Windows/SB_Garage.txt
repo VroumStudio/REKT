@@ -2,7 +2,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	35730698	Play_SFX_Wpn_Gatling_Shoot			\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Shoot	
 	624714026	Play_UI_Weapons			\Default Work Unit\UI\Play_UI_Weapons	
 	878452949	Play_UI_Equipment			\Default Work Unit\UI\Play_UI_Equipment	
-	1472165566	Play_Music_BabyPark			\Default Work Unit\Play_Music_BabyPark	
 	1501458217	Play_Amb_BabyPark			\Default Work Unit\AMB\Play_Amb_BabyPark	
 	1569993949	Play_SFX_Trap_Mine_Explode			\Default Work Unit\SFX_Car\Play_SFX_Trap_Mine_Explode	
 	1576113860	Play_SFX_Wpn_Gatling_Summon			\Default Work Unit\SFX_Car\Play_SFX_Wpn_Gatling_Summon	
@@ -37,7 +36,6 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	568337441	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions_None\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	22608017	Music_BabyPark_Intro	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Intro		6144068
 	25546923	VO_Minions-27	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\VO_Minions-27_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\VO_Minion_Run\VO_Minions-27		32504
 	35856289	SFX_Monster_Run_Asphalt_28	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_28_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_28		6514
 	50865050	SFX_Monster_Run_Asphalt_25	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\SFX_Monster_Run_Asphalt_25_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Monster\SFX_Monster_Run\SFX_Monster_Run_Asphalt\SFX_Monster_Run_Asphalt_25		6514
@@ -153,5 +151,4 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	670022925	Amb_Garage	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem	670022925.wem	\Actor-Mixer Hierarchy\Default Work Unit\Amb\Amb_Garage	
-	707811912	Music_BabyPark_Loop	E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\SFX\20181219_SDLF_REKT2_Boucle_8956FC97.wem	707811912.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\Music_BabyPark\Music_BabyPark_Loop	
 
