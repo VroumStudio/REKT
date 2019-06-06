@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>E:\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Sam\Documents\GitHub\REKT\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Sam\Documents\GitHub\REKT\REKT_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -21,10 +21,6 @@
 			<ShortName>SFX_Car_Engine_Idle.wav</ShortName>
 			<Path>SFX\SFX_Car_Engine_Idle_8956FC97.wem</Path>
 		</File>
-		<File Id="207637835" Language="SFX">
-			<ShortName>20190527_ARTFX_REKT_ZIKTHEME3_Test2.wav</ShortName>
-			<Path>SFX\20190527_ARTFX_REKT_ZIKTHEME3_Test2_D79FB2B7.wem</Path>
-		</File>
 		<File Id="342314681" Language="SFX">
 			<ShortName>SFX_Car_Engine_Plane.wav</ShortName>
 			<Path>SFX\SFX_Car_Engine_Plane_D79FB2B7.wem</Path>
@@ -36,10 +32,6 @@
 		<File Id="670022925" Language="SFX">
 			<ShortName>20181220_SDLF_REKT_AMB_COURSE.wav</ShortName>
 			<Path>SFX\20181220_SDLF_REKT_AMB_COURSE_8956FC97.wem</Path>
-		</File>
-		<File Id="707811912" Language="SFX">
-			<ShortName>20181219_SDLF_REKT2_Boucle.wav</ShortName>
-			<Path>SFX\20181219_SDLF_REKT2_Boucle_8956FC97.wem</Path>
 		</File>
 		<File Id="829940235" Language="SFX">
 			<ShortName>Amb_Babypark_Police_Wet.wav</ShortName>
@@ -68,7 +60,6 @@
 				<Event Id="1925799616" Name="Play_Amb_Babypark_Police_Dry" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Dry"/>
 				<Event Id="1944695683" Name="Play_Amb_Babypark_Police_Wet" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Babypark_Police_Wet"/>
 				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Garage"/>
-				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
 				<Event Id="853193096" Name="Play_SFX_Car_Drift" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift"/>
 				<Event Id="3364113413" Name="Play_SFX_Car_Drift_Start" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Car_Drift_Start"/>
@@ -124,19 +115,13 @@
 				<File Id="89081979"/>
 				<File Id="108940233"/>
 				<File Id="131386122"/>
-				<File Id="207637835"/>
 				<File Id="342314681"/>
 				<File Id="487297546"/>
 				<File Id="670022925"/>
-				<File Id="707811912"/>
 				<File Id="829940235"/>
 				<File Id="906881567"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="22608017" Language="SFX">
-					<ShortName>20181219_SDLF_REKT2_Intro.wav</ShortName>
-					<Path>SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem</Path>
-				</File>
 				<File Id="25546923" Language="SFX">
 					<ShortName>VO_Minions-27.wav</ShortName>
 					<Path>SFX\VO_Minions-27_10C4C929.wem</Path>
@@ -285,10 +270,6 @@
 					<ShortName>VO_Minions-37.wav</ShortName>
 					<Path>SFX\VO_Minions-37_10C4C929.wem</Path>
 				</File>
-				<File Id="154803322" Language="SFX">
-					<ShortName>VO_Synthia_Go_09.wav</ShortName>
-					<Path>SFX\VO_Synthia_Go_09_10C4C929.wem</Path>
-				</File>
 				<File Id="155211351" Language="SFX">
 					<ShortName>VO_Minions-39.wav</ShortName>
 					<Path>SFX\VO_Minions-39_10C4C929.wem</Path>
@@ -433,10 +414,6 @@
 					<ShortName>SFX_Car_Tire_Drift_Loop-02.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-02_56D34C19.wem</Path>
 				</File>
-				<File Id="334575657" Language="SFX">
-					<ShortName>VO_Synthia_Go_08.wav</ShortName>
-					<Path>SFX\VO_Synthia_Go_08_10C4C929.wem</Path>
-				</File>
 				<File Id="337410547" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Loop-13.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Loop-13_56D34C19.wem</Path>
@@ -517,10 +494,6 @@
 					<ShortName>VO_Synthia_Go_04.wav</ShortName>
 					<Path>SFX\VO_Synthia_Go_04_10C4C929.wem</Path>
 				</File>
-				<File Id="422822986" Language="SFX">
-					<ShortName>VO_Synthia_Go_17.wav</ShortName>
-					<Path>SFX\VO_Synthia_Go_17_10C4C929.wem</Path>
-				</File>
 				<File Id="424078183" Language="SFX">
 					<ShortName>PH_SFX_Car_Transmission.wav</ShortName>
 					<Path>SFX\PH_SFX_Car_Transmission_56D34C19.wem</Path>
@@ -549,10 +522,6 @@
 					<ShortName>VO_Minions-24.wav</ShortName>
 					<Path>SFX\VO_Minions-24_10C4C929.wem</Path>
 				</File>
-				<File Id="460982667" Language="SFX">
-					<ShortName>VO_Synthia_Go_01.wav</ShortName>
-					<Path>SFX\VO_Synthia_Go_01_10C4C929.wem</Path>
-				</File>
 				<File Id="473618790" Language="SFX">
 					<ShortName>AMB_COURSE_SELECTOK.wav</ShortName>
 					<Path>SFX\AMB_COURSE_SELECTOK_56D34C19.wem</Path>
@@ -560,10 +529,6 @@
 				<File Id="477144447" Language="SFX">
 					<ShortName>SFX_Monster_Run_Asphalt_18.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_18_56D34C19.wem</Path>
-				</File>
-				<File Id="484851149" Language="SFX">
-					<ShortName>VO_Synthia_Go_18.wav</ShortName>
-					<Path>SFX\VO_Synthia_Go_18_10C4C929.wem</Path>
 				</File>
 				<File Id="498449104" Language="SFX">
 					<ShortName>VO_Synthia_Three_02.wav</ShortName>
@@ -772,10 +737,6 @@
 				<File Id="746364561" Language="SFX">
 					<ShortName>SFX_Car_Tire_Drift_Start-01.wav</ShortName>
 					<Path>SFX\SFX_Car_Tire_Drift_Start-01_56D34C19.wem</Path>
-				</File>
-				<File Id="758270199" Language="SFX">
-					<ShortName>VO_Synthia_Go_10.wav</ShortName>
-					<Path>SFX\VO_Synthia_Go_10_10C4C929.wem</Path>
 				</File>
 				<File Id="761706438" Language="SFX">
 					<ShortName>VO_Minions-23.wav</ShortName>
@@ -997,10 +958,6 @@
 					<ShortName>SFX_Monster_Run_Asphalt_24.wav</ShortName>
 					<Path>SFX\SFX_Monster_Run_Asphalt_24_56D34C19.wem</Path>
 				</File>
-				<File Id="1011809134" Language="SFX">
-					<ShortName>VO_Synthia_Go_16.wav</ShortName>
-					<Path>SFX\VO_Synthia_Go_16_10C4C929.wem</Path>
-				</File>
 				<File Id="1013313836" Language="SFX">
 					<ShortName>VO_Minions-31.wav</ShortName>
 					<Path>SFX\VO_Minions-31_10C4C929.wem</Path>
@@ -1070,7 +1027,6 @@
 			<IncludedEvents>
 				<Event Id="1501458217" Name="Play_Amb_BabyPark" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_BabyPark"/>
 				<Event Id="2207983986" Name="Play_Amb_Garage" ObjectPath="\Events\Default Work Unit\AMB\Play_Amb_Garage"/>
-				<Event Id="1472165566" Name="Play_Music_BabyPark" ObjectPath="\Events\Default Work Unit\Play_Music_BabyPark"/>
 				<Event Id="2468732901" Name="Play_Music_Garage" ObjectPath="\Events\Default Work Unit\New Virtual Folder\Play_Music_Garage"/>
 				<Event Id="3417507024" Name="Play_SFX_Monsters_Die" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Die"/>
 				<Event Id="2883580317" Name="Play_SFX_Monsters_Run" ObjectPath="\Events\Default Work Unit\SFX_Car\Play_SFX_Monsters_Run"/>
@@ -1092,15 +1048,9 @@
 				<Event Id="624714026" Name="Play_UI_Weapons" ObjectPath="\Events\Default Work Unit\UI\Play_UI_Weapons"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
-				<File Id="207637835"/>
 				<File Id="670022925"/>
-				<File Id="707811912"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="22608017" Language="SFX">
-					<ShortName>20181219_SDLF_REKT2_Intro.wav</ShortName>
-					<Path>SFX\20181219_SDLF_REKT2_Intro_56D34C19.wem</Path>
-				</File>
 				<File Id="25546923" Language="SFX">
 					<ShortName>VO_Minions-27.wav</ShortName>
 					<Path>SFX\VO_Minions-27_10C4C929.wem</Path>

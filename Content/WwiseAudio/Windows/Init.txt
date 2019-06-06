@@ -27,6 +27,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	994436243	ST_SlowMo	ST_SlowMo	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	469592262	RTPC_VO			\Default Work Unit\RTPC_VO	
 	3512380217	RTPC_Car_Meter			\Default Work Unit\RTPC_Car_Meter	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
@@ -36,6 +37,8 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1117531639	Amb			\Default Work Unit\Master Audio Bus\Amb	
 	1467963052	Weapons			\Default Work Unit\Master Audio Bus\SFX\Weapons	
 	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	3044442797	VO_Minion			\Default Work Unit\Master Audio Bus\VO_Minion	
+	3569542564	VO Cyntia			\Default Work Unit\Master Audio Bus\VO Cyntia	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3858746980	Monsters			\Default Work Unit\Master Audio Bus\SFX\Monsters	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
@@ -51,6 +54,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	814721238	Wwise Meter (Custom)	Wwise Meter			
 	857790075	Wwise Meter (Custom)	Wwise Meter			
 	962278582	Wwise Meter (Custom)	Wwise Meter			
+	1038801907	Meter_Cyntia	Wwise Meter			
 	2416423925	Wwise_Meter_Car	Wwise Meter			
 	3900114836	Metal_Hangar	Wwise RoomVerb			
 

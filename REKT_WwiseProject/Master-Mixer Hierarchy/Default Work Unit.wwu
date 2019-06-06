@@ -176,6 +176,30 @@
 										<Value>-8</Value>
 									</ValueList>
 									<RTPCList>
+										<RTPC Name="" ID="{59C9FE71-927C-4432-A040-01D4AAE7E385}" ShortID="959416027">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="RTPC_VO" ID="{23305562-94F0-478D-B325-E5CE7C4EBF6E}" WorkUnitID="{ACBB3979-43FA-4D3C-8E14-CF3A8AA64710}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{670DEEB1-2BD2-4D6B-A9E2-134BDB6AE064}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-5.29026</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 										<RTPC Name="" ID="{9605BCD9-4394-4780-9678-43D009C73113}" ShortID="639104099">
 											<ReferenceList>
 												<Reference Name="ControlInput">
@@ -321,6 +345,14 @@
 								</CustomStateList>
 							</StateInfo>
 						</Bus>
+						<Bus Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="Meter_Cyntia" ID="{FEAA7010-CCF7-4B9F-A50D-469E04C94C5A}" WorkUnitID="{B58CADBF-3732-4239-B54B-970ABCA4814E}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
+						<Bus Name="VO_Minion" ID="{17C6B450-8B75-455F-8154-8EF6460B1486}"/>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

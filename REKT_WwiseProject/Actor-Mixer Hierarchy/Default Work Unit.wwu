@@ -231,7 +231,19 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{2D41FA10-B5C1-4D86-A567-7698C207A154}" ShortID="543865380">
@@ -364,6 +376,11 @@
 													<Modifier Name="" ID="{F1B6355A-B568-419C-9504-5BFF4DCBB395}"/>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -3438,6 +3455,7 @@
 														<Value>10</Value>
 													</ValueList>
 												</Property>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -3469,7 +3487,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+													<ObjectRef Name="VO_Minion" ID="{17C6B450-8B75-455F-8154-8EF6460B1486}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -5312,6 +5330,11 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="SFX_Minion_Death_Debris" ID="{E888BA51-F9B5-4CBF-AAAF-CA07CBA7AE6B}" ShortID="1072236048">
 											<PropertyList>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -5324,6 +5347,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -5444,6 +5472,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="SFX_Minion_Death_Impact" ID="{0D564DF4-606B-4E93-A96E-C79918D3CD40}" ShortID="923294551">
 											<PropertyList>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -5456,6 +5489,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -5571,6 +5609,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="SFX_Minion_Death_Rattle" ID="{6EBDD101-CD12-451F-843D-8421A864F0F9}" ShortID="678368553">
 											<PropertyList>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -5583,6 +5626,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -6660,7 +6708,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO_Minion" ID="{17C6B450-8B75-455F-8154-8EF6460B1486}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -6881,7 +6929,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -6890,7 +6938,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -6919,31 +6967,6 @@
 										<ActiveSource Name="VO_Synthia_Go" ID="{A4B08F3F-528F-4808-98A8-6D585F2C1790}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="VO_Synthia_Go_01" ID="{2A3A2C2C-A5B5-4DF9-B441-208C592D51F8}" ShortID="340768388">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Synthia_Go_01" ID="{6C90F24A-02B3-4AB9-AB88-4ACBCB655B39}" ShortID="460982667">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>VO_Synthia_Go_01.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Synthia_Go_01" ID="{6C90F24A-02B3-4AB9-AB88-4ACBCB655B39}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="VO_Synthia_Go_02" ID="{E8C84D17-5638-498E-8E9C-3CF3B0E794E4}" ShortID="892161033">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -6960,6 +6983,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1.5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Go_02.wav</AudioFile>
@@ -7035,6 +7063,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>4.5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Go_05.wav</AudioFile>
@@ -7094,81 +7127,6 @@
 										<ActiveSource Name="VO_Synthia_Go_07" ID="{7DA1B7AC-39AB-4144-9246-85FBB0877A43}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="VO_Synthia_Go_08" ID="{B03FF410-7D11-4A97-92E8-6F66DAA943CD}" ShortID="995088313">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Synthia_Go_08" ID="{AAC1DD8A-41BC-4573-B53D-F57970F6EDE1}" ShortID="334575657">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>VO_Synthia_Go_08.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Synthia_Go_08" ID="{AAC1DD8A-41BC-4573-B53D-F57970F6EDE1}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="VO_Synthia_Go_09" ID="{4A38D7B1-E893-40D0-AB72-58B6C007C895}" ShortID="26131241">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Synthia_Go_09" ID="{A918E937-2329-4507-9CF9-24A8CB07E926}" ShortID="154803322">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>VO_Synthia_Go_09.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Synthia_Go_09" ID="{A918E937-2329-4507-9CF9-24A8CB07E926}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="VO_Synthia_Go_10" ID="{A0E9019D-24D1-4945-81D5-A08D1FF07B92}" ShortID="815871772">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Synthia_Go_10" ID="{C574FFC9-A1C4-436F-B4F1-2AE0111EC85F}" ShortID="758270199">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>VO_Synthia_Go_10.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Synthia_Go_10" ID="{C574FFC9-A1C4-436F-B4F1-2AE0111EC85F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="VO_Synthia_Go_11" ID="{EB3CFFD8-E2C1-424C-84F4-28AF7156819A}" ShortID="138075098">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -7185,6 +7143,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1.9</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Go_11.wav</AudioFile>
@@ -7210,6 +7173,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Go_12.wav</AudioFile>
@@ -7260,6 +7228,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>2.6</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Go_14.wav</AudioFile>
@@ -7294,88 +7267,13 @@
 										<ActiveSource Name="VO_Synthia_Go_15" ID="{354AA062-697B-40B5-8D5C-27A3CD5E56B2}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="VO_Synthia_Go_16" ID="{39CD1D51-3714-412C-B956-F90087106669}" ShortID="148022562">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Synthia_Go_16" ID="{F6F49BF2-777D-43C1-8AA8-0C56E187F359}" ShortID="1011809134">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>VO_Synthia_Go_16.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Synthia_Go_16" ID="{F6F49BF2-777D-43C1-8AA8-0C56E187F359}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="VO_Synthia_Go_17" ID="{96B08E87-ACF6-44C7-99E2-EBF95A445C22}" ShortID="1069501568">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Synthia_Go_17" ID="{1C9B41C9-F246-4A7F-A689-521DADB89910}" ShortID="422822986">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>VO_Synthia_Go_17.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Synthia_Go_17" ID="{1C9B41C9-F246-4A7F-A689-521DADB89910}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="VO_Synthia_Go_18" ID="{77D82045-3A6C-4E7A-82C1-0D7E4A54CA2D}" ShortID="109052258">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Synthia_Go_18" ID="{60575629-A622-4BC9-ABFA-EBD81045B775}" ShortID="484851149">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
-												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>VO_Synthia_Go_18.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Synthia_Go_18" ID="{60575629-A622-4BC9-ABFA-EBD81045B775}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="VO_Synthia_Three" ID="{60EC3CBD-4833-43C9-9554-4B3A9E05D83A}" ShortID="241613569">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -7384,7 +7282,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -7404,6 +7302,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Three_01.wav</AudioFile>
@@ -7454,6 +7357,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Three_03.wav</AudioFile>
@@ -7579,6 +7487,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Three_08.wav</AudioFile>
@@ -7604,6 +7517,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1.5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Three_09.wav</AudioFile>
@@ -7629,6 +7547,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Three_10.wav</AudioFile>
@@ -7644,7 +7567,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -7653,7 +7576,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -7673,6 +7596,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>0.4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two.wav</AudioFile>
@@ -7698,6 +7626,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_01.wav</AudioFile>
@@ -7723,6 +7656,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_02.wav</AudioFile>
@@ -7748,6 +7686,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>0.7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_03.wav</AudioFile>
@@ -7773,6 +7716,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_04.wav</AudioFile>
@@ -7798,6 +7746,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_05.wav</AudioFile>
@@ -7823,6 +7776,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1.7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_06.wav</AudioFile>
@@ -7848,6 +7806,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1.9</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_07.wav</AudioFile>
@@ -7873,6 +7836,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>2.5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_08.wav</AudioFile>
@@ -7898,6 +7866,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>2.2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Two_09.wav</AudioFile>
@@ -7913,7 +7886,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -7922,7 +7895,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -8042,6 +8015,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>0.3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_One_04.wav</AudioFile>
@@ -8067,6 +8045,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>0.9</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_One_05.wav</AudioFile>
@@ -8117,6 +8100,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>0.8</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_One_07.wav</AudioFile>
@@ -8142,6 +8130,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>2.8</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_One_08.wav</AudioFile>
@@ -8167,6 +8160,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>2.2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_One_09.wav</AudioFile>
@@ -8194,7 +8192,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -8202,8 +8200,23 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise_Parametric_EQ_(Custom)" ID="{C7F3B3D7-3CC9-4EFF-AD9F-7CDD9A729429}" ShortID="472980147" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+												<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="189"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="4000"/>
+												<Property Name="GainBand1" Type="Real32" Value="-3"/>
+												<Property Name="GainBand3" Type="Real32" Value="3"/>
+												<Property Name="OnOffBand2" Type="bool" Value="False"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -8513,7 +8526,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -8521,8 +8534,23 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise_Parametric_EQ_(Custom)" ID="{C71B0935-EE62-4825-A844-D73C4013AD2D}" ShortID="938283266" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+												<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="189"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="4000"/>
+												<Property Name="GainBand1" Type="Real32" Value="-3"/>
+												<Property Name="GainBand3" Type="Real32" Value="3"/>
+												<Property Name="OnOffBand2" Type="bool" Value="False"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -8818,6 +8846,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>0.5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Saw_14.wav</AudioFile>
@@ -8843,6 +8876,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>0.6</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Saw_15.wav</AudioFile>
@@ -8858,7 +8896,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -8866,8 +8904,23 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8D4B61C9-42E8-41AC-84BB-A0492E208636}"/>
 								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise_Parametric_EQ_(Custom)" ID="{2DFEB292-FB1E-42F7-9F35-70CC110F4D5F}" ShortID="1039046038" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+												<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="189"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="4000"/>
+												<Property Name="GainBand1" Type="Real32" Value="-3"/>
+												<Property Name="GainBand3" Type="Real32" Value="3"/>
+												<Property Name="OnOffBand2" Type="bool" Value="False"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
+									<ObjectRef Name="VO Cyntia" ID="{F9E7A54E-91A6-4F15-B126-D91D79C16DB6}" WorkUnitID="{E8FB0F02-A610-441D-BD4E-EEC6A53A9CB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -8887,6 +8940,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>3.9</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine.wav</AudioFile>
@@ -8912,6 +8970,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1.7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_01.wav</AudioFile>
@@ -8937,6 +9000,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1.2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_02.wav</AudioFile>
@@ -8962,6 +9030,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1.2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_03.wav</AudioFile>
@@ -8987,6 +9060,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1.3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_04.wav</AudioFile>
@@ -9012,6 +9090,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.9</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_05.wav</AudioFile>
@@ -9037,6 +9120,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.8</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_06.wav</AudioFile>
@@ -9062,6 +9150,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-0.7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_07.wav</AudioFile>
@@ -9087,6 +9180,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_08.wav</AudioFile>
@@ -9112,6 +9210,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_09.wav</AudioFile>
@@ -9137,6 +9240,11 @@
 												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
 												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>-1.1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Synthia_Mine_21.wav</AudioFile>

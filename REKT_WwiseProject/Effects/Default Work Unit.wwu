@@ -7,6 +7,10 @@
 	<GameParameter Name="RTPC_Car_Meter" ID="{CC009623-165F-4CEB-8B0E-9DC4F284FE12}"/>
 </PluginData>
 				</Effect>
+				<Effect Name="Meter_Cyntia" ID="{FEAA7010-CCF7-4B9F-A50D-469E04C94C5A}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">					<PluginData>
+	<GameParameter Name="RTPC_VO" ID="{23305562-94F0-478D-B325-E5CE7C4EBF6E}"/>
+</PluginData>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

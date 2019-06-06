@@ -35,6 +35,13 @@
 						<Property Name="Min" Type="Real64" Value="-180"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="RTPC_VO" ID="{23305562-94F0-478D-B325-E5CE7C4EBF6E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
